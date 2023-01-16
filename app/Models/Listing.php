@@ -41,6 +41,11 @@ class Listing extends Model
         return $this->hasMany(Amenity::class);
     }
 
+
+    public function lisitng_amenities(){
+        return $this->hasMany(ListingAmenity::class,'listing_id' );
+    }
+
     public function picture(){
         return $this->hasOne(Picture::class);
     }

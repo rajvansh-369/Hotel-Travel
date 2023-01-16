@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+      $data =  new App\Models\Listing;
+
+    return $data->with('lisitng_amenities')->get();
 });

@@ -10,6 +10,7 @@ class Amenity extends Model
     use HasFactory;
     
     public function amenities(){
-        return $this->belongsTo(Listing::class);
+        return $this->belongsToMany(Listing::class);
     }
+
 }

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ListingResource\Pages;
 use App\Filament\Resources\ListingResource\RelationManagers;
+use App\Models\Amenity;
 use App\Models\Listing;
 use DateTime;
 use Filament\Forms;
@@ -73,6 +74,23 @@ class ListingResource extends Resource
                         
                 ])
                 ->columns(1),
+
+
+                Fieldset::make('Amenities')
+                ->schema([
+                    Repeater::make('amenities')
+                ->relationship('lisitng_amenities')
+                        ->schema([
+                            
+                            Select::make('amenity_id')
+
+                            ->options(Amenity::all()->pluck('name', 'id'))
+
+                            ])
+                            ->grid(4)
+                        ])
+                        ->columns(1),
+
                 
                 Fieldset::make('Specification')
                 ->schema([
