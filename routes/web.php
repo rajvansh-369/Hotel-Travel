@@ -13,9 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+    
+//       $data =  new App\Models\Listing;
+
+//     return $data->with('lisitng_amenities')->get();
+// });
 Route::get('/', function () {
     
-      $data =  new App\Models\Listing;
-
-    return $data->with('lisitng_amenities')->get();
-});
+    return view('pages.home');
+})->name('home');
+Route::get('/hotels', function () {
+    
+    return view('pages.hotels');
+})->name('hotels');
+Route::get('/contact', function () {
+    
+    return view('pages.contact');
+})->name('contact');
