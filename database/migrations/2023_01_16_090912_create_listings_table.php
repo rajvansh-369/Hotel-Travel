@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('picture');
             $table->double('price_per_hour', 8, 2);
             $table->double('price_per_day', 8, 2);
-            // $table->integer('review_stars');
+
             $table->tinyInteger('half_day_discount');
             $table->tinyInteger('half_discount_rate');
             $table->tinyInteger('full_day_discount');
