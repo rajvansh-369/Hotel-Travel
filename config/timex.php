@@ -69,7 +69,7 @@ return [
         'enablePolicy' => false,
         'modalWidth' => 'xl',
         'icon' => [
-            'static' => true,
+            'static' => false,
             'timex' => 'timex-timex',
             'day' => 'timex-day-'
         ],

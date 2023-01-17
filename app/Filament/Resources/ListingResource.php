@@ -6,6 +6,7 @@ use App\Filament\Resources\ListingResource\Pages;
 use App\Filament\Resources\ListingResource\RelationManagers;
 use App\Models\Amenity;
 use App\Models\Listing;
+use Closure;
 use DateTime;
 use Filament\Forms;
 use Filament\Forms\Components\DateTimePicker;
@@ -45,15 +46,45 @@ class ListingResource extends Resource
                     TextInput::make('name')
                         ->required()
                         ->maxLength(255),
-                    TextInput::make('listing_type')
-                        ->numeric()
-                        ->required(),
+
                     Textarea::make('description')
                         ->required()
                         ->maxLength(65535),
-                    Textarea::make('hosting_instruction')
-                        ->required(),
-                ]),
+                        Textarea::make('advance_notice')
+                        ->required()
+                        ->maxLength(255)
+                        ->maxLength(65535),
+                ]) ->columns(3),
+
+                Fieldset::make('Address')
+                    ->relationship('address')
+                    ->schema([
+
+                        Textarea::make('formatted_address')
+                            ->label('Formatted Address')
+                            ->required()
+                            ->maxLength(255),
+                        TextInput::make('postal_code')
+                            ->label('Pin Code')
+                            ->required()
+                            ->maxLength(255),
+                        TextInput::make('address')
+                            ->label('Street')
+                            ->required()
+                            ->maxLength(255),
+                        TextInput::make('city')
+                             ->default('Gaya')
+                            ->label('City')
+                            ->required()
+                            ->maxLength(255),
+                        TextInput::make('state')
+                             ->default("Bihar")
+                            ->label('State')
+                            ->required()
+                            ->maxLength(255),
+
+
+                    ]) ->columns(2),
 
                 Fieldset::make('Images')
                 ->schema([
@@ -75,6 +106,23 @@ class ListingResource extends Resource
                 ])
                 ->columns(1),
 
+                Fieldset::make('Video')
+                ->schema([
+                    Repeater::make('videos')
+                        ->relationship('videos')
+                        ->schema([
+
+                            FileUpload::make('video')
+                            ->required()
+                            ->directory('videos')
+                           ,
+                        ])
+                        ->defaultItems(0)
+                        ->grid(4)
+                        
+                ])
+                ->columns(1),
+
 
                 Fieldset::make('Amenities')
                 ->schema([
@@ -83,8 +131,14 @@ class ListingResource extends Resource
                         ->schema([
                             
                             Select::make('amenity_id')
-
+            
                             ->options(Amenity::all()->pluck('name', 'id'))
+                            // ->options([
+                            //     'tailwind' => 'Tailwind CSS',
+                            //     'alpine' => 'Alpine.js',
+                            //     'laravel' => 'Laravel',
+                            //     'livewire' => 'Laravel Livewire',
+                            // ])
 
                             ])
                             ->grid(4)
@@ -102,24 +156,27 @@ class ListingResource extends Resource
                 TextInput::make('price_per_day')
                     ->numeric()
                     ->required(),
-                Hidden::make('review_stars')
-                     ->default(0)
-                    ->required(),
 
                 Toggle::make('half_day_discount')
+                        ->reactive()
                     ->required(),
                 TextInput::make('half_discount_rate')
-                    ->label('Half Discount Rate %')
+                ->reactive()
+                    ->label('Half Day Discount %')
                     ->numeric()
                     ->default(0)
-                    ->required(),
+                    ->required()
+                    ->disabled(fn (Closure $get) => $get('half_day_discount') == 0 ? True : False ),
                 Toggle::make('full_day_discount')
+                     ->reactive()
                     ->required(),
                 TextInput::make('full_discount_rate')
+                        ->reactive()
                         ->label('Full Discount Rate %')
                         ->numeric()
                      ->default(0)
-                    ->required(),
+                    ->required()
+                    ->disabled(fn (Closure $get) => $get('full_day_discount') == 0 ? True : False ),
                 TextInput::make('sale_tax')
                     ->numeric()
                     ->default(0)
@@ -131,25 +188,17 @@ class ListingResource extends Resource
                     ->required()
                     ->timezone('America/New_York'),
                 TextInput::make('min_hour')
+                        ->label('Minimum Hour Booking')
                         ->numeric()
                         ->minValue(1)
                         ->maxValue(24)
                     ->required(),
-                    Toggle::make('cleaning_fee')
-                            ->required(),
-                    TextInput::make('cleaning_fee_percent')
-                             ->numeric()
-                            ->default(0)
-                            ->required(),
             
                      
-                        Textarea::make('advance_notice')
-                            ->required()
-                            ->maxLength(255)
-                            ->maxLength(65535),
+                       
                         Toggle::make('status')
                             ->required(),
-                    ]) ->columns(4)
+                    ]) ->columns(5)
             ]);
     }
 

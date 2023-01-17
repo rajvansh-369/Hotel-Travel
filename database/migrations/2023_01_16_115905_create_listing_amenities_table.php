@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('listing_amenities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('listing_id')->constrained('listings')->references('id')->onDelete('cascade');
-            $table->foreignId('amenity_id')->constrained('amenities')->references('id')->onDelete('cascade');
+            $table->string('amenity_id');
             $table->timestamps();
         });
     }

@@ -21,8 +21,7 @@ return new class extends Migration
             $table->text('picture');
             $table->double('price_per_hour', 8, 2);
             $table->double('price_per_day', 8, 2);
-            $table->integer('review_stars');
-            $table->integer('status');
+            // $table->integer('review_stars');
             $table->tinyInteger('half_day_discount');
             $table->tinyInteger('half_discount_rate');
             $table->tinyInteger('full_day_discount');
@@ -32,10 +31,11 @@ return new class extends Migration
             $table->text('full_day_end_time');
             $table->text('min_hour');
             $table->string('advance_notice');
-            $table->longText('hosting_instruction');
-            $table->integer('cleaning_fee');
-            $table->double('cleaning_fee_percent',8,2);
-            $table->integer('listing_type');
+            $table->integer('status');
+            // $table->longText('hosting_instruction');
+            // $table->integer('cleaning_fee');
+            // $table->double('cleaning_fee_percent',8,2);
+            // $table->integer('listing_type');
 
           
             $table->timestamps();

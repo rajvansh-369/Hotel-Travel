@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Listing extends Model
 {
+
+    protected $casts = [
+        'lisitng_amenities' => 'array',
+    ];
     use HasFactory;
 
     protected $fillable = [
@@ -48,5 +52,9 @@ class Listing extends Model
 
     public function picture(){
         return $this->hasOne(Picture::class);
+    }
+
+    public function videos(){
+        return $this->hasOne(Video::class);
     }
 }

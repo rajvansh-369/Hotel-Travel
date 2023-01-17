@@ -5,21 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Address extends Model
+class Video extends Model
 {
     use HasFactory;
+
     protected $fillable = [
     
         'listing_id',
-        'formatted_address',
-        'postal_code',
-        'address',
-        'city',
-        'state',
+        'video',
+
     
     ];
-
-    public function address(){
+      
+    public function picture(){
         return $this->belongsTo(Listing::class);
     }
 }
