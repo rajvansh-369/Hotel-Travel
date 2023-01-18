@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,20 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 //     return $data->with('lisitng_amenities')->get();
 // });
-
-// Route::get('/', function () {
+Route::get('/', function () {
     
-//     return view('pages.home');
-// })->name('home');
-
-Route::get('/', [ListingController::class, 'index'])->name('home');
-Route::get('/hotels', [ListingController::class, 'hotels'])->name('hotels');
-Route::get('/contact', [ListingController::class, 'contact'])->name('contact');
-
-
-
-
-// Route::get('/contact', function () {
+    return view('pages.home');
+})->name('home');
+Route::get('/hotels', function () {
     
-//     return view('pages.contact');
-// })->name('contact');
+    return view('pages.hotels');
+})->name('hotels');
+Route::get('/contact', function () {
+    
+    return view('pages.contact');
+})->name('contact');
