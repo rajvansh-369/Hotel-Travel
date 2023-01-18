@@ -30,9 +30,7 @@ class ListingResource extends Resource
 {
     protected static ?string $model = Listing::class;
 
-    protected static ?string $navigationIcon = 'fas-hotel';
-
-    protected static ?string $navigationLabel = 'Hotels';
+    protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
     {
@@ -133,9 +131,8 @@ class ListingResource extends Resource
                         ->schema([
                             
                             Select::make('amenity_id')
-                            // ->multiple()
+            
                             ->options(Amenity::all()->pluck('name', 'id'))
-                            ->label('Select Amenity')
                             // ->options([
                             //     'tailwind' => 'Tailwind CSS',
                             //     'alpine' => 'Alpine.js',
@@ -144,7 +141,6 @@ class ListingResource extends Resource
                             // ])
 
                             ])
-                            ->label("Hotel's Amenities")
                             ->grid(4)
                         ])
                         ->columns(1),
@@ -187,10 +183,10 @@ class ListingResource extends Resource
                     ->required(),
                 TimePicker::make('full_day_start_time')
                     ->required()
-                    ->timezone('Asia/Kolkata'),
+                    ->timezone('America/New_York'),
                 TimePicker::make('full_day_end_time')
                     ->required()
-                    ->timezone('Asia/Kolkata'),
+                    ->timezone('America/New_York'),
                 TextInput::make('min_hour')
                         ->label('Minimum Hour Booking')
                         ->numeric()
