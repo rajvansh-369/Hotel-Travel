@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <main>
-
+        {{-- {{dd($hotels->picture)}} --}}
         <div class="slider-area hero-bg1  hero-overly">
             <div class="single-slider  slider-height2 d-flex align-items-center">
                 <div class="container">
@@ -67,13 +67,16 @@
         </div>
 
 
-        <div class="location-house section-padding">
-            <div class="container">
-                <div class="row">
+        <div class="container-fluid location-house section-padding">
+            <div class="row mx-auto">
+                <div class="col-xl-2 col-lg-1 d-none d-md-block"></div>
+            <div class="col-xl-6 col-lg-7 col-md-12">
+                <div class="container">
+                 <div class="row">
                     <div class="col-xl-4 col-lg-5 col-md-8">
 
                         <div class="section-tittle mb-50">
-                            <h2>Our Rooms</h2>
+                            <h2>Top-rated around you</h2>
                             <p>The concept and service of the best luxury hotels in Asturias in our sophisticated.</p>
                         </div>
                     </div>
@@ -81,75 +84,30 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
 
-                        <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel1.jpg" alt="">
-                            <div class="location-contents">
-                                <h3><a href="#">Luxurious Room </a></h3>
-                                <p>2 Adult 1 Children</p>
-                                <div class="price">
-                                    <span>Started from<span>$500</span></span>
+                    @foreach ($hotels as $hotel)
+
+                    {{-- {{dd($hotel->picture)}} --}}
+                        <div class="col-lg-4">
+                            <div class="single-location single-location2 mb-30">
+                                <img src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
+                                <div class="location-contents">
+                                    <h3><a href="#">Family Room </a></h3>
+                                    <p>2 Adult 1 Children</p>
+                                    <div class="price">
+                                        <span>Started from<span>$500</span></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+
+
+
                     <div class="col-lg-4">
 
                         <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel2.jpg" alt="">
-                            <div class="location-contents">
-                                <h3><a href="#">Family Room </a></h3>
-                                <p>2 Adult 1 Children</p>
-                                <div class="price">
-                                    <span>Started from<span>$500</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-
-                        <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel3.jpg" alt="">
-                            <div class="location-contents">
-                                <h3><a href="#">Couple Room </a></h3>
-                                <p>2 Adult 1 Children</p>
-                                <div class="price">
-                                    <span>Started from<span>$500</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-
-                        <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel4.jpg" alt="">
-                            <div class="location-contents">
-                                <h3><a href="#">Luxurious Room</a></h3>
-                                <p>2 Adult 1 Children</p>
-                                <div class="price">
-                                    <span>Started from<span>$500</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-
-                        <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel5.jpg" alt="">
-                            <div class="location-contents">
-                                <h3><a href="#">Couple Room </a></h3>
-                                <p>2 Adult 1 Children</p>
-                                <div class="price">
-                                    <span>Started from<span>$500</span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-
-                        <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel6.jpg" alt="">
+                            <img class="hotel_mainImg" src="https://hostdev2.justboardrooms.com/Images/797324500.JPG" alt="">
                             <div class="location-contents">
                                 <h3><a href="#">Family Room </a></h3>
                                 <p>2 Adult 1 Children</p>
@@ -162,7 +120,7 @@
                     <div class="col-lg-4">
 
                         <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel7.jpg" alt="">
+                            <img src="https://hostdev2.justboardrooms.com/Images/2133425839.JPG" alt="">
                             <div class="location-contents">
                                 <h3><a href="#">Couple Room </a></h3>
                                 <p>2 Adult 1 Children</p>
@@ -175,7 +133,7 @@
                     <div class="col-lg-4">
 
                         <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel8.jpg" alt="">
+                            <img src="https://hostdev2.justboardrooms.com/Images/1810191518.jpg" alt="">
                             <div class="location-contents">
                                 <h3><a href="#">Luxurious Room</a></h3>
                                 <p>2 Adult 1 Children</p>
@@ -188,7 +146,59 @@
                     <div class="col-lg-4">
 
                         <div class="single-location single-location2 mb-30">
-                            <img src="assets/img/gallery/hotel9.jpg" alt="">
+                            <img src="https://hostdev2.justboardrooms.com/Images/1810191518.jpg" alt="">
+                            <div class="location-contents">
+                                <h3><a href="#">Couple Room </a></h3>
+                                <p>2 Adult 1 Children</p>
+                                <div class="price">
+                                    <span>Started from<span>$500</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="single-location single-location2 mb-30">
+                            <img src="https://hostdev2.justboardrooms.com/Images/1810191518.jpg" alt="">
+                            <div class="location-contents">
+                                <h3><a href="#">Family Room </a></h3>
+                                <p>2 Adult 1 Children</p>
+                                <div class="price">
+                                    <span>Started from<span>$500</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="single-location single-location2 mb-30">
+                            <img src="{{ asset('img/gallery/hotel1.webp') }}" alt="">
+                            <div class="location-contents">
+                                <h3><a href="#">Couple Room </a></h3>
+                                <p>2 Adult 1 Children</p>
+                                <div class="price">
+                                    <span>Started from<span>$500</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="single-location single-location2 mb-30">
+                            <img src="https://hostdev2.justboardrooms.com/Images/1810191518.jpg" alt="">
+                            <div class="location-contents">
+                                <h3><a href="#">Luxurious Room</a></h3>
+                                <p>2 Adult 1 Children</p>
+                                <div class="price">
+                                    <span>Started from<span>$500</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+
+                        <div class="single-location single-location2 mb-30">
+                            <img src="https://hostdev2.justboardrooms.com/Images/1810191518.jpg" alt="">
                             <div class="location-contents">
                                 <h3><a href="#">Family Room </a></h3>
                                 <p>2 Adult 1 Children</p>
@@ -201,6 +211,9 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-4 col-lg-4 col-md-12"></div>
+        </div>
+    </div>
 
 
         <div class="video-area section-img-bg2 d-flex align-items-center"

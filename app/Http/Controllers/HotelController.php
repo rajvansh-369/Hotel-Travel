@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -10,13 +11,18 @@ class HotelController extends Controller
 
     public function index(){
 
-        return view('pages.home');
+
+        $hotels = Listing::get();
+        return view('pages.home' ,compact('hotels'));
     }
     
     
     public function hotels(){
 
-        return view('pages.hotels');
+
+
+        $hotels = Listing::get();
+        return view('pages.hotels' ,compact('hotels'));
     }
    
    

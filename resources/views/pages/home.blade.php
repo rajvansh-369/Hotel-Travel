@@ -67,6 +67,57 @@
         </div>
 
 
+
+
+        <div class="container-fluid location-house section-padding">
+            <div class="row mx-auto">
+                <div class="col-xl-2 col-lg-1 d-none d-md-block"></div>
+            <div class="col-xl-6 col-lg-7 col-md-12">
+                <div class="container">
+                 <div class="row">
+                    <div class="col-xl-6 col-lg-8 col-md-10">
+
+                        <div class="section-tittle mb-50">
+                            <h2>Top-rated around you</h2>
+                            <p>The concept and service of the best luxury hotels in Asturias in our sophisticated.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+
+                    @foreach ($hotels as $hotel)
+
+                    {{-- {{dd($hotel->picture)}} --}}
+                        <div class="col-lg-4">
+                            <div class="single-location single-location2 mb-30">
+                                <img src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
+                                <div class="location-contents">
+                                    <h3><a href="#">{{$hotel->name}} </a></h3>
+                                    <p>2 Adult 1 Children</p>
+                                    <div class="price">
+                                        <span>Started from<span>$500</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-12">
+            <div id="map" style="height: 68rem; width:100%;">
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
         <div class="support-company-area section-padding">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -338,4 +389,58 @@
         </section>
 
     </main>
+
+        @php
+            $locations = [-25.4372382 , -49.2699727]
+            
+        @endphp
+
+
+
+
+    <script>
+        function initMap() {
+
+
+            var locationArr = @json($locations);
+            
+            console.log(locationArr[0]);
+    
+            var mainCoords = locationArr[0];
+            console.log(mainCoords.lat);
+    
+            var mapOptions = {
+                center: mainCoords,
+                zoom: 9,
+            };
+    
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            const icon = {
+                url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
+                scaledSize: new google.maps.Size(35, 50), // scaled size
+             
+            };
+            var allMarkers = [];
+            for (var i = 0; i < locationArr.length; i++) {
+                var myCoords = locationArr[i];
+    
+                r = new google.maps.Marker({
+                    position: myCoords,
+                    map: map,
+                    icon:icon,
+                    // url: @json(url('/listing-details'))+'/'+myCoords.listingId,                
+                });
+    
+                allMarkers.push(r);
+    
+                
+            }
+            allMarkers.map((marker) => {
+                marker.addListener("click", () => { window.open( marker.url,'_blank') })
+            });
+        }
+        </script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
+        </script>
 @endsection
