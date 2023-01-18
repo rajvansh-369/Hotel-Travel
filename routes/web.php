@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,15 +20,24 @@ use Illuminate\Support\Facades\Route;
 
 //     return $data->with('lisitng_amenities')->get();
 // });
-Route::get('/', function () {
+
+
+// uuid_create()
+// Route::get('/', function () {
     
-    return view('pages.home');
-})->name('home');
-Route::get('/hotels', function () {
+//     return view('pages.home');
+// })->name('home');
+// Route::get('/hotels', function () {
     
-    return view('pages.hotels');
-})->name('hotels');
-Route::get('/contact', function () {
+//     return view('pages.hotels');
+// })->name('hotels');
+// Route::get('/contact', function () {
     
-    return view('pages.contact');
-})->name('contact');
+//     return view('pages.contact');
+// })->name('contact');
+
+
+
+Route::get('/', [HotelController::class, 'index'])->name('home');
+Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
+Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
