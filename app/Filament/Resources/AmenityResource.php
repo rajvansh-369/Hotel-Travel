@@ -8,17 +8,12 @@ use App\Models\Amenity;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Guava\FilamentIconPicker\Forms\IconPicker;
-use Guava\FilamentIconPicker\Tables\IconColumn;
-
 
 class AmenityResource extends Resource
 {
@@ -30,20 +25,12 @@ class AmenityResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
+                Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(255)
-                    ->required(),
-                // FileUpload::make('icon')
-                    
-                //     ,
-                IconPicker::make('icon')
-                     
-                        ->columns([
-                            'default' => 1,
-                            'lg' => 3,
-                            '2xl' => 5,
-                        ]),
+                    ->maxLength(255),
+                FileUpload::make('icon')
+                    ->required()
+                    ,
                Textarea::make('description')
                     ->required()
                     ->maxLength(255),
@@ -58,7 +45,7 @@ class AmenityResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                TextColumn::make('icon'),
+                Tables\Columns\TextColumn::make('icon'),
                 Tables\Columns\TextColumn::make('description'),
   
                 Tables\Columns\TextColumn::make('type'),
