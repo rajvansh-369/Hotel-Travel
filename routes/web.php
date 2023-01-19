@@ -40,4 +40,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
+Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');

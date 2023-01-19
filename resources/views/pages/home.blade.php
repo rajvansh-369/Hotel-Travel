@@ -89,18 +89,21 @@
 
                     @foreach ($hotels as $hotel)
 
-                    {{-- {{dd($locations)}} --}}
-                        <div class="col-lg-6">
+                    {{-- {{dd($hotel)}} --}}
+                    <div class="col-lg-6">
+                        <a target="_blank" href="/hotel-details/{{$hotel->id}}">
                             <div class="single-location single-location2 mb-30">
-                                <img class="hotel_mainImg" src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
+                                <img class="hotel_mainImg" src="{{asset('/storage/'.$hotel->picture[0]->picture)}}" alt="">
+                                
                                 <div class="location-contents">
                                     <h3><a href="#">{{$hotel->name}} </a></h3>
                                     <p>2 Adult 1 Children</p>
                                     <div class="price">
-                                        <span>Started from<span>$500</span></span>
+                                        <span>Started from<span>₹{{$hotel->price_per_hour}}</span></span>
                                     </div>
                                 </div>
                             </div>
+                        </a> 
                         </div>
                     @endforeach
                 </div>

@@ -37,9 +37,14 @@ class HotelController extends Controller
     }
     
     
+    public function hotel_details($id){
+
+        $hotel = Listing::where('id', $id)->first();
+
+        return view('pages.hotel-details' ,compact('hotel'));
+    }
+   
     public function hotels(){
-
-
 
         $hotels = Listing::get();
 
