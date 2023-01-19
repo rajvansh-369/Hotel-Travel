@@ -68,7 +68,7 @@
 
 
 
-
+        
         <div class="container-fluid location-house section-padding">
             <div class="row mx-auto">
                 <div class="col-xl-2 col-lg-1 d-none d-md-block"></div>
@@ -89,10 +89,10 @@
 
                     @foreach ($hotels as $hotel)
 
-                    {{-- {{dd($hotel->picture)}} --}}
-                        <div class="col-lg-4">
+                    {{-- {{dd($locations)}} --}}
+                        <div class="col-lg-6">
                             <div class="single-location single-location2 mb-30">
-                                <img src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
+                                <img class="hotel_mainImg" src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
                                 <div class="location-contents">
                                     <h3><a href="#">{{$hotel->name}} </a></h3>
                                     <p>2 Adult 1 Children</p>
@@ -111,7 +111,7 @@
         </div>
         </div>
     </div>
-
+        </div>
 
 
 
@@ -391,56 +391,59 @@
     </main>
 
         @php
-            $locations = [-25.4372382 , -49.2699727]
-            
+            // $locations =
+
+            //        array(["listingId"=>119,
+            //         "lat"=>24.700270,
+            //         "lng"=>84.990890
+            //        ]);
+            // $locations = (object)$locations;
+
+            // dd($locations);
         @endphp
+<script>
+    function initMap() {
 
 
+        var locationArr = @json($locations);
+        
+        console.log(locationArr.length);
 
+        var mainCoords = locationArr[0];
+        console.log(mainCoords.lat);
 
-    <script>
-        function initMap() {
+        var mapOptions = {
+            center: { lat: mainCoords.lat, lng: mainCoords.lng },
+            zoom: 9,
+        };
 
+        const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        const icon = {
+            url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
+            scaledSize: new google.maps.Size(25, 40), // scaled size
+         
+        };
+        var allMarkers = [];
+        for (var i = 0; i < locationArr.length; i++) {
+            var myCoords = locationArr[i];
 
-            var locationArr = @json($locations);
-            
-            console.log(locationArr[0]);
-    
-            var mainCoords = locationArr[0];
-            console.log(mainCoords.lat);
-    
-            var mapOptions = {
-                center: mainCoords,
-                zoom: 9,
-            };
-    
-            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            const icon = {
-                url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
-                scaledSize: new google.maps.Size(35, 50), // scaled size
-             
-            };
-            var allMarkers = [];
-            for (var i = 0; i < locationArr.length; i++) {
-                var myCoords = locationArr[i];
-    
-                r = new google.maps.Marker({
-                    position: myCoords,
-                    map: map,
-                    icon:icon,
-                    // url: @json(url('/listing-details'))+'/'+myCoords.listingId,                
-                });
-    
-                allMarkers.push(r);
-    
-                
-            }
-            allMarkers.map((marker) => {
-                marker.addListener("click", () => { window.open( marker.url,'_blank') })
+            r = new google.maps.Marker({
+                position: myCoords,
+                map: map,
+                icon:icon,
+                url: @json(url('/hotels'))+'/'+myCoords,                
             });
+
+            allMarkers.push(r);
+
+           
+
+            
         }
-        </script>
-        <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
-        </script>
+
+        allMarkers.map((marker) => {
+            marker.addListener("click", () => { window.open( marker.url,'_blank') })
+        });
+    }
+    </script>
 @endsection

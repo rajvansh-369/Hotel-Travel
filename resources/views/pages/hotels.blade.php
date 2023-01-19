@@ -90,7 +90,7 @@
                     {{-- {{dd($hotel->picture)}} --}}
                         <div class="col-lg-4">
                             <div class="single-location single-location2 mb-30">
-                                <img src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
+                                <img class="hotel_mainImg" src="{{asset('/storage/'.$hotel->picture->picture)}}" alt="">
                                 <div class="location-contents">
                                     <h3><a href="#">Family Room </a></h3>
                                     <p>2 Adult 1 Children</p>

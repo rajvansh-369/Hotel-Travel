@@ -62,6 +62,15 @@ class ListingResource extends Resource
                     ->relationship('address')
                     ->schema([
 
+                        TextInput::make('lat')
+                            ->label('Latitude')
+                            ->required()
+                            ->maxLength(255),
+                            TextInput::make('lng')
+                            ->label('Longitude')
+                            ->required()
+                            ->maxLength(255),
+
                         Textarea::make('formatted_address')
                             ->label('Formatted Address')
                             ->required()
