@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->references('id')->onDelete('cascade');
             $table->string('name');
             $table->text('description');
-            $table->text('picture');
+
             $table->double('price_per_hour', 8, 2);
             $table->double('price_per_day', 8, 2);
 
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->text('full_day_start_time');
             $table->text('full_day_end_time');
             $table->text('min_hour');
-            $table->string('advance_notice');
+            $table->text('advance_notice');
             $table->integer('status');
             // $table->longText('hosting_instruction');
             // $table->integer('cleaning_fee');

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
+use App\Models\Listing;
+use App\Models\Picture;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -10,13 +13,37 @@ class HotelController extends Controller
 
     public function index(){
 
-        return view('pages.home');
+
+        
+
+            // $addr = Picture::get()->toArray();
+
+            // return  ($addr);
+        
+        $hotels = Listing::get();
+        
+        $location = [];
+        foreach($hotels as $hotel){
+
+
+            $location['lat'] = (double)$hotel->address->lat;
+            $location['lng'] = (double)$hotel->address->lng;
+            $location['listing_id'] = (double)$hotel->address->listing_id;
+            $locations[] = $location;
+        }
+        // dd(json_encode($locations));
+
+        return view('pages.home' ,compact('hotels' , 'locations'));
     }
     
     
     public function hotels(){
 
-        return view('pages.hotels');
+
+
+        $hotels = Listing::get();
+
+        return view('pages.hotels' ,compact('hotels'));
     }
    
    
