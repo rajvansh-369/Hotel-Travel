@@ -91,7 +91,7 @@
 
                     {{-- {{dd($hotel)}} --}}
                     <div class="col-lg-6">
-                        <a target="_blank" href="/hotel-details/{{$hotel->id}}">
+                        <a target="_blank" href="{{route('hotel-details',$hotel->id)}}">
                             <div class="single-location single-location2 mb-30">
                                 <img class="hotel_mainImg" src="{{asset('/storage/'.$hotel->picture[0]->picture)}}" alt="">
                                 
