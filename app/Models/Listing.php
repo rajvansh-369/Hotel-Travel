@@ -51,7 +51,7 @@ class Listing extends Model
     }
 
     public function picture(){
-        return $this->hasOne(Picture::class);
+        return $this->hasMany(Picture::class);
     }
 
     public function videos(){
