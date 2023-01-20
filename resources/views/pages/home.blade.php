@@ -419,10 +419,10 @@
             center: { lat: mainCoords.lat, lng: mainCoords.lng },
             zoom: 13,
         };
-        // asset('/storage/map_pointer.png')
+        
         const map = new google.maps.Map(document.getElementById('map'), mapOptions);
         const icon = {
-            url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
+            url: @json(asset('/storage/map_pointer.png')), // url
             // url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
             scaledSize: new google.maps.Size(45, 65), // scaled size
          
