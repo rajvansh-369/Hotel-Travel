@@ -417,13 +417,14 @@
 
         var mapOptions = {
             center: { lat: mainCoords.lat, lng: mainCoords.lng },
-            zoom: 9,
+            zoom: 13,
         };
-
+        // asset('/storage/map_pointer.png')
         const map = new google.maps.Map(document.getElementById('map'), mapOptions);
         const icon = {
             url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
-            scaledSize: new google.maps.Size(25, 40), // scaled size
+            // url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
+            scaledSize: new google.maps.Size(45, 65), // scaled size
          
         };
         var allMarkers = [];
@@ -434,7 +435,7 @@
                 position: myCoords,
                 map: map,
                 icon:icon,
-                url: @json(url('/hotels'))+'/'+myCoords,                
+                url: @json(url('/hotel-details'))+'/'+myCoords.listing_id,                
             });
 
             allMarkers.push(r);
