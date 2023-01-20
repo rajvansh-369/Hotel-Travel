@@ -3,46 +3,47 @@
     {{-- {{dd($hotel->picture)}} --}}
 
     <main>
-        <div class="container  gallery">
+        <div class="container-fluid  gallery">
             <div class="lightbox">
                 <div class="row">
                     <div class="col-lg-6">
                         @foreach ($hotel->picture->where('picture_type', 'main_picture') as $picture)
                             
                         <img src="{{asset('/storage/'.$picture->picture)}}"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp" alt="Dark Roast Iced Coffee"
-                            class="w-100 shadow-1-strong rounded" />
+                            data-mdb-img="{{asset('/storage/'.$picture->picture)}}" alt="{{$hotel->name}}"
+                            class="w-100 mw-100 shadow-1-strong rounded" />
                         @endforeach
                     </div>
                     <div class="col-lg-6">
-                       
-                        
+                        <div class="row ">
+                    
                        @foreach ( $hotel->picture->where('picture_type', 'rest_image') as $picture )
                            
-                       <div class="col lg 4">
+                       <div class="col-lg-6 gallery_img ">
                        <img src="{{asset('/storage/'.$picture->picture)}}"
                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp" alt="Table Full of Spices"
-                           class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" /> 
+                           class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images " /> 
                         </div>
                        @endforeach
-                        {{-- <img src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
-                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp" alt="Coconut with Strawberries"
-                            class="w-100 shadow-1-strong rounded" /> --}}
+                    </>
+                       
                     </div>
 
                 </div>
             </div>
         </div>
-
+        {{-- <hr class="hr" /> --}}
         <div class="container brdetailmain" >
+            
             <p class="gotosrchrslt "><i class="fa fa-angle-left"></i>
                 <a href="https://hostdev2.justboardrooms.com/booking/public">
                     Back
                     <!--Top Rated Around You-->
                 </a>
             </p>
+         
             <div class="row justify-content-between">
-                <div class="col-md-7 col-lg-7">
+                <div class="col-md-7 col-lg-8">
                     <section class="address position-relative py-3">
 
 
@@ -147,7 +148,21 @@
                 </div>
                 <div class="col-md-5 col-lg-4">
 
-                </div>
+                    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Avilbility</div>
+                        <div class="card-body">
+            
+                            <p class="text-center">Full Day Start Time :  {{$hotel->full_day_start_time}}</p>
+                            <p class="text-center">Full Day End Time : {{$hotel->full_day_end_time}}</p>
+                          
+                          
+                            <h6 class="card-title">Price per Hour :   <b>₹{{$hotel->price_per_hour}}</b></h6>
+                          <h5 class="card-title">Price per Day : <b>₹{{$hotel->price_per_day}}</b></h5>
+                          {{-- <h6 class="card-title">Price per Day : <b>₹{{$hotel->price_per_day}}</b></h6> --}}
+                          {{-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
+                          <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                      </div>
             </div>
             <section class="location mt-5">
                 <h4>Location</h4>

@@ -55,13 +55,13 @@
                                         <li><a href="{{route('home')}}">Home</a></li>
                                         <li><a href="{{route('hotels')}}">Rooms</a></li>
                                         <li><a href="about.html">About</a></li>
-                                        <li><a href="#">Blog</a>
+                                        {{-- <li><a href="#">Blog</a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="blog_details.html">Blog Details</a></li>
                                                 <li><a href="elements.html">Element</a></li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                         <li><a href="{{route('contact')}}">Contact Us</a></li>
                                     </ul>
                                 </nav>

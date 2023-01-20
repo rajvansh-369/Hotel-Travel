@@ -3,6 +3,13 @@ img.hotel_mainImg {
     min-height: 300px;
 }
 
+@media only screen and (max-width: 600px) {
+    img.hotel_mainImg {
+        max-height: 300px;
+        min-height: 230px;
+    }
+  }
+
 
 h1,
 h2,
@@ -89,3 +96,16 @@ img.w-100.shadow-1-strong.rounded {
     background-color: #cccccc;
     opacity: 1.0;
 } */
+
+
+.gallery_img{
+
+    margin-top: 21px;
+
+}
+
+.gallery_images{
+
+    max-height: 340px;
+    min-height: 340px;
+}
