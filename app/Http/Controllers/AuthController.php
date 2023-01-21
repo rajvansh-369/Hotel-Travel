@@ -15,7 +15,15 @@ class AuthController extends Controller
     
 
     public function loginView(){
+
+        if(auth()->user()){
+
+            return redirect()->back();
+      }
+
         return view('auth.login');
+
+
     }
   
     public function logout(){
@@ -29,21 +37,28 @@ class AuthController extends Controller
     }
    
     public function registerView(){
+
+        if(auth()->user()){
+
+            return redirect()->back();
+      }
+      
         return view('auth.register');
     }
   
   
   
-    // public function login(Request $request){
+    // public function authLogin(Request $request){
 
     //         $credentials = $request->validate([
     //                 'email' => ['required', 'email'],
     //                 'password' => ['required'],
-    //                 'remember_me' => 'boolean',
+    //                 // 'remember_me' => 'boolean',
     //             ]);
 
     //                 $checkEmail = User::where('email' , $request->email)->first();
 
+    //                 dd($checkEmail);
     //                 if(!$checkEmail){
     //                     return back()->withErrors([
     //                         'email' => 'Email does not match Please Register.',

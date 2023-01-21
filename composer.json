@@ -15,7 +15,8 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",
-        "owenvoke/blade-fontawesome": "^2.1"
+        "owenvoke/blade-fontawesome": "^2.1",
+        "ralphjsmit/livewire-urls": "^1.1"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",

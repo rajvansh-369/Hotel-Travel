@@ -400,8 +400,15 @@ testimonial.slick({
     });
 
 /* 11. Datepicker */
-    $('#datepicker1').datepicker();
-    $('#datepicker2').datepicker();
+
+var d = new Date();
+
+
+
+d.setDate(d.getDate() - 1);
+
+    $('#datepicker1').datepicker({ minDate: d});
+    $('#datepicker2').datepicker({ minDate: d});
 
 
 
