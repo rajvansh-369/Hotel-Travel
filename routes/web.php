@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,3 +43,13 @@ Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
+
+
+
+Route::get('/login', [AuthController::class, 'loginView'])->name('loginView');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/authLogin', [AuthController::class, 'login'])->name('authLogin');
+
+Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
+
+

@@ -1,4 +1,4 @@
-<div id="preloader-active">
+{{-- <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <header>
     <div class="header-area header-transparent">
@@ -63,12 +63,19 @@
                                             </ul>
                                         </li> --}}
                                         <li><a href="{{route('contact')}}">Contact Us</a></li>
+                                      @if (auth()->user())
+                                      <li><a href="{{route('logout')}}">Logout</a></li>
+                                          
+                                      @endif
                                     </ul>
                                 </nav>
                             </div>
 
                             <div class="header-right-btn f-right d-flex align-items-center">
-                                <a href="#" class="header-btn2 d-none d-lg-block">Book Now</a>
+                                <a href="{{ auth()->user() ? "#" :  route('loginView') }} " class="header-btn2 d-none d-lg-block"> 
+                                   
+                                    {{ auth()->user() ? "Welcome: " : ""}}   
+                                    <span class="loginName" > {{ auth()->user() ? auth()->user()->name : "Login"}} </span></a>
                             </div>
                         </div>
 
