@@ -213,7 +213,7 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
-                                            <input id="datepicker1" name="startDate" placeholder="Check in"
+                                            <input id="datepicker1" required name="startDate" placeholder="Check in"
                                                 class="text-secondary datePicker" />
 
                                                 <input type="hidden" name="userID" value="{{auth()->user()->id}}">
@@ -224,7 +224,7 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
-                                            <input id="datepicker2" name="endtDate" placeholder="Check out"
+                                            <input id="datepicker2" required name="endtDate" placeholder="Check out"
                                                 class="text-secondary datePicker" />
                                         </div>
                                     </div>
