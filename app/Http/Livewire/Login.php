@@ -3,8 +3,10 @@
 namespace App\Http\Livewire;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use RalphJSmit\Livewire\Urls\Facades\Url;
 
 class Login extends Component
 {
@@ -25,23 +27,25 @@ class Login extends Component
 
     public function login(){
 
-
+                $url = url()->previous();
+               $arrUrl = explode("/" ,$url);
         $this->validate();
-
             $checkEmail = User::where('email' , $this->email)->first();
-
             if(!$checkEmail){
-
-                return    session()->flash('message', 'Email does not match Please Register.');
-
-                
+                return    session()->flash('message', 'Email does not match Please Register.');      
             }
 
-            // dd(Auth::attempt($credentials));
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             // $this->session()->regenerate();
 
-            return redirect(route('home'));
+            if( $arrUrl[3]  == "hotel-details"){
+
+                return redirect(route('hotel-details', $arrUrl[4]));
+            }else{
+
+
+                return redirect(route('home'));
+            }
         }
         return  session()->flash('message', 'Invalid Password.');
 

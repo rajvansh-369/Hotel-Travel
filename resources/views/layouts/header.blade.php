@@ -53,7 +53,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="{{route('home')}}">Home</a></li>
-                                        <li><a href="{{route('hotels')}}">Rooms</a></li>
+                                        <li><a href="{{route('hotels')}}">Hotels</a></li>
                                         <li><a href="about.html">About</a></li>
                                         {{-- <li><a href="#">Blog</a>
                                             <ul class="submenu">

@@ -1,12 +1,12 @@
 img.hotel_mainImg {
-    max-height: 300px;
+    max-height: auto;
     min-height: 300px;
 }
 
 @media only screen and (max-width: 600px) {
     img.hotel_mainImg {
-        max-height: 300px;
-        min-height: 230px;
+        max-height: auto;
+        min-height: auto;
     }
   }
 
@@ -46,7 +46,7 @@ h6 {
 .brdetailmain h4 {
     color: #444444;
     font-size: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 	font-weight:bold;
 }
 
@@ -100,7 +100,7 @@ img.w-100.shadow-1-strong.rounded {
 
 .gallery_img{
 
-    margin-top: 21px;
+    margin-top: 10px;
 
 }
 
@@ -114,4 +114,183 @@ img.w-100.shadow-1-strong.rounded {
 span.loginName {
     color: red;
     font-weight: bold;
+}
+
+
+#pagin {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul#pagin li {
+    padding: 0.5em 0.7em;
+}
+
+
+ul#pagin li a {
+    text-decoration: none;
+    color: #686058;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+ul#pagin li a.current {
+    color: #fff;
+    background-color: #686058;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+ul#pagin a:hover {
+    text-decoration: underline;
+}
+
+.availability{
+
+    box-shadow: 0px 0px 11px #ccc;
+    border-radius: 4px;
+}
+
+
+
+ p.dicnt {
+    text-align: center;
+    background-color: #ec0517;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 7px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+
+.hr {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+p.pricehrdy {
+    color: #a1a1a1;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+
+input.datePicker {
+    width: 285px;
+}
+
+.navBar {
+    background-color: black;
+    height: 135px;
+}
+
+.booking-detail h1.header {
+    font-size: 30px;
+    color: #444444;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-weight: 600;
+}
+
+.bd-img {
+    width: 100%;
+    height: 335px;
+}
+
+.booking-detail .address p.locnm {
+    font-size: 20px;
+    margin: 0;
+    color: #444444;
+}
+.booking-detail .address p.tornt {
+    font-size: 17px;
+    margin: 0;
+    color: #444444;
+}
+.booking-detail .address p.bechs {
+    font-size: 20px;
+    margin: 0;
+    color: #7C7C7C;
+}
+
+.booking-detail .address p.locnm {
+    font-size: 20px;
+    margin: 0;
+    color: #444444;
+}
+.booking-detail .payment-card {
+    box-shadow: 0px 0px 12px #ccc;
+    border-radius: 4px;
+    padding: 3em 2.4em;
+}
+.payment-card button.btn.btn-primary {
+    background-color: #ff671d;
+    border-color: #ff671d;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 0;
+}
+.payment-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #444444;
+}
+.payment-card p.date {
+    font-size: 20px;
+    color: #444444;
+}
+.payment-card p.hours {
+    font-size: 17px;
+    color: #444444;
+}
+.payment-card .cost {
+    background-color: #E5E5E5;
+    padding: 7px 17px;
+    font-size: 17px;
+    margin-bottom: 1em;
+}
+.payment-card .cost ul li {
+    padding: 0 6px;
+}
+.payment-card .totlcost li strong {
+    font-size: 20px;
+}
+.payment-card  p.paradetail {
+    color: #444444;
+    font-size: 16px;
+    margin: 2em 0;
+}
+
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25;
+}
+
+
+.btn.btn-primary {
+    background-color: #ff671d;
+    border-color: #ff671d;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+#btn_loginpop_submit {
+    background-color: #FF671D;
+    color: white;
+    height: 40px;
 }

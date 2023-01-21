@@ -44,11 +44,20 @@ Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 
+Route::middleware('session.auth')->group(function(){
+    
+    
+    Route::post('/pre-booking', [HotelController::class, 'preBooking'])->name('preBooking');
+    Route::get('/booking', [HotelController::class, 'booking'])->name('booking');
+    Route::get('/confirmBooking', [HotelController::class, 'confirmBooking'])->name('confirmBooking');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
 
 
 Route::get('/login', [AuthController::class, 'loginView'])->name('loginView');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-Route::post('/authLogin', [AuthController::class, 'login'])->name('authLogin');
+Route::get('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin'); //WIthout Livewire
+
 
 Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
 
