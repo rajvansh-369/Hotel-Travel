@@ -404,6 +404,7 @@
 
             // dd($locations);
         @endphp
+
 <script>
     function initMap() {
 
@@ -450,4 +451,8 @@
         });
     }
     </script>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
+</script>
 @endsection

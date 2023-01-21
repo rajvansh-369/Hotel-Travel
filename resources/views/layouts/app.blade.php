@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hotel's In BodhGaya</title>
-
+    
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    {{-- @include('meta::manager', [
+        'title'         => "Hotel's In BodhGaya",
+        'description'   => 'This is my example description',
+        'image'         => 'Url to the image',
+    ]) --}}
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png">
 
@@ -32,10 +36,11 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
 <!-- MDB -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.css" rel="stylesheet" /> --}}
+@livewireStyles
 </head>
 
 <body>
-
+    @livewireScripts
     @include('layouts.header')
     @yield('content')
     <div id="back-top">
@@ -56,9 +61,7 @@
 
 
     
-        <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
-        </script>
+    
     @include('layouts.footer')
     <script src="{{ asset('js/vendor/modernizr-3.5.0.min.js') }}"></script>
     <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
