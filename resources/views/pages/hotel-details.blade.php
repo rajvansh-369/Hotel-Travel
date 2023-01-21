@@ -215,9 +215,11 @@
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate" placeholder="Check in"
                                                 class="text-secondary datePicker" />
-
+                                                @if (auth()->user())
+                                                    
                                                 <input type="hidden" name="userID" value="{{auth()->user()->id}}">
                                                 <input type="hidden" name="hotelId" value="{{$hotel->id}}">
+                                                @endif
                                         </div>
 
                                     </div>
