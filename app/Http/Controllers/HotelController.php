@@ -201,7 +201,7 @@ class HotelController extends Controller
             ]);
 
             session()->flush();
-            // dd($booked);
+            dd($booked);
         
         
         return view('pages.thank-you');

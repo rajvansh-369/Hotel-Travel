@@ -78,7 +78,7 @@
                     </ul>
                     <ul class="discnt">
                         <li>TAX {{$hotel->sale_tax}}%</li>
-                        <li>- ₹{{$sale_tax}}.00</li>
+                        <li>+ ₹{{$sale_tax}}.00</li>
                     </ul>
                     <hr>
                     <ul class="totlcost">
