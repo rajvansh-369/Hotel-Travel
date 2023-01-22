@@ -36,7 +36,7 @@ class Login extends Component
             }
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            dd(session()->regenerate());
+            session()->regenerate();
 
             if( $arrUrl[3]  == "hotel-details"){
 
