@@ -44,7 +44,7 @@ Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 
-Route::middleware('session.auth')->group(function(){
+Route::middleware(['middleware' => 'auth'], function () {
     
     
     Route::post('/pre-booking', [HotelController::class, 'preBooking'])->name('preBooking');
