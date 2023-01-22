@@ -112,7 +112,7 @@ class HotelController extends Controller
             'formattedEnd' => $endtDate->format('M d, Y'),
             'endTime' => $hotel->full_day_end_time,
             'isAllDay' => 1,
-            'organizer' => $user->id,
+            'organizer' => 1,
             'participants' => [$user->id],
             'subject' => $subject,
             'formattedStart' => $startDate->format('M d, Y'),
