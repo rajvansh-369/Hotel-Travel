@@ -130,6 +130,11 @@ class HotelController extends Controller
             return redirect(route('loginView'));
       }
 
+      if(!session('data')){
+
+        return redirect()->back();
+  }
+
         $bookingData =   session('data');
         $hotel = Listing::with('address')->find($bookingData['hotelId']);
         $user = User::find($bookingData['userID']);
@@ -153,6 +158,13 @@ class HotelController extends Controller
 
             return redirect(route('loginView'));
       }
+        if(!session('data')){
+
+            return redirect()->back();
+      }
+
+
+
         $data =   session('data');
         $totalPrice =   session('totalPrice');
 
@@ -176,7 +188,9 @@ class HotelController extends Controller
                 'lisitng_id' => $data['lisitng_id'],
 
             ]);
-            dd($booked);
+
+            session()->flush();
+            // dd($booked);
         
         
         return view('pages.thank-you');
