@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+{{-- {{dd(auth())}} --}}
 {{-- {{dd($bookingData, $user , $hotel)}} --}}
 <div class="header-top navBar">
     <div class="container-fluid">
