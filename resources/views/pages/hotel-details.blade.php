@@ -163,7 +163,7 @@
                             <div class="card-body ">
 
 
-                                <form action="/pre-booking" method="post">
+                                <form action="{{route('pre-booking')}}" method="post">
                                     @csrf
 
                                     <div class="row justify-content-between hr" id="hr1">
