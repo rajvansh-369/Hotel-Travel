@@ -1,7 +1,33 @@
 @extends('layouts.app')
 @section('content')
     {{-- {{dd($hotel->picture)}} --}}
-
+    <div class="header-top navBarDetailPage">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="d-flex justify-content-between flex-wrap align-items-center">
+                        <div class="header-info-left">
+                            {{-- <ul>
+                                <li>Call Us: +10 (89) 675 5456</li>
+                                <li>
+    
+                                    <a href="">enquiry@hotel.com</a>
+                                    
+                                </li>
+                            </ul> --}}
+                        </div>
+                        <div class="header-info-right d-none d-sm-block">
+                            {{-- <ul class="header-social">
+                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="container-fluid  gallery">
             <div class="lightbox">
@@ -253,7 +279,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
