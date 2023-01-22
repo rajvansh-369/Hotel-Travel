@@ -44,7 +44,18 @@ class HotelController extends Controller
 
         $hotel = Listing::where('id', $id)->first();
 
-        return view('pages.hotel-details' ,compact('hotel'));
+        $location = [];
+ 
+
+
+            $location['lat'] = (double)$hotel->address->lat;
+            $location['lng'] = (double)$hotel->address->lng;
+            $location['listing_id'] = (double)$hotel->address->listing_id;
+            
+     
+            // dd($location);
+
+        return view('pages.hotel-details' ,compact('hotel', 'location'));
     }
    
     public function hotels(){
