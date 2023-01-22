@@ -99,7 +99,7 @@
                                     <h3><a href="#">{{$hotel->name}} </a></h3>
                                     <p>2 Adult 1 Children</p>
                                     <div class="price">
-                                        <span>Started from<span>₹{{$hotel->price_per_hour}}</span></span>
+                                        <span>Started from<span>₹{{$hotel->price_per_day}}</span></span>
                                     </div>
                                 </div>
                             </div>
