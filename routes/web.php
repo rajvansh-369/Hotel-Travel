@@ -44,14 +44,14 @@ Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 
-Route::middleware(['middleware' => 'auth'], function () {
+// Route::middleware(['middleware' => 'auth'], function () {
     
     
     Route::post('/pre-booking', [HotelController::class, 'preBooking'])->name('preBooking');
     Route::get('/booking', [HotelController::class, 'booking'])->name('booking');
     Route::get('/confirmBooking', [HotelController::class, 'confirmBooking'])->name('confirmBooking');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-});
+// });
 
 
 
