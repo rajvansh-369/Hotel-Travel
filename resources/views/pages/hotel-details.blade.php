@@ -7,7 +7,7 @@
             <div class="lightbox">
                 <div class="row">
                     <div class="col-lg-6">
-                        @foreach ($hotel->picture->where('picture_type', 'main_picture') as $picture)
+                        @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
                                 data-mdb-img="{{ asset('/storage/' . $picture->picture) }}" alt="{{ $hotel->name }}"
                                 class="w-100 mw-100 shadow-1-strong rounded" />
@@ -16,7 +16,7 @@
                     <div class="col-lg-6">
                         <div class="row ">
 
-                            @foreach ($hotel->picture->where('picture_type', 'rest_image') as $picture)
+                            @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(4) as $picture)
                                 <div class="col-lg-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $picture->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
