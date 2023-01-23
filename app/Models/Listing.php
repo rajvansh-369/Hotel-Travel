@@ -36,6 +36,8 @@ class Listing extends Model
         'cleaning_fee',
         'cleaning_fee_percent',
         'listing_type',
+        'adult',
+        'child',
 
     ];
     public function address(){

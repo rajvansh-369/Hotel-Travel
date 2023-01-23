@@ -18,7 +18,7 @@
                 <div class="date-pic mb-15">
                     <label>Check Out Date*</label>
                     <div class="boking-datepicker">
-                        <input id="datepicker2" name="toDate" value="{{ session('toDate') ?? '01/01/2023' }} "
+                        <input id="datepicker2" name="toDate" value="{{ session('toDate') ?? '' }} "
                             placeholder="Check out" />
                     </div>
                 </div>
