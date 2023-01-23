@@ -22,21 +22,19 @@ return new class extends Migration
             $table->double('price_per_hour', 8, 2);
             $table->double('price_per_day', 8, 2);
 
-            $table->tinyInteger('half_day_discount');
-            $table->tinyInteger('half_discount_rate');
+            // $table->tinyInteger('half_day_discount');
+            // $table->tinyInteger('half_discount_rate');
             $table->tinyInteger('full_day_discount');
             $table->tinyInteger('full_discount_rate');
             $table->double('sale_tax', 8, 2);
             $table->text('full_day_start_time');
             $table->text('full_day_end_time');
             $table->text('min_hour');
+            $table->text('adult')->nullable();
+            $table->text('child')->nullable();
             $table->text('advance_notice');
             $table->integer('status');
-            // $table->longText('hosting_instruction');
-            // $table->integer('cleaning_fee');
-            // $table->double('cleaning_fee_percent',8,2);
-            // $table->integer('listing_type');
-
+ 
           
             $table->timestamps();
         });

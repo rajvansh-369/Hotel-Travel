@@ -239,7 +239,7 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
-                                            <input id="datepicker1" required name="startDate" placeholder="Check in"
+                                            <input id="datepicker1" required name="startDate" value="{{session('fromDate') ?? ""}} " placeholder="Check in"
                                                 class="text-secondary datePicker" />
                                                 @if (auth()->user())
                                                     
@@ -252,7 +252,7 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
-                                            <input id="datepicker2" required name="endtDate" placeholder="Check out"
+                                            <input id="datepicker2" required name="endtDate"  value="{{session('toDate') ?? ""}} " placeholder="Check out"
                                                 class="text-secondary datePicker" />
                                         </div>
                                     </div>

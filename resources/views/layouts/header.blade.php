@@ -88,3 +88,31 @@
         </div>
     </div>
 </header>
+
+<div class="header-top navBarDetailPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="d-flex justify-content-between flex-wrap align-items-center">
+                    <div class="header-info-left">
+                        {{-- <ul>
+                            <li>Call Us: +10 (89) 675 5456</li>
+                            <li>
+
+                                <a href="">enquiry@hotel.com</a>
+                                
+                            </li>
+                        </ul> --}}
+                    </div>
+                    <div class="header-info-right d-none d-sm-block">
+                        {{-- <ul class="header-social">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

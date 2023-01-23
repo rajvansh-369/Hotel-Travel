@@ -26,8 +26,7 @@ class HotelSeeder extends Seeder
                 "description": "Capture the spritual energy and peacefulness of BODH GAYA from the stunning MAHA BODHI HOTEL RESORT & CONVENTION CENTRE .",
                 "price_per_hour": 700,
                 "price_per_day": 2499,
-                "half_day_discount": 0,
-                "half_discount_rate": 0,
+
                 "full_day_discount": 0,
                 "full_discount_rate": 0,
                 "sale_tax": 8,
@@ -46,8 +45,6 @@ class HotelSeeder extends Seeder
                 "description": "Hotel Sujata takes pleasure to introduce itself as one of the reputed luxury hotel in Bodh Gaya. The Hotel is situated in Bodh Gaya Bihar in India.",
                 "price_per_hour": 200,
                 "price_per_day": 3600,
-                "half_day_discount": 0,
-                "half_discount_rate": 0,
                 "full_day_discount": 0,
                 "full_discount_rate": 0,
                 "sale_tax": 86,

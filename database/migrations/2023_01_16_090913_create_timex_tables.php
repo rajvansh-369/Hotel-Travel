@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('subject');
             $table->date('start');
             $table->time('startTime')->nullable();
-            $table->time('totalPrice')->nullable();
+            $table->string('totalPrice')->nullable();
             $table->foreignId('user_id')->constrained('users')->references('id')->onDelete('cascade')->nullable();
             $table->foreignId('lisitng_id')->constrained('listings')->references('id')->onDelete('cascade')->nullable();
    

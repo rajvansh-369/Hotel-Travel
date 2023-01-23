@@ -308,10 +308,16 @@ hr {
     height: 40px;
 }
 
+input#name {
+    width: auto;
+}
 input#email {
     width: auto;
 }
 input#password {
+    width: auto;
+}
+input#password_confirmation {
     width: auto;
 }
 

@@ -9,7 +9,8 @@ use App\Models\TimexEvents;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Session;
 class HotelController extends Controller
 {
    
@@ -74,6 +75,66 @@ class HotelController extends Controller
         return view('pages.hotels' ,compact('hotels', 'locations'));
     }
    
+    public function searchHotels(Request $request){
+
+        $fromDate = $request->fromDate;
+        $toDate = $request->toDate;
+        $adult = $request->adult;
+        $child = $request->child;
+        
+        session(['fromDate'=> $fromDate]);
+        session(['toDate' => $toDate]);
+        session(['adult'=> $adult]);
+        session(['child'=> $child]);
+
+
+        // dd(session()->all(), $request->all());
+        return response()->json("Sucess");
+    }
+  
+  
+    public function searchResult(Request $request){
+
+        $fromDate = session('fromDate');
+        $toDate = session('toDate');
+        $adult = session('adult');
+         $child =  session('child'); 
+                
+         $data = [
+
+            'fromDate' => $fromDate,
+            'toDate' => $toDate,
+            'adult' => $adult,
+            'child' => $child,
+         ];
+
+        //  return $data;
+        
+        // dd($data);
+        $hotels = Listing::where('adult','>=', $adult)->orderBy('adult' , 'desc')->get();
+        // dd($hotels); 
+        // return $hotels;
+
+
+        $location = [];
+        foreach($hotels as $hotel){
+
+
+            $location['lat'] = (double)$hotel->address->lat;
+            $location['lng'] = (double)$hotel->address->lng;
+            $location['listing_id'] = (double)$hotel->address->listing_id;
+            $locations[] = $location;
+        }
+
+        return view('pages.searchHotels' ,compact('hotels', 'locations', 'data' ));
+    }
+   
+
+
+
+
+
+
    
     public function contact(){
 
@@ -133,9 +194,10 @@ class HotelController extends Controller
         // return view('pages.booking', compact('data'));
     }
 
-    public function booking(){
+    public function booking(Request $request){
 
-        
+
+
         if(!auth()->user()){
 
             return redirect(route('loginView'));
@@ -163,7 +225,7 @@ class HotelController extends Controller
    
    
    
-    public function confirmBooking(){
+    public function confirmBooking(Request $request){
 
         if(!auth()->user()){
 
@@ -174,10 +236,14 @@ class HotelController extends Controller
             return redirect()->back();
       }
 
+      
+
 
 
         $data =   session('data');
         $totalPrice =   session('totalPrice');
+
+
 
         // dd($data);
        
@@ -199,9 +265,8 @@ class HotelController extends Controller
                 'lisitng_id' => $data['lisitng_id'],
 
             ]);
-
-            session()->flush();
-            dd($booked);
+            // dd(session()->flush(), session()->all(),);
+            // dd($booked);
         
         
         return view('pages.thank-you');

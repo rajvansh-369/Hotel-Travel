@@ -37,8 +37,10 @@ class Login extends Component
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
             session()->regenerate();
-
+            
+            // dd($arrUrl);
             if( $arrUrl[3]  == "hotel-details"){
+
 
                 return redirect(route('hotel-details', $arrUrl[4]));
             }else{

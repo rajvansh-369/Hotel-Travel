@@ -404,11 +404,11 @@ testimonial.slick({
 var d = new Date();
 
 
-
 d.setDate(d.getDate() - 1);
 
-    $('#datepicker1').datepicker({ minDate: d});
-    $('#datepicker2').datepicker({ minDate: d});
+$('#datepicker1').datepicker({ minDate: d});
+$('#datepicker2').datepicker({ minDate: d});
+
 
 
 
