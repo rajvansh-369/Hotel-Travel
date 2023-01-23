@@ -43,6 +43,8 @@ Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
+Route::post('/searchHotels', [HotelController::class, 'searchHotels'])->name('searchHotels');
+Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('searchResult');
 
 // Route::middleware(['middleware' => 'auth'], function () {
     

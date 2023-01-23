@@ -29,6 +29,8 @@
 </div>
     <main>
 
+
+        {{-- @include('layouts.headerSearch') --}}
         <div class="slider-area hero-bg1  hero-overly">
             <div class="single-slider  slider-height1 d-flex align-items-center">
                 <div class="container">
@@ -42,55 +44,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <form action="#" class="search-box pb-45">
-                    <div class="row align-items-end">
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+            @include('layouts.headerSearch')
 
-                            <div class="date-pic mb-15">
-                                <label>Check In Date*</label>
-                                <div class="boking-datepicker">
-                                    <input id="datepicker1" placeholder="Check in" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
-                            <div class="date-pic mb-15">
-                                <label>Check Out Date*</label>
-                                <div class="boking-datepicker">
-                                    <input id="datepicker2" placeholder="Check out" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                            <div class="select-form mb-15">
-                                <select name="select" id="select1">
-                                    <option value="">Adult</option>
-                                    <option value="">Adult</option>
-                                    <option value="">Adult</option>
-                                    <option value="">Adult</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                            <div class="select-form mb-15">
-                                <select name="select" id="select2">
-                                    <option value="">Children</option>
-                                    <option value="">Children</option>
-                                    <option value="">Children</option>
-                                    <option value="">Children</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                            <div class="search-form">
-                                <a href="#">Search</a>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
 
 
@@ -102,11 +57,11 @@
             <div class="col-xl-6 col-lg-7 col-md-12">
                 <div class="container">
                  <div class="row">
-                    <div class="col-xl-6 col-lg-8 col-md-10">
+                    <div class="col-xl-8 col-lg-9 col-md-12">
 
                         <div class="section-tittle mb-50">
                             <h2>Top-rated around you</h2>
-                            <p>The concept and service of the best luxury hotels in Asturias in our sophisticated.</p>
+                            <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated.</p>
                         </div>
                     </div>
                 </div>

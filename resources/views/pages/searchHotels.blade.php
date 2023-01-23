@@ -1,5 +1,32 @@
 @extends('layouts.app')
 @section('content')
+<div class="header-top navBarDetailPage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="d-flex justify-content-between flex-wrap align-items-center">
+                    <div class="header-info-left">
+                        {{-- <ul>
+                            <li>Call Us: +10 (89) 675 5456</li>
+                            <li>
+
+                                <a href="">enquiry@hotel.com</a>
+                                
+                            </li>
+                        </ul> --}}
+                    </div>
+                    <div class="header-info-right d-none d-sm-block">
+                        {{-- <ul class="header-social">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <main>
@@ -32,14 +59,44 @@
                         <div class="col-xl-8 col-lg-9 col-md-12">
 
                             <div class="section-tittle mb-50">
-                                <h2>Top-rated around you</h2>
-                                <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated.
+                                <h2>Your Search</h2>
+                                {{-- {{dd($data)}} --}}
+                        <p>From: {{$data['fromDate']}} - {{$data['toDate']}} For {{$data['adult']}} Adult and {{$data['child']}} Child.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                @livewire('hotel-search')
+                <div class="container">
+                    <div class="row">
+                        <div class="form-outline mb-3">
+                            {{-- <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" /> --}}
+                          </div>
+                        @foreach ($hotels as $hotel)
+                            {{-- {{dd($hotel->picture->where('picture_type' , 'main_picture')->first())}} --}}
+                            <div class="col-lg-6">
+                                <a target="_blank" href="{{ route('hotel-details', $hotel->id) }}">
+                                    <div class="single-location single-location2 mb-30 line-content">
+                                        <img class="hotel_mainImg"
+                                            src="{{ asset('/storage/' . $hotel->picture[0]->picture) }}" alt="">
+            
+                                        <div class="location-contents">
+                                            <h3><a href="#">{{ $hotel->name }} </a></h3>
+                                            <p>2 Adult 1 Children</p>
+                                            <div class="price">
+                                                <span>Started from<span>₹{{ $hotel->price_per_day }}</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                        <ul id="pagin"></ul>
+            
+            
+            
+                    </div>
+                </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-12">
                 <div id="map" style="height: 68rem; width:100%;">
@@ -177,6 +234,94 @@
 
 </main>
 
+<style>
+    .next{
+        display: none;
+    }
+    </style>
+
+@if(count($hotels) > 2)
+<script>
+    $(document).ready(function () {
+
+        // alert("test");
+        pageSize = 6;
+        incremSlide = 5;
+        startPage = 0;
+        numberPage = 0;
+
+        var pageCount =  $(".line-content").length / pageSize;
+        var totalSlidepPage = Math.floor(pageCount / incremSlide);
+            
+        for(var i = 0 ; i<pageCount;i++){
+            $("#pagin").append('<li><a href="#topScroll">'+(i+1)+'</a></li> ');
+            if(i>pageSize){
+            $("#pagin li").eq(i).hide();
+            }
+        }
+
+        var prev = $("<li/>").addClass("prev").html("Prev").click(function(){
+        startPage-=5;
+        incremSlide-=5;
+        numberPage--;
+        slide();
+        });
+
+        prev.hide();
+
+        var next = $("<li/>").addClass("next").html("Next").click(function(){
+        startPage+=5;
+        incremSlide+=5;
+        numberPage++;
+        slide();
+        });
+
+        $("#pagin").prepend(prev).append(next);
+
+        $("#pagin li").first().find("a").addClass("current");
+
+        slide = function(sens){
+        $("#pagin li").hide();
+        
+        for(t=startPage;t<incremSlide;t++){
+            $("#pagin li").eq(t+1).show();
+        }
+        if(startPage == 0){
+            next.show();
+            prev.hide();
+        }else if(numberPage == totalSlidepPage ){
+            next.hide();
+            prev.show();
+        }else{
+            next.show();
+            prev.show();
+        } 
+        
+            
+        }
+
+        showPage = function(page) {
+            $(".line-content").hide();
+            $(".line-content").each(function(n) {
+                if (n >= pageSize * (page - 1) && n < pageSize * page)
+                    $(this).show();
+            });        
+        }
+            
+        showPage(1);
+        $("#pagin li a").eq(0).addClass("current");
+
+        $("#pagin li a").click(function() {
+            $("#pagin li a").removeClass("current");
+            $(this).addClass("current");
+            showPage(parseInt($(this).text()));
+        });
+
+      
+});
+</script>
+
+@endif
 
 
 

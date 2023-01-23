@@ -56,6 +56,15 @@ class ListingResource extends Resource
                         ->required()
                         ->maxLength(255)
                         ->maxLength(65535),
+
+                        TextInput::make('adult')
+                        ->required()
+                        ->numeric()
+                        ->maxLength(255),
+                        TextInput::make('child')
+                        ->required()
+                        ->numeric()
+                        ->maxLength(255),
                 ]) ->columns(3),
 
                 Fieldset::make('Address')
@@ -170,16 +179,7 @@ class ListingResource extends Resource
                     ->numeric()
                     ->required(),
 
-                Toggle::make('half_day_discount')
-                        ->reactive()
-                    ->required(),
-                TextInput::make('half_discount_rate')
-                ->reactive()
-                    ->label('Half Day Discount %')
-                    ->numeric()
-                    ->default(0)
-                    ->required()
-                    ->disabled(fn (Closure $get) => $get('half_day_discount') == 0 ? True : False ),
+ 
                 Toggle::make('full_day_discount')
                      ->reactive()
                     ->required(),
@@ -206,12 +206,9 @@ class ListingResource extends Resource
                         ->minValue(1)
                         ->maxValue(24)
                     ->required(),
-            
-                     
-                       
                         Toggle::make('status')
                             ->required(),
-                    ]) ->columns(5)
+                    ]) ->columns(4)
             ]);
     }
 

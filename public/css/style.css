@@ -1527,7 +1527,7 @@ hr {
 
 .slider-area form.search-box .search-form a {
     font-family: "Jost", sans-serif;
-    background: #fff;
+    /* background: #fff; */
     color: #232C26;
     text-transform: capitalize;
     font-size: 18px;
