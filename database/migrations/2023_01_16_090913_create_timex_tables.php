@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('start');
             $table->time('startTime')->nullable();
             $table->string('totalPrice')->nullable();
+            $table->boolean('status')->default(1)->comment("'0' => 'Reject'| '1' => 'In Process'|'2' => 'Accept'");
             $table->foreignId('user_id')->constrained('users')->references('id')->onDelete('cascade')->nullable();
             $table->foreignId('lisitng_id')->constrained('listings')->references('id')->onDelete('cascade')->nullable();
    

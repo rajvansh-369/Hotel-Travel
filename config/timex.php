@@ -207,9 +207,9 @@ return [
         */
             'labels' => [
                 'primary' => 'Primary category',
-                'secondary' => 'Secondary category',
-                'danger' => 'Danger category',
-                'success' => 'Success category',
+                'secondary' => 'In Process',
+                'danger' => 'Rejected',
+                'success' => 'Accepted',
             ],
             'icons' => [
                 'primary' => 'heroicon-o-clipboard',
