@@ -26,5 +26,6 @@ class TimexEvents extends Model
         'totalPrice',
         'user_id',
         'lisitng_id',
+        'status',
     ];
 }
