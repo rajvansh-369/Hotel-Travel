@@ -140,93 +140,96 @@ class HotelSeeder extends Seeder
                 "updated_at": "2023-01-24T18:41:57.000000Z"
                 }
                 ]';
+
+
                 $hotels = json_decode($hotel, true);
+
                 
 
                 $address = '[
                     {
-                    "id": 2,
-                    "listing_id": 2,
-                    "formatted_address": "Village - Hariharpur Tekuna Farm - Gyan Bharti Road Hariharpur, Bodh Gaya 824231 India",
-                    "postal_code": "824231 ",
-                    "address": Village - Hariharpur Tekuna Farm - Gyan Bharti Road Hariharpur,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.71271990700619",
-                    "lng": "84.97432880026022",
-                    "created_at": "2023-01-19T00:27:24.000000Z",
-                    "updated_at": "2023-01-24T08:09:26.000000Z"
+                      "id": 2,
+                      "listing_id": 2,
+                      "formatted_address": "Village - Hariharpur Tekuna Farm - Gyan Bharti Road Hariharpur, Bodh Gaya 824231 India",
+                      "postal_code": "824231 ",
+                      "address": "Village - Hariharpur Tekuna Farm - Gyan Bharti Road Hariharpur",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.71271990700619",
+                      "lng": "84.97432880026022",
+                      "created_at": "2023-01-19T00:27:24.000000Z",
+                      "updated_at": "2023-01-24T08:09:26.000000Z"
                     },
                     {
-                    "id": 3,
-                    "listing_id": 3,
-                    "formatted_address": "Japanese Temple, Road, near Bhutan Temple, Mastipur, Bodh Gaya, Bihar 824231",
-                    "postal_code": "824231",
-                    "address": Japanese Temple, Road, near Bhutan Temple,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.693266216351592",
-                    "lng": "84.98543794219223",
-                    "created_at": "2023-01-19T00:49:12.000000Z",
-                    "updated_at": "2023-01-24T08:08:52.000000Z"
+                      "id": 3,
+                      "listing_id": 3,
+                      "formatted_address": "Japanese Temple, Road, near Bhutan Temple, Mastipur, Bodh Gaya, Bihar 824231",
+                      "postal_code": "824231",
+                      "address": "Japanese Temple, Road, near Bhutan Temple",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.693266216351592",
+                      "lng": "84.98543794219223",
+                      "created_at": "2023-01-19T00:49:12.000000Z",
+                      "updated_at": "2023-01-24T08:08:52.000000Z"
                     },
                     {
-                    "id": 4,
-                    "listing_id": 4,
-                    "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya 824231 India",
-                    "postal_code": "824231",
-                    "address": Domuhan-Bodhgaya Rd,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.696147520884917",
-                    "lng": "84.9757388707162",
-                    "created_at": "2023-01-24T18:34:48.000000Z",
-                    "updated_at": "2023-01-24T18:34:48.000000Z"
+                      "id": 4,
+                      "listing_id": 4,
+                      "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya 824231 India",
+                      "postal_code": "824231",
+                      "address": "Domuhan-Bodhgaya Rd",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.696147520884917",
+                      "lng": "84.9757388707162",
+                      "created_at": "2023-01-24T18:34:48.000000Z",
+                      "updated_at": "2023-01-24T18:34:48.000000Z"
                     },
                     {
-                    "id": 5,
-                    "listing_id": 5,
-                    "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
-                    "postal_code": "824231",
-                    "address": null,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.696685116219452",
-                    "lng": "84.97371414894042",
-                    "created_at": "2023-01-24T18:40:53.000000Z",
-                    "updated_at": "2023-01-24T18:40:53.000000Z"
+                      "id": 5,
+                      "listing_id": 5,
+                      "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
+                      "postal_code": "824231",
+                      "address": "Domuhan-Bodhgaya Rd",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.696685116219452",
+                      "lng": "84.97371414894042",
+                      "created_at": "2023-01-24T18:40:53.000000Z",
+                      "updated_at": "2023-01-24T18:40:53.000000Z"
                     },
                     {
-                    "id": 6,
-                    "listing_id": 6,
-                    "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
-                    "postal_code": "824231",
-                    "address": null,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.696685116219452",
-                    "lng": "84.97371414894042",
-                    "created_at": "2023-01-24T18:41:21.000000Z",
-                    "updated_at": "2023-01-24T18:41:21.000000Z"
+                      "id": 6,
+                      "listing_id": 6,
+                      "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
+                      "postal_code": "824231",
+                      "address": "Domuhan-Bodhgaya Rd",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.696685116219452",
+                      "lng": "84.97371414894042",
+                      "created_at": "2023-01-24T18:41:21.000000Z",
+                      "updated_at": "2023-01-24T18:41:21.000000Z"
                     },
                     {
-                    "id": 7,
-                    "listing_id": 7,
-                    "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
-                    "postal_code": "824231",
-                    "address": null,
-                    "city": "Gaya",
-                    "state": "Bihar",
-                    "lat": "24.696685116219452",
-                    "lng": "84.97371414894042",
-                    "created_at": "2023-01-24T18:41:57.000000Z",
-                    "updated_at": "2023-01-24T18:41:57.000000Z"
+                      "id": 7,
+                      "listing_id": 7,
+                      "formatted_address": "Domuhan-Bodhgaya Rd, Bodh Gaya, Bihar 824231",
+                      "postal_code": "824231",
+                      "address": "Domuhan-Bodhgaya Rd",
+                      "city": "Gaya",
+                      "state": "Bihar",
+                      "lat": "24.696685116219452",
+                      "lng": "84.97371414894042",
+                      "created_at": "2023-01-24T18:41:57.000000Z",
+                      "updated_at": "2023-01-24T18:41:57.000000Z"
                     }
-                    ]';
+                  ]';
 
                     $addresses = json_decode($address, true);
                     
-                    
+                    // dd($addresses);
                     
                     
                     $picture = '[
@@ -371,12 +374,13 @@ class HotelSeeder extends Seeder
 
  
                 foreach($hotels as $hotel){
-
+                    
                     Listing::create($hotel);
                 }
-
+                
+               
                 foreach($addresses as $address){
-
+                    
                     Address::create($address);
                 }
                 foreach($pictures as $picture){
