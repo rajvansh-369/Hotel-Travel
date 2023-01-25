@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
+// Route::get('/getData', function () {
     
-//       $data =  new App\Models\Listing;
+//       $data =  new App\Models\Picture();
 
-//     return $data->with('lisitng_amenities')->get();
+//     return $data->get();
 // });
 
 
