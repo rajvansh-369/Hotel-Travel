@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Banner;
 use App\Models\Listing;
 use App\Models\Picture;
 use App\Models\TimexEvents;
@@ -24,8 +25,11 @@ class HotelController extends Controller
 
             // return  ($addr);
         
-        $hotels = Listing::get();
-        
+        $hotels = Listing::where('status',1)->get();
+        $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
+
+
+
         $location = [];
         foreach($hotels as $hotel){
 
@@ -37,14 +41,14 @@ class HotelController extends Controller
         }
         // dd(json_encode($locations));
 
-        return view('pages.home' ,compact('hotels' , 'locations'));
+        return view('pages.home' ,compact('hotels' , 'locations' , 'banner'));
     }
     
     
     public function hotel_details($id){
 
         $hotel = Listing::where('id', $id)->first();
-
+       
         $location = [];
  
 
@@ -62,6 +66,7 @@ class HotelController extends Controller
     public function hotels(){
 
         $hotels = Listing::get();
+        $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
         $location = [];
         foreach($hotels as $hotel){
 
@@ -72,7 +77,7 @@ class HotelController extends Controller
             $locations[] = $location;
         }
 
-        return view('pages.hotels' ,compact('hotels', 'locations'));
+        return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
    
     public function searchHotels(Request $request){
@@ -87,6 +92,11 @@ class HotelController extends Controller
         session(['adult'=> $adult]);
         session(['child'=> $child]);
 
+            if( $toDate < $fromDate){
+
+
+                return redirect()->back()->withErrors(['error' =>'End Date should be greater than Start Date']);
+            }
 
         // dd(session()->all(), $request->all());
         return response()->json("Sucess");

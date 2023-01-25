@@ -44,6 +44,10 @@
             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                 <div class="search-form">
                     <a type="submit" class="btn btn-primary" onclick="required()" href="#"> Search </a>
+                
+                    @if($errors->any())
+                    <h4>{{$errors->first()}}</h4>
+                    @endif
                 </div>
             </div>
         </div>
@@ -112,6 +116,8 @@
                 window.location.href = @json(route('searchResult'));
             },
             error: function(request, error) {
+                console.log(request);
+                console.log(error);
                 alert("Request: " + JSON.stringify(request));
             }
         });

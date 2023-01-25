@@ -6,7 +6,7 @@
     {{-- {{dd($hotels)}} --}}
     
 
-    <div class="slider-area hero-bg1  hero-overly">
+    <div class="slider-area hero-bg1  hero-overly" style="background-image: url({{asset('storage/'.$banner->banner)}});">
         <div class="single-slider  slider-height2 d-flex align-items-center">
             <div class="container">
                 <div class="row justify-content-center ">
@@ -23,31 +23,9 @@
 
 </div>
 
-    <div class="container-fluid location-house section-padding">
-        <div class="row mx-auto">
-            <div class="col-xl-2 col-lg-1 d-none d-md-block"></div>
-            <div class="col-xl-6 col-lg-7 col-md-12">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8 col-lg-9 col-md-12">
 
-                            <div class="section-tittle mb-50">
-                                <h2>Top-rated around you</h2>
-                                <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 @livewire('hotel-search')
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-12">
-                <div id="map" style="height: 68rem; width:100%;">
-                </div>
-            </div>
-        </div>
-    </div>
- 
+
 
 
     <div class="video-area section-img-bg2 d-flex align-items-center" data-background="assets/img/gallery/video-bg.jpg">

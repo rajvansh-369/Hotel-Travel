@@ -301,6 +301,20 @@ hr {
     font-size: 14px;
     padding: 20px 0;
 }
+.carousel-control-prev-icon:hover {
+    background-color: #ff671d;
+    border-color: #ff671d;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 0;
+}
+.carousel-control-next-icon:hover {
+    background-color: #ff671d;
+    border-color: #ff671d;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 0;
+}
 
 #btn_loginpop_submit {
     background-color: #FF671D;
@@ -382,3 +396,44 @@ input#password_confirmation {
     margin: 0 auto;
 }
 
+
+.cardslider a.discavl {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    background-color: #ff671d;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 2px 6px;
+    font-size: 12px;
+    z-index: 9;
+    width: 58%;
+    text-align: center;
+    z-index: 1;
+}
+
+.cardslider .carousel-item img {
+    width: 100%;
+    display: block;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cardslider a.pprpln {
+    color: #fff !important;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 1;
+}
+
+.cardslider .card {
+    max-height: 367px;
+
+}
+
+.cardslider {
+    display: flex;
+}
