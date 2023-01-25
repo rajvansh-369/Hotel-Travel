@@ -32,7 +32,7 @@
 
         {{-- @include('layouts.headerSearch') --}}
         <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{ asset('storage/' . $banner->banner) }});">
+            style="background-image: url({{  $banner ?   asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg')  }});">
             {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
             <div class="single-slider  slider-height1 d-flex align-items-center">
                 <div class="container">
