@@ -39,9 +39,9 @@ h6 {
 h1 {
     font-size: var(--ifm-h1-font-size);
 }
-h2 {
+/* h2 {
     font-size: var(--ifm-h2-font-size);
-}
+} */
 h3 {
     font-size: var(--ifm-h3-font-size);
 }
@@ -74,8 +74,8 @@ h6 {
 
 /* .gallery{
 
-    /* max-height: 50%; */
-} */
+     max-height: 50%; 
+}  */
 
 
 .brdetailmain p, .brdetailmain ul li{
@@ -321,4 +321,64 @@ input#password_confirmation {
     width: auto;
 }
 
+
+.form_full {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.container_form-bar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.form_full h2:nth-child(1) {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    padding-bottom: 1rem;
+    width: 100%;
+    font-size: 56px;
+    text-transform: uppercase;
+}
+.left_one-hed .sidenav {
+    position: absolute;
+    height: auto;
+    top: 0;
+    border-radius: 5px;
+}
+.cat_r1 form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+} 
+
+.form_full {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #ffff;
+    border-radius: 30px;
+    box-shadow: 1px 0px 5px 0px #b7b1b1;
+    margin-top: 20px !important;
+    float: left;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.form_full.sign_up {
+    box-shadow: none;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+.form_full .reg-btn-two-inner a {
+    padding: 8px 25px;
+    margin: 0px 10px;
+    background: #5479bd;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+    text-align: center;
+    font-family: 'Poppins';
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
 

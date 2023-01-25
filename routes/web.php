@@ -39,6 +39,12 @@ use Illuminate\Support\Facades\Route;
 
 
 
+// Route::get('/sessionRoute', function(){
+
+//         dd(session()->all());
+
+// });
+
 Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');

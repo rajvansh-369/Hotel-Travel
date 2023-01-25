@@ -169,7 +169,7 @@ class HotelController extends Controller
             'hotelId' => $request->hotelId,
             'attachments' => [],
             'body' => $body,
-            'category' => 'success',
+            'category' => 'secondary',
             'formattedEnd' => $endtDate->format('M d, Y'),
             'endTime' => $hotel->full_day_end_time,
             'isAllDay' => 1,
@@ -197,16 +197,16 @@ class HotelController extends Controller
     public function booking(Request $request){
 
 
-
+        // dd(session('data'));
         if(!auth()->user()){
 
             return redirect(route('loginView'));
       }
 
-      if(!session('data')){
+      if(session('data') == null){
 
-        return redirect()->back();
-  }
+        return redirect(route('home'))->with('alert','Booking Session Expired');
+     }
 
         $bookingData =   session('data');
         $hotel = Listing::with('address')->find($bookingData['hotelId']);
@@ -231,10 +231,10 @@ class HotelController extends Controller
 
             return redirect(route('loginView'));
       }
-        if(!session('data')){
+      if(session('data') == null){
 
-            return redirect()->back();
-      }
+        return redirect(route('home'));
+     }
 
       
 
@@ -243,15 +243,17 @@ class HotelController extends Controller
         $data =   session('data');
         $totalPrice =   session('totalPrice');
 
+           
 
 
-        // dd($data);
+        $hotel = Listing::find($data['lisitng_id']);
+        $user = User::find($data['user_id']);
        
         $booked = TimexEvents::create([
                 'id' => uuid_create(),
                 'attachments' => "[]",
                 'body' => $data['body'],
-                'category' => 'success',
+                'category' => 'secondary',
                 'endTime' => '11:45:00',
                 'end' => $data['endDate'],
                 'isAllDay' => 1,
@@ -265,11 +267,17 @@ class HotelController extends Controller
                 'lisitng_id' => $data['lisitng_id'],
 
             ]);
+            // $request->session()->flush();
+            $request->session()->forget('data');
+            $request->session()->forget('totalPrice');
+            // session()->flush();
+            // dd($booked->created_at);
+            $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
             // dd(session()->flush(), session()->all(),);
             // dd($booked);
         
         
-        return view('pages.thank-you');
+        return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate'));
     
     }
 
