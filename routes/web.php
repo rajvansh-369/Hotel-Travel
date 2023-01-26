@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/getData', function () {
     
-//       $data =  new App\Models\Picture();
+//       $data =  new App\Models\Address;
 
 //     return $data->get();
 // });

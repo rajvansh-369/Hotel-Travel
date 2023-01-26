@@ -72,3 +72,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 composer require owenvoke/blade-fontawesome
 
 composer require codeat3/blade-google-material-design-icons
+
+composer require davidhsianturi/blade-bootstrap-icons
+Dashboard Banner Icon
