@@ -150,10 +150,10 @@ class ListingResource extends Resource
                 ->relationship('lisitng_amenities')
                         ->schema([
                             
-                            Select::make('amenity_id')
+                            // Select::make('amenity_id')
                             // ->multiple()
-                            ->options(Amenity::all()->pluck('name', 'id'))
-                            ->label('Select Amenity')
+                            // ->options(Amenity::all()->pluck('name', 'id'))
+                            // ->label('Select Amenity')
                             // ->options([
                             //     'tailwind' => 'Tailwind CSS',
                             //     'alpine' => 'Alpine.js',
@@ -161,6 +161,8 @@ class ListingResource extends Resource
                             //     'livewire' => 'Laravel Livewire',
                             // ])
 
+                            TextInput::make('amenity_id')
+                            ->label("Hotel's Amenities")
                             ])
                             ->label("Hotel's Amenities")
                             ->grid(4)

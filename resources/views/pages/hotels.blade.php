@@ -5,6 +5,7 @@
 <main>
     {{-- {{dd($hotels)}} --}}
     
+            {{-- TIMEX --}}
 
     <div class="slider-area hero-bg1  hero-overly" style="background-image: url({{  $banner ?   asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg')  }});">
         <div class="single-slider  slider-height2 d-flex align-items-center">
