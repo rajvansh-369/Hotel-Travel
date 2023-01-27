@@ -21,12 +21,14 @@
         'title'         => config('app.name', 'Laravel'),
         'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
         'image'         => asset('storage/icon.png'),
+        'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
+        'author'         => "Snehal Rajvansh",
     ])
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/icon/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('storage/icon.png')}}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slicknav.css') }}">
