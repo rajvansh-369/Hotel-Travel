@@ -55,8 +55,8 @@
 
         <div class="container-fluid location-house section-padding">
             <div class="row mx-auto">
-                <div class="col-xl-2 col-lg-1 d-none d-md-block"></div>
-                <div class="col-xl-6 col-lg-7 col-md-12">
+                <div class="col-xl-1 col-lg-1 d-none d-md-block"></div>
+                <div class="col-xl-7 col-lg-7 col-md-12">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-8 col-lg-9 col-md-12">
@@ -72,12 +72,12 @@
 
                     <div class="slideproducts">
                         <div class="row">
-                            <div class=" cardslider flex-wrap">
+                            <div class="container-fluid cardslider flex-wrap">
 
                                 @foreach ($hotels as $hotel)
-                                    <div class="col-md-4 col-sm-5 py-1 line-content">
+                                    <div class="col-md-4 col-sm-6  py-1 line-content">
                                         {{-- {{dd($loop->index)}} --}}
-                                        <div class="card" style="width: 18rem;">
+                                        <div class="card" >
                                             <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                                 data-bs-interval="0" data-bs-ride="carousel">
                                                 <a style="text-decoration: none;"
@@ -132,8 +132,8 @@
 
 
                                                 <h5> {{ $hotel->address->formatted_address }}</h5>
-                                                <h5 class="card-title">Conference Room @ Workspace Bedford</h5>
-                                                <p class="card-text">$40/Hr
+                                                {{-- <h5 class="card-title">Conference Room @ Workspace Bedford</h5> --}}
+                                                <p class="card-text mt-2">₹{{ $hotel->price_per_day }}
 
 
 
@@ -583,7 +583,11 @@
         }
     </script>
 
-    <script
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1GLowllQeWOX52ML3wtC-qYcoZ6ygOwg&libraries=places&callback=initMap">
+</script>
+
+    {{-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
-    </script>
+    </script> --}}
 @endsection
