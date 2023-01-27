@@ -33,10 +33,11 @@ class HotelController extends Controller
         $location = [];
         foreach($hotels as $hotel){
 
-
+            // dd($hotel);
             $location['lat'] = (double)$hotel->address->lat;
             $location['lng'] = (double)$hotel->address->lng;
             $location['listing_id'] = (double)$hotel->address->listing_id;
+            $location['hotel_name'] = (string)$hotel->name;
             $locations[] = $location;
         }
         // dd(json_encode($locations));

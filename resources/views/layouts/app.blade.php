@@ -23,6 +23,7 @@
         'image'         => asset('storage/icon.png'),
         'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
         'author'         => "Snehal Rajvansh",
+        'referrer'         => "default",
     ])
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
