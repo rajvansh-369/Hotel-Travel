@@ -16,12 +16,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    {{-- @include('meta::manager', [
-        'title'         => "Hotel's In BodhGaya",
-        'description'   => 'This is my example description',
-        'image'         => 'Url to the image',
-    ]) --}}
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+    @include('meta::manager', [
+        'title'         => config('app.name', 'Laravel'),
+        'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
+        'image'         => asset('storage/icon.png'),
+    ])
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
