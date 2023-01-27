@@ -537,10 +537,10 @@
 
             var locationArr = @json($locations);
 
-            console.log(locationArr.length);
+            // console.log(locationArr.length);
 
             var mainCoords = locationArr[0];
-            console.log(mainCoords.lat);
+            // console.log(mainCoords);
 
             var mapOptions = {
                 center: {
@@ -559,12 +559,18 @@
             };
             var allMarkers = [];
             for (var i = 0; i < locationArr.length; i++) {
+
+
                 var myCoords = locationArr[i];
+
+                // console.log(myCoords);
 
                 r = new google.maps.Marker({
                     position: myCoords,
                     map: map,
                     icon: icon,
+                    title: myCoords.hotel_name,
+                    optimized: true,
                     url: @json(url('/hotel-details')) + '/' + myCoords.listing_id,
                 });
 
