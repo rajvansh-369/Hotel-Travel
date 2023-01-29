@@ -32,7 +32,7 @@
 
         {{-- @include('layouts.headerSearch') --}}
         <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{  $banner ?   asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg')  }});">
+            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
             {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
             <div class="single-slider  slider-height1 d-flex align-items-center">
                 <div class="container">
@@ -77,11 +77,11 @@
                                 @foreach ($hotels as $hotel)
                                     <div class="col-md-4 col-sm-6  py-1 line-content">
                                         {{-- {{dd($loop->index)}} --}}
-                                        <div class="card" >
+                                        <div class="card">
                                             <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                                 data-bs-interval="0" data-bs-ride="carousel">
                                                 <a style="text-decoration: none;"
-                                                    href="{{route('hotel-details', $hotel->id)}}">
+                                                    href="{{ route('hotel-details', $hotel->id) }}">
                                                     <div class="carousel-inner" style="height: 10rem">
 
                                                         @php $key = 0;@endphp
@@ -115,7 +115,7 @@
                                                 @if ($hotel->full_day_discount == 1)
                                                     <a class="discavl">DISCOUNT AVAILABLE</a>
                                                 @endif
-                                              
+
 
                                                 {{-- <a class="pprpln"><i class="fa fa-paper-plane-o"
                                                         aria-hidden="true"></i>&nbsp;10724.7km</a> --}}
@@ -134,6 +134,9 @@
                                                 <h5> {{ $hotel->address->formatted_address }}</h5>
                                                 {{-- <h5 class="card-title">Conference Room @ Workspace Bedford</h5> --}}
                                                 <p class="card-text mt-2">₹{{ $hotel->price_per_day }}
+                                                    {{-- <div class="price">
+                                                        <span>Started from<span>₹{{ $hotel->price_per_day }}</span></span>
+                                                    </div> --}}
 
 
 
@@ -171,7 +174,7 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-xl-5 col-lg-6 col-md-10">
                             <div class="support-location-img mb-40">
-                                <img src="assets/img/gallery/about.jpg" alt="">
+                                <img src="{{ asset('img/gallery/about.webp') }}" alt="">
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-6 col-md-8">
@@ -190,7 +193,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-4">
                             <div class="about-right-img d-none d-xl-block">
-                                <img src="assets/img/gallery/about-right.jpg" alt="" class="w-100">
+                                <img src="{{ asset('img/gallery/about-right.webp') }}" alt="" class="w-100">
                             </div>
                         </div>
                     </div>
@@ -216,7 +219,7 @@
                             <div class="col-lg-12">
 
                                 <div class="single-location">
-                                    <img src="assets/img/gallery/hotel1.jpg" alt="">
+                                    <img src="{{ asset('img/gallery/hotel1.webp') }}" alt="">
                                     <div class="location-contents">
                                         <h3><a href="#">Luxurious Room </a></h3>
                                         <p>2 Adult 1 Children</p>
@@ -229,7 +232,7 @@
                             <div class="col-lg-12">
 
                                 <div class="single-location">
-                                    <img src="assets/img/gallery/hotel2.jpg" alt="">
+                                    <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
                                     <div class="location-contents">
                                         <h3><a href="#">Family Room </a></h3>
                                         <p>2 Adult 1 Children</p>
@@ -242,7 +245,7 @@
                             <div class="col-lg-12">
 
                                 <div class="single-location">
-                                    <img src="assets/img/gallery/hotel3.jpg" alt="">
+                                    <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
                                     <div class="location-contents">
                                         <h3><a href="#">Couple Room </a></h3>
                                         <p>2 Adult 1 Children</p>
@@ -255,7 +258,7 @@
                             <div class="col-lg-12">
 
                                 <div class="single-location">
-                                    <img src="assets/img/gallery/hotel2.jpg" alt="">
+                                    <img src="{{ asset('img/gallery/hotel2.webp') }}" alt="">
                                     <div class="location-contents">
                                         <h3><a href="#">Luxurious Room </a></h3>
                                         <p>2 Adult 1 Children</p>
@@ -277,8 +280,7 @@
                         <div class="col-xl-9 col-lg-8">
                             <div class="section-tittle mb-60 text-center">
                                 <h2>Surrounded by galleries, boutiques, restaurants and cafés, our Hotel is a hub of energy
-                                    and
-                                    style.</h2>
+                                    and style.</h2>
                                 <a href="#" class="tittle-btn mt-15">Find a Room For You</a>
                             </div>
                         </div>
@@ -290,7 +292,7 @@
                                     <div class="row">
                                         <div class="col-xl-6 col-lg-6 col-md-6 p-0">
                                             <div class="features-img">
-                                                <img src="assets/img/gallery/project-img.jpg" alt="">
+                                                <img src="{{ asset('img/gallery/project-img.webp') }}" alt="">
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 p-0">
@@ -313,13 +315,13 @@
 
 
             <div class="video-area section-img-bg2 d-flex align-items-center"
-                data-background="assets/img/gallery/video-bg.jpg">
+                data-background="{{ asset('img/gallery/video-bg.jpg.webp') }}">
                 <div class="container">
                     <div class="video-wrap position-relative">
 
                         <div class="video-icon">
                             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
-                                <img src="assets/img/icon/video-icon.svg" alt="">
+                                <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
                             </a>
                         </div>
                     </div>
@@ -342,7 +344,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
-                                <img src="assets/img/gallery/guest1.jpg" alt="">
+                                <img src="{{ asset('img/gallery/guest1.webp') }}" alt="">
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">Free Drinks</a></h3>
                                 </div>
@@ -357,7 +359,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
-                                <img src="assets/img/gallery/guest2.jpg" alt="">
+                                <img src="{{ asset('img/gallery/guest2.jpg') }}" alt="">
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">Free Breakfast</a></h3>
                                 </div>
@@ -372,7 +374,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="single-location mb-30">
-                                <img src="assets/img/gallery/guest3.jpg" alt="">
+                                <img src="{{ asset('img/gallery/guest3.webp') }}" alt="">
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">Free Dinner</a></h3>
                                 </div>
@@ -571,8 +573,13 @@
                     icon: icon,
                     title: myCoords.hotel_name,
                     optimized: true,
+                    // label: `${i + 1}`,
+                    animation: google.maps.Animation.DROP,
                     url: @json(url('/hotel-details')) + '/' + myCoords.listing_id,
                 });
+
+
+
 
                 allMarkers.push(r);
 
@@ -583,15 +590,26 @@
 
             allMarkers.map((marker) => {
                 marker.addListener("click", () => {
+                    // marker.addListener("click", toggleBounce);
                     window.open(marker.url, '_blank')
                 })
             });
         }
+
+
+
+        //         function toggleBounce() {
+        //   if (r.getAnimation() !== null) {
+        //     r.setAnimation(null);
+        //   } else {
+        //     r.setAnimation(google.maps.Animation.BOUNCE);
+        //   }
+        // }
     </script>
 
-<script
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1GLowllQeWOX52ML3wtC-qYcoZ6ygOwg&libraries=places&callback=initMap">
-</script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1GLowllQeWOX52ML3wtC-qYcoZ6ygOwg&libraries=places&callback=initMap">
+    </script>
 
     {{-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">

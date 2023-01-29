@@ -31,7 +31,7 @@
 </div>
 
 <style>
-@media print {
+/* @media print {
   body * {
     visibility: hidden;
   }
@@ -43,7 +43,7 @@
     left: 0;
     top: 0;
   }
-}
+} */
     </style>
 <div class="oontainer-fluid container_form-bar">
     <div class="form_full sign_up">

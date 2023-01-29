@@ -107,13 +107,13 @@
  
 
 
-    <div class="video-area section-img-bg2 d-flex align-items-center" data-background="assets/img/gallery/video-bg.jpg">
+    <div class="video-area section-img-bg2 d-flex align-items-center" data-background="{{asset('img/gallery/video-bg.jpg.webp')}}">
         <div class="container">
             <div class="video-wrap position-relative">
 
                 <div class="video-icon">
                     <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
-                        <img src="assets/img/icon/video-icon.svg" alt="">
+                        <img src="{{asset('img/icon/video-icon_2.svg')}}" alt="">
                     </a>
                 </div>
             </div>
@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-location single-location2 mb-30 mb-30">
-                        <img src="assets/img/gallery/guest1.jpg" alt="">
+                        <img src="{{asset('img/gallery/guest1.webp')}}" alt="">
                         <div class="guest-contents guest-contents2">
                             <h3><a href="#">Free Drinks</a></h3>
                         </div>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-location single-location2 mb-30 mb-30">
-                        <img src="assets/img/gallery/guest2.jpg" alt="">
+                        <img src="{{asset('img/gallery/guest2.jpg')}}" alt="">
                         <div class="guest-contents guest-contents2">
                             <h3><a href="#">Free Breakfast</a></h3>
                         </div>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-location single-location2 mb-30 mb-30">
-                        <img src="assets/img/gallery/guest3.jpg" alt="">
+                        <img src="{{asset('img/gallery/guest3.webp')}}" alt="">
                         <div class="guest-contents guest-contents2">
                             <h3><a href="#">Free Dinner</a></h3>
                         </div>

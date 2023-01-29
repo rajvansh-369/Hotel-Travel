@@ -9,7 +9,7 @@
                     <label>Check In Date*</label>
                     <div class="boking-datepicker">
                         <input id="datepicker1"name="fromDate" value="{{ session('fromDate') ?? '' }} "
-                            placeholder="Check in" />
+                            placeholder="Check in" required />
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <label>Check Out Date*</label>
                     <div class="boking-datepicker">
                         <input id="datepicker2" name="toDate" value="{{ session('toDate') ?? '' }} "
-                            placeholder="Check out" />
+                            placeholder="Check out" required />
                     </div>
                 </div>
             </div>
@@ -28,6 +28,9 @@
                     <select id="select1" name="adult">
                         <option value="">No of Adult</option>
                         <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
 
                     </select>
                 </div>
@@ -36,6 +39,8 @@
                 <div class="select-form mb-15">
                     <select id="select2" name="child">
                         <option value="">No of Children</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
                         <option value="1">1</option>
 
                     </select>
