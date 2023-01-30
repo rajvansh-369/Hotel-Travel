@@ -157,10 +157,10 @@
 
                 </div>
                 {{-- </div> --}}
-                <div class="col-xl-4 col-lg-4 col-md-12">
+                {{-- <div class="col-xl-4 col-lg-4 col-md-12">
                     <div id="map" style="height: 68rem; width:100%;">
                     </div>
-                </div>
+                </div> --}}
             </div>
 
 

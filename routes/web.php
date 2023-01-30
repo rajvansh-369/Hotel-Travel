@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,5 +69,12 @@ Route::get('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin'
 
 
 Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
+
+
+
+
+Route::get('event-registration', [PaymentController::class, 'register']);
+Route::post('payment', [PaymentController::class, 'order'])->name('paytm');
+
 
 
