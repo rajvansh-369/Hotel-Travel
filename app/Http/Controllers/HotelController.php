@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Session;
 class HotelController extends Controller
 {
-   
+
 
     public function index(){
 
 
-        
+
 
             // $addr = Picture::get()->toArray();
 
             // return  ($addr);
-        
+
         $hotels = Listing::where('status',1)->get();
         $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
 
@@ -44,26 +44,26 @@ class HotelController extends Controller
 
         return view('pages.home' ,compact('hotels' , 'locations' , 'banner'));
     }
-    
-    
+
+
     public function hotel_details($id){
 
         $hotel = Listing::where('id', $id)->with('bedrooms')->first();
-       
+
         $location = [];
- 
+
 
 
             $location['lat'] = (double)$hotel->address->lat;
             $location['lng'] = (double)$hotel->address->lng;
             $location['listing_id'] = (double)$hotel->address->listing_id;
-            
-     
+
+
             // dd($location);
 
         return view('pages.hotel-details' ,compact('hotel', 'location'));
     }
-   
+
     public function hotels(){
 
         $hotels = Listing::get();
@@ -80,20 +80,20 @@ class HotelController extends Controller
 
         return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
-   
+
     public function searchHotels(Request $request){
 
-        $fromDate = $request->fromDate;
-        $toDate = $request->toDate;
+        $startDate = $request->fromDate;
+        $endDate = $request->toDate;
         $adult = $request->adult;
         $child = $request->child;
-        
-        session(['fromDate'=> $fromDate]);
-        session(['toDate' => $toDate]);
+
+        session(['startDate'=> $startDate]);
+        session(['endDate' => $endDate]);
         session(['adult'=> $adult]);
         session(['child'=> $child]);
 
-            if( $toDate < $fromDate){
+            if( $endDate < $startDate){
 
 
                 return redirect()->back()->withErrors(['error' =>'End Date should be greater than Start Date']);
@@ -102,28 +102,28 @@ class HotelController extends Controller
         // dd(session()->all(), $request->all());
         return response()->json("Sucess");
     }
-  
-  
+
+
     public function searchResult(Request $request){
 
-        $fromDate = session('fromDate');
-        $toDate = session('toDate');
+        $startDate = session('startDate');
+        $endDate = session('endDate');
         $adult = session('adult');
-         $child =  session('child'); 
-                
+         $child =  session('child');
+
          $data = [
 
-            'fromDate' => $fromDate,
-            'toDate' => $toDate,
+            'startDate' => $startDate,
+            'endDate' => $endDate,
             'adult' => $adult,
             'child' => $child,
          ];
 
         //  return $data;
-        
+
         // dd($data);
         $hotels = Listing::where('adult','>=', $adult)->orderBy('adult' , 'desc')->get();
-        // dd($hotels); 
+        // dd($hotels);
         // return $hotels;
 
 
@@ -139,14 +139,14 @@ class HotelController extends Controller
 
         return view('pages.searchHotels' ,compact('hotels', 'locations', 'data' ));
     }
-   
 
 
 
 
 
 
-   
+
+
     public function contact(){
 
         return view('pages.contact');
@@ -160,7 +160,7 @@ class HotelController extends Controller
 
               return redirect(route('loginView'));
         }
-        
+
         // ->format('M d, Y')
         // ->format('M d, Y')
         $startDate = Carbon::createFromFormat('m/d/Y', $request->startDate);
@@ -189,17 +189,21 @@ class HotelController extends Controller
             'subject' => $subject,
             'formattedStart' => $startDate->format('M d, Y'),
             'startTime' => $hotel->full_day_start_time,
-            'startDate' => $startDate->format('Y-m-d'),
-            'endDate' =>$endtDate->format('Y-m-d'),
+            // 'startDate' => $startDate->format('Y-m-d'),
+            // 'endDate' =>$endtDate->format('Y-m-d'),
             'user_id' => $request->userID,
             'lisitng_id' => $request->hotelId,
 
         ];
 
-        session(['data'=> $data]);
+        session([
+            'data'=> $data,
+            'startDate' => $startDate->format('Y-m-d'),
+            'endDate' =>$endtDate->format('Y-m-d')
+    ]);
         // dd($data);
-       
-        
+
+
 
             return    redirect(route('booking'));
         // return view('pages.booking', compact('data'));
@@ -225,17 +229,17 @@ class HotelController extends Controller
         $discountPrice = ($hotel->price_per_day )*($hotel->full_discount_rate /100);
         $sale_tax = ($hotel->price_per_day )*($hotel->sale_tax /100);
         $calculateTotalPrice = number_format((($hotel->price_per_day * $bookingData['totalTime']) +($hotel->price_per_day )*($hotel->sale_tax /100)  ) - ($discountPrice), 2) ;
-        
+
         session(['totalPrice'=>  $calculateTotalPrice]);
         // dd($calculateTotalPrice);
 
-        
+
         return view('pages.booking', compact('hotel', 'user', 'bookingData', 'discountPrice', 'calculateTotalPrice', 'sale_tax'));
-    
+
     }
-   
-   
-   
+
+
+
     public function confirmBooking(Request $request){
 
         if(!auth()->user()){
@@ -247,19 +251,19 @@ class HotelController extends Controller
         return redirect(route('home'));
      }
 
-      
+
 
 
 
         $data =   session('data');
         $totalPrice =   session('totalPrice');
 
-           
+
 
 
         $hotel = Listing::find($data['lisitng_id']);
         $user = User::find($data['user_id']);
-       
+
         $booked = TimexEvents::create([
                 'id' => uuid_create(),
                 'attachments' => "[]",
@@ -286,10 +290,10 @@ class HotelController extends Controller
             $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
             // dd(session()->flush(), session()->all(),);
             // dd($booked);
-        
-        
+
+
         return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate'));
-    
+
     }
 
 }

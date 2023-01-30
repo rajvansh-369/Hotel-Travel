@@ -8,7 +8,7 @@
                 <div class="date-pic mb-15">
                     <label>Check In Date*</label>
                     <div class="boking-datepicker">
-                        <input id="datepicker1"name="fromDate" value="{{ session('fromDate') ?? '' }} "
+                        <input id="datepicker1"name="startDate" value="{{ session('startDate') ?? '' }} "
                             placeholder="Check in" required />
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                 <div class="date-pic mb-15">
                     <label>Check Out Date*</label>
                     <div class="boking-datepicker">
-                        <input id="datepicker2" name="toDate" value="{{ session('toDate') ?? '' }} "
+                        <input id="datepicker2" name="endDate" value="{{ session('endDate') ?? '' }} "
                             placeholder="Check out" required />
                     </div>
                 </div>
@@ -49,7 +49,7 @@
             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                 <div class="search-form">
                     <a type="submit" class="btn btn-primary" onclick="required()" href="#"> Search </a>
-                
+
                     @if($errors->any())
                     <h4>{{$errors->first()}}</h4>
                     @endif
@@ -87,22 +87,22 @@
             error++
         }else if(toDate ==""){
             alert('Please select End Date');
-            
+
             error++
         }else if(adult ==""){
 
             alert('Please select No of Adult');
-            
+
             error++
         }else if(child == ""){
             alert('Please select No of Child');
             error++
 
         }
-        
+
         if(error == 0){
 
-        
+
         $.ajax({
             headers: {
                   'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
