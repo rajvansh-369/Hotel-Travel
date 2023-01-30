@@ -48,7 +48,7 @@ class HotelController extends Controller
     
     public function hotel_details($id){
 
-        $hotel = Listing::where('id', $id)->first();
+        $hotel = Listing::where('id', $id)->with('bedrooms')->first();
        
         $location = [];
  

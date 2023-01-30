@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ListingResource\Pages;
 use App\Filament\Resources\ListingResource\RelationManagers;
 use App\Models\Amenity;
+use App\Models\BedroomsType;
 use App\Models\Listing;
 use Closure;
 use DateTime;
@@ -218,35 +219,18 @@ class ListingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user_id'),
+              
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('picture'),
-                Tables\Columns\TextColumn::make('price_per_hour'),
                 Tables\Columns\TextColumn::make('price_per_day'),
-                Tables\Columns\TextColumn::make('review_stars'),
                 Tables\Columns\TextColumn::make('status'),
-                Tables\Columns\IconColumn::make('half_day_discount')
-                    ->boolean(),
-                Tables\Columns\IconColumn::make('half_discount_rate')
-                    ->boolean(),
+
                 Tables\Columns\IconColumn::make('full_day_discount')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('full_discount_rate')
-                    ->boolean(),
-                Tables\Columns\TextColumn::make('sale_tax'),
-                Tables\Columns\TextColumn::make('full_day_start_time'),
-                Tables\Columns\TextColumn::make('full_day_end_time'),
-                Tables\Columns\TextColumn::make('min_hour'),
-                Tables\Columns\TextColumn::make('advance_notice'),
-                Tables\Columns\TextColumn::make('hosting_instruction'),
-                Tables\Columns\TextColumn::make('cleaning_fee'),
-                Tables\Columns\TextColumn::make('cleaning_fee_percent'),
-                Tables\Columns\TextColumn::make('listing_type'),
+                Tables\Columns\TextColumn::make('full_discount_rate'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime(),
+
             ])
             ->filters([
                 //

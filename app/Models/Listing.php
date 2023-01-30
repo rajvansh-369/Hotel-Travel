@@ -55,6 +55,9 @@ class Listing extends Model
     public function picture(){
         return $this->hasMany(Picture::class);
     }
+    public function bedrooms(){
+        return $this->hasMany(BedroomsType::class);
+    }
 
     public function videos(){
         return $this->hasOne(Video::class);
