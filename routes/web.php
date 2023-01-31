@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
@@ -75,3 +76,7 @@ Route::get('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin'
 Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
 
 
+
+
+Route::get('/login/google', [GoogleLoginController::class, 'redirect'])->name('login.google-redirect');
+Route::get('/login/google/callback',[GoogleLoginController::class, 'callback'])->name('login.google-callback');
