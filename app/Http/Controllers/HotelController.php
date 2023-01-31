@@ -88,14 +88,14 @@ class HotelController extends Controller
         $hotelData = $request->hotel;
         $bedroomTypePrice = $request->bedroomTypePrice;
         $price_per_day = $request->price_per_day;
-        
+
         // dd($hotelData);
 
 
             $startDate = Carbon::createFromFormat('m/d/Y', $request->startDate);
             $endtDate = Carbon::createFromFormat('m/d/Y',   $request->endDate);
 
-           
+
             $days =  $endtDate->diffInDays($startDate);
 
             if($bedroomTypePrice  == ""){
@@ -103,7 +103,7 @@ class HotelController extends Controller
 
                 $PriceCalc = $price_per_day * $days;
             }else{
-                
+
                 $PriceCalc = $bedroomTypePrice * $days;
 
             }
@@ -186,9 +186,6 @@ class HotelController extends Controller
 
     public function preBooking(Request $request){
 
-
-            // dd($request->all());
-
         if(!auth()->user()){
 
               return redirect(route('loginView'));
@@ -222,8 +219,6 @@ class HotelController extends Controller
             'subject' => $subject,
             'formattedStart' => $startDate->format('M d, Y'),
             'startTime' => $hotel->full_day_start_time,
-            // 'startDate' => $startDate->format('Y-m-d'),
-            // 'endDate' =>$endtDate->format('Y-m-d'),
             'user_id' => $request->userID,
             'lisitng_id' => $request->hotelId,
 
@@ -233,7 +228,7 @@ class HotelController extends Controller
             'data'=> $data,
             'startDate' => $startDate->format('m/d/Y'),
             'endDate' =>$endtDate->format('m/d/Y')
-    ]);
+        ]);
         // dd($data);
 
 
@@ -284,32 +279,26 @@ class HotelController extends Controller
         return redirect(route('home'));
      }
 
-
-
-
-
         $data =   session('data');
         $totalPrice =   session('totalPrice');
 
-
-
-
         $hotel = Listing::find($data['lisitng_id']);
         $user = User::find($data['user_id']);
-
+        $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));
+        $endtDate = Carbon::createFromFormat('m/d/Y', session('endDate'));
         $booked = TimexEvents::create([
                 'id' => uuid_create(),
                 'attachments' => "[]",
                 'body' => $data['body'],
                 'category' => 'secondary',
                 'endTime' => '11:45:00',
-                'end' => $data['endDate'],
+                'end' => $endtDate,
                 'isAllDay' => 1,
                 'organizer' => $data['organizer'],
                 'participants' => json_encode($data['participants']),
                 'subject' => $data['subject'],
                 'startTime' => '12:00:00',
-                'start' => $data['startDate'],
+                'start' => $startDate,
                 'totalPrice' => $totalPrice,
                 'user_id' => $data['user_id'],
                 'lisitng_id' => $data['lisitng_id'],
