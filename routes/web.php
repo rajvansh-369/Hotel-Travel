@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,11 @@ Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 Route::post('/searchHotels', [HotelController::class, 'searchHotels'])->name('searchHotels');
 Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('searchResult');
 
+
+
+
+Route::post('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');
+
 // Route::middleware(['middleware' => 'auth'], function () {
     
     
@@ -70,3 +76,7 @@ Route::get('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin'
 Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
 
 
+
+
+Route::get('/login/google', [GoogleLoginController::class, 'redirect'])->name('login.google-redirect');
+Route::get('/login/google/callback',[GoogleLoginController::class, 'callback'])->name('login.google-callback');

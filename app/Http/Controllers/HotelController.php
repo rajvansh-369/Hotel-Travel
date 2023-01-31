@@ -81,6 +81,42 @@ class HotelController extends Controller
         return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
 
+
+
+    public function bedroomsPrice(Request $request){
+
+        $hotelData = $request->hotel;
+        $bedroomTypePrice = $request->bedroomTypePrice;
+        $price_per_day = $request->price_per_day;
+        
+        // dd($hotelData);
+
+
+            $startDate = Carbon::createFromFormat('m/d/Y', $request->startDate);
+            $endtDate = Carbon::createFromFormat('m/d/Y',   $request->endDate);
+
+           
+            $days =  $endtDate->diffInDays($startDate);
+
+            if($bedroomTypePrice  == ""){
+
+
+                $PriceCalc = $price_per_day * $days;
+            }else{
+                
+                $PriceCalc = $bedroomTypePrice * $days;
+
+            }
+
+            session([
+                'startDate' => $startDate->format('m/d/Y'),
+                'endDate' =>$endtDate->format('m/d/Y'),
+                'priceWithoutTax' =>$PriceCalc
+        ]);
+
+            return $PriceCalc;
+    }
+
     public function searchHotels(Request $request){
 
         $startDate = $request->fromDate;
@@ -142,11 +178,6 @@ class HotelController extends Controller
 
 
 
-
-
-
-
-
     public function contact(){
 
         return view('pages.contact');
@@ -156,6 +187,8 @@ class HotelController extends Controller
     public function preBooking(Request $request){
 
 
+            // dd($request->all());
+
         if(!auth()->user()){
 
               return redirect(route('loginView'));
@@ -164,7 +197,7 @@ class HotelController extends Controller
         // ->format('M d, Y')
         // ->format('M d, Y')
         $startDate = Carbon::createFromFormat('m/d/Y', $request->startDate);
-        $endtDate = Carbon::createFromFormat('m/d/Y', $request->endtDate);
+        $endtDate = Carbon::createFromFormat('m/d/Y', $request->endDate);
 
             $totalTime =  $endtDate->diffInDays($startDate);
 
@@ -198,8 +231,8 @@ class HotelController extends Controller
 
         session([
             'data'=> $data,
-            'startDate' => $startDate->format('Y-m-d'),
-            'endDate' =>$endtDate->format('Y-m-d')
+            'startDate' => $startDate->format('m/d/Y'),
+            'endDate' =>$endtDate->format('m/d/Y')
     ]);
         // dd($data);
 
