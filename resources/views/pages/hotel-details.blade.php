@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    {{-- {{dd($hotel->picture)}} --}}
+{{-- {{ dd(session('fromDate')) }} --}}
     <div class="header-top navBarDetailPage">
         <div class="container-fluid">
             <div class="row">
@@ -10,9 +10,9 @@
                             {{-- <ul>
                                 <li>Call Us: +10 (89) 675 5456</li>
                                 <li>
-    
+
                                     <a href="">enquiry@hotel.com</a>
-                                    
+
                                 </li>
                             </ul> --}}
                         </div>
@@ -189,7 +189,7 @@
                             <div class="card-body ">
 
 
-                                <form action="{{route('preBooking')}}" method="post">
+                                <form action="{{ route('preBooking') }}" method="post">
                                     @csrf
 
                                     <div class="row justify-content-between hr" id="hr1">
@@ -239,20 +239,21 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
-                                            <input id="datepicker1" required name="startDate" value="{{session('fromDate') ?? ""}} " placeholder="Check in"
+                                            <input id="datepicker1" required name="startDate"
+                                                value="{{ session('fromDate') ?? '' }} " placeholder="Check in"
                                                 class="text-secondary datePicker" />
-                                                @if (auth()->user())
-                                                    
-                                                <input type="hidden" name="userID" value="{{auth()->user()->id}}">
-                                                <input type="hidden" name="hotelId" value="{{$hotel->id}}">
-                                                @endif
+                                            @if (auth()->user())
+                                                <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
+                                                <input type="hidden" name="hotelId" value="{{ $hotel->id }}">
+                                            @endif
                                         </div>
 
                                     </div>
                                     <div class="date-pic mb-15">
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
-                                            <input id="datepicker2" required name="endtDate"  value="{{session('toDate') ?? ""}} " placeholder="Check out"
+                                            <input id="datepicker2" required name="endtDate"
+                                                value="{{ session('toDate') ?? '' }} " placeholder="Check out"
                                                 class="text-secondary datePicker" />
                                         </div>
                                     </div>
@@ -316,57 +317,7 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-                    <section class="location mt-5">
-                        <h4>Bedrooms Type</h4>
-                        <!-- <iframe width="450" height="250" frameborder="0" style="border:0;"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                        src="https://www.google.com/maps/embed/v1/place?q=44.7009146,-63.6864&key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg"
-                                        allowfullscreen>]
-                                    </iframe> -->
-
-                                    {{-- {{dd($hotel->bedrooms)}} --}}
-
-                        <div class="col-md-12 px-0">
-                            <div class="row">
-
-                                @forelse ( $hotel->bedrooms as  $bedroom)
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                          <img src="{{asset('storage/'.$bedroom->bedroom_image)}}" class="img-fluid card_Bedroom"/>
-                                          <a href="#!">
-                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                                          </a>
-                                        </div>
-                                        <div class="card-body">
-                                          <h5 class="card-title">{{$bedroom->bedroom_name}}</h5>
-                                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                          <a href="#!" class="btn btn-primary">Button</a>
-                                        </div>
-                                      </div>
-
-                                </div>
-                                @empty
-                                    
-                                @endforelse
-                               
-
-
-                            </div>
-
-
-                            
-                           
-                           
-                            {{-- <div id="map-listing" style="height: 100%; height:420px;"> </div> --}}
-                        </div>
-                    </section>
+                    @livewire('bedroom-type', ['hotel' => $hotel])
                     <section class="otherbrthishost py-5" style="display:block">
                         <div class="row">
                             <div class="col-md-12">
@@ -399,8 +350,11 @@
 
 
         function initMap() {
-            var locationArr = { lat: parseFloat(@json($location['lat'])), lng: parseFloat(@json($location['lng'])) };
-console.log(locationArr);
+            var locationArr = {
+                lat: parseFloat(@json($location['lat'])),
+                lng: parseFloat(@json($location['lng']))
+            };
+            console.log(locationArr);
             var mapOptions = {
                 center: locationArr,
                 zoom: 14
@@ -408,27 +362,31 @@ console.log(locationArr);
 
             const map = new google.maps.Map(document.getElementById('map-listing'), mapOptions);
             const icon = {
-                url:  @json(asset('/storage/map_pointer.png')), // url
+                url: @json(asset('/storage/map_pointer.png')), // url
                 scaledSize: new google.maps.Size(35, 50), // scaled size
-            
+
             };
 
             var allMarkers = [];
-            r =   new google.maps.Marker({
+            r = new google.maps.Marker({
                 position: locationArr,
                 map: map,
-                icon:icon,
-                url: 'https://maps.google.com/?q='+(@json($location['lat']))+','+(@json($location['lng'])),     
+                icon: icon,
+                url: 'https://maps.google.com/?q=' + (@json($location['lat'])) + ',' + (
+                    @json($location['lng'])),
             });
-      
+
             allMarkers.push(r);
-      
+
             allMarkers.map((marker) => {
-            marker.addListener("click", () => { window.open( marker.url,'_blank') })
-        });
-      
+                marker.addListener("click", () => {
+                    window.open(marker.url, '_blank')
+                })
+            });
+
         }
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap"></script>
-
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
+    </script>
 @endsection

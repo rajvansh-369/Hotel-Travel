@@ -11,7 +11,7 @@
                             <li>
 
                                 <a href="">enquiry@hotel.com</a>
-                                
+
                             </li>
                         </ul> --}}
                     </div>
@@ -31,14 +31,14 @@
 
 <main>
     {{-- {{dd($hotels)}} --}}
-    
+
 
     <div class="slider-area hero-bg1  hero-overly">
         <div class="single-slider  slider-height2 d-flex align-items-center">
             <div class="container">
                 <div class="row justify-content-center ">
                     <div class="col-xl-7 col-lg-11">
-    
+
                         <div class="hero-caption hero-caption2 pt-10">
                             <h1>Our Rooms</h1>
                         </div>
@@ -61,7 +61,7 @@
                             <div class="section-tittle mb-50">
                                 <h2>Your Search</h2>
                                 {{-- {{dd($data)}} --}}
-                        <p>From: {{$data['fromDate']}} - {{$data['toDate']}} For {{$data['adult']}} Adult and {{$data['child']}} Child.
+                        <p>From: {{$data['startDate']}} - {{$data['endDate']}} For {{$data['adult']}} Adult and {{$data['child']}} Child.
                                 </p>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                     <div class="single-location single-location2 mb-30 line-content">
                                         <img class="hotel_mainImg"
                                             src="{{ asset('/storage/' . $hotel->picture[0]->picture) }}" alt="">
-            
+
                                         <div class="location-contents">
                                             <h3><a href="#">{{ $hotel->name }} </a></h3>
                                             <p>2 Adult 1 Children</p>
@@ -92,9 +92,9 @@
                             </div>
                         @endforeach
                         <ul id="pagin"></ul>
-            
-            
-            
+
+
+
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
             </div>
         </div>
     </div>
- 
+
 
 
     <div class="video-area section-img-bg2 d-flex align-items-center" data-background="{{asset('img/gallery/video-bg.jpg.webp')}}">
@@ -252,7 +252,7 @@
 
         var pageCount =  $(".line-content").length / pageSize;
         var totalSlidepPage = Math.floor(pageCount / incremSlide);
-            
+
         for(var i = 0 ; i<pageCount;i++){
             $("#pagin").append('<li><a href="#topScroll">'+(i+1)+'</a></li> ');
             if(i>pageSize){
@@ -282,7 +282,7 @@
 
         slide = function(sens){
         $("#pagin li").hide();
-        
+
         for(t=startPage;t<incremSlide;t++){
             $("#pagin li").eq(t+1).show();
         }
@@ -295,9 +295,9 @@
         }else{
             next.show();
             prev.show();
-        } 
-        
-            
+        }
+
+
         }
 
         showPage = function(page) {
@@ -305,9 +305,9 @@
             $(".line-content").each(function(n) {
                 if (n >= pageSize * (page - 1) && n < pageSize * page)
                     $(this).show();
-            });        
+            });
         }
-            
+
         showPage(1);
         $("#pagin li a").eq(0).addClass("current");
 
@@ -317,7 +317,7 @@
             showPage(parseInt($(this).text()));
         });
 
-      
+
 });
 </script>
 
@@ -325,7 +325,7 @@
 
 
 
-   
+
 
     <script>
         function initMap() {
