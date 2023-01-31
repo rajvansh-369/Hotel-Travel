@@ -52,6 +52,11 @@ Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 Route::post('/searchHotels', [HotelController::class, 'searchHotels'])->name('searchHotels');
 Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('searchResult');
 
+
+
+
+Route::get('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');
+
 // Route::middleware(['middleware' => 'auth'], function () {
     
     

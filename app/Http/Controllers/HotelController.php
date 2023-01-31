@@ -81,6 +81,14 @@ class HotelController extends Controller
         return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
 
+
+
+    public function bedroomsPrice(Request $request){
+
+        
+
+    }
+
     public function searchHotels(Request $request){
 
         $startDate = $request->fromDate;
@@ -139,11 +147,6 @@ class HotelController extends Controller
 
         return view('pages.searchHotels' ,compact('hotels', 'locations', 'data' ));
     }
-
-
-
-
-
 
 
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-{{-- {{ dd(session('fromDate')) }} --}}
+    {{-- {{ dd(session('fromDate')) }} --}}
     <div class="header-top navBarDetailPage">
         <div class="container-fluid">
             <div class="row">
@@ -232,15 +232,32 @@
                                         @endif
                                     </div>
 
+                                    {{-- {{dd($hotel->bedrooms)}} --}}
+                                    <div class="row justify-content-between hr" id="hr1">
+
+                                        <select id="select"  onchange="bedroomPriceFunc()"  name="bedroomPrice">
+                                            <option value="">Select Bedroom Type</option>
+
+                                            @forelse ($hotel->bedrooms as $bedroom)
+                                                <option value="{{ $bedroom->bedroom_price }}">
+                                                    {{ $bedroom->bedroom_name }}</option>
+
+                                            @empty
+                                            @endforelse
+
+
+                                        </select>
+
+                                    </div>
+
 
                                     {{-- <h5 class="card-title">Price per Day : <b>₹{{ $hotel->price_per_day }}</b></h5> --}}
-
 
                                     <div class="date-pic mb-15">
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('fromDate') ?? '' }} " placeholder="Check in"
+                                                value="{{ session('startDate') ?? '' }} " onchange="bedroomPriceFunc()" placeholder="Check in"
                                                 class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
@@ -252,8 +269,8 @@
                                     <div class="date-pic mb-15">
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
-                                            <input id="datepicker2" required name="endtDate"
-                                                value="{{ session('toDate') ?? '' }} " placeholder="Check out"
+                                            <input id="datepicker2" required name="endDate"
+                                                value="{{ session('endDate') ?? '' }} "  onchange="bedroomPriceFunc()" placeholder="Check out"
                                                 class="text-secondary datePicker" />
                                         </div>
                                     </div>
@@ -331,6 +348,38 @@
     </main>
 
     <script>
+        function bedroomPriceFunc() {
+            var bedroomTypePrice = $('.list .selected').data('value');
+            var startDate = $('#datepicker1').val();
+            var endDate = $('#datepicker2').val();
+
+            console.log(bedroomTypePrice, startDate ,endDate );
+            // $.ajax({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     },
+            //     url: @json(route('searchHotels')),
+            //     type: 'post',
+            //     data: {
+            //         'fromDate': fromDate,
+            //         'toDate': toDate,
+            //         'adult': adult,
+            //         'child': child,
+            //     },
+            //     dataType: 'json',
+            //     success: function(data) {
+            //         console.log(data);
+            //         window.location.href = @json(route('searchResult'));
+            //     },
+            //     error: function(request, error) {
+            //         console.log(request);
+            //         console.log(error);
+            //         alert("Request: " + JSON.stringify(request));
+            //     }
+            // });
+        }
+
+
         function showMore(showClass) {
             $('.' + showClass + '-all').show();
             $('#' + showClass + '-show-btn').hide();
