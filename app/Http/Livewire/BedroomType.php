@@ -12,8 +12,8 @@ class BedroomType extends Component
     public $days;
     public function mount(){
         if(session('startDate') && session('endDate')){
-            $startDate = Carbon::createFromFormat('Y-m-d', session('startDate'));
-            $endtDate = Carbon::createFromFormat('Y-m-d', session('endDate'));
+            $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));
+            $endtDate = Carbon::createFromFormat('m/d/Y', session('endDate'));
             $this->days =  $endtDate->diffInDays($startDate);
             // dd(session('startDate'), session('endDate'), $this->days , session()->all());
         }

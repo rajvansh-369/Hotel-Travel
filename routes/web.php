@@ -55,7 +55,7 @@ Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('sea
 
 
 
-Route::get('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');
+Route::post('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');
 
 // Route::middleware(['middleware' => 'auth'], function () {
     

@@ -213,13 +213,14 @@
                                         </div>
                                     </div>
 
-                                    {{-- {{dd($hotel)}} --}}
+                                    {{-- {{dd(session('priceWithoutTax'))}} --}}
 
                                     {{-- <section class="availability-card"> --}}
                                     <div class="row justify-content-between hr" id="hr1">
                                         <div class="col-md-8 col-sm-8">
                                             <p class="pricehrdy">
-                                                <strong>₹{{ $hotel->price_per_day }}</strong><span>/day</span>
+                                                <strong>₹ <span
+                                                        class="bedroomPrice">{{ session('priceWithoutTax') ? session('priceWithoutTax') :  $hotel->price_per_day }}</span></strong><span>/day</span>
                                             </p>
 
                                         </div>
@@ -235,7 +236,7 @@
                                     {{-- {{dd($hotel->bedrooms)}} --}}
                                     <div class="row justify-content-between hr" id="hr1">
 
-                                        <select id="select"  onchange="bedroomPriceFunc()"  name="bedroomPrice">
+                                        <select id="select" onchange="bedroomPriceFunc()" name="bedroomPrice">
                                             <option value="">Select Bedroom Type</option>
 
                                             @forelse ($hotel->bedrooms as $bedroom)
@@ -257,8 +258,8 @@
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('startDate') ?? '' }} " onchange="bedroomPriceFunc()" placeholder="Check in"
-                                                class="text-secondary datePicker" />
+                                                value="{{ session('startDate') ?? '' }} " onchange="bedroomPriceFunc()"
+                                                placeholder="Check in" class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
                                                 <input type="hidden" name="hotelId" value="{{ $hotel->id }}">
@@ -270,8 +271,8 @@
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
                                             <input id="datepicker2" required name="endDate"
-                                                value="{{ session('endDate') ?? '' }} "  onchange="bedroomPriceFunc()" placeholder="Check out"
-                                                class="text-secondary datePicker" />
+                                                value="{{ session('endDate') ?? '' }} " onchange="bedroomPriceFunc()"
+                                                placeholder="Check out" class="text-secondary datePicker" />
                                         </div>
                                     </div>
 
@@ -350,33 +351,49 @@
     <script>
         function bedroomPriceFunc() {
             var bedroomTypePrice = $('.list .selected').data('value');
+            if(bedroomTypePrice == ''){
+
+                var bedroomTypePrice =   @json($hotel->price_per_day)
+            }
             var startDate = $('#datepicker1').val();
             var endDate = $('#datepicker2').val();
 
-            console.log(bedroomTypePrice, startDate ,endDate );
-            // $.ajax({
-            //     headers: {
-            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            //     },
-            //     url: @json(route('searchHotels')),
-            //     type: 'post',
-            //     data: {
-            //         'fromDate': fromDate,
-            //         'toDate': toDate,
-            //         'adult': adult,
-            //         'child': child,
-            //     },
-            //     dataType: 'json',
-            //     success: function(data) {
-            //         console.log(data);
-            //         window.location.href = @json(route('searchResult'));
-            //     },
-            //     error: function(request, error) {
-            //         console.log(request);
-            //         console.log(error);
-            //         alert("Request: " + JSON.stringify(request));
-            //     }
-            // });
+            console.log(bedroomTypePrice, startDate, endDate);
+
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: @json(route('bedroomsPrice')),
+                type: 'post',
+                data: {
+                    'price_per_day': @json($hotel->price_per_day),
+                    'startDate': startDate,
+                    'endDate': endDate,
+                    'bedroomTypePrice': bedroomTypePrice,
+
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data);
+                    $('.bedroomPrice').html("");
+
+                    // if (data > 1) {
+
+                    //     var finalPrice =  bedroomTypePrice * data
+                    //     console.log(finalPrice);
+                        $('.bedroomPrice').append(data);
+
+                    // }
+                    // window.location.href = @json(route('searchResult'));
+                },
+                error: function(request, error) {
+                    console.log(request);
+                    console.log(error);
+                    // alert("Request: " + JSON.stringify(request));
+                }
+            });
         }
 
 
