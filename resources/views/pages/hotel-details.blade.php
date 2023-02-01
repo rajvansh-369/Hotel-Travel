@@ -464,7 +464,7 @@
             var endDate = $('#datepicker2').val();
 
             console.log(bedroomTypePrice, startDate, endDate);
-            Livewire.emit('mount')
+           
 
             $.ajax({
                 headers: {
@@ -483,7 +483,7 @@
                 success: function(data) {
                     console.log(data);
                     $('.bedroomPrice').html("");
-
+                    Livewire.emit('mount')
                     // if (data > 1) {
 
                     //     var finalPrice =  bedroomTypePrice * data
