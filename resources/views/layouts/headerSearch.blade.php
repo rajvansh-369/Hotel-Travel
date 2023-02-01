@@ -1,8 +1,7 @@
 <div class="container">
-    <form  class="search-box pb-45">
+    <form class="search-box pb-45">
         <div class="row align-items-end">
 
-            {{-- {{ dd(session()->all())}} --}}
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
                 <div class="date-pic mb-15">
@@ -50,82 +49,68 @@
                 <div class="search-form">
                     <a type="submit" class="btn btn-primary" onclick="required()" href="#"> Search </a>
 
-                    @if($errors->any())
-                    <h4>{{$errors->first()}}</h4>
+                    @if ($errors->any())
+                        <h4>{{ $errors->first() }}</h4>
                     @endif
                 </div>
             </div>
         </div>
-    {{-- </form> --}}
+        {{-- </form> --}}
 </div>
 
 <script>
     function required() {
-
-
-        // var empt = document.getElementById("select1").value;
-        // console.log(empt);
-        // if (empt == "") {
-        //     alert("Please input a Value");
-        //     return false;
-        // } else {
-        //     alert('Code has accepted : you can try another');
-        //     return true;
-        // }
-
-
-
 
         var fromDate = $('#datepicker1').val();
         var toDate = $('#datepicker2').val();
         var adult = $('#select1').val();
         var child = $('#select2').val();
         var error = 0;
-        if(fromDate == ""){
+        if (fromDate == "") {
 
             alert('Please select From Date');
             error++
-        }else if(toDate ==""){
+        } else if (toDate == "") {
             alert('Please select End Date');
 
             error++
-        }else if(adult ==""){
+        } else if (adult == "") {
 
             alert('Please select No of Adult');
 
             error++
-        }else if(child == ""){
+        } else if (child == "") {
             alert('Please select No of Child');
             error++
 
         }
 
-        if(error == 0){
+        if (error == 0) {
 
 
-        $.ajax({
-            headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-             },
-              url: @json(route('searchHotels')),
-            type: 'post',
-            data: {
-                'fromDate': fromDate,
-                'toDate': toDate,
-                'adult': adult,
-                'child': child,
-            },
-            dataType: 'json',
-            success: function(data) {
-                console.log(data);
-                window.location.href = @json(route('searchResult'));
-            },
-            error: function(request, error) {
-                console.log(request);
-                console.log(error);
-                alert("Request: " + JSON.stringify(request));
-            }
-        });
-    }
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: @json(route('searchHotels')),
+                type: 'post',
+                data: {
+                    'fromDate': fromDate,
+                    'toDate': toDate,
+                    'adult': adult,
+                    'child': child,
+                },
+                dataType: 'json',
+                success: function(data) {
+                    console.log(data);
+                    window.location.href = @json(route('searchResult'));
+                },
+                error: function(request, error) {
+                    console.log(request);
+                    console.log(error);
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        }
     }
 </script>
