@@ -33,14 +33,12 @@ class HotelController extends Controller
         $location = [];
         foreach($hotels as $hotel){
 
-            // dd($hotel);
             $location['lat'] = (double)$hotel->address->lat;
             $location['lng'] = (double)$hotel->address->lng;
             $location['listing_id'] = (double)$hotel->address->listing_id;
             $location['hotel_name'] = (string)$hotel->name;
             $locations[] = $location;
         }
-        // dd(json_encode($locations));
 
         return view('pages.home' ,compact('hotels' , 'locations' , 'banner'));
     }
@@ -49,17 +47,10 @@ class HotelController extends Controller
     public function hotel_details($id){
 
         $hotel = Listing::where('id', $id)->with('bedrooms')->first();
-
         $location = [];
-
-
-
-            $location['lat'] = (double)$hotel->address->lat;
-            $location['lng'] = (double)$hotel->address->lng;
-            $location['listing_id'] = (double)$hotel->address->listing_id;
-
-
-            // dd($location);
+        $location['lat'] = (double)$hotel->address->lat;
+        $location['lng'] = (double)$hotel->address->lng;
+        $location['listing_id'] = (double)$hotel->address->listing_id;
 
         return view('pages.hotel-details' ,compact('hotel', 'location'));
     }
@@ -191,20 +182,17 @@ class HotelController extends Controller
               return redirect(route('loginView'));
         }
 
-        // ->format('M d, Y')
-        // ->format('M d, Y')
         $startDate = Carbon::createFromFormat('m/d/Y', $request->startDate);
         $endtDate = Carbon::createFromFormat('m/d/Y', $request->endDate);
 
-            $totalTime =  $endtDate->diffInDays($startDate);
+        $totalTime =  $endtDate->diffInDays($startDate);
 
-        // dd($totalTime,$startDate, $request->startDate ,  $endtDate,  $request->endtDate)  ;
         $hotel = Listing::find($request->hotelId);
         $user = User::find($request->userID);
         $subject = "Hotel ". $hotel->name." Booking";
         $body = "<p>Booking of ". $hotel->name." from ".$request->endtDate." to ".$request->endtDate." from ".$user->name."</p>";
         $data = [
-            // 'id' => uuid_create(),
+
             'totalTime' =>$totalTime,
             'userID' => $request->userID,
             'hotelId' => $request->hotelId,
@@ -227,20 +215,13 @@ class HotelController extends Controller
         session([
             'data'=> $data,
             'startDate' => $startDate->format('m/d/Y'),
-            'endDate' =>$endtDate->format('m/d/Y')
+            'endDate' =>$endtDate->format('m/d/Y'),
         ]);
-        // dd($data);
-
-
-
-            return    redirect(route('booking'));
-        // return view('pages.booking', compact('data'));
+            return redirect(route('booking'));
     }
 
     public function booking(Request $request){
 
-
-        // dd(session('data'));
         if(!auth()->user()){
 
             return redirect(route('loginView'));
@@ -254,13 +235,11 @@ class HotelController extends Controller
         $bookingData =   session('data');
         $hotel = Listing::with('address')->find($bookingData['hotelId']);
         $user = User::find($bookingData['userID']);
-        $discountPrice = ($hotel->price_per_day )*($hotel->full_discount_rate /100);
+        $discountPrice = (session('priceWithoutTax') ?? $hotel->price_per_day )*($hotel->full_discount_rate /100);
         $sale_tax = ($hotel->price_per_day )*($hotel->sale_tax /100);
         $calculateTotalPrice = number_format((($hotel->price_per_day * $bookingData['totalTime']) +($hotel->price_per_day )*($hotel->sale_tax /100)  ) - ($discountPrice), 2) ;
 
         session(['totalPrice'=>  $calculateTotalPrice]);
-        // dd($calculateTotalPrice);
-
 
         return view('pages.booking', compact('hotel', 'user', 'bookingData', 'discountPrice', 'calculateTotalPrice', 'sale_tax'));
 
@@ -287,32 +266,28 @@ class HotelController extends Controller
         $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));
         $endtDate = Carbon::createFromFormat('m/d/Y', session('endDate'));
         $booked = TimexEvents::create([
-                'id' => uuid_create(),
-                'attachments' => "[]",
-                'body' => $data['body'],
-                'category' => 'secondary',
-                'endTime' => '11:45:00',
-                'end' => $endtDate,
-                'isAllDay' => 1,
-                'organizer' => $data['organizer'],
-                'participants' => json_encode($data['participants']),
-                'subject' => $data['subject'],
-                'startTime' => '12:00:00',
-                'start' => $startDate,
-                'totalPrice' => $totalPrice,
-                'user_id' => $data['user_id'],
-                'lisitng_id' => $data['lisitng_id'],
+                    'id' => uuid_create(),
+                    'attachments' => "[]",
+                    'body' => $data['body'],
+                    'category' => 'secondary',
+                    'endTime' => '11:45:00',
+                    'end' => $endtDate,
+                    'isAllDay' => 1,
+                    'organizer' => $data['organizer'],
+                    'participants' => json_encode($data['participants']),
+                    'subject' => $data['subject'],
+                    'startTime' => '12:00:00',
+                    'start' => $startDate,
+                    'totalPrice' => $totalPrice,
+                    'user_id' => $data['user_id'],
+                    'lisitng_id' => $data['lisitng_id'],
 
-            ]);
-            // $request->session()->flush();
+                  ]);
+
             $request->session()->forget('data');
             $request->session()->forget('totalPrice');
-            // session()->flush();
-            // dd($booked->created_at);
-            $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
-            // dd(session()->flush(), session()->all(),);
-            // dd($booked);
 
+            $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
 
         return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate'));
 
