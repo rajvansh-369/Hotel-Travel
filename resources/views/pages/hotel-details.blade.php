@@ -28,6 +28,9 @@
             </div>
         </div>
     </div>
+
+
+
     <main>
         <div class="container-fluid  gallery">
             <div class="lightbox">
@@ -42,7 +45,7 @@
                     <div class="col-lg-6">
                         <div class="row ">
 
-                            @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(4) as $picture)
+                            @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(3) as $picture)
                                 <div class="col-lg-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $picture->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
@@ -51,12 +54,113 @@
                                 </div>
                             @endforeach
 
+                            @if (count($hotel->picture) > 3)
+                            
+                            <div class="col-lg-6 gallery_img ">
+                                <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
+                                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                    alt="Table Full of Spices"
+                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images gallery_click_more " />
+
+                                    <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt="">
+                            </div>
+                            @endif
 
                         </div>
 
                     </div>
                 </div>
             </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Gallery</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+               
+                <div class="carousel-inner">
+               
+            @foreach ($hotel->picture as $key => $picture )
+                
+                <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                        <h2 class="bedroom_name">{{$hotel->name}}</h2>
+                      
+                      </div>
+                </div>
+                
+                @endforeach
+
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              {{-- {{dd($hotel->bedrooms[0]->bedroomPicture)}} --}}
+              @forelse ($hotel->bedrooms as  $bedroom)
+            
+                {{-- {{dd($bedroom)}} --}}
+          
+              <div id="carouselExampleControls_Bedroom{{ $loop->index }}" class="carousel slide mt-5" data-bs-ride="carousel">
+               
+                <div class="carousel-inner">
+               
+            @foreach ($bedroom->bedroomPicture as $key => $picture )
+                
+                <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100" alt="...">
+                
+                    <div class="carousel-caption  d-md-block">
+                        <h2 class="bedroom_name">{{$bedroom->bedroom_name}} Bedroom</h2>
+                      
+                      </div>
+                </div>
+                
+                @endforeach
+
+
+                </div>
+                @if (count($bedroom->bedroomPicture) > 1)
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                @endif
+              </div>
+
+              @empty
+              @endforelse
+
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
             {{-- <hr class="hr" /> --}}
             <div class="container brdetailmain">
 
@@ -283,7 +387,7 @@
                                             AVAILABILITY</button>
                                     @else
                                         <a class="btn btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal">CHECK
+                                            data-bs-target="#loginModal">CHECK
                                             AVAILABILITY</a>
                                     @endif
 
@@ -294,7 +398,7 @@
 
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -360,7 +464,7 @@
             var endDate = $('#datepicker2').val();
 
             console.log(bedroomTypePrice, startDate, endDate);
-
+            Livewire.emit('mount')
 
             $.ajax({
                 headers: {
@@ -385,6 +489,8 @@
                     //     var finalPrice =  bedroomTypePrice * data
                     //     console.log(finalPrice);
                         $('.bedroomPrice').append(data);
+
+                       
 
                     // }
                     // window.location.href = @json(route('searchResult'));

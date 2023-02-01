@@ -21,6 +21,17 @@ img.hotel_mainImg {
         height: 135px;
         display: block;
     }
+
+    .plusSign{
+
+
+        position: absolute;
+    right: 55px;
+    width: 75%;
+    
+    
+    }
+
   }
 
   
@@ -28,16 +39,43 @@ img.hotel_mainImg {
   .card_home {
       width: 21.5rem;
   }
+
+  .plusSign{
+
+    position: absolute;
+    right: -0px;
+    top: 308px;
+
+}
   }
   @media only screen and (min-width: 1500px) and (max-width: 1899px) {
   .card_home {
       width: 17rem;
   }
+  .plusSign{
+
+    position: absolute;
+    right: 0px;
+    top: 340px;
+    width: 28%;
+
+}
   }
   @media only screen and (min-width: 1200px) and (max-width: 1499px){
   .card_home {
       width: 14rem;
   }
+
+  .plusSign{
+
+
+    position: absolute;
+    right: 0px;
+    top: 362px;
+    width: 30%;
+
+
+}
   }
 
 
@@ -45,6 +83,16 @@ img.hotel_mainImg {
   .card_home {
       width: 11.5rem;
   }
+  .plusSign{
+
+
+    position: absolute;
+    right: 0px;
+    top: 362px;
+    width: 30%;
+
+
+}
   }
 
 
@@ -469,4 +517,64 @@ input#password_confirmation {
     height: 220px;
     object-fit: cover;
 }
+
+
+
+
+.amenity {
+     border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block!important;
+    width: auto!important;
+    /* display: inline-table; */
+    vertical-align: top;
+    position: relative;
+    top: 0;
+    /* margin-right: 2px; */
+}
+.amenity label {
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0px 14px -7px
+}
+
+.price_beroom{
+
+    font-size: 25px;
+    font-weight: bold;
+    color: green;
+}
+
+.bedroom_title{
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--ifm-heading-font-family);
+}
+
+.rt_occ_above {
+
+   display: inline-flex;
+    float: none;
+    text-align: left;
+    width: auto;
+}
+
+.gallery_click_more{
+
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+
+h2.bedroom_name {
+    background-color: #171717;
+    border-radius: 10px;
+    display: inline !important;
+}
+
 

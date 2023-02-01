@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('amenities', function (Blueprint $table) {
+        Schema::create('bedroom_amenities', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('bedrooms_type_id')->constrained('bedrooms_types')->references('id')->onDelete('cascade');
             $table->string('name');
             $table->string('icon');
-            $table->string('description');
-            $table->string('type');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('amenities');
+        Schema::dropIfExists('bedroom_amenities');
     }
 };
