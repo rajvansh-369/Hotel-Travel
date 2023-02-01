@@ -148,7 +148,7 @@ class ListingResource extends Resource
                 Fieldset::make('Amenities')
                 ->schema([
                     Repeater::make('amenities')
-                ->relationship('lisitng_amenities')
+                     ->relationship('amenities')
                         ->schema([
                             
                             // Select::make('amenity_id')
@@ -162,8 +162,13 @@ class ListingResource extends Resource
                             //     'livewire' => 'Laravel Livewire',
                             // ])
 
-                            TextInput::make('amenity_id')
-                            ->label("Hotel's Amenities")
+                            TextInput::make('name')
+                            ->label("Hotel's Amenities"),
+                            FileUpload::make('icon')
+                            ->required()
+                            ->directory('amenities')
+                           ,
+                           
                             ])
                             ->label("Hotel's Amenities")
                             ->grid(4)

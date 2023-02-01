@@ -10,6 +10,8 @@ class BedroomType extends Component
 {
     public $hotel;
     public $days;
+    protected $listeners = ['mount'];
+
     public function mount(){
         if(session('startDate') && session('endDate')){
             $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));

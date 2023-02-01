@@ -7,8 +7,11 @@ use App\Filament\Resources\BedroomsTypeResource\RelationManagers;
 use App\Models\BedroomsType;
 use App\Models\Listing;
 use Filament\Forms;
+use Filament\Forms\Components\Fieldset;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -42,6 +45,37 @@ class BedroomsTypeResource extends Resource
                     ->numeric()
                     ->required()
                     ->maxLength(65535),
+                    Fieldset::make('Images')
+                    ->schema([
+                        Repeater::make('images')
+                            ->relationship('bedroomPicture')
+                            ->schema([
+                                FileUpload::make('picture')
+                                ->required()
+                                ->directory('picture'),
+                            ])
+                            ->defaultItems(0)
+                            ->grid(4)
+                            
+                    ])
+                    ->columns(1),
+                    Fieldset::make('Amenities')
+                ->schema([
+                    Repeater::make('amenities')
+                     ->relationship('BedroomAmenities')
+                        ->schema([
+                            TextInput::make('name')
+                            ->label("Hotel's Amenities"),
+                            FileUpload::make('icon')
+                            ->required()
+                            ->directory('amenities')
+                           ,
+                           
+                            ])
+                            ->label("Hotel's Amenities")
+                            ->grid(4)
+                        ])
+                        ->columns(1),
                 Forms\Components\Toggle::make('status')
                     ->required(),
             ]);
