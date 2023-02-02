@@ -47,6 +47,10 @@ img.hotel_mainImg {
     top: 308px;
 
 }
+
+.cardslider {
+    display: flex;
+}
   }
   @media only screen and (min-width: 1500px) and (max-width: 1899px) {
   .card_home {
@@ -506,9 +510,7 @@ input#password_confirmation {
 
 }
 
-.cardslider {
-    display: flex;
-}
+
 
 .card_Bedroom{
 
