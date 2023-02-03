@@ -17,7 +17,7 @@ class HotelSeeder extends Seeder
      */
     public function run()
     {
-      
+
             $hotel = '[
                 {
                 "id": 2,
@@ -144,7 +144,7 @@ class HotelSeeder extends Seeder
 
                 $hotels = json_decode($hotel, true);
 
-                
+
 
                 $address = '[
                     {
@@ -228,10 +228,10 @@ class HotelSeeder extends Seeder
                   ]';
 
                     $addresses = json_decode($address, true);
-                    
+
                     // dd($addresses);
-                    
-                    
+
+
                     $picture = '[
                         {
                         "id": 1,
@@ -362,25 +362,18 @@ class HotelSeeder extends Seeder
                         "updated_at": "2023-01-24T18:40:53.000000Z"
                         }
                         ]';
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
                     $pictures = json_decode($picture, true);
 
- 
+
                 foreach($hotels as $hotel){
-                    
+
                     Listing::create($hotel);
                 }
-                
-               
+
+
                 foreach($addresses as $address){
-                    
+
                     Address::create($address);
                 }
                 foreach($pictures as $picture){

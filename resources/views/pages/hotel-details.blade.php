@@ -365,9 +365,10 @@
 
                                     {{-- {{dd(session()->all()   )}} --}}
                                     <div class="row justify-content-between hr" id="hr1">
-
+                                        <label for="#">Select Bedroom Type*</label>
                                         <select id="select" onchange="bedroomPriceFunc()" name="bedroomPrice">
                                             <option value="">Select Bedroom Type</option>
+                                            <option value="{{ $hotel->price_per_day }}" selected>Normal </option>
 
                                             @forelse ($hotel->bedrooms as $bedroom)
                                                 <option value="{{ $bedroom->bedroom_price }}"    {{ session('bedroomPrice') == $bedroom->bedroom_price ? 'selected' : ''}}  >{{ $bedroom->bedroom_name }}</option>
