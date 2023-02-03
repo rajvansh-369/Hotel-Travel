@@ -121,6 +121,7 @@ class ListingResource extends Resource
                             ->directory('picture')
                            ,
                         ])
+                      
                         ->defaultItems(0)
                         ->grid(4)
                         

@@ -55,9 +55,9 @@
 
         <div class="container-fluid location-house section-padding">
             <div class="row mx-auto">
-                <div class="col-xl-1 col-lg-1 d-none d-md-block"></div>
-                <div class="col-xl-10 col-lg-11 col-md-12">
-                    <div class="container">
+                {{-- <div class="col-xl-1 col-lg-1 d-none d-md-block"></div> --}}
+                <div class="col-xl-12 col-lg-10 col-md-12">
+                    <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-8 col-lg-9 col-md-12">
 
@@ -375,7 +375,7 @@
             $(document).ready(function() {
 
                 // alert("test");
-                pageSize = 6;
+                pageSize = 4;
                 incremSlide = 5;
                 startPage = 0;
                 numberPage = 0;

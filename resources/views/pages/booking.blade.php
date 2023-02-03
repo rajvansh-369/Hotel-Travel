@@ -50,7 +50,7 @@
                 <section class="payment-card">
                     <p class="date">{{$bookingData['formattedStart']}} -  {{$bookingData['formattedEnd']}}</p>
                     <p class="hours mb-5">
-                        23 Hours  x {{$bookingData['totalTime']}} = {{$bookingData['totalTime']}}D <br>
+                        {{$bookingData['totalTime']}} Nights <br>
                         12:00 am -
                         11:00 pm
                     </p>
@@ -68,14 +68,16 @@
                         </div>
                     </div>
                     <ul class="hrs">
-                        <li>23 hours (12:00 pm -
-                            11:00 am)<br>
-                            {{$bookingData['formattedStart']}} -  {{$bookingData['formattedEnd']}}</li>
-                        <li>₹{{number_format($hotel->price_per_day, 2)}}</li>
+                        <li>
+                           
+                            {{$bookingData['formattedStart']}} -  {{$bookingData['formattedEnd']}}<br>(12:00 pm -
+                            11:00 am)
+                            {{$bookingData['totalTime']}} Nights <br></li>
+                        <li>₹{{number_format(session('priceWithoutTax'), 2)}}</li>
                     </ul>
                     <ul class="discnt">
                         <li>Discount {{$hotel->full_discount_rate}}%</li>
-                        <li>- ₹{{$discountPrice}}.00</li>
+                        <li><span class="price_card"> - ₹{{$discountPrice}}.00 </span></li>
                     </ul>
                     <ul class="discnt">
                         <li>TAX {{$hotel->sale_tax}}%</li>

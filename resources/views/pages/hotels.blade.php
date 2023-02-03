@@ -24,9 +24,28 @@
 
 </div>
 
+<div class="container-fluid location-house section-padding">
+    <div class="row mx-auto">
+        {{-- <div class="col-xl-2 col-lg-1 d-none d-md-block"></div> --}}
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        
+                        <div class="section-tittle mb-50">
+                            <h2>Search More Hotels Here</h2>
+                            {{-- <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated. --}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
                 @livewire('hotel-search')
 
+
+        </div>
 
 
     <div class="video-area section-img-bg2 d-flex align-items-center" data-background="{{asset('img/gallery/video-bg.jpg.webp')}}">

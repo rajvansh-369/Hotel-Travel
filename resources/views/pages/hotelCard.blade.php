@@ -1,5 +1,6 @@
-<div class="row">
-    <div class="container-fluid cardslider flex-wrap">
+
+{{-- <div class="container-fluid cardslider flex-wrap"> --}}
+        <div class="row cardslider flex-wrap">
 
         @foreach ($hotels as $hotel)
             <div class="col-md-3 col-sm-6  py-1 line-content">
@@ -9,7 +10,7 @@
                         data-bs-interval="0" data-bs-ride="carousel">
                         <a style="text-decoration: none;"
                             href="{{ route('hotel-details', $hotel->id) }}">
-                            <div class="carousel-inner" style="height: 10rem">
+                            <div class="carousel-inner" style="height: 15rem;border-radius:10px">
 
                                 @php $key = 0;@endphp
                                 @foreach ($hotel->picture as $picture)
@@ -59,11 +60,12 @@
 
 
                         <h5> {{ $hotel->address->formatted_address }}</h5>
-                        {{-- <h5 class="card-title">Conference Room @ Workspace Bedford</h5> --}}
-                        <p class="card-text mt-2">₹{{ $hotel->price_per_day }}
-                            {{-- <div class="price">
-                            <span>Started from<span>₹{{ $hotel->price_per_day }}</span></span>
-                        </div> --}}
+                        {{-- <h5 class="card-title">Conference Room @ Workspace Bedford</h5> --}} 
+                        <p>2 Adult 1 Children</p>
+                        <p class="card-text mt-2">Started From <Span class="price_card"> ₹{{ $hotel->price_per_day }} </Span>
+                                         {{-- <div class="price">
+                                            <span>Started from<span>$500</span></span>
+                                        </div> --}}
 
 
 
@@ -75,8 +77,8 @@
 
             </div>
         @endforeach
+        <ul id="pagin">
+            
+        </ul>
     </div>
-    <ul id="pagin">
-
-    </ul>
-</div>
+{{-- </div> --}}

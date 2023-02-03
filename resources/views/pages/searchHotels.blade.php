@@ -33,14 +33,16 @@
         {{-- {{dd($hotels)}} --}}
 
 
-        <div class="slider-area hero-bg1  hero-overly">
-            <div class="single-slider  slider-height2 d-flex align-items-center">
+        <div class="slider-area hero-bg1   hero-overly"
+            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
+            {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
+            <div class="single-slider  slider-height1 d-flex align-items-center">
                 <div class="container">
                     <div class="row justify-content-center ">
                         <div class="col-xl-7 col-lg-11">
 
-                            <div class="hero-caption hero-caption2 pt-10">
-                                <h1>Our Rooms</h1>
+                            <div class="hero-caption pt-10">
+                                <h1>Rest Journey in Single step, in the breathtaking</h1>
                             </div>
                         </div>
                     </div>
@@ -52,8 +54,8 @@
 
         <div class="container-fluid location-house section-padding">
             <div class="row mx-auto">
-                <div class="col-xl-1 col-lg-1 d-none d-md-block"></div>
-                <div class="col-xl-10 col-lg-11 col-md-12">
+                {{-- <div class="col-xl-1 col-lg-1 d-none d-md-block"></div> --}}
+                <div class="col-xl-12 col-lg-11 col-md-12">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-8 col-lg-9 col-md-12">
@@ -70,7 +72,7 @@
                     </div>
 
                     <div class="slideproducts">
-                        @include('pages.hotelCard')     
+                        @include('pages.hotelCard')
                     </div>
 
                 </div>

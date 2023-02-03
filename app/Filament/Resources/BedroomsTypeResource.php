@@ -72,6 +72,7 @@ class BedroomsTypeResource extends Resource
                            ,
                            
                             ])
+                            ->maxItems(5)
                             ->label("Hotel's Amenities")
                             ->grid(4)
                         ])

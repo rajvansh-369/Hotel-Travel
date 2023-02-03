@@ -31,7 +31,7 @@
 </div>
 
 <style>
-/* @media print {
+@media print {
   body * {
     visibility: hidden;
   }
@@ -43,7 +43,7 @@
     left: 0;
     top: 0;
   }
-} */
+}
     </style>
 <div class="oontainer-fluid container_form-bar">
     <div class="form_full sign_up">
@@ -147,7 +147,7 @@
                      <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Commission Fees (10%) </span>₹111</li>
                             </ul>
                             <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
-                                    style="font-size: 25px;">₹{{$booked->totalPrice}}</span></p>
+                                    style="font-size: 25px;">₹{{ number_format($booked->totalPrice,2)}}</span></p>
                         </div>
                     </div>
                     <hr>
