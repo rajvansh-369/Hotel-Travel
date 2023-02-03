@@ -2,37 +2,22 @@
     
     
     
-    <div class="container-fluid location-house section-padding">
-        <div class="row mx-auto">
-            {{-- <div class="col-xl-2 col-lg-1 d-none d-md-block"></div> --}}
-            <div class="col-xl-12 col-lg-12 col-md-12">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12">
-                            
-                            <div class="section-tittle mb-50">
-                                <h2>Top-rated around you</h2>
-                                <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" />
-                
-                <div class="slideproducts">
-                    <div class="row">
-                        <div class="cardslider flex-wrap">
+
+    
+    <div class="slideproducts container">
+                    <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" />
+                    {{-- <div class="container   flex-wrap"> --}}
+                            <div class="row cardslider">
 
                             @foreach ($hotels as $hotel)
-                                <div class="col-md-2 col-sm-5 mt-3 mb-3 py-1 line-content">
+                                <div class=" col-md-3 col-sm-5 mt-3 mb-3 py-1 line-content" >
                                     {{-- {{dd($loop->index)}} --}}
-                                    <div class="card" style="width: 18rem;">
+                                    <div class="card" style="width: 18rem; ">
                                         <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                             data-bs-interval="0" data-bs-ride="carousel">
                                             <a style="text-decoration: none;"
                                                 href="{{route('hotel-details', $hotel->id)}}">
-                                                <div class="carousel-inner" style="height: 10rem">
+                                                <div class="carousel-inner" style="height: 15rem;border-radius:10px">
 
                                                     @php $key = 0;@endphp
                                                     @foreach ($hotel->picture as $picture)
@@ -82,8 +67,11 @@
 
 
                                             <h5> {{ $hotel->address->formatted_address }}</h5>
-                                            <h5 class="card-title">Conference Room @ Workspace Bedford</h5>
-                                            <p class="card-text">$40/Hr
+                                            <p>2 Adult 1 Children</p>
+                        <p class="card-text mt-2">Started From <Span class="price_card"> ₹{{ $hotel->price_per_day }} </Span>
+                                         <div class="price">
+                                            <span>Started from<span>$500</span></span>
+                                        </div>
 
 
 
@@ -95,11 +83,11 @@
 
                                 </div>
                             @endforeach
+                            <ul id="pagin">
+                                
+                            </ul>
                         </div>
-                        <ul id="pagin">
-
-                        </ul>
-                    </div>
+                    {{-- </div> --}}
                 </div>
 
             </div>
@@ -108,7 +96,7 @@
                 <div id="map" style="height: 68rem; width:100%;">
                 </div>
             </div> --}}
-        </div>
+        {{-- </div> --}}
     <style>
         .next{
             display: none;
@@ -120,7 +108,7 @@
         $(document).ready(function () {
 
             // alert("test");
-            pageSize = 6;
+            pageSize = 4;
             incremSlide = 5;
             startPage = 0;
             numberPage = 0;

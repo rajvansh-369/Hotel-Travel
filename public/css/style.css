@@ -164,6 +164,7 @@ h6 a {
 
 ul {
     margin: 0px;
+    
     padding: 0px
 }
 
@@ -971,6 +972,10 @@ hr {
     -o-transform: rotateY(180deg)
 }
 
+
+
+
+
 .header-area .header-bottom {
     height: 85px;
     padding: 0px 38px;
@@ -1084,9 +1089,14 @@ hr {
     transition: all .4s ease-out 0s
 }
 
+
+
+
 .header-area .header-bottom .main-menu ul li:hover>a {
     color: #fff
 }
+
+
 
 .header-area .header-bottom .main-menu ul li:hover>a::after {
     left: 0;

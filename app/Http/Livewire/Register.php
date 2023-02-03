@@ -2,10 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use App\Mail\RegisterUser;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
+
 
 class Register extends Component
 {
@@ -38,7 +41,18 @@ class Register extends Component
                
                 // dd("ttest");
                 // session()->regenerate();
+
+                Mail::to('snehal.webroottech@gmail.com')->send(new RegisterUser());
     
+                if (Mail::failures()) {
+                    
+             dd("FAIL");
+             
+                }else{
+
+
+                    dd("Success");
+                  }
                 // return redirect()->intended('home');
                 return redirect(route('home'));;
             }

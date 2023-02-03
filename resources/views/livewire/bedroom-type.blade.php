@@ -18,13 +18,13 @@
                 @forelse ($hotel->bedrooms as  $bedroom)
 
                     {{-- {{dd($bedroom->bedroomPicture)}} --}}
-                    <div class="col-md-4 cardslider">
+                    <div class="col-md-4 my-1 cardslider">
                         <div class="card card_home ">
                             <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                 data-bs-interval="0" data-bs-ride="carousel">
                                 <a style="text-decoration: none;"
                                     href="{{ route('hotel-details', $hotel->id) }}">
-                                    <div class="carousel-inner bg-image hover-overlay ripple" style="height: 10rem">
+                                    <div class="carousel-inner bg-image hover-overlay ripple" style="height: 15rem;border-radius:10px">
 
                                         @php $key = 0;@endphp
                                         @foreach ($bedroom->bedroomPicture  as $picture)
@@ -73,7 +73,7 @@
 
 
                             <div class="card-body">
-                                <h5 class="card-title bedroom_title">{{ $bedroom->bedroom_name }}</h5>
+                                <h5 class="card-title bedroom_title">{{$hotel->name}} ({{ $bedroom->bedroom_name }})</h5>
                                 <div
                                     class=" roomInfo maxPersonsInfo rt_occ_above m_hp_rt_room_card__occupancy-container ">
                                     <span class="roomDetailHeading">

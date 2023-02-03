@@ -8,7 +8,7 @@
         </div>
     </div>
 </div> --}}
-
+{{-- {{dd(\Request::route()->getName())}} --}}
 <header>
     <div class="header-area header-transparent">
         <div class="main-header ">
@@ -51,22 +51,24 @@
 
                             <div class="main-menu d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">
-                                        <li><a href="{{route('home')}}">Home</a></li>
-                                        <li><a href="{{route('hotels')}}">Hotels</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        {{-- <li><a href="#">Blog</a>
+                                    <ul id="navigation" class="navBarUL">
+                                        <li class="{{ (\Request::route()->getName() == 'home') ? 'active' : ''}}"><a href="{{route('home')}}">Home</a></li>
+                                        <li  class="{{(\Request::route()->getName() == 'hotels') ? 'active' : ''}}"><a href="{{route('hotels')}}">Hotels</a></li>
+                                        <li  class="{{(\Request::route()->getName() == 'about') ? 'active' : ''}}"><a href="about.html">About</a></li>
+                                        @if (auth()->user())
+                                        <li><a href="#">My Account</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
+                                                <li><a href="blog.html">My Booking</a></li>
+                                                <li><a href="blog_details.html">My Profile</a></li>
+                                                <li><a href="{{route('logout')}}">Logout</a></li>
                                             </ul>
-                                        </li> --}}
-                                        <li><a href="{{route('contact')}}">Contact Us</a></li>
-                                      @if (auth()->user())
+                                        </li>
+                                        @endif
+                                        <li  class="{{(\Request::route()->getName()== 'contact' )? 'active' :''}}"><a href="{{route('contact')}}">Contact Us</a></li>
+                                      {{-- @if (auth()->user())
                                       <li><a href="{{route('logout')}}">Logout</a></li>
                                           
-                                      @endif
+                                      @endif --}}
                                     </ul>
                                 </nav>
                             </div>

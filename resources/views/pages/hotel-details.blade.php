@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-
+{{-- {{dd($hotel->picture[3])}} --}}
 
 
     <main>
@@ -39,31 +39,41 @@
                         @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
                                 data-mdb-img="{{ asset('/storage/' . $picture->picture) }}" alt="{{ $hotel->name }}"
-                                class="w-100 mw-100 shadow-1-strong rounded" />
+                                class="w-100 mw-100 shadow-1-strong rounded full_screen"  />
                         @endforeach
                     </div>
                     <div class="col-lg-6">
                         <div class="row ">
 
-                            @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(3) as $picture)
+                            @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(2) as $picture)
                                 <div class="col-lg-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $picture->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                         alt="Table Full of Spices"
-                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images " />
+                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images margin_gallery" />
                                 </div>
                             @endforeach
 
                             @if (count($hotel->picture) > 3)
                             
                             <div class="col-lg-6 gallery_img ">
+                                <img src="{{ asset('/storage/' . $hotel->picture[3]->picture) }}"
+                                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                    alt="Table Full of Spices"
+                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
+
+                                    {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt=""> --}}
+                            </div>
+                            @if (count($hotel->picture) > 4)
+                            <div class="col-lg-6 gallery_img ">
                                 <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
                                     data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                     alt="Table Full of Spices"
-                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images gallery_click_more " />
+                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
 
-                                    <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt="">
+                                    {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign hide_gallery" alt=""> --}}
                             </div>
+                            @endif
                             @endif
 
                         </div>
@@ -222,9 +232,25 @@
                             </div>
 
                         </section>
+                        <h4>Gallery</h4>
 
+                        <div class="container">
+                            <div class="row">
+                                
+                            @foreach ($hotel->picture as $picture)
+                                <div class="col-lg-2 gallery_img ">
+                                    <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                        alt="Table Full of Spices"
+                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" />
+                                </div>
+                            @endforeach
+                        
+                            </div>
+                        </div>
                         <section class="features pb-4">
                             <h4>Features</h4>
+
                             <ul class="features-list">
                                 <li class="feature-all feature-1" style=""> <b>&#x2022 </b> Bicycle parking
                                 </li>
@@ -337,7 +363,7 @@
                                         @endif
                                     </div>
 
-                                    {{-- {{dd($hotel->bedrooms)}} --}}
+                                    {{-- {{dd(session()->all()   )}} --}}
                                     <div class="row justify-content-between hr" id="hr1">
                                         <label for="#">Select Bedroom Type*</label>
                                         <select id="select" onchange="bedroomPriceFunc()" name="bedroomPrice">
@@ -345,8 +371,7 @@
                                             <option value="{{ $hotel->price_per_day }}" selected>Normal </option>
 
                                             @forelse ($hotel->bedrooms as $bedroom)
-                                                <option value="{{ $bedroom->bedroom_price }}">
-                                                    {{ $bedroom->bedroom_name }}</option>
+                                                <option value="{{ $bedroom->bedroom_price }}"    {{ session('bedroomPrice') == $bedroom->bedroom_price ? 'selected' : ''}}  >{{ $bedroom->bedroom_name }}</option>
 
                                             @empty
                                             @endforelse
@@ -442,8 +467,10 @@
 
                     @livewire('bedroom-type', ['hotel' => $hotel])
                     <section class="otherbrthishost py-5" style="display:block">
+                        <h4>Other Hotels</h4>
                         <div class="row">
                             <div class="col-md-12">
+                                @livewire('hotel-search')
                             </div>
                         </div>
 
