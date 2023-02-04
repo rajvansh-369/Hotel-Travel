@@ -4,7 +4,7 @@
     
 
     
-    <div class="slideproducts container">
+    <div class="slideproducts">
                     <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" />
                     {{-- <div class="container   flex-wrap"> --}}
                             <div class="row cardslider">
@@ -117,7 +117,7 @@
             var totalSlidepPage = Math.floor(pageCount / incremSlide);
                 
             for(var i = 0 ; i<pageCount;i++){
-                $("#pagin").append('<li><a href="#topScroll">'+(i+1)+'</a></li> ');
+                $("#pagin").append('<li><a>'+(i+1)+'</a></li> ');
                 if(i>pageSize){
                 $("#pagin li").eq(i).hide();
                 }

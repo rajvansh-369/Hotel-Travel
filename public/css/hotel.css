@@ -12,6 +12,12 @@ img.hotel_mainImg {
 
         display: none;
     }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
   }
 
 .navBarDetailPage{
@@ -36,7 +42,32 @@ img.hotel_mainImg {
     
     }
 
+
+    img.d-block.w-100.min_maxHeight_galleryList {
+        /* width: 91px; */
+        max-width: 70px;
+    }
+
+.alignFlex{
+
+    display: contents;
+}
+
+
+img.d-block.w-100.min_maxHeight {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+
+
   }
+
+  .forMobileGallery{
+    display: none;
+}
+
+
 
   
   @media only screen and (min-width: 1900px) {
@@ -54,6 +85,23 @@ img.hotel_mainImg {
 .full_screen{
 
     margin-top: 110px;
+}
+
+
+img.w-100.mb-2.mb-md-4.shadow-1-strong.rounded.gallery_img_height {
+    min-height: 86px;
+    max-height: 86px;
+}
+
+img.d-block.w-100.min_maxHeight_galleryList {
+    min-height: 100px;
+    max-height: 100px;
+    max-width: 187px;
+}
+
+img.d-block.w-100.min_maxHeight {
+    max-height: 650px;
+    min-height: 650px;
 }
 
 .cardslider {
@@ -309,7 +357,7 @@ p.pricehrdy {
 
 
 input.datePicker {
-    width: 285px;
+    width: auto;
 }
 
 .navBar {
@@ -641,3 +689,4 @@ li.active {
     line-height: 0rem;
     border-radius: 10px;
 }
+
