@@ -117,7 +117,7 @@
             var totalSlidepPage = Math.floor(pageCount / incremSlide);
                 
             for(var i = 0 ; i<pageCount;i++){
-                $("#pagin").append('<li><a href="#topScroll">'+(i+1)+'</a></li> ');
+                $("#pagin").append('<li><a>'+(i+1)+'</a></li> ');
                 if(i>pageSize){
                 $("#pagin li").eq(i).hide();
                 }
