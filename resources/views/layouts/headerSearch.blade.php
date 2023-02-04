@@ -2,7 +2,6 @@
     <form class="search-box pb-45">
         <div class="row align-items-end">
 
-            {{-- {{ dd(session()->all())}} --}}
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
                 <div class="date-pic mb-15">
@@ -78,7 +77,9 @@
                 </div>
             </div>
         </div>
+
         </form>
+
 </div>
 
 <script>
@@ -102,25 +103,12 @@
 
     function required() {
 
-
-        // var empt = document.getElementById("select1").value;
-        // console.log(empt);
-        // if (empt == "") {
-        //     alert("Please input a Value");
-        //     return false;
-        // } else {
-        //     alert('Code has accepted : you can try another');
-        //     return true;
-        // }
-
-
-
-
         var fromDate = $('#datepicker1').val();
         var toDate = $('#datepicker2').val();
         var adult = $('#select1').val();
         var child = $('#select2').val();
         var error = 0;
+
 
         console.log(fromDate);
 
@@ -130,6 +118,7 @@
             alert('Please select From Date');
             error++
         } else if (toDate == " ") {
+
             alert('Please select End Date');
 
             error++

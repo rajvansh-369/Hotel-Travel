@@ -1,34 +1,30 @@
 @extends('layouts.app')
 @section('content')
-{{-- {{dd(auth())}} --}}
-{{-- {{dd($bookingData, $user , $hotel)}} --}}
-<div class="header-top navBar">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="d-flex justify-content-between flex-wrap align-items-center">
-                    <div class="header-info-left">
-                        {{-- <ul>
+    {{-- {{dd(auth())}} --}}
+    {{-- {{dd($bookingData, $user , $hotel)}} --}}
+    <div class="header-top navBar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="d-flex justify-content-between flex-wrap align-items-center">
+                        <div class="header-info-left">
+                            {{-- <ul>
                             <li>Call Us: +10 (89) 675 5456</li>
                             <li>
 
                                 <a href="">enquiry@hotel.com</a>
-                                
+
                             </li>
                         </ul> --}}
-                    </div>
-                    <div class="header-info-right d-none d-sm-block">
-                        {{-- <ul class="header-social">
-                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul> --}}
+                        </div>
+                        <div class="header-info-right d-none d-sm-block">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 
 
@@ -92,9 +88,8 @@
                         <b><a style="text-decoration:none;color:black;" target="_blank" href="https://justboardrooms.com/privacy-policy/">Privacy Policy</a></b>.<br><br> For details about cancellations, please read our <b><a style="text-decoration:none;color:black;" target="_blank" href="https://api.justboardrooms.com/api-PROD/terms.php">Cancellation Policy</a></b> within our <b><a style="text-decoration:none;color:black;" target="_blank" href="https://api.justboardrooms.com/api-PROD/terms.php">Member Agreement</a></b>. </p>
                    <a href="{{route('confirmBooking')}}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Confirm Booking</button> </a> 
                 </section>
+
             </div>
         </div>
     </div>
-</div>
-
 @endsection
