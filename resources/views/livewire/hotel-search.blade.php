@@ -4,7 +4,7 @@
     
 
     
-    <div class="slideproducts container">
+    <div class="slideproducts">
                     <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" />
                     {{-- <div class="container   flex-wrap"> --}}
                             <div class="row cardslider">

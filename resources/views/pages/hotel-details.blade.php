@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-{{-- {{dd($hotel->picture[3])}} --}}
+    {{-- {{dd($hotel->picture[3])}} --}}
 
 
     <main>
@@ -39,7 +39,7 @@
                         @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
                                 data-mdb-img="{{ asset('/storage/' . $picture->picture) }}" alt="{{ $hotel->name }}"
-                                class="w-100 mw-100 shadow-1-strong rounded full_screen"  />
+                                class="w-100 mw-100 shadow-1-strong rounded full_screen" />
                         @endforeach
                     </div>
                     <div class="col-lg-6">
@@ -55,25 +55,24 @@
                             @endforeach
 
                             @if (count($hotel->picture) > 3)
-                            
-                            <div class="col-lg-6 gallery_img ">
-                                <img src="{{ asset('/storage/' . $hotel->picture[3]->picture) }}"
-                                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                                    alt="Table Full of Spices"
-                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
+                                <div class="col-lg-6 gallery_img ">
+                                    <img src="{{ asset('/storage/' . $hotel->picture[3]->picture) }}"
+                                        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                        alt="Table Full of Spices"
+                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
 
                                     {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt=""> --}}
-                            </div>
-                            @if (count($hotel->picture) > 4)
-                            <div class="col-lg-6 gallery_img ">
-                                <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
-                                    data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                                    alt="Table Full of Spices"
-                                    class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
+                                </div>
+                                @if (count($hotel->picture) > 4)
+                                    <div class="col-lg-6 gallery_img ">
+                                        <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
+                                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                            alt="Table Full of Spices"
+                                            class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_images  hide_gallery " />
 
-                                    {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign hide_gallery" alt=""> --}}
-                            </div>
-                            @endif
+                                        {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign hide_gallery" alt=""> --}}
+                                    </div>
+                                @endif
                             @endif
 
                         </div>
@@ -83,90 +82,119 @@
             </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Gallery</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-               
-                <div class="carousel-inner">
-               
-            @foreach ($hotel->picture as $key => $picture )
-                
-                <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
-                    <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption  d-md-block">
-                        <h2 class="bedroom_name">{{$hotel->name}}</h2>
-                      
-                      </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalGallery" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Gallery</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+                                <div class="carousel-inner">
+
+                                    @foreach ($hotel->picture as $key => $picture)
+                                        <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
+                                            <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                                class="d-block w-100 min_maxHeight" alt="...">
+                                            <div class="carousel-caption  d-md-block">
+                                                <h2 class="bedroom_name">{{ $hotel->name }}</h2>
+
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+
+                                </div>
+
+
+                                <div class="row d-flex justify-content-center mt-2">
+                                    @foreach ($hotel->picture as $key => $picture)
+                                        <div class="col-sm-2 flex-column alignFlex ">
+                                            <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                                class="d-block w-100 min_maxHeight_galleryList mx-1 mt-1" alt="...">
+
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+
+                            @forelse ($hotel->bedrooms as  $bedroom)
+                                <div id="carouselExampleControls_Bedroom{{ $loop->index }}" class="carousel slide mt-5"
+                                    data-bs-ride="carousel">
+
+                                    <div class="carousel-inner">
+
+                                        @foreach ($bedroom->bedroomPicture as $key => $picture)
+                                            <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
+                                                <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                                    class="d-block w-100 min_maxHeight" alt="...">
+
+                                                <div class="carousel-caption  d-md-block">
+                                                    <h2 class="bedroom_name">{{ $bedroom->bedroom_name }} Bedroom</h2>
+
+                                                </div>
+                                            </div>
+                                        @endforeach
+
+
+                                    </div>
+                                    <div class="row d-flex justify-content-center mt-2">
+                                        @foreach ($bedroom->bedroomPicture as $key => $picture)
+                                            <div class="col-sm-2 flex-column alignFlex">
+                                                <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                                    class="d-block w-100 min_maxHeight_galleryList mx-1 mt-1 "
+                                                    alt="...">
+
+                                            </div>
+                                        @endforeach
+
+                                    </div>
+                                    @if (count($bedroom->bedroomPicture) > 1)
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}"
+                                            data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}"
+                                            data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    @endif
+                                </div>
+
+                            @empty
+                            @endforelse
+
+
+
+
+
+
+                        </div>
+
+                    </div>
                 </div>
-                
-                @endforeach
-
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-              {{-- {{dd($hotel->bedrooms[0]->bedroomPicture)}} --}}
-              @forelse ($hotel->bedrooms as  $bedroom)
-            
-                {{-- {{dd($bedroom)}} --}}
-          
-              <div id="carouselExampleControls_Bedroom{{ $loop->index }}" class="carousel slide mt-5" data-bs-ride="carousel">
-               
-                <div class="carousel-inner">
-               
-            @foreach ($bedroom->bedroomPicture as $key => $picture )
-                
-                <div class="carousel-item  {{ $key == 0 ? 'active' : '' }}">
-                    <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100" alt="...">
-                
-                    <div class="carousel-caption  d-md-block">
-                        <h2 class="bedroom_name">{{$bedroom->bedroom_name}} Bedroom</h2>
-                      
-                      </div>
-                </div>
-                
-                @endforeach
-
-
-                </div>
-                @if (count($bedroom->bedroomPicture) > 1)
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_Bedroom{{ $loop->index }}" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-                @endif
-              </div>
-
-              @empty
-              @endforelse
-
-
-
-        </div>
-
-      </div>
-    </div>
-  </div>
+            </div>
 
 
 
@@ -235,20 +263,38 @@
                         <h4>Gallery</h4>
 
                         <div class="container">
-                            <div class="row">
-                                
-                            @foreach ($hotel->picture as $picture)
-                                <div class="col-lg-2 gallery_img ">
-                                    <img src="{{ asset('/storage/' . $picture->picture) }}"
-                                        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                                        alt="Table Full of Spices"
-                                        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded" />
-                                </div>
-                            @endforeach
-                        
+                            <div class="row forDesktopGallery">
+                                @foreach ($hotel->picture as $picture)
+                                    <div class="col-lg-2 gallery_img ">
+                                        <img  src="{{ asset('/storage/' . $picture->picture) }}"
+                                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                            alt="Table Full of Spices"
+                                            class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_img_height" />
+                                    </div>
+                                @endforeach
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery" class="btn btn-primary mb-3">Click here to Enlarge Picture</button>
+
                             </div>
+
+
+                            <div class="row forMobileGallery">
+                                @foreach ($hotel->picture->take(2) as $picture)
+                                    <div class="col-lg-2 gallery_img ">
+                                        <img  src="{{ asset('/storage/' . $picture->picture) }}"
+                                            data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+                                            alt="Table Full of Spices"
+                                            class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_img_height" />
+                                    </div>
+                                @endforeach
+
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery" class="btn btn-primary mb-3">Click here to Show more Picture</button>
+                            </div>
+
+
+
+
                         </div>
-                        <section class="features pb-4">
+                        {{-- <section class="features pb-4">
                             <h4>Features</h4>
 
                             <ul class="features-list">
@@ -271,7 +317,7 @@
                                 Features</a>
                             <a onclick="showLess('feature')" id="feature-hide-btn" style="display: none;"
                                 class="undline-text">Show less</a>
-                        </section>
+                        </section> --}}
 
                         <section class="house-rules">
 
@@ -350,7 +396,7 @@
                                         <div class="col-md-8 col-sm-8">
                                             <p class="pricehrdy">
                                                 <strong>₹ <span
-                                                        class="bedroomPrice">{{ session('priceWithoutTax') ? session('priceWithoutTax') :  $hotel->price_per_day }}</span></strong><span>/day</span>
+                                                        class="bedroomPrice">{{ session('priceWithoutTax') ? session('priceWithoutTax') : $hotel->price_per_day }}</span></strong><span>/day</span>
                                             </p>
 
                                         </div>
@@ -370,7 +416,9 @@
                                             <option value="">Select Bedroom Type</option>
 
                                             @forelse ($hotel->bedrooms as $bedroom)
-                                                <option value="{{ $bedroom->bedroom_price }}"    {{ session('bedroomPrice') == $bedroom->bedroom_price ? 'selected' : ''}}  >{{ $bedroom->bedroom_name }}</option>
+                                                <option value="{{ $bedroom->bedroom_price }}"
+                                                    {{ session('bedroomPrice') == $bedroom->bedroom_price ? 'selected' : '' }}>
+                                                    {{ $bedroom->bedroom_name }}</option>
 
                                             @empty
                                             @endforelse
@@ -482,15 +530,15 @@
     <script>
         function bedroomPriceFunc() {
             var bedroomTypePrice = $('.list .selected').data('value');
-            if(bedroomTypePrice == ''){
+            if (bedroomTypePrice == '') {
 
-                var bedroomTypePrice =   @json($hotel->price_per_day)
+                var bedroomTypePrice = @json($hotel->price_per_day)
             }
             var startDate = $('#datepicker1').val();
             var endDate = $('#datepicker2').val();
 
             console.log(bedroomTypePrice, startDate, endDate);
-           
+
 
             $.ajax({
                 headers: {
@@ -514,9 +562,9 @@
 
                     //     var finalPrice =  bedroomTypePrice * data
                     //     console.log(finalPrice);
-                        $('.bedroomPrice').append(data);
+                    $('.bedroomPrice').append(data);
 
-                       
+
 
                     // }
                     // window.location.href = @json(route('searchResult'));
