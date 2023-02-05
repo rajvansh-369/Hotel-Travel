@@ -251,19 +251,23 @@
                             </div>
 
                         </section>
-                        <h4>Video</h4>
-                        <div class="container my-3">
-                            <div class="row">
 
-                                <div class="video">
-                                    <video controls class="videoSource">
-                                        <source src="{{ asset('storage/' . $hotel->videos->video) }}" type="video/mp4">
+                        @if ($hotel->videos)
+                            <h4>Video</h4>
+                            <div class="container my-3">
+                                <div class="row">
 
-                                    </video>
+                                    <div class="video">
+                                        <video controls class="videoSource">
+                                            <source src="{{ asset('storage/' . $hotel->videos->video) }}"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
+                        @endif
                         <h4>Gallery</h4>
 
                         <div class="container">
@@ -471,7 +475,8 @@
                                     <p style="color:red" id="errorDate"></p>
 
                                     @if (auth()->user())
-                                        <button type="submit"  {{session('endDate') == null ? 'disabled' : '' }}   id="checkAvailButton"
+                                        <button type="submit" {{ session('endDate') == null ? 'disabled' : '' }}
+                                            id="checkAvailButton"
                                             class="btn btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
@@ -544,7 +549,7 @@
             </div>
     </main>
 
-{{-- {{dd(session('endDate') == null ? 'disabled' : '')}} --}}
+    {{-- {{dd(session('endDate') == null ? 'disabled' : '')}} --}}
     <script>
         function checkDate() {
             var startDate = $('#datepicker1').val();
@@ -557,25 +562,24 @@
 
                 // alert("Please Select Check In Dates");
                 $('#errorDate').append("Please Select Check In Dates");
-            }else if(startDate == endDate){
-                
-                
+            } else if (startDate == endDate) {
+
+
                 // alert("Check In Date & Check Out Date Should not be same");
                 $('#errorDate').append("Check In Date & Check Out Date Should not be same");
-                
-            }else if(endDate < startDate){
 
-                if(endDate == ' '){
+            } else if (endDate < startDate) {
+
+                if (endDate == ' ') {
                     $('#errorDate').append("Please Select Check Out Dates");
 
-                }else{
+                } else {
 
                     $('#errorDate').append("Check In Date should be greater than Check Out Date");
                 }
-                
 
-            }
-             else {
+
+            } else {
 
                 document.getElementById('checkAvailButton').disabled = false;
                 bedroomPriceFunc();
