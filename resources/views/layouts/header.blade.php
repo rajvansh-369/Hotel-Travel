@@ -45,7 +45,7 @@
                     <div class="d-flex align-items-center justify-content-between flex-wrap">
 
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('img/logo/logo.webp')}}" alt=""></a>
+                            <a href="index.html"><img src="{{asset('img/logo/logo1.png')}}" width="250px" alt=""></a>
                         </div>
                         <div class="menu-wrapper d-flex align-items-center">
 

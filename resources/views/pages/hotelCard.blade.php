@@ -1,11 +1,13 @@
 
 {{-- <div class="container-fluid cardslider flex-wrap"> --}}
-        <div class="row cardslider flex-wrap">
+    <div class="slideproducts">
+    <div class="row cardslider flex-wrap">
 
         @foreach ($hotels as $hotel)
-            <div class="col-md-3 col-sm-6  py-1 line-content">
-                {{-- {{dd($loop->index)}} --}}
-                <div class="card card_home">
+        <div class="col-md-3 col-sm-6  py-1 line-content">
+            {{-- {{dd($loop->index)}} --}}
+            <a href="{{route('hotel-details', $hotel->id)}}">
+                <div class="card card_home" >
                     <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                         data-bs-interval="0" data-bs-ride="carousel">
                         <a style="text-decoration: none;"
@@ -51,7 +53,7 @@
 
 
                     </div>
-
+                    <a href="{{route('hotel-details', $hotel->id)}}">
 
                     <div class="card-body" style="font-family: 'Myriad Pro Semibold';">
                         <b>
@@ -61,7 +63,7 @@
 
                         <h5> {{ $hotel->address->formatted_address }}</h5>
                         {{-- <h5 class="card-title">Conference Room @ Workspace Bedford</h5> --}} 
-                        <p>2 Adult 1 Children</p>
+                        <p>{{$hotel->adult}} Adult {{$hotel->child}} Children</p>
                         <p class="card-text mt-2">Started From <Span class="price_card"> ₹{{ $hotel->price_per_day }} </Span>
                                          {{-- <div class="price">
                                             <span>Started from<span>$500</span></span>
@@ -73,6 +75,7 @@
                         <ul class="fivestars m-0 p-0">
                         </ul>
                     </div>
+                </a>
                 </div>
 
             </div>
@@ -81,4 +84,6 @@
             
         </ul>
     </div>
+
+</div>   
 {{-- </div> --}}

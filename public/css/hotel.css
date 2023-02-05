@@ -18,6 +18,12 @@ img.hotel_mainImg {
     .forDesktopGallery{
         display: none !important;
     }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
   }
 
 .navBarDetailPage{
@@ -72,7 +78,7 @@ img.d-block.w-100.min_maxHeight {
   
   @media only screen and (min-width: 1900px) {
   .card_home {
-      width: 28.5rem;
+      width: 20rem;
   }
 
   .plusSign{
@@ -110,7 +116,7 @@ img.d-block.w-100.min_maxHeight {
   }
   @media only screen and (min-width: 1500px) and (max-width: 1899px) {
   .card_home {
-      width: 17rem;
+      width: 20rem;
   }
   .plusSign{
 
@@ -135,7 +141,7 @@ img.d-block.w-100.min_maxHeight {
   }
   @media only screen and (min-width: 1200px) and (max-width: 1499px){
   .card_home {
-      width: 14rem;
+      width: 17rem;
   }
 
   .plusSign{
@@ -164,7 +170,7 @@ img.d-block.w-100.min_maxHeight {
 
   @media only screen and (min-width: 1000px) and (max-width: 1200px){
   .card_home {
-      width: 11.5rem;
+      width: 13.5rem;
   }
   .plusSign{
 
@@ -631,15 +637,15 @@ input#password_confirmation {
 
 .price_beroom{
 
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
     color: green;
 }
 
 .bedroom_title{
 
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 700;
     font-family: var(--ifm-heading-font-family);
 }
 
@@ -690,3 +696,8 @@ li.active {
     border-radius: 10px;
 }
 
+
+.videoSource{
+    max-width: 500px;
+    max-height: 280px !important;
+}

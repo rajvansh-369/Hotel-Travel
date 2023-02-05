@@ -58,7 +58,7 @@
                             <div class="col-md-2">
                                 <ul class="mb-0">
                                     <li>INR</li>
-                                    <li><img src="{{asset('storage/inr_logo.webp')}}" style="max-width:35px;" class="img-fluid"></li>
+                                    <li><img src="{{asset('storage/inr_logo.webp')}}" style="max-width:25px;" class="img-fluid"></li>
                                 </ul>
                             </div>
                         </div>
