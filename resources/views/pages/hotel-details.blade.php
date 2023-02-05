@@ -251,6 +251,10 @@
                             </div>
 
                         </section>
+                        
+                        @if ($hotel->videos)
+                            
+                        
                         <h4>Video</h4>
                         <div class="container my-3">
                             <div class="row">
@@ -264,6 +268,7 @@
 
                             </div>
                         </div>
+                        @endif
                         <h4>Gallery</h4>
 
                         <div class="container">
