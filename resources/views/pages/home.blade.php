@@ -442,67 +442,67 @@
     @endif
 
     <script>
-        function initMap() {
+        // function initMap() {
 
 
-            var locationArr = @json($locations);
+        //     var locationArr = @json($locations);
 
-            // console.log(locationArr.length);
+        //     // console.log(locationArr.length);
 
-            var mainCoords = locationArr[0];
-            // console.log(mainCoords);
+        //     var mainCoords = locationArr[0];
+        //     // console.log(mainCoords);
 
-            var mapOptions = {
-                center: {
-                    lat: mainCoords.lat,
-                    lng: mainCoords.lng
-                },
-                zoom: 13,
-            };
+        //     var mapOptions = {
+        //         center: {
+        //             lat: mainCoords.lat,
+        //             lng: mainCoords.lng
+        //         },
+        //         zoom: 13,
+        //     };
 
-            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            const icon = {
-                url: @json(asset('/storage/map_pointer.png')), // url
-                // url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
-                scaledSize: new google.maps.Size(45, 65), // scaled size
+        //     const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        //     const icon = {
+        //         url: @json(asset('/storage/map_pointer.png')), // url
+        //         // url: "https://hostdev2.justboardrooms.com/Images/LocationPointer.png", // url
+        //         scaledSize: new google.maps.Size(45, 65), // scaled size
 
-            };
-            var allMarkers = [];
-            for (var i = 0; i < locationArr.length; i++) {
-
-
-                var myCoords = locationArr[i];
-
-                // console.log(myCoords);
-
-                r = new google.maps.Marker({
-                    position: myCoords,
-                    map: map,
-                    icon: icon,
-                    title: myCoords.hotel_name,
-                    optimized: true,
-                    // label: `${i + 1}`,
-                    animation: google.maps.Animation.DROP,
-                    url: @json(url('/hotel-details')) + '/' + myCoords.listing_id,
-                });
+        //     };
+        //     var allMarkers = [];
+        //     for (var i = 0; i < locationArr.length; i++) {
 
 
+        //         var myCoords = locationArr[i];
 
+        //         // console.log(myCoords);
 
-                allMarkers.push(r);
+        //         r = new google.maps.Marker({
+        //             position: myCoords,
+        //             map: map,
+        //             icon: icon,
+        //             title: myCoords.hotel_name,
+        //             optimized: true,
+        //             // label: `${i + 1}`,
+        //             animation: google.maps.Animation.DROP,
+        //             url: @json(url('/hotel-details')) + '/' + myCoords.listing_id,
+        //         });
 
 
 
 
-            }
+        //         allMarkers.push(r);
 
-            allMarkers.map((marker) => {
-                marker.addListener("click", () => {
-                    // marker.addListener("click", toggleBounce);
-                    window.open(marker.url, '_blank')
-                })
-            });
-        }
+
+
+
+        //     }
+
+        //     allMarkers.map((marker) => {
+        //         marker.addListener("click", () => {
+        //             // marker.addListener("click", toggleBounce);
+        //             window.open(marker.url, '_blank')
+        //         })
+        //     });
+        // }
 
 
 
@@ -513,13 +513,18 @@
         //     r.setAnimation(google.maps.Animation.BOUNCE);
         //   }
         // }
+        
     </script>
-
-    <script
+    
+    {{-- <script
+        
+        GOlocalBaskst
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1GLowllQeWOX52ML3wtC-qYcoZ6ygOwg&libraries=places&callback=initMap">
-    </script>
+    </script> --}}
 
     {{-- <script
+        
+        JB
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
     </script> --}}
 @endsection
