@@ -229,18 +229,20 @@
                                     </li>
                                     <li class="feature-all feature-2" style=""> <b>&#x2022 </b>Catering options
                                     </li>
-                                    <li class="feature-all feature-3" style=""> <b>&#x2022 </b>Kitchenette
+                                    {{-- <li class="feature-all feature-3" style=""> <b>&#x2022 </b>Kitchenette
                                         Whiteboard walls with markers
-                                    </li>
-                                    <li class="feature-all feature-4" style=""> <b>&#x2022 </b>Free parking for host
-                                        and
-                                        guests
-                                    </li>
-                                    <li class="feature-all feature-5" style="display:none"> <b>&#x2022 </b>Logitech camera
-                                        &amp;
-                                        videoconferencing
-                                        equipment
-                                    </li>
+                                    </li> --}}
+
+                                    {{-- {{dd($hotel->amenities)}} --}}
+
+                                    @forelse ($hotel->amenities as $amenity)
+                                        <li class="feature-all feature-4" style="display:none"> <b>&#x2022 </b>
+                                            {{ $amenity->name }}
+                                        </li>
+                                    @empty
+                                    @endforelse
+
+
                                 </ul>
                                 <a onclick="showMore('feature')" id="feature-show-btn" class="undline-text">Show all
                                     Features</a>
@@ -249,19 +251,38 @@
                             </div>
 
                         </section>
+                        <h4>Video</h4>
+                        <div class="container my-3">
+                            <div class="row">
+
+                                <div class="video">
+                                    <video controls class="videoSource">
+                                        <source src="{{ asset('storage/' . $hotel->videos->video) }}" type="video/mp4">
+
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
                         <h4>Gallery</h4>
 
                         <div class="container">
                             <div class="row forDesktopGallery">
                                 @foreach ($hotel->picture as $picture)
                                     <div class="col-lg-2 gallery_img ">
-                                        <img  src="{{ asset('/storage/' . $picture->picture) }}"
+                                        <img src="{{ asset('/storage/' . $picture->picture) }}"
                                             data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                             alt="Table Full of Spices"
                                             class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_img_height" />
+
                                     </div>
                                 @endforeach
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery" class="btn btn-primary mb-3">Click here to Enlarge Picture</button>
+
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery"
+                                    class="btn btn-primary mb-3">Click here to Enlarge Picture</button>
+
+
+
 
                             </div>
 
@@ -269,20 +290,24 @@
                             <div class="row forMobileGallery">
                                 @foreach ($hotel->picture->take(2) as $picture)
                                     <div class="col-lg-2 gallery_img ">
-                                        <img  src="{{ asset('/storage/' . $picture->picture) }}"
+                                        <img src="{{ asset('/storage/' . $picture->picture) }}"
                                             data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                             alt="Table Full of Spices"
                                             class="w-100 mb-2 mb-md-4 shadow-1-strong rounded gallery_img_height" />
                                     </div>
                                 @endforeach
 
-                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery" class="btn btn-primary mb-3">Click here to Show more Picture</button>
+                                <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery"
+                                    class="btn btn-primary mb-3">Click here to Show more Picture</button>
                             </div>
 
 
 
 
                         </div>
+
+
+
                         {{-- <section class="features pb-4">
                             <h4>Features</h4>
 
@@ -401,7 +426,7 @@
                                     {{-- {{dd(session()->all()   )}} --}}
                                     <div class="row justify-content-between hr" id="hr1">
                                         <label for="#">Select Bedroom Type*</label>
-                                        <select id="select" onchange="bedroomPriceFunc()" name="bedroomPrice">
+                                        <select id="select" onchange="checkDate()" name="bedroomPrice">
                                             <option value="">Select Bedroom Type</option>
                                             <option value="{{ $hotel->price_per_day }}" selected>Normal </option>
 
@@ -425,7 +450,7 @@
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('startDate') ?? '' }} " onchange="bedroomPriceFunc()"
+                                                value="{{ session('startDate') ?? '' }} " onchange="checkDate()"
                                                 placeholder="Check in" class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
@@ -438,13 +463,15 @@
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
                                             <input id="datepicker2" required name="endDate"
-                                                value="{{ session('endDate') ?? '' }} " onchange="bedroomPriceFunc()"
+                                                value="{{ session('endDate') ?? '' }} " onchange="checkDate()"
                                                 placeholder="Check out" class="text-secondary datePicker" />
                                         </div>
                                     </div>
 
+                                    <p style="color:red" id="errorDate"></p>
+
                                     @if (auth()->user())
-                                        <button type="submit"
+                                        <button type="submit"  {{session('endDate') == null ? 'disabled' : '' }}   id="checkAvailButton"
                                             class="btn btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
@@ -517,7 +544,44 @@
             </div>
     </main>
 
+{{-- {{dd(session('endDate') == null ? 'disabled' : '')}} --}}
     <script>
+        function checkDate() {
+            var startDate = $('#datepicker1').val();
+            var endDate = $('#datepicker2').val();
+
+            console.log(startDate, endDate);
+
+            $('#errorDate').html("");
+            if (startDate == " " && endDate == " ") {
+
+                // alert("Please Select Check In Dates");
+                $('#errorDate').append("Please Select Check In Dates");
+            }else if(startDate == endDate){
+                
+                
+                // alert("Check In Date & Check Out Date Should not be same");
+                $('#errorDate').append("Check In Date & Check Out Date Should not be same");
+                
+            }else if(endDate < startDate){
+
+                if(endDate == ' '){
+                    $('#errorDate').append("Please Select Check Out Dates");
+
+                }else{
+
+                    $('#errorDate').append("Check In Date should be greater than Check Out Date");
+                }
+                
+
+            }
+             else {
+
+                document.getElementById('checkAvailButton').disabled = false;
+                bedroomPriceFunc();
+            }
+        }
+
         function bedroomPriceFunc() {
             var bedroomTypePrice = $('.list .selected').data('value');
             if (bedroomTypePrice == '') {
@@ -579,7 +643,7 @@
             $('#' + showClass + '-show-btn').show();
             $('#' + showClass + '-hide-btn').hide();
 
-            for (let i = 1; i <= 4; i++) {
+            for (let i = 1; i <= 3; i++) {
                 $('.' + showClass + '-' + i).show();
             }
         }

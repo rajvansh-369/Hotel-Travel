@@ -39,10 +39,10 @@
                         </div>
                     </div>
                 </div>
+                @livewire('hotel-search')
             </div>
 
 
-                @livewire('hotel-search')
 
 
         </div>

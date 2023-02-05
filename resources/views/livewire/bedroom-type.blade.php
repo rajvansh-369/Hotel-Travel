@@ -18,7 +18,7 @@
                 @forelse ($hotel->bedrooms as  $bedroom)
 
                     {{-- {{dd($bedroom->bedroomPicture)}} --}}
-                    <div class="col-md-4 my-1 cardslider">
+                    <div class="col-md-3 my-1 cardslider">
                         <div class="card card_home ">
                             <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                 data-bs-interval="0" data-bs-ride="carousel">

@@ -57,11 +57,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="slideproducts">
                         @include('pages.hotelCard')
                     </div>
+
+                    {{-- <div class="slideproducts"> --}}
+                    {{-- </div> --}}
 
                 </div>
                 {{-- </div> --}}
@@ -215,7 +215,7 @@
             $(document).ready(function() {
 
                 // alert("test");
-                pageSize = 6;
+                pageSize = 4;
                 incremSlide = 5;
                 startPage = 0;
                 numberPage = 0;

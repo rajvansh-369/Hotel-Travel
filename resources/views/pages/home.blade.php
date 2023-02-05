@@ -29,7 +29,7 @@
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                <h1>Rest Journey in Single step, in the breathtaking</h1>
+                                {{-- <h1>Rest Journey in Single step, in the breathtaking</h1> --}}
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
             <div class="row mx-auto">
                 {{-- <div class="col-xl-1 col-lg-1 d-none d-md-block"></div> --}}
                 <div class="col-xl-12 col-lg-10 col-md-12">
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="row">
                             <div class="col-xl-8 col-lg-9 col-md-12">
 
@@ -57,11 +57,11 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="slideproducts">
                         @include('pages.hotelCard')     
                     </div>
+
+                    {{-- <div class="slideproducts"> --}}
+                    {{-- </div> --}}
 
                 </div>
                 {{-- </div> --}}

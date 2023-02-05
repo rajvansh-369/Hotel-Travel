@@ -141,6 +141,7 @@ class ListingResource extends Resource
                         ])
                         ->defaultItems(0)
                         ->grid(4)
+                        ->maxItems(1)
                         
                 ])
                 ->columns(1),
