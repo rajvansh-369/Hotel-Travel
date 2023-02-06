@@ -21,6 +21,8 @@ class UserSeeder extends Seeder
                 'name' => 'Snehal Rajvansh',
                 'email' => 'admin@hotel.com',
                 'password' => Hash::make('admin@hotel123'),
+                'phone' => '7894561230',
+                'address' => 'Bodhgaya , Bihar',
             ]);
         }
     }
