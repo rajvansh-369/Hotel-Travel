@@ -58,6 +58,9 @@ class Listing extends Model
     public function bedrooms(){
         return $this->hasMany(BedroomsType::class);
     }
+    public function bookings(){
+        return $this->hasMany(TimexEvents::class);
+    }
 
     public function videos(){
         return $this->hasOne(Video::class);

@@ -24,6 +24,8 @@ class User extends Authenticatable implements FilamentUser
         'google_id',
         'email',
         'password',
+        'address',
+        'phone',
         'remember_token',
     ];
 
@@ -51,4 +53,9 @@ class User extends Authenticatable implements FilamentUser
     {
         return str_ends_with($this->email, '@hotel.com');
     }
+
+    public function UserBookings(){
+        return $this->hasMany(TimexEvents::class);
+    }
+
 }

@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hotel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mybooking.css') }}">
     <!-- Font Awesome -->
 {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
 <!-- Google Fonts -->

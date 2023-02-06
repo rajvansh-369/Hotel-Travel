@@ -48,6 +48,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
+Route::get('/tour', [HotelController::class, 'tour'])->name('tour');
+Route::get('/myBookings', [HotelController::class, 'myBooking'])->name('myBooking');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 Route::post('/searchHotels', [HotelController::class, 'searchHotels'])->name('searchHotels');

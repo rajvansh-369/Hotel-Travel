@@ -71,6 +71,27 @@ class HotelController extends Controller
 
         return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
+    public function tour(){
+
+        $hotels = Listing::get();
+        $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
+        $location = [];
+        foreach($hotels as $hotel){
+
+
+            $location['lat'] = (double)$hotel->address->lat;
+            $location['lng'] = (double)$hotel->address->lng;
+            $location['listing_id'] = (double)$hotel->address->listing_id;
+            $locations[] = $location;
+        }
+
+        return view('pages.tour' ,compact('hotels', 'locations', 'banner'));
+    }
+
+
+
+
+
 
 
 
@@ -303,7 +324,7 @@ class HotelController extends Controller
                 'start' => $startDate,
                 'totalPrice' => $totalPrice,
                 'user_id' => $data['user_id'],
-                'lisitng_id' => $data['lisitng_id'],
+                'listing_id' => $data['lisitng_id'],
 
             ]);
             // $request->session()->flush();
@@ -326,6 +347,15 @@ class HotelController extends Controller
             $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
 
         return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate'));
+
+    }
+
+
+    public function myBooking(){
+
+        
+
+        return view('pages.myBooking');
 
     }
 

@@ -1163,7 +1163,7 @@ hr {
 
 @media (max-width: 575px) {
     .header-area .header-bottom .logo {
-        padding: 25px 0
+        padding: 15px 0;
     }
 }
 

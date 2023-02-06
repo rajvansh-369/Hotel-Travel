@@ -25,7 +25,16 @@ class TimexEvents extends Model
         'startTime',
         'totalPrice',
         'user_id',
-        'lisitng_id',
+        'listing_id',
         'status',
     ];
+
+
+    public function hotel(){
+        return $this->belongsTo(Listing::class,'listing_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class,'listing_id', 'id');
+    }
 }
