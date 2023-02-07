@@ -23,19 +23,19 @@
     <main>
         <div class="container-fluid  gallery">
             <div class="lightbox">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row desktopSlider" >
+                    <div class="col-lg-6 col-sm-6">
                         @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
                                 data-mdb-img="{{ asset('/storage/' . $picture->picture) }}" alt="{{ $hotel->name }}"
                                 class="w-100 mw-100 shadow-1-strong rounded full_screen" />
                         @endforeach
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-6">
                         <div class="row ">
 
                             @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(2) as $picture)
-                                <div class="col-lg-6 gallery_img ">
+                                <div class="col-lg-6 col-sm-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $picture->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                         alt="Table Full of Spices"
@@ -44,7 +44,7 @@
                             @endforeach
 
                             @if (count($hotel->picture) > 3)
-                                <div class="col-lg-6 gallery_img ">
+                                <div class="col-lg-6 col-sm-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $hotel->picture[3]->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                         alt="Table Full of Spices"
@@ -53,7 +53,7 @@
                                     {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt=""> --}}
                                 </div>
                                 @if (count($hotel->picture) > 4)
-                                    <div class="col-lg-6 gallery_img ">
+                                    <div class="col-lg-6 col-sm-6 gallery_img ">
                                         <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
                                             data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                             alt="Table Full of Spices"
@@ -67,6 +67,33 @@
                         </div>
 
                     </div>
+                </div>
+
+
+                <div class="row mobieSlider">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            @foreach ($hotel->picture as $key => $picture)
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100 min_maxHeight" alt="...">
+                            <div class="carousel-caption ">
+                              <h5 class="countSlider">{{$key+1}}/{{count($hotel->picture)}}</h5>
+                              {{-- <p>Some representative placeholder content for the first slide.</p> --}}
+                            </div>
+                          </div>
+                          @endforeach
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
             </div>
 
@@ -386,7 +413,7 @@
                                 <form action="{{ route('preBooking') }}" method="post">
                                     @csrf
 
-                                    <div class="row justify-content-between hr" id="hr1">
+                                    {{-- <div class="row justify-content-between hr" id="hr1">
                                         <div class="col-md-8 col-sm-8">
                                             <p class="pricehrdy"><strong>Full Day Start Time :</strong></p>
 
@@ -405,7 +432,7 @@
                                         <div class="col-md-4 col-sm-4">
                                             <p>{{ $hotel->full_day_end_time }}</p>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     {{-- {{dd(session('priceWithoutTax'))}} --}}
 
