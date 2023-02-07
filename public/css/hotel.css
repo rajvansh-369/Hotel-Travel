@@ -38,6 +38,25 @@ img.hotel_mainImg {
         display: block;
     }
 
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 60px;
+    }
+
+    .countSlider{
+        font-size: var(--ifm-h5-font-size);
+        background: black;
+        max-width: max-content;
+        border-radius: 2px;
+        display: inline-block;
+        opacity: 0.8;
+    }
+
     .plusSign{
 
 
@@ -88,6 +107,11 @@ img.d-block.w-100.min_maxHeight {
     top: 308px;
 
 }
+
+.mobieSlider{
+
+   display: none;
+}
 .full_screen{
 
     margin-top: 110px;
@@ -125,7 +149,13 @@ img.d-block.w-100.min_maxHeight {
     top: 340px;
     width: 28%;
 
+    
 }
+.mobieSlider{
+
+    display: none;
+ }
+
 
 .hide_gallery{
 
@@ -154,7 +184,10 @@ img.d-block.w-100.min_maxHeight {
 
 
 }
+.mobieSlider{
 
+    display: none;
+ }
 .margin_gallery{
 
     margin-top: 53.5px;
@@ -182,7 +215,10 @@ img.d-block.w-100.min_maxHeight {
 
 
 }
+.mobieSlider{
 
+    display: none;
+ }
 .hide_gallery{
 
     display: none;

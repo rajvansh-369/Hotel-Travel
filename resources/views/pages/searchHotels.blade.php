@@ -30,7 +30,7 @@
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                <h1>Rest Journey in Single step, in the breathtaking</h1>
+                                {{-- <h1>Rest Journey in Single step, in the breathtaking</h1> --}}
                             </div>
                         </div>
                     </div>

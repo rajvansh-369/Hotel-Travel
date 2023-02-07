@@ -1,6 +1,6 @@
-<div class="container">
+{{-- <div class="container"> --}}
     <form class="search-box pb-45">
-        <div class="row align-items-end">
+        {{-- <div class="row align-items-end">
 
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
@@ -23,17 +23,10 @@
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                {{-- <div class="select-form mb-15"> --}}
+               
                 <div class="date-pic mb-15">
                     <label>Adult*</label>
-                    {{-- <select id="select1" name="adult">
-                        <option value="">No of Adult</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-
-                    </select> --}}
+    
                     <div class="boking-datepicker">
 
                         <a class="btn  mx-5" onclick="incrementAdult()">+</a>
@@ -43,16 +36,7 @@
                 </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                {{-- <div class="select-form mb-15">
-                    <select id="select2" name="child">
-                        <option value="">No of Children</option>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="1">1</option>
 
-                    </select>
-                </div> --}}
-                {{-- {{dd((int)session('adult'))}} --}}
                 <div class="date-pic mb-15">
                     <label>Child*</label>
                     <div class="boking-datepicker">
@@ -76,17 +60,77 @@
                     @endif
                 </div>
             </div>
+        </div> --}}
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+
+
+        <div class="container"  id="booking-form">
+            <div class="row d-flex justify-content-center searchBack">
+{{-- 
+                <div class="col-md-3 mx-2">
+
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" value="Bodhgaya" readonly placeholder="EG. HAWAII">
+                </div> --}}
+
+                <div class="col-md-3 form-date-from form-icon">
+                    <label for="date_from">From</label>
+                    <input type="text" id="datepicker1" class="date_from hasDatepicker" value="{{ session('startDate') ?? '' }} " placeholder="Pick a date">    
+                    
+                    </div>
+                <div class="col-md-3 form-date-from form-icon">
+                    <label for="date_from">To</label>
+                    <input type="text" id="datepicker2" class="date_from hasDatepicker" value="{{ session('endDate') ?? '' }} " placeholder="Pick a date">
+                    
+                    </div>
+                 
+                    <div class="col-md-2 col-sm-4 mt-3 form-quantity">
+                        <label for="quantity">Adults</label>
+                        <input type="number"   name="quantity" id="select1" value="0" min="0" class="nput-text qty text">
+                        <span class="modify-qty plus mx-2" onclick="incrementAdult()"><i class="fa-solid fa-angle-up"></i></span>
+                        <span class="modify-qty minus mx-2" onclick="decrementAdult()"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+
+                    <div class="col-md-2  col-sm-4 mt-3 form-quantity">
+                        <label for="quantity">Children</label>
+                        <input type="number"   name="quantity" id="select2" value="0" min="0" class="nput-text qty text">
+                        <span class="modify-qty plus mx-2" onclick="incrementChild()"><i class="fa-solid fa-angle-up"></i></span>
+                        <span class="modify-qty minus mx-2" onclick="decrementChild()"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="col-md-2  col-sm-4 mt-3 form-quantity">
+                        <label for="quantity">Room</label>
+                        <input type="number"    name="quantity" id="select3" value="0" min="0" class="nput-text qty text">
+                        <span class="modify-qty plus mx-2" onclick="incrementRoom()"><i class="fa-solid fa-angle-up"></i></span>
+                        <span class="modify-qty minus mx-2" onclick="decrementRoom()"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+            </div>
+            <div class="row d-flex justify-content-center searchBack">
+                    <div class="col-md-2  mt-4">
+                        <div class="search-form">
+                            <a type="submit" class="btn btn-primary" onclick="required()"> Search </a>
+        
+                            @if ($errors->any())
+                                <h4>{{ $errors->first() }}</h4>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                </div>
+
         </div>
 
-        </form>
-
-</div>
+{{-- </div> --}}
 
 <script>
+
+
+
     function incrementAdult() {
         document.getElementById('select1').stepUp();
         // document.getElementById('select2').stepUp();
     }
+
     function incrementChild() {
         // document.getElementById('select1').stepUp();
         document.getElementById('select2').stepUp();
@@ -96,9 +140,20 @@
         document.getElementById('select1').stepDown();
         // document.getElementById('select2').stepDown();
     }
+
     function decrementChild() {
         // document.getElementById('select1').stepDown();
         document.getElementById('select2').stepDown();
+    }
+
+    function incrementRoom() {
+        // document.getElementById('select1').stepUp();
+        document.getElementById('select3').stepUp();
+    }
+
+    function decrementRoom() {
+        // document.getElementById('select1').stepDown();
+        document.getElementById('select3').stepDown();
     }
 
     function required() {
@@ -107,30 +162,34 @@
         var toDate = $('#datepicker2').val();
         var adult = $('#select1').val();
         var child = $('#select2').val();
+        var room = $('#select3').val();
         var error = 0;
 
 
-        console.log(fromDate);
+        // console.log(fromDate);
 
 
-        if (fromDate == " ") {
+        if (fromDate == "") {
 
             alert('Please select From Date');
             error++
-        } else if (toDate == " ") {
+        } else if (toDate == "") {
 
             alert('Please select End Date');
 
             error++
-        } else if (adult == "") {
+        } else if (adult == 0) {
 
-            alert('Please select No of Adult');
+            alert('Please select atleat 1 adult');
 
             error++
         } else if (child == "") {
             alert('Please select No of Child');
             error++
 
+        }else if(room == 0){
+            alert('Select atleat 1 Room');
+            error++
         }
 
         if (error == 0) {
