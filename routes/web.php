@@ -54,6 +54,7 @@ Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->na
 Route::get('/contact', [HotelController::class, 'contact'])->name('contact');
 Route::post('/searchHotels', [HotelController::class, 'searchHotels'])->name('searchHotels');
 Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('searchResult');
+Route::get('/invoice/{id}', [HotelController::class, 'invoice'])->name('invoice');
 
 
 

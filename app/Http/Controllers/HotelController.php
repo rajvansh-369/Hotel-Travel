@@ -8,6 +8,8 @@ use App\Models\Listing;
 use App\Models\Picture;
 use App\Models\TimexEvents;
 use App\Models\User;
+
+use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
@@ -351,12 +353,31 @@ class HotelController extends Controller
     }
 
 
-    public function myBooking(){
+    public function invoice($id){
 
+        // retreive all records from db
+        $booked = TimexEvents::find($id);
+        $hotel =  $booked->hotel;
+        $user =  $booked->user;
+        $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+        // dd( $invoiceDate);
+
+        // // share data to view
+        // view()->share('employee',$data);
+        // $pdf = PDF::loadView('pages.thank-you', compact('booked', 'user' ,'hotel', 'invoiceDate') );
+        // // download PDF file with download method
+        //  return $pdf->save(public_path());
+        // return $pdf->download('pdf_file.pdf');
         
 
-        return view('pages.myBooking');
+        $pdf = PDF::setOptions(['defaultFont' => 'dejavu serif'])->loadView('pages.thank-you', compact('booked', 'user' ,'hotel', 'invoiceDate') );
+return $pdf->stream('filename.pdf');
 
+    }
+
+    public function myBooking(){
+
+        return view('pages.myBooking');
     }
 
 }
