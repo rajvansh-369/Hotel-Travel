@@ -62,7 +62,7 @@
                     <div class="col-xl-9">
                         <p style="color: hsl(213, 15%, 56%);font-size: 20px;">Invoice >> <strong>ID: #123-123</strong></p>
                     </div>
-                    <div class="col-xl-3 float-end">
+                    <div class="col-xl-3 float-end mb-2">
                         <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark" onclick="window.print()"><i
                                 class="fas fa-print text-primary"></i> Print</a>
                         
@@ -79,8 +79,8 @@
                         <div class="col-xl-8">
                             <ul class="list-unstyled">
                                 <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{$user->name}}</span></li>
-                                {{-- <li class="text-muted">Street, City</li>
-                                <li class="text-muted">State, Country</li> --}}
+                                <li class="text-muted">Street, City</li>
+                                <li class="text-muted">State, Country</li>
                                 <li class="text-muted"><i class="fas fa-phone"></i> {{$user->email}}</li>
                             </ul>
                         </div>
@@ -104,33 +104,19 @@
                             <thead style="background-color:#5479bd ;" class="text-white">
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
                                     <th scope="col">Description</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Unit Price</th>
-                                    <th scope="col">Amount</th>
+                                    {{-- <th scope="col">Rooms</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">1</th>
-                                    <td>Pro Package</td>
-                                    <td>4</td>
-                                    <td>₹200</td>
-                                    <td>₹800</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Web hosting</td>
-                                    <td>1</td>
-                                    <td>₹10</td>
-                                    <td>₹10</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Consulting</td>
-                                    <td>1 year</td>
-                                    <td>₹300</td>
-                                    <td>₹300</td>
+                                    <td>{{  \Carbon\Carbon::createFromFormat('Y-m-d', $booked->start)->format('M d, Y') }}</td>
+                                    <td>{{  \Carbon\Carbon::createFromFormat('Y-m-d', $booked->end)->format('M d, Y') }}</td>
+                                    <td class="desc">{!! html_entity_decode($booked->body, ENT_QUOTES, 'UTF-8') !!} </td>
+                                    {{-- <td>₹800</td> --}}
                                 </tr>
                             </tbody>
 
@@ -143,11 +129,13 @@
                         </div>
                         <div class="col-xl-3">
                             <ul class="list-unstyled">
-                                <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>₹1110</li>
-                     <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Commission Fees (10%) </span>₹111</li>
+                                <li class="text-muted ms-3"><span class="text-black me-4">SubTotal :</span> <span class="float-end"> ₹{{$hotel->price_per_day * $totalTime}} </span></li>
+                                <li class="text-muted ms-3 mt-2"><span class="text-black me-4">  Discount {{$hotel->full_discount_rate}}%:</span>  <span class="float-end price_card"> - ₹{{number_format($discountPrice , 2)}} </span>  </li>
+                                <li class="text-muted ms-3 mt-2"><span class="text-black me-4"> TAX {{$hotel->sale_tax}}% :</span>   <span class="float-end"> + ₹{{number_format($sale_tax , 2)}} </span>  </li>
+                     {{-- <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Commission Fees (10%) </span>₹111</li> --}}
                             </ul>
                             <p class="text-black float-start"><span class="text-black me-3"> Total Amount</span><span
-                                    style="font-size: 25px;">₹{{ number_format($booked->totalPrice,2)}}</span></p>
+                                    style="font-size: 25px;">₹{{ number_format($totalPrice,2)}}</span></p>
                         </div>
                     </div>
                     <hr>
@@ -156,7 +144,7 @@
                             <p>Thank you for your booking</p>
                         </div>
                         <div class="col-xl-12">
-                            <button type="button" class="btn btn-primary text-capitalize">Pay at Hotel</button>
+                            <button type="button" class="btn btn-primary text-capitalize">Proceed</button>
                         </div>
                     </div>
 

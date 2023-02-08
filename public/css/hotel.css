@@ -38,6 +38,10 @@ img.hotel_mainImg {
         display: block;
     }
 
+    .mainLogo{
+        display: none;
+    }
+
     .desktopSlider{
 
         display: none;
@@ -108,6 +112,19 @@ img.d-block.w-100.min_maxHeight {
 
 }
 
+
+img.mainLogo {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    z-index: 1;
+}
+
+img.logoName {
+    margin-left: 155px;
+    width: 250px;
+}
+
 .mobieSlider{
 
    display: none;
@@ -151,6 +168,19 @@ img.d-block.w-100.min_maxHeight {
 
     
 }
+
+
+img.mainLogo {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    z-index: -1;
+}
+
+img.logoName {
+    margin-left: 155px;
+    width: 250px;
+}
 .mobieSlider{
 
     display: none;
@@ -184,6 +214,19 @@ img.d-block.w-100.min_maxHeight {
 
 
 }
+
+
+img.mainLogo {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    z-index: -1;
+}
+
+img.logoName {
+    margin-left: 155px;
+    width: 250px;
+}
 .mobieSlider{
 
     display: none;
@@ -215,6 +258,18 @@ img.d-block.w-100.min_maxHeight {
 
 
 }
+img.mainLogo {
+    position: absolute;
+    width: 150px;
+    top: 50px;
+    z-index: 1;
+}
+
+img.logoName {
+    margin-left: 155px;
+    width: 250px;
+}
+
 .mobieSlider{
 
     display: none;
@@ -543,7 +598,7 @@ input#password_confirmation {
     padding-bottom: 2rem;
 }
 .container_form-bar {
-    max-width: 900px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -737,3 +792,5 @@ li.active {
     max-width: 500px;
     max-height: 280px !important;
 }
+
+

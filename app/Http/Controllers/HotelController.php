@@ -275,6 +275,8 @@ class HotelController extends Controller
 
 
         session(['totalPrice'=>  $calculateTotalPrice]);
+        session(['discountPrice'=>  $discountPrice]);
+        session(['sale_tax'=>  $sale_tax]);
 
         return view('pages.booking', compact('hotel', 'user', 'bookingData', 'discountPrice', 'calculateTotalPrice', 'sale_tax'));
 
@@ -288,17 +290,23 @@ class HotelController extends Controller
 
             return redirect(route('loginView'));
       }
-      if(session('data') == null){
+    //   if(session('data') == null){
 
-        return redirect(route('home'));
-     }
+    //     return redirect(route('home'));
+    //  }
 
         $data =   session('data');
+        $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));
+        $endDate = Carbon::createFromFormat('m/d/Y', session('endDate'));
+        $totalTime =  $endDate->diffInDays($startDate);
 
 
         $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'))->format('Y-m-d');
         $endDate = Carbon::createFromFormat('m/d/Y', session('endDate'))->format('Y-m-d');
+
         $totalPrice =   session('totalPrice');
+        $discountPrice =   session('discountPrice');
+        $sale_tax =   session('sale_tax');
 
 
         // dd(session()->all());
@@ -308,45 +316,47 @@ class HotelController extends Controller
         $user = User::find($data['user_id']);
         $startDate = Carbon::createFromFormat('m/d/Y', session('startDate'));
         $endtDate = Carbon::createFromFormat('m/d/Y', session('endDate'));
-        $booked = TimexEvents::create([
+        $booked  = TimexEvents::find('e3d00317-949d-4058-9b29-a429481381be');
+        // $booked = TimexEvents::create([
 
-                'id' => uuid_create(),
-                'attachments' => "[]",
-                'body' => $data['body'],
-                'category' => 'secondary',
-                'endTime' => '11:45:00',
-                'end' => $endDate,
-                'isAllDay' => 1,
-                'organizer' => $data['organizer'],
-                'participants' => json_encode($data['participants']),
-                'subject' => $data['subject'],
-                'startTime' => '12:00:00',
-                'start' => $startDate,
-                'totalPrice' => $totalPrice,
-                'user_id' => $data['user_id'],
-                'listing_id' => $data['lisitng_id'],
+        //         'id' => uuid_create(),
+        //         'attachments' => "[]",
+        //         'body' => $data['body'],
+        //         'category' => 'secondary',
+        //         'endTime' => '11:45:00',
+        //         'end' => $endDate,
+        //         'isAllDay' => 1,
+        //         'organizer' => $data['organizer'],
+        //         'participants' => json_encode($data['participants']),
+        //         'subject' => $data['subject'],
+        //         'startTime' => '12:00:00',
+        //         'start' => $startDate,
+        //         'totalPrice' => $totalPrice,
+        //         'user_id' => $data['user_id'],
+        //         'listing_id' => $data['lisitng_id'],
 
-            ]);
-            // $request->session()->flush();
-            $request->session()->forget('data');
-            $request->session()->forget('startDate');
-            $request->session()->forget('endDate');
-            $request->session()->forget('adult');
-            $request->session()->forget('child');
-            $request->session()->forget('priceWithoutTax');
-            $request->session()->forget('totalPrice');
+        //     ]);
+        //     // $request->session()->flush();
+        //     $request->session()->forget('data');
+        //     $request->session()->forget('startDate');
+        //     $request->session()->forget('endDate');
+        //     $request->session()->forget('adult');
+        //     $request->session()->forget('child');
+        //     $request->session()->forget('priceWithoutTax');
+        //     $request->session()->forget('totalPrice');
 
-            $request->session()->forget('bedroomPrice');
+        //     $request->session()->forget('bedroomPrice');
             // session()->flush();
             // dd($booked->created_at);
-            $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+            // $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+            $invoiceDate = '2023-02-08 22:36:18';
             // dd(session()->flush(), session()->all(),);
             // dd($booked);
 
 
-            $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+            // $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
 
-        return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate'));
+        return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate', 'totalTime', 'discountPrice' , 'sale_tax', 'totalPrice'));
 
     }
 

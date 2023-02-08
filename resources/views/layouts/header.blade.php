@@ -45,7 +45,9 @@
                     <div class="d-flex align-items-center justify-content-between flex-wrap">
 
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('img/logo/logo1.png')}}" width="250px" alt=""></a>
+
+                            <a href="{{route('home')}}"><img class="mainLogo" src="{{asset('img/logo/mainLogo_1.jpg')}}" width="50px" alt=""></a>
+                            <a href="{{route('home')}}"><img class="logoName" src="{{asset('img/logo/logo2.png')}}" width="200px" alt=""></a>
                         </div>
                         <div class="menu-wrapper d-flex align-items-center">
 

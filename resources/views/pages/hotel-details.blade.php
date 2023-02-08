@@ -404,9 +404,9 @@
                         </section>
                     </div>
                     <div class="col-md-5 col-lg-4">
-
-                        <div class="card text-dark bg-light mb-3 availability" style="max-width: 20rem;">
-                            <div class="card-header">Avilbility</div>
+{{-- style="max-width: 20rem;" --}}
+                        <div class="card text-dark bg-light mb-3 availability" >
+                            <div class="card-header">Availability</div>
                             <div class="card-body ">
 
 
@@ -481,7 +481,7 @@
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('startDate') ?? '' }} " onchange="checkDate()"
+                                                value="{{ session('startDate') ??  \Carbon\Carbon::now()->format('m/d/Y')  }} " onchange="checkDate()"
                                                 placeholder="Check in" class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
@@ -494,7 +494,7 @@
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
                                             <input id="datepicker2" required name="endDate"
-                                                value="{{ session('endDate') ?? '' }} " onchange="checkDate()"
+                                                value="{{ session('endDate') ?? \Carbon\Carbon::now()->addDay()->format('m/d/Y') }} " onchange="checkDate()"
                                                 placeholder="Check out" class="text-secondary datePicker" />
                                         </div>
                                     </div>
@@ -663,62 +663,62 @@
         }
 
 
-        function showMore(showClass) {
-            $('.' + showClass + '-all').show();
-            $('#' + showClass + '-show-btn').hide();
-            $('#' + showClass + '-hide-btn').show();
-        }
+        // function showMore(showClass) {
+        //     $('.' + showClass + '-all').show();
+        //     $('#' + showClass + '-show-btn').hide();
+        //     $('#' + showClass + '-hide-btn').show();
+        // }
 
-        function showLess(showClass) {
-            $('.' + showClass + '-all').hide();
-            $('#' + showClass + '-show-btn').show();
-            $('#' + showClass + '-hide-btn').hide();
+        // function showLess(showClass) {
+        //     $('.' + showClass + '-all').hide();
+        //     $('#' + showClass + '-show-btn').show();
+        //     $('#' + showClass + '-hide-btn').hide();
 
-            for (let i = 1; i <= 3; i++) {
-                $('.' + showClass + '-' + i).show();
-            }
-        }
+        //     for (let i = 1; i <= 3; i++) {
+        //         $('.' + showClass + '-' + i).show();
+        //     }
+        // }
 
 
 
-        function initMap() {
-            var locationArr = {
-                lat: parseFloat(@json($location['lat'])),
-                lng: parseFloat(@json($location['lng']))
-            };
-            console.log(locationArr);
-            var mapOptions = {
-                center: locationArr,
-                zoom: 14
-            };
+        // function initMap() {
+        //     var locationArr = {
+        //         lat: parseFloat(@json($location['lat'])),
+        //         lng: parseFloat(@json($location['lng']))
+        //     };
+        //     console.log(locationArr);
+        //     var mapOptions = {
+        //         center: locationArr,
+        //         zoom: 14
+        //     };
 
-            const map = new google.maps.Map(document.getElementById('map-listing'), mapOptions);
-            const icon = {
-                url: @json(asset('/storage/map_pointer.png')), // url
-                scaledSize: new google.maps.Size(35, 50), // scaled size
+        //     const map = new google.maps.Map(document.getElementById('map-listing'), mapOptions);
+        //     const icon = {
+        //         url: @json(asset('/storage/map_pointer.png')), // url
+        //         scaledSize: new google.maps.Size(35, 50), // scaled size
 
-            };
+        //     };
 
-            var allMarkers = [];
-            r = new google.maps.Marker({
-                position: locationArr,
-                map: map,
-                icon: icon,
-                url: 'https://maps.google.com/?q=' + (@json($location['lat'])) + ',' + (
-                    @json($location['lng'])),
-            });
+        //     var allMarkers = [];
+        //     r = new google.maps.Marker({
+        //         position: locationArr,
+        //         map: map,
+        //         icon: icon,
+        //         url: 'https://maps.google.com/?q=' + (@json($location['lat'])) + ',' + (
+        //             @json($location['lng'])),
+        //     });
 
-            allMarkers.push(r);
+        //     allMarkers.push(r);
 
-            allMarkers.map((marker) => {
-                marker.addListener("click", () => {
-                    window.open(marker.url, '_blank')
-                })
-            });
+        //     allMarkers.map((marker) => {
+        //         marker.addListener("click", () => {
+        //             window.open(marker.url, '_blank')
+        //         })
+        //     });
 
-        }
+        // }
     </script>
-    <script
+    {{-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
-    </script>
+    </script> --}}
 @endsection

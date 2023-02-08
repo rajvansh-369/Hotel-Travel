@@ -11,8 +11,9 @@
 
                             @foreach ($hotels as $hotel)
                                 <div class=" col-md-3 col-sm-5 mt-3 mb-3 py-1 line-content" >
-                                    {{-- {{dd($loop->index)}} --}}
-                                    <div class="card" style="width: 20rem; ">
+                                    {{-- {{dd($loop->index)}}
+                                    style="width: 20rem; " --}}
+                                    <div class="card" >
                                         <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                             data-bs-interval="0" data-bs-ride="carousel">
                                             <a style="text-decoration: none;"
