@@ -38,11 +38,7 @@ img.hotel_mainImg {
         display: block;
     }
 
-    .cardslider .card {
-        max-height: 440px;
-        min-height: 440px;
-    
-    }
+
 
     .mainLogo{
         display: none;
