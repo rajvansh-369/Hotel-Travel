@@ -38,6 +38,12 @@ img.hotel_mainImg {
         display: block;
     }
 
+    .cardslider .card {
+        max-height: 440px;
+        min-height: 440px;
+    
+    }
+
     .mainLogo{
         display: none;
     }
@@ -109,6 +115,12 @@ img.d-block.w-100.min_maxHeight {
     position: absolute;
     right: -0px;
     top: 308px;
+
+}
+
+.cardslider .card {
+    max-height: 440px;
+    min-height: 440px;
 
 }
 
@@ -686,11 +698,7 @@ input#password_confirmation {
     z-index: 1;
 }
 
-.cardslider .card {
-    max-height: 440px;
-    min-height: 440px;
 
-}
 
 
 
