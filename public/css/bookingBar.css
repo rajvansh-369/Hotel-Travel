@@ -314,7 +314,7 @@ input#datepicker2{
     width: -webkit-fill-available;
 }
 
-label {
+#booking-form label {
     display: inline-block;
     color: white;
     font-size: 18px;

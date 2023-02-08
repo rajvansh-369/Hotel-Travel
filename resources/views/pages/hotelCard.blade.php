@@ -4,7 +4,7 @@
     <div class="row cardslider flex-wrap">
 
         @foreach ($hotels as $hotel)
-        <div class="col-md-3 col-sm-6  py-1 line-content">
+        <div class="col-md-3 col-sm-6  mt-3 mb-3  py-1 line-content">
             {{-- {{dd($loop->index)}} --}}
             <a href="{{route('hotel-details', $hotel->id)}}">
                 <div class="card card_home" >

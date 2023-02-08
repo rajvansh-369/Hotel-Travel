@@ -865,7 +865,8 @@ hr {
 }
 
 .header-area .header-top {
-    background: #2e0000;
+    background: #000000;
+    /* background: #2e0000; */
     padding: 13px 38px
 }
 
