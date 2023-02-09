@@ -1208,7 +1208,7 @@ hr {
 }
 
 .header-sticky.sticky-bar {
-    background: #191514
+    background: #020202
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
@@ -1561,7 +1561,11 @@ hr {
 
 .hero-overly {
     position: relative;
-    z-index: 0
+    z-index: 0;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero-overly::before {

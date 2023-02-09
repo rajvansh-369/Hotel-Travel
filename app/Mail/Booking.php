@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class RegisterUser extends Mailable
+class Booking extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,7 +18,7 @@ class RegisterUser extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( private $user, private $hotel, private $booked, private $invoiceDate, private $totalTime , private $discountPrice , private $sale_tax , private $totalPrice)
     {
         //
     }
@@ -31,7 +31,8 @@ class RegisterUser extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Register User',
+            subject: 'New Booking'.$this->hotel->name,
+            
         );
     }
 
@@ -43,7 +44,19 @@ class RegisterUser extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mail.mailRegistration',
+            view: 'mail.booking',
+            with: [
+                'user' => $this->user, 
+                'hotel' => $this->hotel,
+                'booked' => $this->booked,
+                'invoiceDate' => $this->invoiceDate,
+                'totalTime' => $this->totalTime,
+                'discountPrice' => $this->discountPrice,
+                'sale_tax' => $this->sale_tax,
+                'totalPrice' => $this->totalPrice,
+
+        
+        ],
         );
     }
 
