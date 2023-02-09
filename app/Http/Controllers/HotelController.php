@@ -363,8 +363,6 @@ class HotelController extends Controller
 
     public function myBooking(){
 
-        
-
         return view('pages.myBooking');
 
     }

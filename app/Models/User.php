@@ -58,4 +58,8 @@ class User extends Authenticatable implements FilamentUser
         return $this->hasMany(TimexEvents::class);
     }
 
+    public function userAddress(){
+        return $this->hasOne(UserAddress::class);
+    }
+
 }

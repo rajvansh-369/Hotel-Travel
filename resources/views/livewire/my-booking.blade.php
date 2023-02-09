@@ -181,7 +181,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- 2 column grid layout with text inputs for the first and last names -->
-                        <div class="row mb-4">
+                        <div class="row">
                             <div class="col">
                                 <div class="form-outline">
                                     <label class="form-label" for="form6Example1">Full Name</label>
@@ -192,24 +192,35 @@
                         </div>
 
                         <!-- Text input -->
-                        <div class="form-outline mb-4">
+                        <div class="form-outline">
                             <label class="form-label" for="form6Example4">Address</label>
                             <input type="text" id="form6Example4" wire:model="address" class="form-control" />
                         </div>
 
                         <!-- Email input -->
-                        <div class="form-outline mb-4">
+                        <div class="form-outline">
                             <label class="form-label" for="form6Example5">Email</label>
                             <input type="email" id="form6Example5" wire:model="email" class="form-control"
                                 readonly />
                         </div>
 
                         <!-- Number input -->
-                        <div class="form-outline mb-4">
+                        <div class="form-outline">
                             <label class="form-label" for="form6Example6">Phone</label>
                             <input type="number" id="form6Example6" wire:model="phone" class="form-control" />
                         </div>
-
+                        <div class="form-outline">
+                            <label class="form-label" for="form6Example6">City</label>
+                            <input type="text" id="form6Example6" wire:model="city" class="form-control" />
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label" for="form6Example6">State</label>
+                            <input type="text" id="form6Example6" wire:model="state" class="form-control" />
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label" for="form6Example6">Country</label>
+                            <input type="text" id="form6Example6" wire:model="country" class="form-control" />
+                        </div>
 
                     </div>
                     <div class="modal-footer">
