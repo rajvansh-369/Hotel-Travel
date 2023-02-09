@@ -181,8 +181,8 @@ img.d-block.w-100.min_maxHeight {
 img.mainLogo {
     position: absolute;
     width: 150px;
-    top: 50px;
-    z-index: -1;
+    top: 40px;
+    z-index: 1;
 }
 
 img.logoName {
@@ -227,13 +227,14 @@ img.logoName {
 img.mainLogo {
     position: absolute;
     width: 150px;
-    top: 50px;
-    z-index: -1;
+    top: 40px;
+    z-index: 1;
 }
 
 img.logoName {
     margin-left: 155px;
     width: 250px;
+    display: contents;
 }
 .mobieSlider{
 
@@ -243,6 +244,9 @@ img.logoName {
 
     margin-top: 53.5px;
 
+}
+.gallery_img {
+    margin-top: 11px !important;
 }
 
 .hide_gallery{
@@ -269,13 +273,14 @@ img.logoName {
 img.mainLogo {
     position: absolute;
     width: 150px;
-    top: 50px;
+    top: 40px;
     z-index: 1;
 }
 
 img.logoName {
     margin-left: 155px;
     width: 250px;
+    display: none;
 }
 
 .mobieSlider{
@@ -286,6 +291,8 @@ img.logoName {
 
     display: none;
 }
+
+
   }
 
 
@@ -378,7 +385,7 @@ img.w-100.shadow-1-strong.rounded {
 
 .gallery_img{
 
-    margin-top: 10px;
+    margin-top: 4px;
 
 }
 
