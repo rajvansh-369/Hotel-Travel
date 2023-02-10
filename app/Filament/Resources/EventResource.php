@@ -38,6 +38,7 @@ use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Radio;
 use Illuminate\Support\Collection;
 use function PHPUnit\Framework\isEmpty;
+// use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\Action;
 
 class EventResource extends Resource
@@ -409,13 +410,20 @@ class EventResource extends Resource
                         }
                     })
             ])->defaultSort('start', 'desc')
-
+            ->filters([
+                //
+            ])
             ->actions([
                 Action::make('Approval')
-                ->action(fn (TimexEvents $record) => $record->approved($record->invoice_no))
-                ->requiresConfirmation()
-                ->color('success')
-                ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
+                
+                ->url(fn (TimexEvents $record): string => route('home', $record))
+                ->openUrlInNewTab(),
+                
+                
+                // ->action(fn (TimexEvents $record) => $record->approved($record->invoice_no))
+                // ->requiresConfirmation()
+                // ->color('success')
+                // ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
 
                 Action::make('Reject')
                 ->action(fn (TimexEvents $record) => $record->reject($record->invoice_no))

@@ -19,17 +19,20 @@
     <main>
         {{-- {{dd($banner)}} --}}
 
+{{--  style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});" --}}
+
         {{-- @include('layouts.headerSearch') --}}
         <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
+           >
             {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
-            <div class="single-slider  slider-height1 d-flex align-items-center">
+            <div class="single-slider  slider-height1 d-flex justify-content-start align-items-center">
                 <div class="container">
-                    <div class="row justify-content-center ">
+                    <div class="row justify-content-start ">
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                {{-- <h1>Rest Journey in Single step, in the breathtaking</h1> --}}
+                                <h1>Find your next stay</h1>
+                                <p>Search deals on hotels, homes, and much more...</p>
                             </div>
                         </div>
                     </div>
@@ -364,7 +367,7 @@
             $(document).ready(function() {
 
                 // alert("test");
-                pageSize = 4;
+                pageSize = 8;
                 incremSlide = 5;
                 startPage = 0;
                 numberPage = 0;

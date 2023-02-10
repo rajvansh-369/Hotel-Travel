@@ -42,7 +42,7 @@ class Register extends Component
                 // dd("ttest");
                 // session()->regenerate();
 
-                Mail::to('vikas.webroottech@gmail.com')->send(new RegisterUser());
+                Mail::to('snehal.webroottech@gmail.com')->send(new RegisterUser($user));
     
             //     if (Mail::failures()) {
                     
