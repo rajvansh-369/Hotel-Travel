@@ -107,7 +107,7 @@ img.hotel_mainImg {
 
     .mobieSlider{
 
-        margin-top: 60px;
+        margin-top: 150px;
     }
 
     .countSlider{
@@ -162,6 +162,10 @@ img.d-block.w-100.min_maxHeight {
       width: 20rem;
   }
 
+  main {
+    padding-top: 210px;
+}
+
   .plusSign{
 
     position: absolute;
@@ -200,9 +204,18 @@ img.mainLogo {
 
    display: none;
 }
+
+
+.gallery_images {
+    max-height: 340px !important;
+    min-height: 340px !important;
+    max-width: 455px;
+}
+
+
 .full_screen{
 
-    margin-top: 110px;
+    margin-top: 97px;
 }
 
 
@@ -243,6 +256,10 @@ img.d-block.w-100.min_maxHeight {
 }
 
 
+main {
+    padding-top: 211px;
+}
+
 img.mainLogo {
     position: absolute;
     width: 200px;
@@ -266,10 +283,15 @@ img.mainLogo {
     display: none;
  }
 
+ .gallery_images {
+    max-height: 238px !important;
+    min-height: 238px !important;
+    max-width: 409px;
+}
 
 .hide_gallery{
 
-    display: none;
+    /* display: none; */
 }
 
 .margin_gallery{
@@ -308,6 +330,25 @@ img.mainLogo {
         margin-bottom: 7px;
     }
 
+    .mobieSlider{
+
+        display: none;
+     }
+    .hide_gallery{
+    
+        /* display: none; */
+    }
+
+
+    .gallery_images {
+        max-height: 228px !important;
+        min-height: 228px !important;
+        max-width: 357px;
+    }
+
+    main {
+        padding-top: 200px;
+    }
   }
 
   @media only screen and (min-width: 1200px) and (max-width: 1500px){
@@ -316,6 +357,10 @@ img.mainLogo {
       min-height: 454px;
     max-height: 454px;
   }
+
+  main {
+    padding-top: 200px;
+}
 
   .plusSign{
 
@@ -365,7 +410,13 @@ img.mainLogo {
 
 .hide_gallery{
 
-    display: none;
+    /* display: none; */
+}
+
+.gallery_images {
+    max-height: 153px !important;
+    min-height: 153px !important;
+    max-width: 294px;
 }
   }
 
@@ -376,6 +427,10 @@ img.mainLogo {
       min-height: 454px;
       max-height: 454px;
   }
+
+  main {
+    padding-top: 200px;
+}
   .plusSign{
 
 
@@ -414,9 +469,14 @@ img.mainLogo {
  }
 .hide_gallery{
 
-    display: none;
+    /* display: none; */
 }
 
+.gallery_images {
+    max-height: 156px !important;
+    min-height: 156px !important;
+    max-width: 294px;
+}
 
   }
 
