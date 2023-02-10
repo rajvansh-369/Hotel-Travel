@@ -3,6 +3,15 @@ img.hotel_mainImg {
     min-height: 300px;
 }
 
+@media only screen and (min-width: 900px) {
+
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
     img.hotel_mainImg {
         max-height: auto;
@@ -24,10 +33,7 @@ img.hotel_mainImg {
         max-height: 280px !important;
 
     }
-    .col-sm-6 {
-        flex: 0 0 auto;
-        width: 50% !important;
-    }
+
 
     
   }
@@ -42,6 +48,15 @@ img.hotel_mainImg {
         background-color: #003580;
         height: 135px;
         display: block;
+    }
+
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+
+    div#booking-form {
+        width: 400px !important;
     }
 
     li.active {
