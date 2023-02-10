@@ -50,9 +50,14 @@ img.hotel_mainImg {
         display: block;
     }
 
-    .col-sm-6 {
+    .form-quantity {
         flex: 0 0 auto;
         width: 50% !important;
+    }
+
+
+    .form-quantity input {
+        width: 42px !important;
     }
 
     div#booking-form {
