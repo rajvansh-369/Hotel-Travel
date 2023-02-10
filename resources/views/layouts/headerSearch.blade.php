@@ -74,31 +74,31 @@
                     <input type="text" id="destination" name="destination" value="Bodhgaya" readonly placeholder="EG. HAWAII">
                 </div> --}}
 
-                <div class="col-md-3 form-date-from form-icon">
+                <div class="col-xl-3 col-sm-6 form-date-from form-icon">
                     <label for="date_from">From</label>
                     <input type="text" id="datepicker1" class="date_from hasDatepicker" value="{{ session('startDate') ?? \Carbon\Carbon::now()->format('m/d/Y') }} " placeholder="Pick a date">    
                     
                     </div>
-                <div class="col-md-3 form-date-from form-icon">
+                <div class="col-xl-3 col-sm-6 form-date-from form-icon">
                     <label for="date_from">To</label>
                     <input type="text" id="datepicker2" class="date_from hasDatepicker" value="{{ session('endDate') ?? \Carbon\Carbon::now()->addDay()->format('m/d/Y') }} " placeholder="Pick a date">
                     
                     </div>
                  
-                    <div class="col-md-2 col-sm-4 mt-3 form-quantity">
+                    <div class="col-xl-2 col-sm-6 mt-3 form-quantity">
                         <label for="quantity">Adults</label>
                         <input type="number"   name="quantity" id="select1" value="2" min="0" class="nput-text qty text">
                         <span class="modify-qty plus mx-2" onclick="incrementAdult()"><i class="fa-solid fa-angle-up"></i></span>
                         <span class="modify-qty minus mx-2" onclick="decrementAdult()"><i class="fa-solid fa-angle-down"></i></span>
                     </div>
 
-                    <div class="col-md-2  col-sm-4 mt-3 form-quantity">
+                    <div class="col-xl-2 col-sm-6 mt-3 form-quantity">
                         <label for="quantity">Child</label>
                         <input type="number"   name="quantity" id="select2" value="0" min="0" class="nput-text qty text">
                         <span class="modify-qty plus mx-2" onclick="incrementChild()"><i class="fa-solid fa-angle-up"></i></span>
                         <span class="modify-qty minus mx-2" onclick="decrementChild()"><i class="fa-solid fa-angle-down"></i></span>
                     </div>
-                    <div class="col-md-2  col-sm-4 mt-3 form-quantity">
+                    <div class="col-xl-2 col-sm-6 mt-3 form-quantity">
                         <label for="quantity">Room</label>
                         <input type="number"    name="quantity" id="select3" value="1" min="0" class="nput-text qty text">
                         <span class="modify-qty plus mx-2" onclick="incrementRoom()"><i class="fa-solid fa-angle-up"></i></span>

@@ -337,14 +337,14 @@ class HotelController extends Controller
         $booked = $getEventTable->create([
 
                 'id' => uuid_create(),
-                'attachments' => "[]",
+                'attachments' => [],
                 'body' => $data['body'],
                 'category' => 'secondary',
                 'endTime' => '11:45:00',
                 'end' => $endDate,
                 'isAllDay' => 1,
                 'organizer' => $data['organizer'],
-                'participants' => json_encode($data['participants']),
+                'participants' => ($data['participants']),
                 'subject' => $data['subject'],
                 'startTime' => '12:00:00',
                 'start' => $startDate,
@@ -354,6 +354,8 @@ class HotelController extends Controller
                 'listing_id' => $data['lisitng_id'],
 
             ]);
+
+            // dd( $booked);
             // $request->session()->flush();
             $request->session()->forget('data');
             $request->session()->forget('startDate');

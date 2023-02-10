@@ -82,6 +82,11 @@ p {
 .pt-10 {
     padding-top: 10px
 }
+.pt-60 {
+    padding-top: 60px
+}
+
+
 
 .pb-45 {
     padding-bottom: 45px
@@ -615,16 +620,16 @@ hr {
 }
 
 .btn {
-    background: #E29C89;
-    font-family: "Baskervville", serif;
+    background: #fff;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
     text-transform: inherit !important;
     padding: 22px 32px;
-    color: #fff !important;
+    color: #003580 !important;
     cursor: pointer;
     display: inline-block;
     font-size: 18px !important;
     font-weight: 500 !important;
-    border-radius: 35px;
+    /* border-radius: 35px; */
     line-height: 1;
     line-height: 0;
     cursor: pointer;
@@ -636,6 +641,30 @@ hr {
     overflow: hidden
 }
 
+.btn2 {
+    background: #003580;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
+    text-transform: inherit !important;
+    padding: 22px 32px;
+    color: #fff !important;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #fff !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    /* border-radius: 35px; */
+    line-height: 1;
+    line-height: 0;
+    cursor: pointer;
+    -moz-user-select: none;
+    transition: color 0.4s linear;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden
+}
+
+
 .btn::before {
     content: "";
     position: absolute;
@@ -643,7 +672,7 @@ hr {
     top: 0;
     width: 102%;
     height: 102%;
-    background: #ec583a;
+    background: #fff;
     z-index: 1;
     border-radius: 0px;
     transition: transform 0.5s;
@@ -659,7 +688,7 @@ hr {
 }
 
 .btn:hover {
-    color: #fff !important
+    color: #003580 !important
 }
 
 .btn:hover::before {
@@ -673,12 +702,14 @@ hr {
 
 .header-btn2 {
     padding: 29px 43px !important;
-    background: #E29C89;
+    background: #003580;
     border-radius: 0;
     font-size: 18px;
     position: relative;
     right: -12px;
-    top: 0
+    top: 0;
+    color: white;
+
 }
 
 .header-btn2 i {
@@ -865,7 +896,7 @@ hr {
 }
 
 .header-area .header-top {
-    background: #000000;
+    background: #003580;
     /* background: #2e0000; */
     padding: 13px 38px
 }
@@ -981,7 +1012,7 @@ hr {
     height: 85px;
     padding: 0px 38px;
     padding-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3) */
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -1113,7 +1144,7 @@ hr {
 .header-area .header-bottom .main-menu ul ul.submenu {
     position: absolute;
     width: 170px;
-    background: #E29C89;
+    background: #003580;
     left: 0;
     top: 90%;
     visibility: hidden;
@@ -1241,7 +1272,7 @@ hr {
 }
 
 .slider-height1 {
-    min-height: 735px
+    min-height: 451px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -1307,7 +1338,8 @@ hr {
 }
 
 .slider-area .hero-caption {
-    text-align: center
+    /* text-align: center */
+    padding-top: 180px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1345,13 +1377,24 @@ hr {
 }
 
 .slider-area .hero-caption h1 {
-    font-family: "Baskervville", serif;
-    font-size: 57px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 62px;
+    /* line-height: 1.3; */
+    margin-bottom: 7px;
+}
+.slider-area .hero-caption p {
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;;
+    font-size: 24px;
     font-weight: 400;
     color: #fff;
-    line-height: 1.3;
-    margin-bottom: 7px
+    line-height: 32px;
+    /* line-height: 1.3; */
+    /* margin-bottom: 7px; */
 }
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .slider-area .hero-caption h1 {
@@ -1388,7 +1431,7 @@ hr {
     font-size: 22px;
     margin-bottom: 34px;
     font-weight: 300;
-    padding: 0 159px
+    /* padding: 0 159px */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1566,6 +1609,7 @@ hr {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #003580;
 }
 
 .hero-overly::before {
@@ -1730,7 +1774,7 @@ hr {
 }
 
 .location-house .single-location .location-contents h3 a:hover {
-    color: #E29C89
+    color: #003580
 }
 
 .location-house .single-location .location-contents p {
@@ -2031,7 +2075,7 @@ hr {
 }
 
 .video-icon a {
-    color: #F04506;
+    color: #003580;
     width: 100px;
     height: 100px;
     display: inline-block;
@@ -2198,7 +2242,7 @@ hr {
 }
 
 .guest-house .single-location .guest-contents h3 a:hover {
-    color: #E29C89
+    color: #003580
 }
 
 .guest-house .single-location .guest-contents p {
@@ -2380,7 +2424,7 @@ hr {
 }
 
 .client-active button.slick-arrow:hover i {
-    color: #fff
+    color: #003580
 }
 
 .client-active button.slick-arrow i {
@@ -2530,7 +2574,7 @@ hr {
     border: 0;
     cursor: pointer;
     padding: 17px 22px;
-    background: #E29C89;
+    background: #003580;
     line-height: 1;
     width: 100%;
     display: block;
@@ -2539,7 +2583,7 @@ hr {
 }
 
 .footer-area .info.error {
-    color: #E29C89
+    color: #003580
 }
 
 .footer-bottom-area .footer-border {
@@ -2556,15 +2600,15 @@ hr {
 }
 
 .footer-bottom-area .footer-copy-right p i {
-    color: #E29C89
+    color: #003580
 }
 
 .footer-bottom-area .footer-copy-right p a {
-    color: #E29C89
+    color: #fff
 }
 
 .footer-social a {
-    color: #656565;
+    color: #fff;
     font-size: 17px;
     display: inline-block;
     text-align: center;
@@ -2579,14 +2623,14 @@ hr {
 }
 
 .footer-social a:hover {
-    color: #E29C89;
+    color: #003580;
     top: -3px
 }
 
 .number a {
     font-family: "Jost", sans-serif;
     font-size: 16px !important;
-    color: #E29C89 !important;
+    color: #003580 !important;
     margin-bottom: 10px;
     font-weight: 400 !important;
     display: block
@@ -2637,7 +2681,7 @@ hr {
 }
 
 .blog_details a:hover {
-    color: #E29C89
+    color: #003580
 }
 
 .blog_details h2 {
@@ -3479,12 +3523,12 @@ hr {
     }
 }
 
-.hero-overly::before {
+/* .hero-overly::before {
     background: -moz-linear-gradient(top, #1b1a1a 0%, rgba(98, 63, 53, 0.49) 26%, rgba(96, 59, 51, 0.47) 27%, rgba(88, 55, 48, 0.43) 29%, rgba(82, 52, 45, 0.41) 30%, rgba(79, 53, 45, 0.39) 31%, rgba(75, 50, 42, 0.37) 32%, rgba(72, 49, 41, 0.35) 33%, rgba(72, 47, 40, 0.33) 34%, rgba(66, 43, 40, 0.31) 35%, rgba(65, 43, 36, 0.29) 36%, rgba(62, 43, 35, 0.27) 37%, rgba(59, 38, 33, 0.25) 38%, rgba(54, 36, 31, 0.23) 39%, rgba(49, 34, 29, 0.21) 40%, rgba(44, 33, 28, 0.19) 41%, rgba(44, 31, 31, 0.17) 42%, rgba(40, 27, 27, 0.15) 43%, rgba(41, 25, 25, 0.13) 44%, rgba(29, 29, 20, 0.11) 45%, rgba(36, 24, 24, 0.09) 46%, rgba(30, 15, 15, 0.07) 47%, rgba(18, 18, 18, 0.05) 48%, rgba(32, 16, 16, 0.06) 49%, rgba(27, 27, 27, 0.07) 50%, rgba(20, 20, 20, 0.09) 52%, rgba(29, 20, 20, 0.1) 53%, rgba(26, 17, 17, 0.11) 54%, rgba(24, 24, 24, 0.12) 55%, rgba(28, 21, 21, 0.14) 57%, rgba(24, 24, 18, 0.16) 59%, rgba(28, 22, 22, 0.17) 60%, rgba(23, 23, 18, 0.21) 64%, rgba(26, 22, 22, 0.22) 65%, rgba(27, 23, 19, 0.25) 68%, rgba(26, 22, 18, 0.26) 69%, rgba(25, 22, 22, 0.27) 70%, rgba(26, 19, 19, 0.29) 72%, rgba(26, 23, 19, 0.3) 73%, rgba(25, 22, 22, 0.31) 74%, rgba(24, 21, 19, 0.35) 78%, rgba(26, 21, 21, 0.36) 79%, rgba(24, 22, 19, 0.39) 82%, rgba(26, 21, 21, 0.41) 84%, rgba(25, 22, 20, 0.6) 100%);
     background: -webkit-linear-gradient(top, #1b1a1a 0%, rgba(98, 63, 53, 0.49) 26%, rgba(96, 59, 51, 0.47) 27%, rgba(88, 55, 48, 0.43) 29%, rgba(82, 52, 45, 0.41) 30%, rgba(79, 53, 45, 0.39) 31%, rgba(75, 50, 42, 0.37) 32%, rgba(72, 49, 41, 0.35) 33%, rgba(72, 47, 40, 0.33) 34%, rgba(66, 43, 40, 0.31) 35%, rgba(65, 43, 36, 0.29) 36%, rgba(62, 43, 35, 0.27) 37%, rgba(59, 38, 33, 0.25) 38%, rgba(54, 36, 31, 0.23) 39%, rgba(49, 34, 29, 0.21) 40%, rgba(44, 33, 28, 0.19) 41%, rgba(44, 31, 31, 0.17) 42%, rgba(40, 27, 27, 0.15) 43%, rgba(41, 25, 25, 0.13) 44%, rgba(29, 29, 20, 0.11) 45%, rgba(36, 24, 24, 0.09) 46%, rgba(30, 15, 15, 0.07) 47%, rgba(18, 18, 18, 0.05) 48%, rgba(32, 16, 16, 0.06) 49%, rgba(27, 27, 27, 0.07) 50%, rgba(20, 20, 20, 0.09) 52%, rgba(29, 20, 20, 0.1) 53%, rgba(26, 17, 17, 0.11) 54%, rgba(24, 24, 24, 0.12) 55%, rgba(28, 21, 21, 0.14) 57%, rgba(24, 24, 18, 0.16) 59%, rgba(28, 22, 22, 0.17) 60%, rgba(23, 23, 18, 0.21) 64%, rgba(26, 22, 22, 0.22) 65%, rgba(27, 23, 19, 0.25) 68%, rgba(26, 22, 18, 0.26) 69%, rgba(25, 22, 22, 0.27) 70%, rgba(26, 19, 19, 0.29) 72%, rgba(26, 23, 19, 0.3) 73%, rgba(25, 22, 22, 0.31) 74%, rgba(24, 21, 19, 0.35) 78%, rgba(26, 21, 21, 0.36) 79%, rgba(24, 22, 19, 0.39) 82%, rgba(26, 21, 21, 0.41) 84%, rgba(25, 22, 20, 0.6) 100%);
     background: linear-gradient(to bottom, #1c1b1b 0%, rgba(61, 52, 50, 0.49) 26%, rgba(96, 59, 51, 0.47) 27%, rgba(88, 55, 48, 0.43) 29%, rgba(82, 52, 45, 0.41) 30%, rgba(79, 53, 45, 0.39) 31%, rgba(75, 50, 42, 0.37) 32%, rgba(72, 49, 41, 0.35) 33%, rgba(72, 47, 40, 0.33) 34%, rgba(66, 43, 40, 0.31) 35%, rgba(65, 43, 36, 0.29) 36%, rgba(62, 43, 35, 0.27) 37%, rgba(59, 38, 33, 0.25) 38%, rgba(54, 36, 31, 0.23) 39%, rgba(49, 34, 29, 0.21) 40%, rgba(44, 33, 28, 0.19) 41%, rgba(44, 31, 31, 0.17) 42%, rgba(40, 27, 27, 0.15) 43%, rgba(41, 25, 25, 0.13) 44%, rgba(29, 29, 20, 0.11) 45%, rgba(36, 24, 24, 0.09) 46%, rgba(30, 15, 15, 0.07) 47%, rgba(18, 18, 18, 0.05) 48%, rgba(32, 16, 16, 0.06) 49%, rgba(27, 27, 27, 0.07) 50%, rgba(20, 20, 20, 0.09) 52%, rgba(29, 20, 20, 0.1) 53%, rgba(26, 17, 17, 0.11) 54%, rgba(24, 24, 24, 0.12) 55%, rgba(28, 21, 21, 0.14) 57%, rgba(24, 24, 18, 0.16) 59%, rgba(28, 22, 22, 0.17) 60%, rgba(23, 23, 18, 0.21) 64%, rgba(26, 22, 22, 0.22) 65%, rgba(27, 23, 19, 0.25) 68%, rgba(26, 22, 18, 0.26) 69%, rgba(25, 22, 22, 0.27) 70%, rgba(26, 19, 19, 0.29) 72%, rgba(26, 23, 19, 0.3) 73%, rgba(25, 22, 22, 0.31) 74%, rgba(24, 21, 19, 0.35) 78%, rgba(26, 21, 21, 0.36) 79%, rgba(24, 22, 19, 0.39) 82%, rgba(26, 21, 21, 0.41) 84%, rgba(25, 22, 20, 0.6) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b86e5a', endColorstr='#99191614', GradientType=0)
-}
+} */
 
 .location-house .single-location::before {
     background: -moz-linear-gradient(top, rgba(41, 38, 33, 0) 0%, #292621 100%);

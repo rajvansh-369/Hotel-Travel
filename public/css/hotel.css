@@ -24,6 +24,12 @@ img.hotel_mainImg {
         max-height: 280px !important;
 
     }
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+
+    
   }
 
 .navBarDetailPage{
@@ -33,16 +39,46 @@ img.hotel_mainImg {
 
   @media only screen and (max-width: 991px) {
     .navBarDetailPage{
-        background-color: black;
+        background-color: #003580;
         height: 135px;
         display: block;
     }
 
+    li.active {
+        background-color:  #003580 !important;
+
+    }
+
+    .form-quantity{
+
+        width: 20px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
 
 
+/* 
     .mainLogo{
         display: none;
-    }
+    } */
 
     .desktopSlider{
 
@@ -123,14 +159,21 @@ img.d-block.w-100.min_maxHeight {
 
 img.mainLogo {
     position: absolute;
-    width: 150px;
-    top: 50px;
+    width: 200px;
+    top: 22px;
     z-index: 1;
 }
 
-img.logoName {
-    margin-left: 155px;
+.logoName {
     width: 250px;
+    left: 215px;
+    position: absolute;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
 }
 
 .mobieSlider{
@@ -163,9 +206,11 @@ img.d-block.w-100.min_maxHeight {
     display: flex;
 }
   }
-  @media only screen and (min-width: 1500px) and (max-width: 1899px) {
+  @media only screen and (min-width: 1600px) and (max-width: 1899px) {
   .card_home {
       width: 20rem;
+      min-height: 454px;
+    max-height: 454px;
   }
   .plusSign{
 
@@ -180,14 +225,21 @@ img.d-block.w-100.min_maxHeight {
 
 img.mainLogo {
     position: absolute;
-    width: 150px;
-    top: 40px;
+    width: 200px;
+    top: 25px;
     z-index: 1;
 }
 
-img.logoName {
-    margin-left: 155px;
+.logoName {
+    position: absolute;
+    left: 213px;
     width: 250px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
 }
 .mobieSlider{
 
@@ -207,9 +259,42 @@ img.logoName {
 }
 
   }
-  @media only screen and (min-width: 1200px) and (max-width: 1499px){
+
+  @media only screen and (min-width: 1501px) and (max-width: 1599px){
+
+    .card_home {
+        width: 20rem;
+        min-height: 454px;
+      max-height: 454px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 182px;
+        top: 27px;
+        z-index: 1;
+    }
+    .logoName {
+        /* margin-left: 155px; */
+        width: 250px;
+        position: absolute;
+        /* display: none; */
+        left: 174px;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+    }
+
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1500px){
   .card_home {
       width: 17rem;
+      min-height: 454px;
+    max-height: 454px;
   }
 
   .plusSign{
@@ -226,15 +311,24 @@ img.logoName {
 
 img.mainLogo {
     position: absolute;
-    width: 150px;
-    top: 40px;
+    width: 182px;
+    top: 27px;
     z-index: 1;
+    top: 30px;
+    
 }
-
-img.logoName {
-    margin-left: 155px;
+.logoName {
+    /* margin-left: 155px; */
     width: 250px;
-    display: contents;
+    position: absolute;
+    left: 177px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+    top: 130px;
 }
 .mobieSlider{
 
@@ -258,7 +352,9 @@ img.logoName {
 
   @media only screen and (min-width: 1000px) and (max-width: 1200px){
   .card_home {
-      width: 13.5rem;
+      width: 12.5rem;
+      min-height: 454px;
+      max-height: 454px;
   }
   .plusSign{
 
@@ -272,15 +368,24 @@ img.logoName {
 }
 img.mainLogo {
     position: absolute;
-    width: 150px;
-    top: 40px;
+    width: 153px;
+    top: 50px;
     z-index: 1;
 }
 
-img.logoName {
-    margin-left: 155px;
+.logoName {
+    /* margin-left: 155px; */
     width: 250px;
-    display: none;
+    position: absolute;
+    /* display: none; */
+    left: 148px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+    top: 130px;
 }
 
 .mobieSlider{
@@ -567,8 +672,8 @@ hr {
 
 
 .btn.btn-primary {
-    background-color: #ff671d;
-    border-color: #ff671d;
+    background-color: #fff;
+    border-color: #003580;
     width: 100%;
     font-size: 14px;
     padding: 20px 0;
@@ -775,7 +880,7 @@ h2.bedroom_name {
 
 .navBarUL{
 
-    background-color: #ec0517;
+    /* background-color: #ec0517; */
     width: 110%;
 }
 
@@ -803,5 +908,8 @@ li.active {
     max-width: 500px;
     max-height: 280px !important;
 }
+
+
+
 
 
