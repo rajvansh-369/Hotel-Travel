@@ -310,7 +310,7 @@
                                 @endforeach
 
                                 <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery"
-                                    class="btn btn-primary mb-3">Click here to Enlarge Picture</button>
+                                    class="btn2 btn-primary mb-3">Click here to Enlarge Picture</button>
 
 
 
@@ -504,10 +504,10 @@
                                     @if (auth()->user())
                                         <button type="submit" {{ session('endDate') == null ? 'disabled' : '' }}
                                             id="checkAvailButton"
-                                            class="btn btn-primary  d-flex justify-content-center">CHECK
+                                            class="btn2 btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
-                                        <a class="btn btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
+                                        <a class="btn2 btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
                                             data-bs-target="#loginModal">CHECK
                                             AVAILABILITY</a>
                                     @endif
@@ -543,11 +543,11 @@
                                                         <p class="mt-2">Don't have an account?</p>
                                                     </div>
                                                     <div class="col-md-5    my-3">
-                                                        <a class="btn btn-others" href="{{ route('registerView') }}">SIGN
+                                                        <a class="btn2 btn-others" href="{{ route('registerView') }}">SIGN
                                                             UP</a>
                                                     </div>
                                                     <div class="col-md-12 text-center">
-                                                        <button class="btn btn-others" href="">Forgot
+                                                        <button class="btn2 btn-others" href="">Forgot
                                                             Password?</button>
                                                     </div>
                                                 </div>
