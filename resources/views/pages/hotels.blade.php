@@ -7,20 +7,23 @@
     
             {{-- TIMEX --}}
 
-    <div class="slider-area hero-bg1  hero-overly" style="background-image: url({{  $banner ?   asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg')  }});">
-        <div class="single-slider  slider-height2 d-flex align-items-center">
+            
+    <div class="slider-area hero-bg1  hero-overly" 
+    {{-- style="background-image: url({{  $banner ?   asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg')  }});" --}}
+    >
+        <div class="single-slider  slider-height2 d-flex align-items-center" style="min-height: 0px !important;">
             <div class="container">
-                <div class="row justify-content-center ">
+                <div class="row justify-content-start ">
                     <div class="col-xl-7 col-lg-11">
     
-                        <div class="hero-caption hero-caption2 pt-10">
+                        <div class="hero-caption hero-caption2 pt-10" style="padding-top: 0px !important;">
                             <h1>Our Rooms</h1>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    @include('layouts.headerSearch')
+    {{-- @include('layouts.headerSearch') --}}
 
 </div>
 

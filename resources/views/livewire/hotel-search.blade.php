@@ -1,9 +1,4 @@
 <div>
-    
-    
-    
-
-    
     <div class="slideproducts">
                     <input wire:keydown="search" wire:model="searchText" type="search" id="form1" class="form-control" placeholder="Search Your Hotels" aria-label="Search" />
                     {{-- <div class="container   flex-wrap"> --}}
@@ -13,7 +8,7 @@
                                 <div class=" col-md-3 col-sm-5 mt-3 mb-3 py-1 line-content" >
                                     {{-- {{dd($loop->index)}}
                                     style="width: 20rem; " --}}
-                                    <div class="card" >
+                                    <div class="card card_home" >
                                         <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                                             data-bs-interval="0" data-bs-ride="carousel">
                                             <a style="text-decoration: none;"
@@ -108,7 +103,7 @@
         $(document).ready(function () {
 
             // alert("test");
-            pageSize = 4;
+            pageSize = 8;
             incremSlide = 5;
             startPage = 0;
             numberPage = 0;
