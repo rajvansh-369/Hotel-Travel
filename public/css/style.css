@@ -1264,28 +1264,30 @@ hr {
     .header-sticky.sticky-bar.sticky {
         padding: 15px 0px
     }
+
+    .mobile_menu {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 99
+    }
+    
+    .slider-height1 {
+        min-height: 315px;
+    }
 }
 
-.mobile_menu {
-    position: absolute;
-    right: 0px;
-    width: 100%;
-    z-index: 99
-}
 
-.slider-height1 {
-    min-height: 451px;
-}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .slider-height1 {
-        min-height: 680px
+        min-height: 144px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .slider-height1 {
-        min-height: 500px
+        min-height: 295px;
     }
 }
 
@@ -1341,7 +1343,7 @@ hr {
 
 .slider-area .hero-caption {
     /* text-align: center */
-    padding-top: 180px;
+    padding-top: 29px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
