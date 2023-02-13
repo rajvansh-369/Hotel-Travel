@@ -128,10 +128,22 @@ img.hotel_mainImg {
     }
 
 }
+
+input#select1 {
+    margin-left: 0px;
+}
+input#select2 {
+    margin-left: 6px;
+}
+input#select3 {
+    margin-left: 3px;
+}
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
     div#booking-form {
         width: 390px !important;
     }
+
+   
 
     img.mainLogo {
         position: absolute;
