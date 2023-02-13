@@ -130,13 +130,16 @@ img.hotel_mainImg {
 }
 
 input#select1 {
-    margin-left: 0px;
+    margin-left: 20px;
+    width: 100px;
 }
 input#select2 {
-    margin-left: 6px;
+    margin-left: 26px;
+    width: 100px;
 }
 input#select3 {
-    margin-left: 3px;
+    margin-left: 23px;
+    width: 100px;
 }
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
     div#booking-form {
