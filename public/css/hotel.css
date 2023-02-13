@@ -5,6 +5,38 @@ img.hotel_mainImg {
 
 
 @media only screen  and (max-width: 299px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 267px;
+    }
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
     div#booking-form {
         width: 265px !important;
     }
@@ -38,6 +70,38 @@ img.hotel_mainImg {
 
 
 @media only screen and (min-width:280px)  and (max-width: 350px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
     div#booking-form {
         width: 271px !important;   
     }
@@ -68,6 +132,38 @@ img.hotel_mainImg {
 
 }
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
     div#booking-form {
         width: 390px !important;
     }
@@ -99,6 +195,39 @@ img.hotel_mainImg {
 }
 
 @media only screen and (min-width:350px)  and (max-width: 400px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
     div#booking-form {
         width: 342px !important; 
     }
@@ -142,6 +271,41 @@ input#select3 {
     width: 100px;
 }
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+
+
     div#booking-form {
         width: 390px !important;
     }
@@ -176,6 +340,17 @@ input#select3 {
 
 
 @media only screen and (min-width: 501px) and (max-width: 600px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
 
 
     .slider-area .hero-caption {
@@ -348,6 +523,11 @@ img.d-block.w-100.min_maxHeight {
   @media only screen and (min-width: 901px) and (max-width: 1200px) {
 
 
+    .slicknav_menu {
+
+        padding-top: 0px;
+    }
+
     .header-area .header-top {
         padding: 17px 173px !important;
     }
@@ -415,7 +595,7 @@ img.d-block.w-100.min_maxHeight {
 
     .mobieSlider{
 
-        margin-top: 110px;
+        margin-top: 121px;
     }
 
     .countSlider{
@@ -769,6 +949,11 @@ img.mainLogo {
     line-height: 62px;
     margin-bottom: 7px;
     top: 130px;
+}
+
+.desktopSlider{
+
+    display: block;
 }
 
 .mobieSlider{
