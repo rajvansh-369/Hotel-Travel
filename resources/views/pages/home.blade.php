@@ -56,7 +56,7 @@
                                 <div class="section-tittle mb-50">
                                     <h2>Top-rated Hotels  around you</h2>
                                     <p>The concept and service of the best luxury hotels in the  <i
-                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i> of the city BodhGaya.
+                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i>city The BodhGaya.
                                     </p>
                                 </div>
                             </div>
