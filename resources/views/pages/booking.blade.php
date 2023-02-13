@@ -86,7 +86,7 @@
                     </ul>
                     <p class="paradetail">By continuing, you agree to Hotel’ <b><a style="text-decoration:none;color:black;" target="_blank" href="https://justboardrooms.com/terms-of-use/">Terms of Use</a></b> and
                         <b><a style="text-decoration:none;color:black;" target="_blank" href="https://justboardrooms.com/privacy-policy/">Privacy Policy</a></b>.<br><br> For details about cancellations, please read our <b><a style="text-decoration:none;color:black;" target="_blank" href="https://api.justboardrooms.com/api-PROD/terms.php">Cancellation Policy</a></b> within our <b><a style="text-decoration:none;color:black;" target="_blank" href="https://api.justboardrooms.com/api-PROD/terms.php">Member Agreement</a></b>. </p>
-                   <a href="{{route('confirmBooking')}}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Confirm Booking</button> </a> 
+                   <a href="{{route('confirmBooking')}}"><button type="button" class="btn2 btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Confirm Booking</button> </a> 
                 </section>
 
             </div>

@@ -19,7 +19,7 @@
                             <div class="d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li>Call Us: +10 (89) 675 5456</li>
+                                        <li>Call Us:   +91 7004 (450) 098</li>
                                         <li>
 
                                             <a href="" style="color:white">enquiry@hotel.com</a>
