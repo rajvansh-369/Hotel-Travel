@@ -26,7 +26,7 @@
         }
 
         a {
-            color: #003580;
+            color: #0000ee;
             text-decoration: underline;
         }
 
@@ -147,7 +147,7 @@
                                                 cellpadding="0" cellspacing="0" width="100%" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:25px 10px 0px;font-family:arial,helvetica,sans-serif;background-color: #003580;"
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:25px 10px 0px;font-family:arial,helvetica,sans-serif;"
                                                             align="left">
 
                                                             <table width="100%" cellpadding="0" cellspacing="0"
@@ -157,12 +157,10 @@
                                                                         align="center">
 
                                                                         <img align="center" border="0"
-                                                                            src="https://uxdesigns.in/project/hotels/public/img/logo/mainLogo_1.png"
+                                                                            src="https://cdn.templates.unlayer.com/assets/1625753203582-School_263e6a.png"
                                                                             alt="Logo" title="Logo"
-                                                                            style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 40%;max-width: 150px;"
-                                                                            width="200px" />
-
-                                                                            <h1 class="logoName" style="margin-top: -20px;">Hotels in <span style="color:#fff">Bo</span>dhgaya</h1>    
+                                                                            style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 10%;max-width: 58px;"
+                                                                            width="58" />
 
                                                                     </td>
                                                                 </tr>
@@ -173,7 +171,25 @@
                                                 </tbody>
                                             </table>
 
-                                            
+                                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation"
+                                                cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:10px 10px 0px;font-family:arial,helvetica,sans-serif;"
+                                                            align="left">
+
+                                                            <div
+                                                                style="color: #2e8fc0; line-height: 100%; text-align: center; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 100%;"><span
+                                                                        style="font-size: 20px; line-height: 20px; font-family: georgia, palatino;"><strong><span
+                                                                                style="line-height: 20px; font-size: 20px;">HOTEL</span></strong></span>
+                                                                </p>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
                                             <!--[if (!mso)&(!IE)]><!-->
                                         </div><!--<![endif]-->
@@ -217,7 +233,7 @@
                                                                         align="center">
 
                                                                         <img align="center" border="0"
-                                                                            src="{{url('https://uxdesigns.in/project/hotels/public/storage/'.$hotel->picture[0]->picture)}}"
+                                                                            src="https://cdn.templates.unlayer.com/assets/1625747076329-hotel.jpg"
                                                                             alt="Hero Image" title="Hero Image"
                                                                             style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 600px;"
                                                                             width="600" />
@@ -472,7 +488,7 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;"> #{{$booked->invoice_no}}</span>
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">+123-456-789</span>
                                                                 </p>
                                                             </div>
 
@@ -552,7 +568,8 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{$user->name}}</span></p>
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">Devid
+                                                                        Beckham</span></p>
                                                             </div>
 
                                                         </td>
@@ -631,7 +648,8 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booked->start)->format('M d, Y') }}</span></p>
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">Sunday,
+                                                                        June, 10, 20xx</span></p>
                                                             </div>
 
                                                         </td>
@@ -710,7 +728,8 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booked->end)->format('M d, Y') }}</span></p>
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">Sunday,
+                                                                        June, 10, 20xx</span></p>
                                                             </div>
 
                                                         </td>
@@ -789,7 +808,7 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{$totalTime}}</span>
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">5</span>
                                                                 </p>
                                                             </div>
 
@@ -808,6 +827,88 @@
                         </div>
                     </div>
 
+
+
+                    <div class="u-row-container" style="padding: 0px;background-color: transparent">
+                        <div class="u-row"
+                            style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #3d3d3d;">
+                            <div
+                                style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;">
+                                <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr style="background-color: #3d3d3d;"><![endif]-->
+
+                                <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                                <div class="u-col u-col-50"
+                                    style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;">
+                                    <div style="width: 100% !important;">
+                                        <!--[if (!mso)&(!IE)]><!-->
+                                        <div
+                                            style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;">
+                                            <!--<![endif]-->
+
+                                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation"
+                                                cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:13px 10px;font-family:arial,helvetica,sans-serif;"
+                                                            align="left">
+
+                                                            <div
+                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 100%;"><span
+                                                                        style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Number
+                                                                        of Children:</span></p>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <!--[if (!mso)&(!IE)]><!-->
+                                        </div><!--<![endif]-->
+                                    </div>
+                                </div>
+                                <!--[if (mso)|(IE)]></td><![endif]-->
+                                <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                                <div class="u-col u-col-50"
+                                    style="max-width: 320px;min-width: 300px;display: table-cell;vertical-align: top;">
+                                    <div style="width: 100% !important;">
+                                        <!--[if (!mso)&(!IE)]><!-->
+                                        <div
+                                            style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;">
+                                            <!--<![endif]-->
+
+                                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation"
+                                                cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:13px 10px;font-family:arial,helvetica,sans-serif;"
+                                                            align="left">
+
+                                                            <div
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 100%;"><span
+                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">2</span>
+                                                                </p>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <!--[if (!mso)&(!IE)]><!-->
+                                        </div><!--<![endif]-->
+                                    </div>
+                                </div>
+                                <!--[if (mso)|(IE)]></td><![endif]-->
+                                <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     <div class="u-row-container" style="padding: 0px 0px 25px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #444444;">
@@ -824,7 +925,24 @@
                                             style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;">
                                             <!--<![endif]-->
 
-                                            
+                                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation"
+                                                cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:13px 10px;font-family:arial,helvetica,sans-serif;"
+                                                            align="left">
+
+                                                            <div
+                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 100%;"><span
+                                                                        style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Conditions:</span>
+                                                                </p>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
                                             <!--[if (!mso)&(!IE)]><!-->
                                         </div><!--<![endif]-->
@@ -839,6 +957,28 @@
                                         <div
                                             style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;">
                                             <!--<![endif]-->
+
+                                            <table style="font-family:arial,helvetica,sans-serif;" role="presentation"
+                                                cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:13px 10px;font-family:arial,helvetica,sans-serif;"
+                                                            align="left">
+
+                                                            <div
+                                                                style="color: #ffffff; line-height: 150%; text-align: left; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 150%;"><span
+                                                                        style="font-size: 16px; line-height: 24px;">Lorem
+                                                                        Ipsum is simply dummy text of the printing and
+                                                                        typesetting industry. Lorem Ipsum has been the
+                                                                        industry's standard dummy</span></p>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
                                             <!--[if (!mso)&(!IE)]><!-->
                                         </div><!--<![endif]-->
                                     </div>
@@ -952,9 +1092,11 @@
                                                                 <p style="font-size: 14px; line-height: 150%;">&nbsp;
                                                                 </p>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
-                                                                        style="font-size: 16px; line-height: 24px;">{{$hotel->name}},</span></p>
+                                                                        style="font-size: 16px; line-height: 24px;">Hotel
+                                                                        Name,</span></p>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
-                                                                        style="font-size: 16px; line-height: 24px;">{{$hotel->address->formatted_address}}</span></p>
+                                                                        style="font-size: 16px; line-height: 24px;">Hotel
+                                                                        Address</span></p>
                                                             </div>
 
                                                         </td>
@@ -1050,7 +1192,7 @@
                                                 cellpadding="0" cellspacing="0" width="100%" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:35px 100px 10px 25px;font-family:arial,helvetica,sans-serif;"
+                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:35px 10px 10px 25px;font-family:arial,helvetica,sans-serif;"
                                                             align="left">
 
                                                             <table width="100%" cellpadding="0" cellspacing="0"
@@ -1059,13 +1201,11 @@
                                                                     <td style="padding-right: 0px;padding-left: 0px;"
                                                                         align="left">
 
-                                                                        <img align="center" border="0"
-                                                                            src="https://uxdesigns.in/project/hotels/public/img/logo/mainLogo_1.png"
+                                                                        <img align="left" border="0"
+                                                                            src="https://cdn.templates.unlayer.com/assets/1625752516919-School_ffffff.png"
                                                                             alt="Logo" title="Logo"
-                                                                            style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 40%;max-width: 150px;"
-                                                                            width="200px" />
-
-                                                                          
+                                                                            style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 21%;max-width: 55.65px;"
+                                                                            width="55.65" />
 
                                                                     </td>
                                                                 </tr>
@@ -1084,11 +1224,11 @@
                                                             align="left">
 
                                                             <div
-                                                                style="line-height: 150%; text-align: left; word-wrap: break-word;">
-                                                            
-                                                                <h1 class="logoName" style="margin-top: -20px; font-size: 14px; line-height: 150%;">Hotels in <span style="color:#fff">Bo</span>dhgaya</h1>    
+                                                                style="color: #ffffff; line-height: 150%; text-align: left; word-wrap: break-word;">
+                                                                <p style="font-size: 14px; line-height: 150%;"><span
+                                                                        style="font-size: 16px; line-height: 24px; font-family: georgia, palatino;">Hotel
+                                                                        Name</span></p>
                                                             </div>
-
 
                                                         </td>
                                                     </tr>
@@ -1206,7 +1346,7 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 150%; text-align: right; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
-                                                                        style="font-size: 16px; line-height: 24px;">www.hotelinbodhgaya.com</span>
+                                                                        style="font-size: 16px; line-height: 24px;">www.htelbooking.com</span>
                                                                 </p>
                                                             </div>
 

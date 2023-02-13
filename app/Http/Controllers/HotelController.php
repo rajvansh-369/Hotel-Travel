@@ -376,7 +376,7 @@ class HotelController extends Controller
 
             // $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
 
-            Mail::to('snhlrj8@gmail.com')->send(new Booking($user,$hotel,$booked, $invoiceDate, $totalTime ,$discountPrice , $sale_tax , $totalPrice));
+            Mail::to('snhlrj8@gmail.com' , 'hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com')->send(new Booking($user,$hotel,$booked, $invoiceDate, $totalTime ,$discountPrice , $sale_tax , $totalPrice));
 
         return view('pages.thank-you' ,  compact('hotel' , 'user' , 'booked' , 'invoiceDate', 'totalTime', 'discountPrice' , 'sale_tax', 'totalPrice'));
 

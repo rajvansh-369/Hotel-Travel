@@ -36,9 +36,9 @@ class TourPackageResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
                     ->required(),
-                Forms\Components\Textarea::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->required()
-                    ->maxLength(255),
+                    ,
             ]);
     }
 

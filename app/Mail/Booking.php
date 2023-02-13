@@ -31,7 +31,7 @@ class Booking extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New Booking'.$this->hotel->name,
+            subject: 'New Booking '.$this->hotel->name,
             
         );
     }

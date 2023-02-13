@@ -3,16 +3,171 @@ img.hotel_mainImg {
     min-height: 300px;
 }
 
-/* @media only screen and (min-width: 900px) {
 
-    .col-sm-6 {
-        flex: 0 0 auto;
-        width: 50% !important;
+@media only screen  and (max-width: 299px) {
+    div#booking-form {
+        width: 265px !important;
     }
-} */
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
 
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width:280px)  and (max-width: 350px) {
+    div#booking-form {
+        width: 271px !important;   
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 275px !important;
+    }
+
+}
+@media only screen and (min-width: 401px)  and (max-width: 500px) {
+    div#booking-form {
+        width: 390px !important;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+@media only screen and (min-width:350px)  and (max-width: 400px) {
+    div#booking-form {
+        width: 368px !important;    
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+@media only screen and (min-width: 401px)  and (max-width: 500px) {
+    div#booking-form {
+        width: 390px !important;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+
+
+    .slider-area .hero-caption {
+        padding-top: 250px !important;
+    }
+
+
     img.hotel_mainImg {
         max-height: auto;
         min-height: auto;
@@ -34,8 +189,29 @@ img.hotel_mainImg {
 
     }
 
-
+    div#booking-form {
+        width: 510px !important;
+    }
+ 
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
     
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
   }
 
 .navBarDetailPage{
@@ -43,7 +219,11 @@ img.hotel_mainImg {
     display: none;
 }
 
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    .header-area .header-top {
+        padding: 17px 105px !important;
+    }
     .navBarDetailPage{
         background-color: #003580;
         height: 135px;
@@ -61,7 +241,120 @@ img.hotel_mainImg {
     }
 
     div#booking-form {
-        width: 380px !important
+        width: 551px !important;
+    }
+
+    li.active {
+        background-color:  #003580 !important;
+
+    }
+
+    .form-quantity{
+
+        width: 20px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+
+/* 
+    .mainLogo{
+        display: none;
+    } */
+
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 110px;
+    }
+
+    .countSlider{
+        font-size: var(--ifm-h5-font-size);
+        background: black;
+        max-width: max-content;
+        border-radius: 2px;
+        display: inline-block;
+        opacity: 0.8;
+    }
+
+    .plusSign{
+
+
+        position: absolute;
+    right: 55px;
+    width: 75%;
+    
+    
+    }
+
+
+    img.d-block.w-100.min_maxHeight_galleryList {
+        /* width: 91px; */
+        max-width: 70px;
+    }
+
+.alignFlex{
+
+    display: contents;
+}
+
+
+img.d-block.w-100.min_maxHeight {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+
+
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 1200px) {
+
+
+    .header-area .header-top {
+        padding: 17px 173px !important;
+    }
+
+    .navBarDetailPage{
+        background-color: #003580;
+        height: 135px;
+        display: block;
+    }
+
+    .form-quantity {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+
+
+    .form-quantity input {
+        width: 42px !important;
+    }
+
+    div#booking-form {
+        width: 718px !important;
     }
 
     li.active {
@@ -257,7 +550,7 @@ img.d-block.w-100.min_maxHeight {
 
 
 main {
-    padding-top: 211px;
+    padding-top: 209px;
 }
 
 img.mainLogo {
@@ -429,7 +722,7 @@ img.mainLogo {
   }
 
   main {
-    padding-top: 200px;
+    padding-top: 106px;
 }
   .plusSign{
 
