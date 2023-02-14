@@ -2,14 +2,14 @@
 @section('content')
     <main>
 
-        <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
-            <div class="single-slider  slider-height3 d-flex align-items-center">
+        <div class="slider-area hero-bg1   hero-overly">
+            {{-- style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});"> --}}
+            <div class="single-slider  slider-height2 d-flex align-items-center" style="min-height: 0px !important;">
                 <div class="container">
-                    <div class="row justify-content-center ">
+                    <div class="row justify-content-start ">
                         <div class="col-xl-7 col-lg-11">
 
-                            <div class="hero-caption hero-caption3">
+                            <div class="hero-caption hero-caption3" style="padding-top: 0px !important;">
                                 <h1>Contact Us</h1>
                             </div>
                         </div>
@@ -18,15 +18,14 @@
             </div>
         </div>
 
-
         <section class="contact-section">
             <div class="container">
                 <div class="d-none d-sm-block mb-5 pb-4">
 
-                    <iframe
+                    {{-- <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28998.456663612273!2d84.98519604999998!3d24.699157599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c5fbc12ed3d%3A0x9bbc5dccc57d96e!2sBodh%20Gaya%2C%20Bihar!5e0!3m2!1sen!2sin!4v1675451692526!5m2!1sen!2sin"
                         width="1200" height="450" style="border:10;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 
                 </div>
                 <div class="row">

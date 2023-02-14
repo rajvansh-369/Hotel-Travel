@@ -143,17 +143,19 @@ return [
             ],
         ],
     ],
+    // Buildix\Timex\Resources\EventResource::class
 
     'resources' => [
-        'event' => \Buildix\Timex\Resources\EventResource::class,
+        'event' => \App\Filament\Resources\EventResource::class,
         'sort' => 1,
         'icon' => 'heroicon-o-calendar',
         'slug' => 'timex-events',
         'shouldRegisterNavigation' => true,
         'isStartEndHidden' => false,
     ],
+    // \Buildix\Timex\Models\Event::class
     'models' => [
-        'event' => \Buildix\Timex\Models\Event::class,
+        'event' =>  \App\Models\TimexEvents::class,
         'users' => [
             'model' => \App\Models\User::class,
             'name' => 'name',
@@ -191,10 +193,10 @@ return [
     | You can define your custom Category model.
     | Minimum and default columns in your DB should be: id, value, icon, color.
     |
-    |
+    |\Buildix\Timex\Models\Category::class
     */
             'model' => [
-                'class' => \Buildix\Timex\Models\Category::class, // \App\Models\Category::class
+                'class' => \App\Models\Category::class, // \App\Models\Category::class
                 'key' => 'id', // "id" is a DB column - you can change by any primary key
                 'value' => 'value', // "value" is a DB column - it used for Select options and displays on Resource page
                 'icon' => 'icon', // "icon" is a DB column - define here any heroicon- icon

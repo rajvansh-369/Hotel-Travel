@@ -18,7 +18,7 @@ class RegisterUser extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(private $user)
     {
         //
     }
@@ -31,7 +31,7 @@ class RegisterUser extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Register User',
+            subject: 'Welcome',
         );
     }
 
@@ -43,7 +43,8 @@ class RegisterUser extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mailRegistration',
+            view: 'mail.mailRegistration',
+            with: ['user' => $this->user],
         );
     }
 

@@ -71,7 +71,7 @@
 
                     </div>
                     <div class="col-sm-6 px-0 d-none d-sm-block">
-                        <img src="{{ asset('storage/login.jpg') }}" alt="Login image" class="w-100 vh-100"
+                        <img src="{{ asset('storage/login.jpg') }}" alt="Login image" class="w-100 vh-100 registerImage"
                             style="object-fit: cover; object-position: left;">
                     </div>
                 </div>

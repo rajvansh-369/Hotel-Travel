@@ -12,24 +12,27 @@
 <header>
     <div class="header-area header-transparent">
         <div class="main-header ">
-            <div class="header-top">
+      <div class="header-top">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li>Call Us: +10 (89) 675 5456</li>
+                                        <li>Call Us:   +91 7004 (450) 098</li>
                                         <li>
 
-                                            <a href="">enquiry@hotel.com</a>
+                                            <a href="" style="color:white">enquiry@hotel.com</a>
                                             {{-- <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                                 data-cfemail="a2cbccc4cde2d0cdcec3da8cc1cdcf">[email&#160;protected]</a> --}}
-                                        </li>
+                                      </li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right d-none d-sm-block">
                                     <ul class="header-social">
+                                        <li><img src="{{asset('storage/inr_logo.webp')}}" style="max-width:25px;" class="img-fluid"></li>
+                                        <li><a href="/admin"><button class="btn2">List your property</button> </a></li>
+                                        <li><a href="{{route('registerView')}}"><button class="btn">Register</button> </a></li>
                                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -39,13 +42,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="header-bottom header-sticky">
+            </div> 
+            {{-- header-sticky --}}
+            <div class="header-bottom ">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between flex-wrap">
 
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('img/logo/logo1.png')}}" width="250px" alt=""></a>
+
+                            <a href="{{route('home')}}">
+                                
+                                
+                                <img class="mainLogo" src="{{asset('img/logo/mainLogo_1.png')}}" width="50px" alt="">
+                            
+                            </a>
+                           
+                        </div>
+                        <div class="logo">
+
+                            
+                            <a href="{{route('home')}}">
+                                <h1 class="logoName">Hotels in <span style="color:#fff">Bo</span>dhgaya</h1>
+                                {{-- <img class="logoName" src="{{asset('img/logo/logo2.png')}}" width="200px" alt=""> --}}
+                            </a>
+                           
                         </div>
                         <div class="menu-wrapper d-flex align-items-center">
 

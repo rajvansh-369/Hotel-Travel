@@ -20,16 +20,15 @@
     @include('meta::manager', [
         'title'         => config('app.name', 'Laravel'),
         'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
-        'image'         => asset('storage/icon.png'),
+        'image'         => asset('storage/icon_.ico'),
         'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
         'author'         => "Snehal Rajvansh",
         'referrer'         => "default",
     ])
     <!-- CSRF Token -->
+    <link rel="icon" type="image/png" sizes="6x6" href="{{asset('storage/icon_.ico')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('storage/icon.png')}}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slicknav.css') }}">
@@ -43,12 +42,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hotel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mybooking.css') }}">
-    <!-- Font Awesome -->
-{{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-<!-- MDB -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.css" rel="stylesheet" /> --}}
+    <link rel="stylesheet" href="{{ asset('css/bookingBar.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 @livewireStyles
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927060033825760"
      crossorigin="anonymous"></script>

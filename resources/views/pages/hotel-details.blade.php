@@ -23,19 +23,19 @@
     <main>
         <div class="container-fluid  gallery">
             <div class="lightbox">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row desktopSlider" >
+                    <div class="col-lg-6 col-sm-6">
                         @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
                                 data-mdb-img="{{ asset('/storage/' . $picture->picture) }}" alt="{{ $hotel->name }}"
                                 class="w-100 mw-100 shadow-1-strong rounded full_screen" />
                         @endforeach
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-6">
                         <div class="row ">
 
                             @foreach ($hotel->picture->where('picture_type', 'rest_image')->take(2) as $picture)
-                                <div class="col-lg-6 gallery_img ">
+                                <div class="col-lg-6 col-sm-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $picture->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                         alt="Table Full of Spices"
@@ -44,7 +44,7 @@
                             @endforeach
 
                             @if (count($hotel->picture) > 3)
-                                <div class="col-lg-6 gallery_img ">
+                                <div class="col-lg-6 col-sm-6 gallery_img ">
                                     <img src="{{ asset('/storage/' . $hotel->picture[3]->picture) }}"
                                         data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                         alt="Table Full of Spices"
@@ -53,7 +53,7 @@
                                     {{-- <img data-bs-toggle="modal" data-bs-target="#exampleModal" src="{{asset('img/more_gallery.png')}}" class="plusSign" alt=""> --}}
                                 </div>
                                 @if (count($hotel->picture) > 4)
-                                    <div class="col-lg-6 gallery_img ">
+                                    <div class="col-lg-6 col-sm-6 gallery_img ">
                                         <img src="{{ asset('/storage/' . $hotel->picture[4]->picture) }}"
                                             data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
                                             alt="Table Full of Spices"
@@ -67,6 +67,33 @@
                         </div>
 
                     </div>
+                </div>
+
+
+                <div class="row mobieSlider">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            @foreach ($hotel->picture as $key => $picture)
+                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100 min_maxHeight" alt="...">
+                            <div class="carousel-caption ">
+                              <h5 class="countSlider">{{$key+1}}/{{count($hotel->picture)}}</h5>
+                              {{-- <p>Some representative placeholder content for the first slide.</p> --}}
+                            </div>
+                          </div>
+                          @endforeach
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
                 </div>
             </div>
 
@@ -283,7 +310,7 @@
                                 @endforeach
 
                                 <button data-bs-toggle="modal" data-bs-target="#exampleModalGallery"
-                                    class="btn btn-primary mb-3">Click here to Enlarge Picture</button>
+                                    class="btn2 btn-primary mb-3">Click here to Enlarge Picture</button>
 
 
 
@@ -377,16 +404,16 @@
                         </section>
                     </div>
                     <div class="col-md-5 col-lg-4">
-
-                        <div class="card text-dark bg-light mb-3 availability" style="max-width: 20rem;">
-                            <div class="card-header">Avilbility</div>
+{{-- style="max-width: 20rem;" --}}
+                        <div class="card text-dark bg-light mb-3 availability" >
+                            <div class="card-header">Availability</div>
                             <div class="card-body ">
 
 
                                 <form action="{{ route('preBooking') }}" method="post">
                                     @csrf
 
-                                    <div class="row justify-content-between hr" id="hr1">
+                                    {{-- <div class="row justify-content-between hr" id="hr1">
                                         <div class="col-md-8 col-sm-8">
                                             <p class="pricehrdy"><strong>Full Day Start Time :</strong></p>
 
@@ -405,7 +432,7 @@
                                         <div class="col-md-4 col-sm-4">
                                             <p>{{ $hotel->full_day_end_time }}</p>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     {{-- {{dd(session('priceWithoutTax'))}} --}}
 
@@ -454,7 +481,7 @@
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('startDate') ?? '' }} " onchange="checkDate()"
+                                                value="{{ session('startDate') ??  \Carbon\Carbon::now()->format('m/d/Y')  }} " onchange="checkDate()"
                                                 placeholder="Check in" class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
@@ -467,7 +494,7 @@
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
                                             <input id="datepicker2" required name="endDate"
-                                                value="{{ session('endDate') ?? '' }} " onchange="checkDate()"
+                                                value="{{ session('endDate') ?? \Carbon\Carbon::now()->addDay()->format('m/d/Y') }} " onchange="checkDate()"
                                                 placeholder="Check out" class="text-secondary datePicker" />
                                         </div>
                                     </div>
@@ -477,10 +504,10 @@
                                     @if (auth()->user())
                                         <button type="submit" {{ session('endDate') == null ? 'disabled' : '' }}
                                             id="checkAvailButton"
-                                            class="btn btn-primary  d-flex justify-content-center">CHECK
+                                            class="btn2 btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
-                                        <a class="btn btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
+                                        <a class="btn2 btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
                                             data-bs-target="#loginModal">CHECK
                                             AVAILABILITY</a>
                                     @endif
@@ -516,11 +543,11 @@
                                                         <p class="mt-2">Don't have an account?</p>
                                                     </div>
                                                     <div class="col-md-5    my-3">
-                                                        <a class="btn btn-others" href="{{ route('registerView') }}">SIGN
+                                                        <a class="btn2 btn-others" href="{{ route('registerView') }}">SIGN
                                                             UP</a>
                                                     </div>
                                                     <div class="col-md-12 text-center">
-                                                        <button class="btn btn-others" href="">Forgot
+                                                        <button class="btn2 btn-others" href="">Forgot
                                                             Password?</button>
                                                     </div>
                                                 </div>
@@ -636,62 +663,62 @@
         }
 
 
-        function showMore(showClass) {
-            $('.' + showClass + '-all').show();
-            $('#' + showClass + '-show-btn').hide();
-            $('#' + showClass + '-hide-btn').show();
-        }
+        // function showMore(showClass) {
+        //     $('.' + showClass + '-all').show();
+        //     $('#' + showClass + '-show-btn').hide();
+        //     $('#' + showClass + '-hide-btn').show();
+        // }
 
-        function showLess(showClass) {
-            $('.' + showClass + '-all').hide();
-            $('#' + showClass + '-show-btn').show();
-            $('#' + showClass + '-hide-btn').hide();
+        // function showLess(showClass) {
+        //     $('.' + showClass + '-all').hide();
+        //     $('#' + showClass + '-show-btn').show();
+        //     $('#' + showClass + '-hide-btn').hide();
 
-            for (let i = 1; i <= 3; i++) {
-                $('.' + showClass + '-' + i).show();
-            }
-        }
+        //     for (let i = 1; i <= 3; i++) {
+        //         $('.' + showClass + '-' + i).show();
+        //     }
+        // }
 
 
 
-        function initMap() {
-            var locationArr = {
-                lat: parseFloat(@json($location['lat'])),
-                lng: parseFloat(@json($location['lng']))
-            };
-            console.log(locationArr);
-            var mapOptions = {
-                center: locationArr,
-                zoom: 14
-            };
+        // function initMap() {
+        //     var locationArr = {
+        //         lat: parseFloat(@json($location['lat'])),
+        //         lng: parseFloat(@json($location['lng']))
+        //     };
+        //     console.log(locationArr);
+        //     var mapOptions = {
+        //         center: locationArr,
+        //         zoom: 14
+        //     };
 
-            const map = new google.maps.Map(document.getElementById('map-listing'), mapOptions);
-            const icon = {
-                url: @json(asset('/storage/map_pointer.png')), // url
-                scaledSize: new google.maps.Size(35, 50), // scaled size
+        //     const map = new google.maps.Map(document.getElementById('map-listing'), mapOptions);
+        //     const icon = {
+        //         url: @json(asset('/storage/map_pointer.png')), // url
+        //         scaledSize: new google.maps.Size(35, 50), // scaled size
 
-            };
+        //     };
 
-            var allMarkers = [];
-            r = new google.maps.Marker({
-                position: locationArr,
-                map: map,
-                icon: icon,
-                url: 'https://maps.google.com/?q=' + (@json($location['lat'])) + ',' + (
-                    @json($location['lng'])),
-            });
+        //     var allMarkers = [];
+        //     r = new google.maps.Marker({
+        //         position: locationArr,
+        //         map: map,
+        //         icon: icon,
+        //         url: 'https://maps.google.com/?q=' + (@json($location['lat'])) + ',' + (
+        //             @json($location['lng'])),
+        //     });
 
-            allMarkers.push(r);
+        //     allMarkers.push(r);
 
-            allMarkers.map((marker) => {
-                marker.addListener("click", () => {
-                    window.open(marker.url, '_blank')
-                })
-            });
+        //     allMarkers.map((marker) => {
+        //         marker.addListener("click", () => {
+        //             window.open(marker.url, '_blank')
+        //         })
+        //     });
 
-        }
+        // }
     </script>
-    <script
+    {{-- <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSuy4U3KFAhhK1gtshBsDJIiKDnK16upg&libraries=places&callback=initMap">
-    </script>
+    </script> --}}
 @endsection

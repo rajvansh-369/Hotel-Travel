@@ -67,7 +67,6 @@ class BedroomsTypeResource extends Resource
                             TextInput::make('name')
                             ->label("Hotel's Amenities"),
                             FileUpload::make('icon')
-                            ->required()
                             ->directory('amenities')
                            ,
                            

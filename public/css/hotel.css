@@ -3,7 +3,20 @@ img.hotel_mainImg {
     min-height: 300px;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen  and (max-width: 299px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 267px;
+    }
+
     img.hotel_mainImg {
         max-height: auto;
         min-height: auto;
@@ -24,6 +37,371 @@ img.hotel_mainImg {
         max-height: 280px !important;
 
     }
+    div#booking-form {
+        width: 265px !important;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+
+
+@media only screen and (min-width:280px)  and (max-width: 350px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+    div#booking-form {
+        width: 271px !important;   
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 275px !important;
+    }
+
+}
+@media only screen and (min-width: 401px)  and (max-width: 500px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+    div#booking-form {
+        width: 390px !important;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+@media only screen and (min-width:350px)  and (max-width: 400px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+    div#booking-form {
+        width: 342px !important; 
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+input#select1 {
+    margin-left: 20px;
+    width: 100px;
+}
+input#select2 {
+    margin-left: 26px;
+    width: 100px;
+}
+input#select3 {
+    margin-left: 23px;
+    width: 100px;
+}
+@media only screen and (min-width: 401px)  and (max-width: 500px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+
+
+    div#booking-form {
+        width: 390px !important;
+    }
+
+   
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+    .slider-area .hero-caption {
+        padding-top: 228px !important;
+    }
+
+}
+
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+
+    
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 243px;
+    }
+
+
+    .slider-area .hero-caption {
+        padding-top: 250px !important;
+    }
+
+
+    img.hotel_mainImg {
+        max-height: auto;
+        min-height: auto;
+    }
+    .hide_gallery{
+
+        display: none;
+    }
+    .forMobileGallery{
+        display: block !important;
+    }
+    .forDesktopGallery{
+        display: none !important;
+    }
+
+    .videoSource {
+        max-width: 300px !important;
+        max-height: 280px !important;
+
+    }
+
+    div#booking-form {
+        width: 510px !important;
+    }
+ 
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
   }
 
 .navBarDetailPage{
@@ -31,11 +409,202 @@ img.hotel_mainImg {
     display: none;
 }
 
-  @media only screen and (max-width: 991px) {
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+
+    .header-area .header-top {
+        padding: 17px 105px !important;
+    }
     .navBarDetailPage{
-        background-color: black;
+        background-color: #003580;
         height: 135px;
         display: block;
+    }
+
+    .form-quantity {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+
+
+    .form-quantity input {
+        width: 42px !important;
+    }
+
+    div#booking-form {
+        width: 551px !important;
+    }
+
+    li.active {
+        background-color:  #003580 !important;
+
+    }
+
+    .form-quantity{
+
+        width: 20px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+
+/* 
+    .mainLogo{
+        display: none;
+    } */
+
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 110px;
+    }
+
+    .countSlider{
+        font-size: var(--ifm-h5-font-size);
+        background: black;
+        max-width: max-content;
+        border-radius: 2px;
+        display: inline-block;
+        opacity: 0.8;
+    }
+
+    .plusSign{
+
+
+        position: absolute;
+    right: 55px;
+    width: 75%;
+    
+    
+    }
+
+
+    img.d-block.w-100.min_maxHeight_galleryList {
+        /* width: 91px; */
+        max-width: 70px;
+    }
+
+.alignFlex{
+
+    display: contents;
+}
+
+
+img.d-block.w-100.min_maxHeight {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+
+
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 1200px) {
+
+
+    .slicknav_menu {
+
+        padding-top: 0px;
+    }
+
+    .header-area .header-top {
+        padding: 17px 173px !important;
+    }
+
+    .navBarDetailPage{
+        background-color: #003580;
+        height: 135px;
+        display: block;
+    }
+
+    .form-quantity {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+
+
+    .form-quantity input {
+        width: 42px !important;
+    }
+
+    div#booking-form {
+        width: 718px !important;
+    }
+
+    li.active {
+        background-color:  #003580 !important;
+
+    }
+
+    .form-quantity{
+
+        width: 20px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 117px;
+        top: 43px;
+        z-index: 9999;
+    }
+    
+    .logoName {
+        left: 118px;
+        position: absolute;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+        z-index: 9999;
+        top: 100px;
+    }
+
+
+/* 
+    .mainLogo{
+        display: none;
+    } */
+
+    .desktopSlider{
+
+        display: none;
+    }
+
+    .mobieSlider{
+
+        margin-top: 121px;
+    }
+
+    .countSlider{
+        font-size: var(--ifm-h5-font-size);
+        background: black;
+        max-width: max-content;
+        border-radius: 2px;
+        display: inline-block;
+        opacity: 0.8;
     }
 
     .plusSign{
@@ -81,6 +650,10 @@ img.d-block.w-100.min_maxHeight {
       width: 20rem;
   }
 
+  main {
+    padding-top: 210px;
+}
+
   .plusSign{
 
     position: absolute;
@@ -88,9 +661,49 @@ img.d-block.w-100.min_maxHeight {
     top: 308px;
 
 }
+
+.cardslider .card {
+    max-height: 440px;
+    min-height: 440px;
+
+}
+
+
+img.mainLogo {
+    position: absolute;
+    width: 200px;
+    top: 22px;
+    z-index: 1;
+}
+
+.logoName {
+    width: 250px;
+    left: 215px;
+    position: absolute;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+}
+
+.mobieSlider{
+
+   display: none;
+}
+
+
+.gallery_images {
+    max-height: 340px !important;
+    min-height: 340px !important;
+    max-width: 455px;
+}
+
+
 .full_screen{
 
-    margin-top: 110px;
+    margin-top: 97px;
 }
 
 
@@ -114,9 +727,11 @@ img.d-block.w-100.min_maxHeight {
     display: flex;
 }
   }
-  @media only screen and (min-width: 1500px) and (max-width: 1899px) {
+  @media only screen and (min-width: 1600px) and (max-width: 1899px) {
   .card_home {
       width: 20rem;
+      min-height: 454px;
+    max-height: 454px;
   }
   .plusSign{
 
@@ -125,11 +740,46 @@ img.d-block.w-100.min_maxHeight {
     top: 340px;
     width: 28%;
 
+    
+}
+
+
+main {
+    padding-top: 209px;
+}
+
+img.mainLogo {
+    position: absolute;
+    width: 200px;
+    top: 25px;
+    z-index: 1;
+}
+
+.logoName {
+    position: absolute;
+    left: 213px;
+    width: 250px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+}
+.mobieSlider{
+
+    display: none;
+ }
+
+ .gallery_images {
+    max-height: 238px !important;
+    min-height: 238px !important;
+    max-width: 409px;
 }
 
 .hide_gallery{
 
-    display: none;
+    /* display: none; */
 }
 
 .margin_gallery{
@@ -139,10 +789,66 @@ img.d-block.w-100.min_maxHeight {
 }
 
   }
-  @media only screen and (min-width: 1200px) and (max-width: 1499px){
+
+  @media only screen and (min-width: 1501px) and (max-width: 1599px){
+
+    .card_home {
+        width: 20rem;
+        min-height: 454px;
+      max-height: 454px;
+    }
+
+    img.mainLogo {
+        position: absolute;
+        width: 182px;
+        top: 27px;
+        z-index: 1;
+    }
+    .logoName {
+        /* margin-left: 155px; */
+        width: 250px;
+        position: absolute;
+        /* display: none; */
+        left: 174px;
+        font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: black;
+        line-height: 62px;
+        margin-bottom: 7px;
+    }
+
+    .mobieSlider{
+
+        display: none;
+     }
+    .hide_gallery{
+    
+        /* display: none; */
+    }
+
+
+    .gallery_images {
+        max-height: 228px !important;
+        min-height: 228px !important;
+        max-width: 357px;
+    }
+
+    main {
+        padding-top: 200px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) and (max-width: 1500px){
   .card_home {
       width: 17rem;
+      min-height: 454px;
+    max-height: 454px;
   }
+
+  main {
+    padding-top: 200px;
+}
 
   .plusSign{
 
@@ -155,23 +861,64 @@ img.d-block.w-100.min_maxHeight {
 
 }
 
+
+img.mainLogo {
+    position: absolute;
+    width: 182px;
+    top: 27px;
+    z-index: 1;
+    top: 30px;
+    
+}
+.logoName {
+    /* margin-left: 155px; */
+    width: 250px;
+    position: absolute;
+    left: 177px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+    top: 130px;
+}
+.mobieSlider{
+
+    display: none;
+ }
 .margin_gallery{
 
     margin-top: 53.5px;
 
 }
+.gallery_img {
+    margin-top: 11px !important;
+}
 
 .hide_gallery{
 
-    display: none;
+    /* display: none; */
+}
+
+.gallery_images {
+    max-height: 153px !important;
+    min-height: 153px !important;
+    max-width: 294px;
 }
   }
 
 
   @media only screen and (min-width: 1000px) and (max-width: 1200px){
   .card_home {
-      width: 13.5rem;
+      width: 12.5rem;
+      min-height: 454px;
+      max-height: 454px;
   }
+
+  main {
+    padding-top: 106px;
+}
   .plusSign{
 
 
@@ -182,11 +929,48 @@ img.d-block.w-100.min_maxHeight {
 
 
 }
+img.mainLogo {
+    position: absolute;
+    width: 153px;
+    top: 50px;
+    z-index: 1;
+}
 
-.hide_gallery{
+.logoName {
+    /* margin-left: 155px; */
+    width: 250px;
+    position: absolute;
+    /* display: none; */
+    left: 148px;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    line-height: 62px;
+    margin-bottom: 7px;
+    top: 130px;
+}
+
+.desktopSlider{
+
+    display: block;
+}
+
+.mobieSlider{
 
     display: none;
+ }
+.hide_gallery{
+
+    /* display: none; */
 }
+
+.gallery_images {
+    max-height: 156px !important;
+    min-height: 156px !important;
+    max-width: 294px;
+}
+
   }
 
 
@@ -279,7 +1063,7 @@ img.w-100.shadow-1-strong.rounded {
 
 .gallery_img{
 
-    margin-top: 10px;
+    margin-top: 4px;
 
 }
 
@@ -461,8 +1245,8 @@ hr {
 
 
 .btn.btn-primary {
-    background-color: #ff671d;
-    border-color: #ff671d;
+    background-color: #fff;
+    border-color: #003580;
     width: 100%;
     font-size: 14px;
     padding: 20px 0;
@@ -507,7 +1291,7 @@ input#password_confirmation {
     padding-bottom: 2rem;
 }
 .container_form-bar {
-    max-width: 900px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -567,7 +1351,7 @@ input#password_confirmation {
     position: absolute;
     bottom: -4px;
     right: 0;
-    background-color: #ff671d;
+    background-color: #003580;
     color: #fff !important;
     text-decoration: none;
     padding: 2px 6px;
@@ -595,11 +1379,7 @@ input#password_confirmation {
     z-index: 1;
 }
 
-.cardslider .card {
-    max-height: 440px;
-    min-height: 440px;
 
-}
 
 
 
@@ -673,7 +1453,7 @@ h2.bedroom_name {
 
 .navBarUL{
 
-    background-color: #ec0517;
+    /* background-color: #ec0517; */
     width: 110%;
 }
 
@@ -701,3 +1481,13 @@ li.active {
     max-width: 500px;
     max-height: 280px !important;
 }
+
+
+
+.modal-header{
+
+    background-color: #003580;
+    color: #fff;
+    font-weight: 500;
+}
+

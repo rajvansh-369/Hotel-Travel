@@ -8,8 +8,15 @@
                             <div class="single-footer-caption mb-30">
 
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="{{asset('img/logo/logo2_footer.webp')}}" alt=""></a>
+                                    
+
+                                        <a href="{{route('home')}}"><img  src="{{asset('img/logo/mainLogo_1.png')}}" width="100px" alt=""></a>
+                                        <a href="{{route('home')}}"><img src="{{asset('img/logo/logo2.png')}}" width="200px" alt=""></a>
+                                       
+                                 
                                 </div>
+
+                                
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
                                         <p>Leather detail contrastic colour contour stunning silhouette working peplum.
@@ -46,7 +53,7 @@
                             <div class="footer-tittle">
                                 <h4>Contact</h4>
                                 <ul>
-                                    <li><a href="#">76/A, Green Lane, Dhanmondi, NYC</a></li>
+                                    <li><a href="#">Bodhgaya, Bihar, India</a></li>
                                     <li class="number"><a href="#">10 (87) 738-3940</a></li>
                                     <li><a href="#"><span class="__cf_email__"
                                                 data-cfemail="cfaca0a1bbaeacbb8facaebdb8aebca7e1aca0a2">[email&#160;protected]</span></a>

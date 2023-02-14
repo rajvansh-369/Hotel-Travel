@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('bedrooms_type_id')->constrained('bedrooms_types')->references('id')->onDelete('cascade');
             $table->string('name');
-            $table->string('icon');
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

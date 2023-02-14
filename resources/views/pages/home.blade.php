@@ -19,17 +19,20 @@
     <main>
         {{-- {{dd($banner)}} --}}
 
+{{--  style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});" --}}
+
         {{-- @include('layouts.headerSearch') --}}
         <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
+           >
             {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
-            <div class="single-slider  slider-height1 d-flex align-items-center">
+            <div class="single-slider  slider-height1 d-flex justify-content-start align-items-center">
                 <div class="container">
-                    <div class="row justify-content-center ">
+                    <div class="row justify-content-start ">
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                {{-- <h1>Rest Journey in Single step, in the breathtaking</h1> --}}
+                                <h1>Find your next stay & rent Car</h1>
+                                <p>Search deals on hotels, homes, and much more...</p>
                             </div>
                         </div>
                     </div>
@@ -51,8 +54,9 @@
                             <div class="col-xl-8 col-lg-9 col-md-12">
 
                                 <div class="section-tittle mb-50">
-                                    <h2>Top-rated around you</h2>
-                                    <p>The concept and service of the best luxury hotels in BodhGaya in our sophisticated.
+                                    <h2>Top-rated Hotels  around you</h2>
+                                    <p>The concept and service of the best luxury hotels in the  <i
+                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i>city The BodhGaya.
                                     </p>
                                 </div>
                             </div>
@@ -364,7 +368,7 @@
             $(document).ready(function() {
 
                 // alert("test");
-                pageSize = 4;
+                pageSize = 8;
                 incremSlide = 5;
                 startPage = 0;
                 numberPage = 0;
