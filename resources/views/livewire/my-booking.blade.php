@@ -13,14 +13,14 @@
 
         {{-- TIMEX --}}
 
-        <div class="slider-area hero-bg1   hero-overly"
-            style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});">
-            <div class="single-slider  slider-height3 d-flex align-items-center">
+        <div class="slider-area hero-bg1   hero-overly">
+            {{-- style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});"> --}}
+            <div class="single-slider  slider-height2 d-flex align-items-center" style="min-height: 0px !important;">
                 <div class="container">
-                    <div class="row justify-content-center ">
+                    <div class="row justify-content-start ">
                         <div class="col-xl-7 col-lg-11">
 
-                            <div class="hero-caption hero-caption3">
+                            <div class="hero-caption hero-caption2 pt-10" style="padding-top: 0px !important;">
                                 <h1>My Profile</h1>
                             </div>
                         </div>
@@ -40,15 +40,15 @@
                             </ul>
 
 
-                            <div class="progress mt-3">
+                            {{-- <div class="progress mt-3">
                                 <div class="progress-bar" role="progressbar" style="width: 34%;background: #ff671d;"
                                     aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <p class="prgrsinfo"><b>Your account is 34% done!</b></p>
+                            <p class="prgrsinfo"><b>Your account is 34% done!</b></p> --}}
 
                             <p class="updtac text-warning">
                                 <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                    style="color:#ff671d;"> &gt;&gt; UPDATE YOUR ACCOUNT </a>
+                                    style="color:#003580;"> &gt;&gt; UPDATE YOUR ACCOUNT </a>
                             </p>
                         </section>
                     </div>
@@ -103,6 +103,10 @@
 
                                                     </div>
                                                     <div class="list-adr">
+                                                        <p>{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booking->start)->format('M d, Y') }} - {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booking->end)->format('M d, Y');}}
+                                                        </p>
+                                                    </div>
+                                                    <div class="list-adr">
                                                         <p>{{ $booking->hotel->address->formatted_address }}
                                                         </p>
                                                     </div>
@@ -127,7 +131,7 @@
                                                                     <ul class="settings">
                                                                         <li>
                                                                             <a
-                                                                                href="http://127.0.0.1:8001/listing/edit/4">Reciept
+                                                                                href="{{route('bill', $booking->id)}}">Reciept
                                                                                 &gt;&gt;</a>
                                                                         </li>
 
@@ -157,10 +161,6 @@
     </main>
 
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary">
-        Launch demo modal
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" wire:ignore.self tabindex="-1" aria-labelledby="exampleModalLabel"

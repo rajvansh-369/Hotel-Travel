@@ -9,6 +9,8 @@ use App\Models\Listing;
 use App\Models\Picture;
 use App\Models\TimexEvents;
 use App\Models\User;
+
+use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -385,10 +387,66 @@ class HotelController extends Controller
     }
 
 
+    public function invoice($id){
+
+        // dd($id);
+        // retreive all records from db
+        $booked = TimexEvents::find($id);
+        $hotel =  $booked->hotel;
+        $user =  $booked->user;
+        $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+      
+        // dd( $booked->start);
+        $startDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->start);
+        $endDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->end);
+        $totalTime =  $endDate->diffInDays($startDate);
+
+
+        $sale_tax = ( $hotel->price_per_day * $totalTime  )*($hotel->sale_tax  /100);
+
+        $discountPrice = ( $hotel->price_per_day * $totalTime  )*( $hotel->full_discount_rate/100);
+
+        $totalPrice = $booked->totalPrice;
+
+        // dd($discountPrice , $hotel->full_discount_rate, $hotel);
+
+        // // share data to view
+        // view()->share('employee',$data);
+        // $pdf = PDF::loadView('pages.thank-you', compact('booked', 'user' ,'hotel', 'invoiceDate') );
+        // // download PDF file with download method
+        //  return $pdf->save(public_path());
+        // return $pdf->download('pdf_file.pdf');
+        
+
+        $pdf = PDF::setOptions(['defaultFont' => 'dejavu serif'])->loadView('pdf.invoice', compact('booked', 'user' ,'hotel', 'invoiceDate', 'totalTime' , 'discountPrice' , 'sale_tax','totalPrice') );
+        return $pdf->stream('filename.pdf');
+
+    }
+
     public function myBooking(){
 
         return view('pages.myBooking');
+    }
 
+    public function bill($id){
+
+
+
+        $booked = TimexEvents::find($id);
+        $hotel =  $booked->hotel;
+        $user =  $booked->user;
+        $invoiceDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->created_at)->format('M d, Y');
+        $startDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->start);
+        $endDate = Carbon::createFromFormat('Y-m-d H:i:s', $booked->end);
+        $totalTime =  $endDate->diffInDays($startDate);
+        $sale_tax = ( $hotel->price_per_day * $totalTime  )*($hotel->sale_tax  /100);
+
+        $discountPrice = ( $hotel->price_per_day * $totalTime  )*( $hotel->full_discount_rate/100);
+
+        $totalPrice = $booked->totalPrice;
+
+
+        return view('pages.bill' , compact('booked', 'user' ,'hotel', 'invoiceDate', 'totalTime' , 'discountPrice' , 'sale_tax','totalPrice') );
     }
 
 }

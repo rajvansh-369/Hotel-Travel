@@ -17,8 +17,22 @@
     <meta name="x-apple-disable-message-reformatting">
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-    <title></title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+    @include('meta::manager', [
+        'title'         => config('app.name', 'Laravel'),
+        'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
+        'image'         => asset('storage/icon_.ico'),
+        'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
+        'author'         => "Snehal Rajvansh",
+        'referrer'         => "default",
+    ])
+    <!-- CSRF Token -->
+    <link rel="icon" type="image/png" sizes="6x6" href="{{asset('storage/icon_.ico')}}">
+    <title>Reciept | Hotels in Bodhgaya</title>
     <style type="text/css">
         table,
         td {
@@ -1172,7 +1186,7 @@
 
 
 
-                    <div class="u-row-container" style="padding: 0px;background-color: #263e6a">
+                    <div class="u-row-container" style="padding: 0px;background-color: #003580">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
                             <div

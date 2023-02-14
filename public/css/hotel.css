@@ -411,6 +411,15 @@ input#select3 {
 
   @media only screen and (min-width: 601px) and (max-width: 900px) {
 
+
+    .slicknav_menu {
+  
+        padding-top: 0px !important;
+  
+    }
+
+
+
     .header-area .header-top {
         padding: 17px 105px !important;
     }
