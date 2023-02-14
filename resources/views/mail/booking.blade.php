@@ -17,9 +17,45 @@
     <meta name="x-apple-disable-message-reformatting">
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+    @include('meta::manager', [
+        'title'         => config('app.name', 'Laravel'),
+        'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
+        'image'         => asset('storage/icon_.ico'),
+        'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
+        'author'         => "Snehal Rajvansh",
+        'referrer'         => "default",
+    ])
+    <!-- CSRF Token -->
+    <link rel="icon" type="image/png" sizes="6x6" href="{{asset('storage/icon_.ico')}}">
+    <title>Reciept | Hotels in Bodhgaya</title>
 
     <style type="text/css">
+
+        @media print {
+            body * {
+              visibility: hidden;
+            }
+
+            .section-not-to-print{
+
+                visibility: hidden;
+
+            }
+            .section-to-print, .section-to-print * {
+              visibility: visible;
+            }
+            .section-to-print {
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+
         table,
         td {
             color: #000000;
@@ -114,7 +150,7 @@
 
 </head>
 
-<body class="clean-body"
+<body class="clean-body" id="section-to-print"
     style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #333333;color: #000000">
     <!--[if IE]><div class="ie-container"><![endif]-->
     <!--[if mso]><div class="mso-container"><![endif]-->
@@ -126,7 +162,7 @@
                 <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                     <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #333333;"><![endif]-->
 
-
+                        <div class="section-to-print">
                     <div class="u-row-container" style="padding: 0px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
@@ -792,7 +828,7 @@
                                                                         style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{$totalTime}}</span>
                                                                 </p>
                                                             </div>
-
+                                                              <a href="{{route('invoice', $booked->id)}}"> <button> Click here to view Reciept</button></a> 
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -808,7 +844,7 @@
                         </div>
                     </div>
 
-                    <div class="u-row-container" style="padding: 0px 0px 25px;background-color: transparent">
+                    <div class="u-row-container " style="padding: 0px 0px 25px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #444444;">
                             <div
@@ -848,7 +884,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="u-row-container" style="padding: 0px;background-color: transparent">
+
+
+
+                    </div>
+                    
+                    <div class="u-row-container section-not-to-print" style="padding: 0px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
                             <div
@@ -904,7 +945,7 @@
 
 
 
-                    <div class="u-row-container" style="padding: 0px;background-color: transparent">
+                    <div class="u-row-container section-not-to-print" style="padding: 0px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;">
                             <div
@@ -983,7 +1024,7 @@
 
 
 
-                    <div class="u-row-container" style="padding: 0px 0px 60px;background-color: transparent">
+                    <div class="u-row-container section-not-to-print" style="padding: 0px 0px 60px;background-color: transparent">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
                             <div
@@ -1039,7 +1080,7 @@
 
 
 
-                    <div class="u-row-container" style="padding: 0px;background-color: #263e6a">
+                    <div class="u-row-container" style="padding: 0px;background-color: #003580">
                         <div class="u-row"
                             style="Margin: 0 auto;min-width: 320px;max-width: 600px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
                             <div

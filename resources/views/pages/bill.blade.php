@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-{{-- {{dd($booked)}} --}}
 
 <div class="header-top navBar">
     <div class="container-fluid">
@@ -79,9 +78,9 @@
                     <div class="row">
                         <div class="col-xl-8">
                             <ul class="list-unstyled">
-                                <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{$user->name}}</span></li>
-                                <li class="text-muted">{{$user->address}}</li>
-                                <li class="text-muted">State, Country</li>
+                                <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{ucfirst($user->name)}}</span></li>
+                                <li class="text-muted">{{ucfirst($user->address)}}</li>
+                                <li class="text-muted">{{ucfirst($user->userAddress->state)}}, {{ucfirst($user->userAddress->country)}}</li>
                                 <li class="text-muted"><i class="fas fa-phone"></i> {{$user->email}}</li>
                             </ul>
                         </div>
@@ -145,7 +144,7 @@
                             <p>Thank you for your booking</p>
                         </div>
                         <div class="col-xl-12">
-                            <button type="button" class="btn btn-primary text-capitalize">Proceed</button>
+                            <button type="button" class="btn2 btn-primary text-capitalize">Proceed</button>
                         </div>
                     </div>
 

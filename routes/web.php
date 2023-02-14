@@ -57,6 +57,9 @@ Route::get('/searchResult', [HotelController::class, 'searchResult'])->name('sea
 Route::get('/invoice/{id}', [HotelController::class, 'invoice'])->name('invoice');
 
 
+Route::get('/bill/{id}', [HotelController::class, 'bill'])->name('bill');
+
+
 
 
 Route::post('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');

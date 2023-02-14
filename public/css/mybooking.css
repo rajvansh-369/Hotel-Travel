@@ -15,7 +15,7 @@
 }
 .listing_dashboard li.profile-username {
     font-size: 50px;
-    background: #ff671d;
+    background: #003580;
     color: #fff;
     width: 75px;
     height: 75px;
@@ -40,7 +40,7 @@
     font-weight: 600;
 }
 .listing_dashboard .listing-inbox-txt-btm a {
-    color: #ff671d;
+    color: #003580;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
@@ -91,7 +91,7 @@
 
 
 .dashboard-listing .card .card-header .card-header-pending {
-    background-color: #ff671d;
+    background-color: #003580;
 }
 
 .dashboard-listing .card .card-header .card-header-active {
@@ -139,13 +139,13 @@
 }
 
 .dashboard-listing .list-action .settings a {
-    color: #ff671d;
+    color: #003580;
     font-size: 13px;
     text-decoration: none;
     font-family: 'Roboto';
     font-weight: 500;
     padding: 4px 4px;
-    border: 2px solid #ff671d;
+    border: 2px solid #003580;
     border-radius: 8px;
     display: block;
     margin-left: 5px;

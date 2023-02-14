@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Models\Banner;
+use App\Models\UserAddress;
+use Faker\Provider\UserAgent;
 use Livewire\Component;
 
 class MyBooking extends Component
@@ -42,17 +44,24 @@ class MyBooking extends Component
 
     return view('livewire.my-booking');
    }
+
+
    public function updateProfile(){
+
+    $userAddress = new UserAddress();
+    // $userAddress = $userAddress->get();
+
+    // dd($this->user->userAddress->user_id);
     $this->user->name = $this->name;
     $this->user->email = $this->email;
     $this->user->address = $this->address;
     $this->user->phone = $this->phone;
-    $this->user->userAddress->user_id = $this->user_id;
-    $this->user->userAddress->city = $this->city;
-    $this->user->userAddress->state = $this->state;
-    $this->user->userAddress->country = $this->country;
+    $userAddress->user_id = $this->user_id;
+    $userAddress->city = $this->city;
+    $userAddress->state = $this->state;
+    $userAddress->country = $this->country;
     $this->user->save();
-    $this->user->userAddress->save();
+    $userAddress->save();
 
     session()->flash('message', 'User successfully updated.');
    }

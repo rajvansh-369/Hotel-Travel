@@ -507,7 +507,7 @@
                                             class="btn2 btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
-                                        <a class="btn2 btn-primary  d-flex justify-content-center" data-bs-toggle="modal"
+                                        <a class="btn2 btn-primary  d-flex justify-content-center" id="checkAvailButton" data-bs-toggle="modal"
                                             data-bs-target="#loginModal">CHECK
                                             AVAILABILITY</a>
                                     @endif
