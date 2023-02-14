@@ -31,7 +31,7 @@ class RegisterUser extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New User Registered',
+            subject: 'Welcome',
         );
     }
 

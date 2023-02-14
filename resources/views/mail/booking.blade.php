@@ -389,7 +389,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: center; word-wrap: break-word;">
+                                                                style="color: #ffffff;line-height: 100%;text-align: left;word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-size: 28px; line-height: 28px; font-family: 'trebuchet ms', geneva;"><strong><span
                                                                                 style="line-height: 28px; font-size: 28px;">RESERVATION
@@ -437,7 +437,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Reservation
                                                                         Number:</span></p>
@@ -472,7 +472,7 @@
                                                             <div
                                                                 style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
-                                                                        style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;"> #{{$booked->invoice_no}}</span>
+                                                                        style="font-family: georgia, palatino;font-size: 16px;line-height: 16px;text-align: right;display: block;"> #{{$booked->invoice_no}}</span>
                                                                 </p>
                                                             </div>
 
@@ -517,7 +517,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Guest
                                                                         Name:</span></p>
@@ -550,7 +550,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;text-align: right;display: block;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{$user->name}}</span></p>
                                                             </div>
@@ -596,7 +596,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Arrival
                                                                         Date:</span></p>
@@ -629,7 +629,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;text-align: right;display: block;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booked->start)->format('M d, Y') }}</span></p>
                                                             </div>
@@ -675,7 +675,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Departure
                                                                         Date:</span></p>
@@ -708,7 +708,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;text-align: right;display: block;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $booked->end)->format('M d, Y') }}</span></p>
                                                             </div>
@@ -754,7 +754,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: right; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: arial, helvetica, sans-serif; font-size: 16px; line-height: 16px;">Number
                                                                         of Nights:</span></p>
@@ -787,7 +787,7 @@
                                                             align="left">
 
                                                             <div
-                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;">
+                                                                style="color: #ffffff; line-height: 100%; text-align: left; word-wrap: break-word;text-align: right;display: block;">
                                                                 <p style="font-size: 14px; line-height: 100%;"><span
                                                                         style="font-family: georgia, palatino; font-size: 16px; line-height: 16px;">{{$totalTime}}</span>
                                                                 </p>
@@ -931,24 +931,33 @@
                                                                 style="color: #222222; line-height: 150%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
                                                                         style="font-size: 16px; line-height: 24px;">Dear
-                                                                        <strong>David,</strong></span></p>
+                                                                        <strong>{{$user->name}},</strong></span></p>
                                                                 <p style="font-size: 14px; line-height: 150%;">&nbsp;
                                                                 </p>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
-                                                                        style="font-size: 16px; line-height: 24px;">Lorem
-                                                                        Ipsum is simply dummy text of the printing and
-                                                                        typesetting industry. Lorem Ipsum has been the
-                                                                        industry's standard dummy &nbsp;printing and
-                                                                        typesetting industry. Lorem Ipsum has been the
-                                                                        industry's standard dummy</span></p>
-                                                                <p style="font-size: 14px; line-height: 150%;">&nbsp;
+                                                                        style="font-size: 16px; line-height: 24px;">
+                                                                        It is with great pleasure that I welcome you to {{$hotel->name}}! We are thrilled to have the opportunity to host you during your stay with us.</span></p>
+                                                                <p style="font-size: 14px; line-height: 150%;"> 
+                                                                    <span
+                                                                        style="font-size: 16px; line-height: 24px;">
+                                                                    We have prepared your room to ensure that your experience with us is as comfortable and enjoyable as possible. Our dedicated staff are available to assist you with anything you may need throughout your stay.
+                                                                </span>
                                                                 </p>
+                                                                <p style="font-size: 14px; line-height: 150%;"> 
+                                                                    
+                                                                    <span
+                                                                    style="font-size: 16px; line-height: 24px;">
+                                                                    We hope that you will have a wonderful time with us and make unforgettable memories during your visit. Please do not hesitate to contact us if there is anything we can do to make your stay more enjoyable.
+
+                                                                    Thank you for choosing {{$hotel->name}} for your accommodations, and we look forward to having you with us.
+                                                                </span>
+                                                                </p>
+                                                                <br>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
                                                                         style="font-size: 16px; line-height: 24px;">Kind
                                                                         regards,</span></p>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span
-                                                                        style="font-size: 16px; line-height: 24px;">Jhon
-                                                                        Wick</span></p>
+                                                                        style="font-size: 16px; line-height: 24px;">Gaurav</span></p>
                                                                 <p style="font-size: 14px; line-height: 150%;">&nbsp;
                                                                 </p>
                                                                 <p style="font-size: 14px; line-height: 150%;"><span

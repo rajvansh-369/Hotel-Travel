@@ -38,22 +38,10 @@ class Register extends Component
             session()->flash('message', 'User Created successfully.');
 
             if(\Auth::attempt(['email' => $user->email, 'password' => $this->password])) {
-               
-                // dd("ttest");
-                // session()->regenerate();
-
-                Mail::to('snehal.webroottech@gmail.com')->send(new RegisterUser($user));
-    
-            //     if (Mail::failures()) {
-                    
-            //  dd("FAIL");
-             
-            //     }else{
 
 
-            //         dd("Success");
-            //       }
-                // return redirect()->intended('home');
+                Mail::to($user->email)->bcc(['snhlrj8@gmail.com', 'surmansalman@gmail.com'])->send(new RegisterUser($user));
+
                 return redirect(route('home'));;
             }
     
