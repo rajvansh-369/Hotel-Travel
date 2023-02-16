@@ -214,7 +214,7 @@
                                                     sophisticated Urban Double and Unique Junior Suite rooms, with the
                                                     possibility of enjoying a furnished terrace in our Double Urban Loft and
                                                     Unique Junior Loft Suite.</p>
-                                                <a href="#" class="btn_01 ">View Project</a>
+                                                <a href="#" class="btn">View Project</a>
                                             </div>
                                         </div>
                                     </div>
