@@ -414,10 +414,16 @@ class EventResource extends Resource
                 //
             ])
             ->actions([
+
                 Action::make('Approval')
+                ->action(fn (TimexEvents $record) => $record->approved($record->id))
+                ->requiresConfirmation()
+                ->color('success')
+                ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
+                // Action::make('Approval')
                 
-                ->url(fn (TimexEvents $record): string => route('home', $record))
-                ->openUrlInNewTab(),
+                // ->url(fn (TimexEvents $record): string => route('home', $record))
+                // ->openUrlInNewTab(),
                 
                 
                 // ->action(fn (TimexEvents $record) => $record->approved($record->invoice_no))
@@ -426,10 +432,12 @@ class EventResource extends Resource
                 // ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
 
                 Action::make('Reject')
-                ->action(fn (TimexEvents $record) => $record->reject($record->invoice_no))
+                ->action(fn (TimexEvents $record) => $record->reject($record->id))
                 ->requiresConfirmation()
                 ->color('danger')
                 ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 0 )),
+
+              
             ])
 
 
