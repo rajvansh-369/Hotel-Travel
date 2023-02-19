@@ -316,11 +316,15 @@
                                         Statement buttons cover-up tweaks patch.</p>
 
                                     <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="founder-text">
-                                            <span>- Omeka Lotus</span>
+                                        <div class="testimonialimg">
+                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                        </div>
+                                        <div class="founder-text mx-1">
+                                            <span>  - Omeka Lotus</span>
                                         </div>
                                     </div>
                                 </div>
+                            
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6">
                                 <div class="client-caption">
@@ -330,7 +334,10 @@
                                         Statement buttons cover-up tweaks patch.</p>
 
                                     <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="founder-text">
+                                        <div class="testimonialimg">
+                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                        </div>
+                                        <div class="founder-text mx-1">
                                             <span>- Omeka Lotus</span>
                                         </div>
                                     </div>
@@ -344,7 +351,10 @@
                                         Statement buttons cover-up tweaks patch.</p>
 
                                     <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="founder-text">
+                                        <div class="testimonialimg">
+                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                        </div>
+                                        <div class="founder-text mx-1">
                                             <span>- Omeka Lotus</span>
                                         </div>
                                     </div>
