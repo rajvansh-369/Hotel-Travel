@@ -8,6 +8,7 @@ use App\Models\Banner;
 use App\Models\Listing;
 use App\Models\Picture;
 use App\Models\TimexEvents;
+use App\Models\TourPackage;
 use App\Models\User;
 
 use PDF;
@@ -76,20 +77,20 @@ class HotelController extends Controller
         return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
     }
     public function tour(){
+        
+        return view('pages.tour');
+    }
+    public function tour_details($id){
 
-        $hotels = Listing::get();
-        $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
-        $location = [];
-        foreach($hotels as $hotel){
+        $tour = TourPackage::find($id);
 
+        return view('pages.tour-details' ,compact('tour'));
+    }
 
-            $location['lat'] = (double)$hotel->address->lat;
-            $location['lng'] = (double)$hotel->address->lng;
-            $location['listing_id'] = (double)$hotel->address->listing_id;
-            $locations[] = $location;
-        }
+    
+    public function taxi(){
 
-        return view('pages.tour' ,compact('hotels', 'locations', 'banner'));
+        return view('pages.taxi');
     }
 
 

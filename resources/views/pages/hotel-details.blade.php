@@ -23,7 +23,7 @@
     <main>
         <div class="container-fluid  gallery">
             <div class="lightbox">
-                <div class="row desktopSlider" >
+                <div class="row desktopSlider">
                     <div class="col-lg-6 col-sm-6">
                         @foreach ($hotel->picture->where('picture_type', 'main_picture')->take(1) as $picture)
                             <img src="{{ asset('/storage/' . $picture->picture) }}"
@@ -75,25 +75,28 @@
 
                         <div class="carousel-inner">
                             @foreach ($hotel->picture as $key => $picture)
-                            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                <img src="{{ asset('/storage/' . $picture->picture) }}" class="d-block w-100 min_maxHeight" alt="...">
-                            <div class="carousel-caption ">
-                              <h5 class="countSlider">{{$key+1}}/{{count($hotel->picture)}}</h5>
-                              {{-- <p>Some representative placeholder content for the first slide.</p> --}}
-                            </div>
-                          </div>
-                          @endforeach
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                    <img src="{{ asset('/storage/' . $picture->picture) }}"
+                                        class="d-block w-100 min_maxHeight" alt="...">
+                                    <div class="carousel-caption ">
+                                        <h5 class="countSlider">{{ $key + 1 }}/{{ count($hotel->picture) }}</h5>
+                                        {{-- <p>Some representative placeholder content for the first slide.</p> --}}
+                                    </div>
+                                </div>
+                            @endforeach
 
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
-                      </div>
+                    </div>
                 </div>
             </div>
 
@@ -404,8 +407,8 @@
                         </section>
                     </div>
                     <div class="col-md-5 col-lg-4">
-{{-- style="max-width: 20rem;" --}}
-                        <div class="card text-dark bg-light mb-3 availability" >
+                        {{-- style="max-width: 20rem;" --}}
+                        <div class="card text-dark bg-light mb-3 availability">
                             <div class="card-header">Availability</div>
                             <div class="card-body ">
 
@@ -481,8 +484,9 @@
                                         <label for="#">Check In Date*</label>
                                         <div class="boking-datepicker ">
                                             <input id="datepicker1" required name="startDate"
-                                                value="{{ session('startDate') ??  \Carbon\Carbon::now()->format('m/d/Y')  }} " onchange="checkDate()"
-                                                placeholder="Check in" class="text-secondary datePicker" />
+                                                value="{{ session('startDate') ?? \Carbon\Carbon::now()->format('m/d/Y') }} "
+                                                onchange="checkDate()" placeholder="Check in"
+                                                class="text-secondary datePicker" />
                                             @if (auth()->user())
                                                 <input type="hidden" name="userID" value="{{ auth()->user()->id }}">
                                                 <input type="hidden" name="hotelId" value="{{ $hotel->id }}">
@@ -494,8 +498,9 @@
                                         <label for="#">Check Out Date*</label>
                                         <div class="boking-datepicker">
                                             <input id="datepicker2" required name="endDate"
-                                                value="{{ session('endDate') ?? \Carbon\Carbon::now()->addDay()->format('m/d/Y') }} " onchange="checkDate()"
-                                                placeholder="Check out" class="text-secondary datePicker" />
+                                                value="{{ session('endDate') ??\Carbon\Carbon::now()->addDay()->format('m/d/Y') }} "
+                                                onchange="checkDate()" placeholder="Check out"
+                                                class="text-secondary datePicker" />
                                         </div>
                                     </div>
 
@@ -507,8 +512,8 @@
                                             class="btn2 btn-primary  d-flex justify-content-center">CHECK
                                             AVAILABILITY</button>
                                     @else
-                                        <a class="btn2 btn-primary  d-flex justify-content-center" id="checkAvailButton" data-bs-toggle="modal"
-                                            data-bs-target="#loginModal">CHECK
+                                        <a class="btn2 btn-primary  d-flex justify-content-center" id="checkAvailButton"
+                                            data-bs-toggle="modal" data-bs-target="#loginModal">CHECK
                                             AVAILABILITY</a>
                                     @endif
 
@@ -543,7 +548,8 @@
                                                         <p class="mt-2">Don't have an account?</p>
                                                     </div>
                                                     <div class="col-md-5    my-3">
-                                                        <a class="btn2 btn-others" href="{{ route('registerView') }}">SIGN
+                                                        <a class="btn2 btn-others"
+                                                            href="{{ route('registerView') }}">SIGN
                                                             UP</a>
                                                     </div>
                                                     <div class="col-md-12 text-center">

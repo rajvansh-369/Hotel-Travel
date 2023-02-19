@@ -75,7 +75,7 @@
                                         <li class="{{ (\Request::route()->getName() == 'home') ? 'active' : ''}}"><a href="{{route('home')}}">Home</a></li>
                                         <li  class="{{(\Request::route()->getName() == 'hotels') ? 'active' : ''}}"><a href="{{route('hotels')}}">Hotels</a></li>
                                         <li  class="{{(\Request::route()->getName() == 'tour') ? 'active' : ''}}"><a href="{{route('tour')}}">Tour Package</a></li>
-                                        <li  class="{{(\Request::route()->getName() == 'taxi') ? 'active' : ''}}"><a href="">Taxi</a></li>
+                                        <li  class="{{(\Request::route()->getName() == 'taxi') ? 'active' : ''}}"><a href="{{route('taxi')}}">Taxi</a></li>
                                         <li  class="{{(\Request::route()->getName() == 'about') ? 'active' : ''}}"><a href="about.html">About</a></li>
                                         @if (auth()->user())
                                         <li><a href="#">My Account</a>

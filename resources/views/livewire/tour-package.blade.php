@@ -12,7 +12,7 @@
                     <div class="card card_home">
                         <div id="carouselExampleIndicators{{ $loop->index }}" class="carousel slide"
                             data-bs-interval="0" data-bs-ride="carousel">
-                            <a style="text-decoration: none;" href="{{ route('hotel-details', $tourPackage->id) }}">
+                            <a style="text-decoration: none;" href="{{ route('tour-details', $tourPackage->id) }}">
                                 <div class="carousel-inner" style="height: 15rem;border-radius:10px">
 
                                     @php $key = 0;@endphp
