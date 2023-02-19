@@ -18,7 +18,7 @@
         </div>
         <div class="container brdetailmain">
             <p class="gotosrchrslt "><i class="fa fa-angle-left"></i>
-                <a href="https://hostdev2.justboardrooms.com/booking/public">
+                <a href="{{route('home')}}">
                     Back
                     <!--Top Rated Around You-->
                 </a>

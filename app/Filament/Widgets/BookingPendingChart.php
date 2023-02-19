@@ -16,7 +16,7 @@ class BookingPendingChart extends LineChartWidget
     {
 
 
-        $data =  Trend::query(TimexEvents::where('status', '0'))
+        $data =  Trend::query(TimexEvents::where('status', '1'))
             ->between(
                 start: now()->startOfMonth(),
                 end: now()->endOfMonth(),
@@ -27,7 +27,7 @@ class BookingPendingChart extends LineChartWidget
         return [
             'datasets' => [
                 [
-                    'label' => 'Blog posts created',
+                    'label' => 'Pending Bookings',
                     'data' => $data->map(fn (TrendValue $value) => $value->aggregate),
                 ],
             ],

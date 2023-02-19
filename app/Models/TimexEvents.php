@@ -75,14 +75,20 @@ class TimexEvents extends Model
 
 
     public function approved($id){
+        dd($id);
 
-       $a =  TimexEvents::where('invoice_no', $id)->update(['status' => 2, 'category' => 'success']);
+            $x =   TimexEvents::where('id', $id)->update(['status' => 2, 'category' => 'success']);
+
         
-        dd($a,$id );
+
     }
     public function reject($id){
 
-        TimexEvents::where('id', $id)->update(['status' => 0, 'category' => 'danger']);
+        
         dd($id);
+     $x =  TimexEvents::where('id', $id)->update(['status' => 0, 'category' => 'danger']);
+
+        
+   
     }
 }
