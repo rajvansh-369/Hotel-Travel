@@ -2040,7 +2040,7 @@ hr {
 
 .video-area {
     height: 650px;
-    margin: 0 50px
+    margin: 0 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

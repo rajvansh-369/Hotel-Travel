@@ -56,6 +56,56 @@
                 the best in class services for the Car rental business and guarantee the highest level of services.
 
                 <br>
+                <br>
+
+                <h4>- Taxi in Bodhgaya</h4>
+                <p>Bodhgaya or Gaya is considered the most beautiful and holiest Buddhist pilgrimage site in the world, along with other historical cities of India. Bodhgaya is situated in the Gaya district of Bihar, India. This site is believed to be where Siddhartha Gautama, the founder of Buddhism, attained Enlightenment under a Bodhi tree. At this place sitting under a tree, Lord Buddha attained wisdom and Buddhism came into the existence. The original Bodhi tree may have been destroyed by many Kings, but the direct descendants flourish even today standing tall at 80 feet.
+
+                    Today, Bodhgaya is a popular tourist destination for both domestic and international Travelers. A hundred thousand Pilgrims visit this city every year. Easy & quality mobility and hospitality become very important in a city with such diverse people. To fulfill this demand, Hotel In Bodhgaya comes into the picture. “Hotel in Bodhgaya” is a Bodhgaya-based company We are managed and operated by the locals of Bodhgaya. We generally Provide Transportation, Accommodation, Pind Daan, Guided tours of the main and Popular sights in and around Bodhgaya, and Tour Packages related to the Buddhist circuit.
+                    
+                    Bodhgaya or Gaya is a blend of history. This Place is also known as a land of Knowledge and salvation Lots of Tourist Attractions are present in Gaya, due to which cab service in Bodhgaya has become the most common mode of transportation. Cabs in Bodhgaya are very popular and convenient. The service parameter has improved drastically with the advent of the Bodhgaya online taxi booking system.
+                    
+                    Cab booking in Bodhgaya or Gaya is now straightforward and affordable for all travelers, whether tourists, youth, or business people, with flexible payment options. With the help of a cab service in Bodhgaya, you can visit some places Dungeshwari, Mahabodhi Temple, Vishnupad Temple, Barabar Caves, Maa Mangla Gauri Mandir, and much more. So book a taxi in Bodhgaya from us and head on with your journey.
+                    
+                    Not only this, but We also provide the facility of a taxi on hire in Bodhgaya for exploring nearby places too like Rajgir, Ruins of Nalanda University, Patna Museum, Varanasi or Banaras, Takhat Sri Harimandir ji (Patna Sahib), Budhha Smriti Park, Barabar caves, Mahavirswami Jain Water Temple, and much more. All you need to do is book a cab in Bodhgaya and enjoy your trip. With the facility of a taxi on rent in Bodhgaya, your travel time reduces, and comfortability increases.
+                    
+                    With Hotel in Bodhgaya, cab booking in Bodhgaya has become extremely easy and affordable. With the advent of an online booking system, taxi rental in Bodhgaya has become the most popular means of transportation. We also provide outstation cab on hire in Bodhgaya with well-trained and experienced Drivers to make your journey safe and comfortable. Not just that, we provide various car options at the lowest price. So book a taxi in Bodhgaya from us for your next travel plan, and you will surely get a wonderful experience.</p>
+
+
+                    <h4>- Taxi Service in Bodhgaya 
+                        -from us Why?</h4>
+
+                        <p>There are several reasons for choosing Our Taxi as a taxi service in Bodhgaya. First, our assurance in quality and services is unmatched and the best. We value your time and comfort and offer several benefits to you. You can easily avail of our below-given services once you take a cab in Bodhgaya with us.  
+
+                            Multiple options among cars: Cabs from sedans and hatchbacks to Innovas, tempo travelers, Mini Bus, Luxury Coach, and many more vehicles are all available. You can book any among them that suits your desired need and comfort.
+                            
+                            Experienced drivers: We care for your safety, so each driver is hired after a Proper checklist and their familiarity with the routes and knowledge of the local language.
+                            
+                            Simple booking process: With Hotel in Bodhgaya, you can book our cab for hire in Bodhgaya in a few minutes with a phone call on our helpline no. +91 9971840388 or 91+9546355003 or a few clicks on our website “hotelinbodhgaya.com” or email us at hotelofbodhgaya@gmail.com.
+                            
+                            Steps to Hire Cabs in Bodhgaya from us
+                            Cabs in Bodhgaya from us are very easy and affordable. All you need to do is follow the steps below and head on with your journey.
+                            <ul>
+                                <li> 1. Choose your car- As per your comfort and need, you can choose cars among the various cars we offer</li>
+                                <li>2. Select the type of your journey- i.e. whether you want a cab for a local visit, outstation trips, or an airport.</li>
+                                <li>3. Tell us some details of your Trip- Provide us with details of your trip, like pick-up date, time, and location</li>
+                                <li>4. Confirm your booking- </li>
+
+                            </ul>
+                           
+                            
+                            
+                            
+                            Pay a token amount to confirm your booking from Hotel in Bodhgaya with your card or e-wallet, and the cab gets reserved for you.
+                            
+                            With our Excellent service system, you will get all messages and emails regarding your journey. In addition, our website has been designed much more user-friendly, so taking a 
+                            taxi for hire in Delhi has become extremely easy.</p>
+
+
+                            <h4>- Cab in Bodhgaya</h4>
+
+                            <p>Whether planning for a single or a multi-day journey, local or outstation trip with a family of four, or friends of ten, or Group of 45 We always stands at your service with various options at your disposal. We have room for all your plans. Just hire a cab in Bodhgaya. You have a taxi at your service till your booking destination. Our excellent service track record and a good review of our customers encourage us throughout the journey. We care for your time and comfort, and so we provide you with the best available carb at the most reasonable price in the least time.</p>
+
                 <table border="0" cellspacing="1" cellpadding="1" width="100%">
                     <tbody>
                         <tr>

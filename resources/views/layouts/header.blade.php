@@ -19,10 +19,10 @@
                             <div class="d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li>Call Us:   +91 7004 (450) 098</li>
+                                        <li><a href="tel:9971840388" style="color:white">Call Us:   +91 9971 (840) 388</a></li>
                                         <li>
 
-                                            <a href="" style="color:white">enquiry@hotel.com</a>
+                                            <a href="mailto:enquiry@hotel.com" style="color:white">enquiry@hotel.com</a>
                                             {{-- <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                                 data-cfemail="a2cbccc4cde2d0cdcec3da8cc1cdcf">[email&#160;protected]</a> --}}
                                       </li>
@@ -35,7 +35,7 @@
                                         <li><a href="{{route('registerView')}}"><button class="btn">Register</button> </a></li>
                                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a target="_blank" href="https://wa.me/+919971840388"><i class="fab fa-whatsapp"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
             <div class="col-xl-12">
                 <div class="d-flex justify-content-between flex-wrap align-items-center">
                     <div class="header-info-left">
-=
+
                     </div>
                     <div class="header-info-right d-none d-sm-block">
 

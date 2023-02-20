@@ -75,9 +75,7 @@ class TimexEvents extends Model
 
 
     public function approved($id){
-        dd($id);
-
-            $x =   TimexEvents::where('id', $id)->update(['status' => 2, 'category' => 'success']);
+   
 
         
 

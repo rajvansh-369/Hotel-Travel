@@ -39,11 +39,10 @@
                                 <h4>Navigation</h4>
                                 <ul>
                                     <li><a href="#">About</a></li>
-                                    <li><a href="#">Our Rooms</a></li>
-                                    <li><a href="#">Book A Room</a></li>
-                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="{{route('hotels')}}">Our Rooms</a></li>
+                                    <li><a href="{{route('hotels')}}">Book A Room</a></li>
                                     <li><a href="#">Privacy & Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{route('contact')}}">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -53,16 +52,16 @@
                             <div class="footer-tittle">
                                 <h4>Contact</h4>
                                 <ul>
-                                    <li><a href="#">Bodhgaya, Bihar, India</a></li>
-                                    <li class="number"><a href="#">10 (87) 738-3940</a></li>
-                                    <li><a href="#"><span class="__cf_email__"
-                                                data-cfemail="cfaca0a1bbaeacbb8facaebdb8aebca7e1aca0a2">[email&#160;protected]</span></a>
+                                    <li><a href="#">Hotel Bodhi Residency, Near kanaya uch vidyalaya,
+                                        Pachhatti Bodhgaya, Police Thana Rd, Gaya, Bihar 824231</a></li>
+                                    <li class="number"><a href="tel:9971840388" style="color:white">Call Us:   +91 9971 (840) 388</a></li>
+                                    <li><a href="mailto:enquiry@hotel.com" style="color:white">enquiry@hotel.com</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    {{-- <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>Newsletter</h4>
@@ -87,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
@@ -101,9 +100,7 @@
                                         <script>
                                             document.write(new Date().getFullYear());
                                         </script> All rights reserved | This template is made with <i
-                                            class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-                                            href="https://uxdesigns.in" target="_blank"
-                                            rel="nofollow noopener">UXDesign</a>
+                                            class="fa fa-heart color-danger" aria-hidden="true"></i>
                                     </p>
                                 </div>
                             </div>
