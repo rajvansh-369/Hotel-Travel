@@ -450,4 +450,24 @@ class HotelController extends Controller
         return view('pages.bill' , compact('booked', 'user' ,'hotel', 'invoiceDate', 'totalTime' , 'discountPrice' , 'sale_tax','totalPrice') );
     }
 
+
+    public function bookingConfirmed($id){
+
+
+
+        $x =   TimexEvents::where('id', $id)->update(['status' => 2, 'category' => 'success']);
+        
+        return view('pages.bookingConfirmed');
+
+    }
+    public function bookingReject($id){
+
+
+        // dd($id);
+
+        $x =   TimexEvents::where('id', $id)->update(['status' => 0, 'category' => 'danger']);
+            return view('pages.bookingReject');
+
+    }
+
 }

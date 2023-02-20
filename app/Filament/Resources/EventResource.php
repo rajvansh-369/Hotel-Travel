@@ -44,15 +44,16 @@ use Filament\Tables\Actions\Action;
 class EventResource extends Resource
 {
     use TimexTrait;
+    protected static ?string $model = TimexEvents::class;
     protected static ?string $recordTitleAttribute = 'subject';
     protected $chosenStartTime;
 
 
 
-    public static function getModel(): string
-    {
-        return config('timex.models.event');
-    }
+    // public static function getModel(): string
+    // {
+    //     return config('timex.models.event');
+    // }
 
     public static function getModelLabel(): string
     {
@@ -416,10 +417,11 @@ class EventResource extends Resource
             ->actions([
 
                 Action::make('Approval')
-                ->action(fn (TimexEvents $record) => $record->approved($record->id))
+                ->url(fn (TimexEvents $record ) : string  => route('bookingConfirmed', $record->id))
                 ->requiresConfirmation()
-                ->color('success')
-                ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
+                ->openUrlInNewTab()
+                ->color('success'),
+                // ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
                 // Action::make('Approval')
                 
                 // ->url(fn (TimexEvents $record): string => route('home', $record))
@@ -432,10 +434,11 @@ class EventResource extends Resource
                 // ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 2 )),
 
                 Action::make('Reject')
-                ->action(fn (TimexEvents $record) => $record->reject($record->id))
+                ->url(fn (TimexEvents $record ) : string  => route('bookingReject', $record->id))
                 ->requiresConfirmation()
-                ->color('danger')
-                ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 0 )),
+                ->openUrlInNewTab()
+                ->color('danger'),
+                // ->visible(fn (TimexEvents $record) => ($record->status == 1 || $record->status == 0 )),
 
               
             ])
