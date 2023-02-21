@@ -99,8 +99,9 @@
                                     <p>Copyright &copy;
                                         <script>
                                             document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This template is made with <i
-                                            class="fa fa-heart color-danger" aria-hidden="true"></i>
+                                        </script> All rights reserved 
+                                        {{-- | This template is made with <i
+                                            class="fa fa-heart color-danger" aria-hidden="true"></i> --}}
                                     </p>
                                 </div>
                             </div>
