@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Mail\Booking;
+use App\Mail\bookingConfimed;
+use App\Mail\bookingRejected;
 use App\Models\Address;
 use App\Models\Banner;
 use App\Models\Listing;
@@ -453,20 +455,26 @@ class HotelController extends Controller
 
     public function bookingConfirmed($id){
 
+            $timex = new TimexEvents();
 
+            $user = $timex->find($id)->user;
+            $timex->where('id', $id)->update(['status' => 2, 'category' => 'success']);
 
-        $x =   TimexEvents::where('id', $id)->update(['status' => 2, 'category' => 'success']);
-        
+            Mail::to($user->email)
+            ->bcc(['snhlrj8@gmail.com' , 'hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingConfimed($id));
+            
         return view('pages.bookingConfirmed');
 
     }
     public function bookingReject($id){
+        $timex = new TimexEvents();
 
+        $user = $timex->find($id)->user;
 
-        // dd($id);
-
-        $x =   TimexEvents::where('id', $id)->update(['status' => 0, 'category' => 'danger']);
-            return view('pages.bookingReject');
+        $timex->where('id', $id)->update(['status' => 0, 'category' => 'danger']);
+           
+        Mail::to($user->email)->bcc(['snhlrj8@gmail.com' , 'hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingRejected());
+        return view('pages.bookingReject');
 
     }
 
