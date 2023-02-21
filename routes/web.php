@@ -60,6 +60,9 @@ Route::get('/invoice/{id}', [HotelController::class, 'invoice'])->name('invoice'
 
 
 Route::get('/bill/{id}', [HotelController::class, 'bill'])->name('bill');
+Route::get('/about', function(){
+    return view('pages.about');
+})->name('about');
 
 
 
