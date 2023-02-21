@@ -76,12 +76,11 @@
                                         <li  class="{{(\Request::route()->getName() == 'hotels') ? 'active' : ''}}"><a href="{{route('hotels')}}">Hotels</a></li>
                                         <li  class="{{(\Request::route()->getName() == 'tour') ? 'active' : ''}}"><a href="{{route('tour')}}">Tour Package</a></li>
                                         <li  class="{{(\Request::route()->getName() == 'taxi') ? 'active' : ''}}"><a href="{{route('taxi')}}">Taxi</a></li>
-                                        <li  class="{{(\Request::route()->getName() == 'about') ? 'active' : ''}}"><a href="about.html">About</a></li>
+                                        <li  class="{{(\Request::route()->getName() == 'about') ? 'active' : ''}}"><a href="{{route('about')}}">About</a></li>
                                         @if (auth()->user())
                                         <li><a href="#">My Account</a>
                                             <ul class="submenu">
                                                 <li><a href="{{route('myBooking')}}">My Booking</a></li>
-                                                <li><a href="{{route('myBooking')}}">My Profile</a></li>
                                                 <li><a href="{{route('logout')}}">Logout</a></li>
                                             </ul>
                                         </li>
