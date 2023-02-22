@@ -21,7 +21,7 @@
         'title'         => config('app.name', 'Laravel'),
         'description'   => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
         'image'         => asset('storage/icon_.ico'),
-        'keywords'         => "hotel, bodhgaya, Hotel's in bodhgaya , rooms ",
+        'keywords'         => "bodhgaya, Hotel's in bodhgaya , rooms ,Hotel, Hotels, Bodh Gaya, lodging, accommodation, special offers, packages, specials, weekend breaks, city breaks, deals Bodh Gaya India, budget, cheap, discount, savings",
         'author'         => "Snehal Rajvansh",
         'referrer'         => "default",
     ])
