@@ -183,6 +183,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Davmixcool\MetaManager\MetaServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Silber\PageCache\LaravelServiceProvider::class,
         /*
          * Package Service Providers...
          */
