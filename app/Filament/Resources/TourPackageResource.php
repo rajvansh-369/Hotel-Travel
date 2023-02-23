@@ -29,7 +29,7 @@ class TourPackageResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('tour_name')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(50),
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()
