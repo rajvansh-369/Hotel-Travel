@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TourPackageResource\Pages;
-use App\Filament\Resources\TourPackageResource\RelationManagers;
-use App\Models\TourPackage;
+use App\Filament\Resources\TestimonialResource\Pages;
+use App\Filament\Resources\TestimonialResource\RelationManagers;
+use App\Models\Testimonial;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -12,14 +12,10 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
-use Filament\Tables\Columns\ImageColumn;
 
-
-class TourPackageResource extends Resource
+class TestimonialResource extends Resource
 {
-    protected static ?string $model = TourPackage::class;
+    protected static ?string $model = Testimonial::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -27,18 +23,24 @@ class TourPackageResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('tour_name')
+                Forms\Components\TextInput::make('name')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('price')
-                    ->required()
-                    ->numeric()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image')
+                    ->directory('testimonials')
                     ->required(),
-                Forms\Components\RichEditor::make('description')
+                Forms\Components\TextInput::make('review_title')
                     ->required()
-                    ,
+                    ->maxLength(15),
+                Forms\Components\TextInput::make('priority')
+                    ->numeric()
+                    ->minValue(1)
+                    ->maxValue(10)
+                    ->required(),
+                Forms\Components\Textarea::make('review_desc')
+                    ->required()
+                    ->maxLength(255),
+
             ]);
     }
 
@@ -46,9 +48,10 @@ class TourPackageResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('tour_name'),
-                Tables\Columns\TextColumn::make('price'),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\IconColumn::make('image'),
+                Tables\Columns\TextColumn::make('review_title'),
+                Tables\Columns\TextColumn::make('priority'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
             ])
@@ -73,9 +76,9 @@ class TourPackageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTourPackages::route('/'),
-            'create' => Pages\CreateTourPackage::route('/create'),
-            'edit' => Pages\EditTourPackage::route('/{record}/edit'),
+            'index' => Pages\ListTestimonials::route('/'),
+            'create' => Pages\CreateTestimonial::route('/create'),
+            'edit' => Pages\EditTestimonial::route('/{record}/edit'),
         ];
     }
 }

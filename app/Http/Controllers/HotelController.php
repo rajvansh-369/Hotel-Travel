@@ -9,6 +9,7 @@ use App\Models\Address;
 use App\Models\Banner;
 use App\Models\Listing;
 use App\Models\Picture;
+use App\Models\Testimonial;
 use App\Models\TimexEvents;
 use App\Models\TourPackage;
 use App\Models\User;
@@ -34,7 +35,7 @@ class HotelController extends Controller
 
         $hotels = Listing::where('status',1)->get();
         $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
-
+        $testimonials = Testimonial::all();
 
 
         $location = [];
@@ -47,7 +48,7 @@ class HotelController extends Controller
             $locations[] = $location;
         }
 
-        return view('pages.home' ,compact('hotels' , 'locations' , 'banner'));
+        return view('pages.home' ,compact('hotels' , 'locations' , 'banner', 'testimonials'));
     }
 
 

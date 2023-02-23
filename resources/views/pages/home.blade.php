@@ -308,58 +308,123 @@
                 <div class="container">
                     <div class="custom-row">
                         <div class="client-active">
-                            <div class="col-lg-5 col-md-6 col-sm-6">
-                                <div class="client-caption">
-                                    <h3>Nice Accommodation</h3>
-                                    <p>"Leather detail shoulder contrastic colour
-                                        contour stunning silhouette working peplum.
-                                        Statement buttons cover-up tweaks patch.</p>
+                           @if (count($testimonials) > 2 )
+                               
+                         
+                        @forelse ($testimonials as  $testimonial)
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>{{$testimonial->review_title}}</h3>
+                                <p>{{$testimonial->review_desc}}</p>
 
-                                    <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="testimonialimg">
-                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                        </div>
-                                        <div class="founder-text mx-1">
-                                            <span>  - Omeka Lotus</span>
-                                        </div>
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('storage/'.$testimonial->image)}}" class="img-fluid" alt="client-img">
                                     </div>
-                                </div>
-                            
-                            </div>
-                            <div class="col-lg-5 col-md-6 col-sm-6">
-                                <div class="client-caption">
-                                    <h3>Delicious Food</h3>
-                                    <p>"Leather detail shoulder contrastic colour
-                                        contour stunning silhouette working peplum.
-                                        Statement buttons cover-up tweaks patch.</p>
-
-                                    <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="testimonialimg">
-                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                        </div>
-                                        <div class="founder-text mx-1">
-                                            <span>- Omeka Lotus</span>
-                                        </div>
+                                    <div class="founder-text mx-1">
+                                        <span>  - {{$testimonial->name}}</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 col-md-6 col-sm-6">
-                                <div class="client-caption">
-                                    <h3>Nice Accommodation</h3>
-                                    <p>"Leather detail shoulder contrastic colour
-                                        contour stunning silhouette working peplum.
-                                        Statement buttons cover-up tweaks patch.</p>
+                        
+                        </div>
+                        @empty
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>Delicious Food</h3>
+                                <p>"Leather detail shoulder contrastic colour
+                                    contour stunning silhouette working peplum.
+                                    Statement buttons cover-up tweaks patch.</p>
 
-                                    <div class="testimonial-founder d-flex align-items-center mt-30">
-                                        <div class="testimonialimg">
-                                            <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                        </div>
-                                        <div class="founder-text mx-1">
-                                            <span>- Omeka Lotus</span>
-                                        </div>
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="founder-text mx-1">
+                                        <span>- Omeka Lotus</span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>Nice Accommodation</h3>
+                                <p>"Leather detail shoulder contrastic colour
+                                    contour stunning silhouette working peplum.
+                                    Statement buttons cover-up tweaks patch.</p>
+
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="founder-text mx-1">
+                                        <span>- Omeka Lotus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforelse
+
+                        @else
+
+
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>Delicious Food</h3>
+                                <p>"Leather detail shoulder contrastic colour
+                                    contour stunning silhouette working peplum.
+                                    Statement buttons cover-up tweaks patch.</p>
+
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="founder-text mx-1">
+                                        <span>- Omeka Lotus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>Nice Accommodation</h3>
+                                <p>"Leather detail shoulder contrastic colour
+                                    contour stunning silhouette working peplum.
+                                    Statement buttons cover-up tweaks patch.</p>
+
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="founder-text mx-1">
+                                        <span>- Omeka Lotus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-6">
+                            <div class="client-caption">
+                                <h3>Nice Accommodation</h3>
+                                <p>"Leather detail shoulder contrastic colour
+                                    contour stunning silhouette working peplum.
+                                    Statement buttons cover-up tweaks patch.</p>
+
+                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                    <div class="testimonialimg">
+                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="founder-text mx-1">
+                                        <span>- Omeka Lotus</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                               
+                        @endif
+
+
                         </div>
                     </div>
                 </div>
