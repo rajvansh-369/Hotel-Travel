@@ -513,8 +513,7 @@
                                             AVAILABILITY</button>
                                     @else
                                         <a class="btn2 btn-primary  d-flex justify-content-center" id="checkAvailButton"
-                                            data-bs-toggle="modal" data-bs-target="#loginModal">CHECK
-                                            AVAILABILITY</a>
+                                            data-bs-toggle="modal" data-bs-target="#loginModal">Book Now</a>
                                     @endif
 
                                 </form>
