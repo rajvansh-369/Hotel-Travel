@@ -52,7 +52,7 @@
 
 
                         </div>
-                        <a href="{{ route('hotel-details', $tourPackage->id) }}">
+                        <a href="{{ route('tour-details', $tourPackage->id) }}">
 
                             <div class="card-body" style="font-family: 'Myriad Pro Semibold';">
                                 <b>

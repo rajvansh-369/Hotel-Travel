@@ -459,6 +459,10 @@ class HotelController extends Controller
             $timex = new TimexEvents();
 
             $user = $timex->find($id)->user;
+            if($timex->find($id)->status == 2){
+
+                return "Page Expired!";
+            }
             $timex->where('id', $id)->update(['status' => 2, 'category' => 'success']);
 
             Mail::to($user->email)
@@ -471,6 +475,10 @@ class HotelController extends Controller
         $timex = new TimexEvents();
 
         $user = $timex->find($id)->user;
+        if($timex->find($id)->status == 0){
+
+            return "Page Expired!";
+        }
 
         $timex->where('id', $id)->update(['status' => 0, 'category' => 'danger']);
            

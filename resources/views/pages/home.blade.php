@@ -31,8 +31,8 @@
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                <h1>Find your next stay & rent Car</h1>
-                                <p>Search deals on hotels, homes, and much more...</p>
+                                <h1>Find Your Stay & taxi in bodhgaya</h1>
+                                <p>Search deals on hotels Taxi and much more</p>
                             </div>
                         </div>
                     </div>
@@ -54,9 +54,9 @@
                             <div class="col-xl-8 col-lg-9 col-md-12">
 
                                 <div class="section-tittle mb-50">
-                                    <h2>Top-rated Hotels  around you</h2>
-                                    <p>The concept and service of the best luxury hotels in the  <i
-                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i>city The BodhGaya.
+                                    <h2>Top rated Hotel in Bodhgaya.</h2>
+                                    <p>In the heart <i
+                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i> of the city of Bodhgaya.
                                     </p>
                                 </div>
                             </div>
