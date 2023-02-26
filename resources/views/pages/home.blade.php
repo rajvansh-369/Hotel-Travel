@@ -19,11 +19,10 @@
     <main>
         {{-- {{dd($banner)}} --}}
 
-{{--  style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});" --}}
+        {{--  style="background-image: url({{ $banner ? asset('storage/' . $banner->banner) : asset('img/h1_hero.jpg') }});" --}}
 
         {{-- @include('layouts.headerSearch') --}}
-        <div class="slider-area hero-bg1   hero-overly"
-           >
+        <div class="slider-area hero-bg1   hero-overly">
             {{-- <img   src="../img/h1_hero.jpg" alt=""> --}}
             <div class="single-slider  slider-height1 d-flex justify-content-start align-items-center">
                 <div class="container">
@@ -55,13 +54,13 @@
 
                                 <div class="section-tittle mb-50">
                                     <h2>Top rated Hotel in Bodhgaya.</h2>
-                                    <p>In the heart <i
-                                        class="fa fa-heart color-danger" aria-hidden="true" style="color:#003580"></i> of the city of Bodhgaya.
+                                    <p>In the heart <i class="fa fa-heart color-danger" aria-hidden="true"
+                                            style="color:#003580"></i> of the city of Bodhgaya.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        @include('pages.hotelCard')     
+                        @include('pages.hotelCard')
                     </div>
 
                     {{-- <div class="slideproducts"> --}}
@@ -128,58 +127,71 @@
                 <div class="container-fluid">
                     <div class="rows">
                         <div class="location-active owl-carousel">
-                            <div class="col-lg-12">
 
-                                <div class="single-location">
-                                    <img src="{{ asset('img/gallery/hotel1.webp') }}" alt="">
-                                    <div class="location-contents">
-                                        <h3><a href="#">Luxurious Room </a></h3>
-                                        <p>2 Adult 1 Children</p>
-                                        <div class="price">
-                                            <span>Started from<span>$500</span></span>
+
+
+
+                            @if (count($bedrooms) < 2)
+                                <div class="col-lg-12">
+
+                                    <div class="single-location">
+                                        <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
+                                        <div class="location-contents">
+                                            <h3><a href="#">Family Room </a></h3>
+                                            <div class="price">
+                                                <span>Started from<span>$500</span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
+                                <div class="col-lg-12">
 
-                                <div class="single-location">
-                                    <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
-                                    <div class="location-contents">
-                                        <h3><a href="#">Family Room </a></h3>
-                                        <p>2 Adult 1 Children</p>
-                                        <div class="price">
-                                            <span>Started from<span>$500</span></span>
+                                    <div class="single-location">
+                                        <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
+                                        <div class="location-contents">
+                                            <h3><a href="#">Couple Room </a></h3>
+                                       
+                                            <div class="price">
+                                                <span>Started from<span>$500</span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
+                                <div class="col-lg-12">
 
-                                <div class="single-location">
-                                    <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
-                                    <div class="location-contents">
-                                        <h3><a href="#">Couple Room </a></h3>
-                                        <p>2 Adult 1 Children</p>
-                                        <div class="price">
-                                            <span>Started from<span>$500</span></span>
+                                    <div class="single-location">
+                                        <img src="{{ asset('img/gallery/hotel2.webp') }}" alt="">
+                                        <div class="location-contents">
+                                            <h3><a href="#">Luxurious Room </a></h3>
+
+                                            <div class="price">
+                                                <span>Started from<span>$500</span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12">
 
-                                <div class="single-location">
-                                    <img src="{{ asset('img/gallery/hotel2.webp') }}" alt="">
-                                    <div class="location-contents">
-                                        <h3><a href="#">Luxurious Room </a></h3>
-                                        <p>2 Adult 1 Children</p>
-                                        <div class="price">
-                                            <span>Started from<span>$500</span></span>
+                            @else
+                            @forelse ($bedrooms as $key => $bedroom)
+                                <div class="col-lg-12 {{$key}}">
+                                    {{-- {{dd($bedroom)}} --}}
+                                    <div class="single-location">
+                                        <img src="{{ asset('storage/'.$bedroom->bedroom_image) }}" alt="">
+                                        <div class="location-contents">
+                                            <h3><a href="#">{{ $bedroom->bedroom_name }}</a></h3>
+                                            {{-- <p>2 Adult 1 Children</p> --}}
+                                            <div class="price">
+                                                <span>Started from<span>₹{{ $bedroom->bedroom_price }}</span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @empty
+
+                            @endforelse
+                            @endif
+
+
                         </div>
                     </div>
                 </div>
@@ -251,7 +263,7 @@
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6 weOffers">
@@ -308,121 +320,119 @@
                 <div class="container">
                     <div class="custom-row">
                         <div class="client-active">
-                           @if (count($testimonials) > 2 )
-                               
-                         
-                        @forelse ($testimonials as  $testimonial)
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>{{$testimonial->review_title}}</h3>
-                                <p>{{$testimonial->review_desc}}</p>
+                            @if (count($testimonials) > 2)
+                                @forelse ($testimonials as  $testimonial)
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>{{ $testimonial->review_title }}</h3>
+                                            <p>{{ $testimonial->review_desc }}</p>
 
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('storage/'.$testimonial->image)}}" class="img-fluid" alt="client-img">
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('storage/' . $testimonial->image) }}"
+                                                        class="img-fluid" alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span> - {{ $testimonial->name }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="founder-text mx-1">
-                                        <span>  - {{$testimonial->name}}</span>
+                                @empty
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>Delicious Food</h3>
+                                            <p>"Leather detail shoulder contrastic colour
+                                                contour stunning silhouette working peplum.
+                                                Statement buttons cover-up tweaks patch.</p>
+
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                        alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span>- Omeka Lotus</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>Nice Accommodation</h3>
+                                            <p>"Leather detail shoulder contrastic colour
+                                                contour stunning silhouette working peplum.
+                                                Statement buttons cover-up tweaks patch.</p>
+
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                        alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span>- Omeka Lotus</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforelse
+                            @else
+                                <div class="col-lg-5 col-md-6 col-sm-6">
+                                    <div class="client-caption">
+                                        <h3>Delicious Food</h3>
+                                        <p>"Leather detail shoulder contrastic colour
+                                            contour stunning silhouette working peplum.
+                                            Statement buttons cover-up tweaks patch.</p>
+
+                                        <div class="testimonial-founder d-flex align-items-center mt-30">
+                                            <div class="testimonialimg">
+                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                    alt="client-img">
+                                            </div>
+                                            <div class="founder-text mx-1">
+                                                <span>- Omeka Lotus</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        
-                        </div>
-                        @empty
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>Delicious Food</h3>
-                                <p>"Leather detail shoulder contrastic colour
-                                    contour stunning silhouette working peplum.
-                                    Statement buttons cover-up tweaks patch.</p>
+                                <div class="col-lg-5 col-md-6 col-sm-6">
+                                    <div class="client-caption">
+                                        <h3>Nice Accommodation</h3>
+                                        <p>"Leather detail shoulder contrastic colour
+                                            contour stunning silhouette working peplum.
+                                            Statement buttons cover-up tweaks patch.</p>
 
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="founder-text mx-1">
-                                        <span>- Omeka Lotus</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>Nice Accommodation</h3>
-                                <p>"Leather detail shoulder contrastic colour
-                                    contour stunning silhouette working peplum.
-                                    Statement buttons cover-up tweaks patch.</p>
-
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="founder-text mx-1">
-                                        <span>- Omeka Lotus</span>
+                                        <div class="testimonial-founder d-flex align-items-center mt-30">
+                                            <div class="testimonialimg">
+                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                    alt="client-img">
+                                            </div>
+                                            <div class="founder-text mx-1">
+                                                <span>- Omeka Lotus</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        @endforelse
+                                <div class="col-lg-5 col-md-6 col-sm-6">
+                                    <div class="client-caption">
+                                        <h3>Nice Accommodation</h3>
+                                        <p>"Leather detail shoulder contrastic colour
+                                            contour stunning silhouette working peplum.
+                                            Statement buttons cover-up tweaks patch.</p>
 
-                        @else
-
-
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>Delicious Food</h3>
-                                <p>"Leather detail shoulder contrastic colour
-                                    contour stunning silhouette working peplum.
-                                    Statement buttons cover-up tweaks patch.</p>
-
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="founder-text mx-1">
-                                        <span>- Omeka Lotus</span>
+                                        <div class="testimonial-founder d-flex align-items-center mt-30">
+                                            <div class="testimonialimg">
+                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                    alt="client-img">
+                                            </div>
+                                            <div class="founder-text mx-1">
+                                                <span>- Omeka Lotus</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>Nice Accommodation</h3>
-                                <p>"Leather detail shoulder contrastic colour
-                                    contour stunning silhouette working peplum.
-                                    Statement buttons cover-up tweaks patch.</p>
-
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="founder-text mx-1">
-                                        <span>- Omeka Lotus</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-6 col-sm-6">
-                            <div class="client-caption">
-                                <h3>Nice Accommodation</h3>
-                                <p>"Leather detail shoulder contrastic colour
-                                    contour stunning silhouette working peplum.
-                                    Statement buttons cover-up tweaks patch.</p>
-
-                                <div class="testimonial-founder d-flex align-items-center mt-30">
-                                    <div class="testimonialimg">
-                                        <img src="{{asset('img/testiImg.png')}}" class="img-fluid" alt="client-img">
-                                    </div>
-                                    <div class="founder-text mx-1">
-                                        <span>- Omeka Lotus</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                               
-                        @endif
+                            @endif
 
 
                         </div>
@@ -592,9 +602,8 @@
         //     r.setAnimation(google.maps.Animation.BOUNCE);
         //   }
         // }
-        
     </script>
-    
+
     {{-- <script
         
         GOlocalBaskst
