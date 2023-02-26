@@ -1710,7 +1710,9 @@ hr {
 }
 
 .location-house .single-location img {
-    width: 100%
+    width: 100%;
+    max-height: 473px;
+    min-height: 473px;
 }
 
 .location-house .single-location::before {

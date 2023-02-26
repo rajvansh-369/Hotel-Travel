@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Mail\Booking;
 use App\Mail\bookingConfimed;
 use App\Mail\bookingRejected;
@@ -9,6 +10,7 @@ use App\Models\Address;
 use App\Models\Banner;
 use App\Models\Listing;
 use App\Models\Picture;
+use App\Models\BedroomsType;
 use App\Models\Testimonial;
 use App\Models\TimexEvents;
 use App\Models\TourPackage;
@@ -36,6 +38,7 @@ class HotelController extends Controller
         $hotels = Listing::where('status',1)->get();
         $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
         $testimonials = Testimonial::all();
+        $bedrooms = BedroomsType::where('status', 1)->get();
 
 
         $location = [];
@@ -48,7 +51,7 @@ class HotelController extends Controller
             $locations[] = $location;
         }
 
-        return view('pages.home' ,compact('hotels' , 'locations' , 'banner', 'testimonials'));
+        return view('pages.home' ,compact('hotels' , 'locations' , 'banner', 'testimonials' , 'bedrooms'));
     }
 
 
