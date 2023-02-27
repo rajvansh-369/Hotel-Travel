@@ -7,7 +7,7 @@
         </section>
     @endunless
 
-    <main class="flex flex-col sm:flex-row justify-between mx-auto gap-3 md:gap-6 px-3 md:px-6 py-4 md:py-8 marginBlogMobile">
+    <main class="flex flex-col sm:flex-row justify-between mx-auto gap-3 md:gap-6 px-3 md:px-6 py-4 md:py-8 @if($stickies->count() > 1) marginBlogMobile @endif ">
         <section class="w-full sm:w-2/3 lg:w-3/4">
             @unless ($posts->isEmpty())
                 <h1 class="text-xl font-bold text-black-700 dark:text-black-100 md:text-2xl">{{ __('Posts') }}</h1>
