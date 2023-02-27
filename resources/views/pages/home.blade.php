@@ -54,9 +54,11 @@
 
                                 <div class="section-tittle mb-50">
                                     <h2>Top rated Hotel in Bodhgaya.</h2>
+
                                     <p>BodhGaya: The City of Enlightenment
                                         {{-- In the heart <i class="fa fa-heart color-danger" aria-hidden="true"
                                             style="color:#003580"></i> of the city of Bodhgaya. --}}
+
                                     </p>
                                 </div>
                             </div>
