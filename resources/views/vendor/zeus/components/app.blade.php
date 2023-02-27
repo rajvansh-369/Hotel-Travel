@@ -45,7 +45,8 @@
 
 {{-- bg-gray-50 text-gray-900 dark:text-gray-100 dark:bg-gray-900 --}}
 
-<body class="font-sans antialiased  @if (app()->isLocal()) debug-screens @endif">
+<body class="font-sans antialiased  @if (app()->isLocal()) debug-screens @endif" style="background-color: #F8F8F8 
+    ">
     {{-- @include('layouts.header') --}}
     @extends('layouts.app')
     @section('content')
