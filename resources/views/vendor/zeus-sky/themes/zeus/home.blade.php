@@ -1,6 +1,6 @@
 <div>
     @unless($stickies->isEmpty())
-        <section class="mt-10 grid @if($stickies->count() > 1) grid-cols-3 @endif gap-4">
+        <section class="mt-10 grid @if($stickies->count() > 1) grid-cols-3 @endif gap-4 marginBlogMobile">
             @foreach($stickies as $post)
                 @include($theme.'.partial.sticky')
             @endforeach

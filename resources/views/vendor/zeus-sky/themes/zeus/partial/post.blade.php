@@ -12,10 +12,25 @@
             <a href="{{ route('post',$post->slug) }}" class="text-2xl md:text-3xl font-bold text-black-700 dark:text-black-200 hover:underline">
                 {!! $post->title !!}
             </a>
+            {{-- {{dd($post)}} --}}
             @if($post->description !== null)
-                <p class="mt-2 text-black-600 dark:text-black-200">
-                    {!! $post->description !!}
-                </p>
+            <a href="{{ route('post',$post->slug) }}" class="text-2xl md:text-3xl font-bold text-black-700 dark:text-black-200 hover:underline"> 
+            <div class="row">
+               
+                <div class="col-sm-4">
+                    <img src="{{ $post->getFirstMediaUrl('posts') }}" class="my-10  shadow-md rounded-[2rem] rounded-bl-none z-0 object-cover" />
+
+                </div>
+                <div class="col-sm-8 my-5">
+                    <p class="mt-2 text-black-600 dark:text-black-200" style="font-size: 20px;">
+                        {!! $post->description !!}
+    
+                    </p>
+                </div>
+               
+            </div>
+        </a>
+                
             @endif
         </aside>
         <div class="flex items-center justify-between mt-4">
