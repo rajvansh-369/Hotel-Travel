@@ -14,7 +14,7 @@
                                 </span>
                             </a>
                         </h5>
-                        <div class="pb-4 px-6 prose dark:prose-invert max-w-none">
+                        <div class="pb-4 px-6 prose light:prose-invert max-w-none">
                             {!! $faq->answer !!}
                         </div>
                     </div>
