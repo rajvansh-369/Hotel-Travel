@@ -509,8 +509,7 @@
                                     @if (auth()->user())
                                         <button type="submit" {{ session('endDate') == null ? 'disabled' : '' }}
                                             id="checkAvailButton"
-                                            class="btn2 btn-primary  d-flex justify-content-center">CHECK
-                                            AVAILABILITY</button>
+                                            class="btn2 btn-primary disable  d-flex justify-content-center">Book Now</button>
                                     @else
                                         <a class="btn2 btn-primary  d-flex justify-content-center" id="checkAvailButton"
                                             data-bs-toggle="modal" data-bs-target="#loginModal">Book Now</a>
@@ -612,7 +611,8 @@
 
 
             } else {
-
+                
+                document.getElementById('checkAvailButton').classList.remove('disable')
                 document.getElementById('checkAvailButton').disabled = false;
                 bedroomPriceFunc();
             }

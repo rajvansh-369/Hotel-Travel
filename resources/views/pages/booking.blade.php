@@ -29,7 +29,7 @@
 
 
 
-<div class="booking-detail py-4">
+<div class="booking-detail py-5">
     <div class="container">
         <h1 class="header">Booking Details</h1>
         <div class="row">

@@ -28,7 +28,7 @@
                                     <a href="#"><i class="fab fa-twitter-square"></i></a>
                                     <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-square"></i></a>
                                     <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                                    {{-- <a href="#"><i class="fab fa-pinterest-square"></i></a> --}}
                                 </div>
                             </div>
                         </div>
@@ -43,6 +43,8 @@
                                     <li><a href="{{route('hotels')}}">Book A Room</a></li>
                                     <li><a href="#">Privacy & Policy</a></li>
                                     <li><a href="{{route('contact')}}">Contact</a></li>
+                                    <li><a href="{{route('blogs')}}">Blog</a></li>
+                                    {{-- <li><a href="{{route('page')}}">Blog-Pages</a></li> --}}
                                 </ul>
                             </div>
                         </div>
