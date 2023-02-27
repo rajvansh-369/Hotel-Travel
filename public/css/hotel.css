@@ -6,6 +6,13 @@ img.hotel_mainImg {
 
 @media only screen  and (max-width: 299px) {
 
+
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
+
     
     .desktopSlider{
 
@@ -71,6 +78,12 @@ img.hotel_mainImg {
 
 @media only screen and (min-width:280px)  and (max-width: 350px) {
 
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
+
     
     .desktopSlider{
 
@@ -132,6 +145,12 @@ img.hotel_mainImg {
 
 }
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
+
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
 
     
     .desktopSlider{
@@ -195,6 +214,13 @@ img.hotel_mainImg {
 }
 
 @media only screen and (min-width:350px)  and (max-width: 400px) {
+
+
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
 
     
     .desktopSlider{
@@ -272,6 +298,13 @@ input#select3 {
 }
 @media only screen and (min-width: 401px)  and (max-width: 500px) {
 
+
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
+
     
     .desktopSlider{
 
@@ -340,6 +373,13 @@ input#select3 {
 
 
 @media only screen and (min-width: 501px) and (max-width: 600px) {
+
+
+    .marginBlogMobile{
+
+
+        margin-top: 141px;
+      }
 
     
     .desktopSlider{
@@ -411,6 +451,12 @@ input#select3 {
 
   @media only screen and (min-width: 601px) and (max-width: 900px) {
 
+
+    .marginBlogMobile{
+
+
+        margin-top: 71px;
+      }
 
     .slicknav_menu {
   
@@ -531,6 +577,12 @@ img.d-block.w-100.min_maxHeight {
 
   @media only screen and (min-width: 901px) and (max-width: 1200px) {
 
+
+    .marginBlogMobile{
+
+
+        margin-top: 32px;
+      }
 
     .slicknav_menu {
 
@@ -1540,3 +1592,10 @@ li.active {
 
     margin-top: 10px;
   }
+
+  .disable{
+
+    background-color: #7C7C7C;
+  }
+
+

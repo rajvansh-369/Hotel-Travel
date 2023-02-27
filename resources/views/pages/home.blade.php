@@ -30,8 +30,8 @@
                         <div class="col-xl-7 col-lg-11">
 
                             <div class="hero-caption pt-10">
-                                <h1>Find Your Stay & taxi in bodhgaya</h1>
-                                <p>Search deals on hotels Taxi and much more</p>
+                                <h1>Find Your Stay & Taxi in Bodhgaya</h1>
+                                <p>Search deals on Hotels Taxi and much more...</p>
                             </div>
                         </div>
                     </div>
@@ -54,8 +54,9 @@
 
                                 <div class="section-tittle mb-50">
                                     <h2>Top rated Hotel in Bodhgaya.</h2>
-                                    <p>In the heart <i class="fa fa-heart color-danger" aria-hidden="true"
-                                            style="color:#003580"></i> of the city of Bodhgaya.
+                                    <p>BodhGaya: The City of Enlightenment
+                                        {{-- In the heart <i class="fa fa-heart color-danger" aria-hidden="true"
+                                            style="color:#003580"></i> of the city of Bodhgaya. --}}
                                     </p>
                                 </div>
                             </div>
@@ -238,7 +239,7 @@
             </div>
 
 
-            <div class="video-area section-img-bg2 d-flex align-items-center"
+            {{-- <div class="video-area section-img-bg2 d-flex align-items-center"
                 data-background="{{ asset('img/gallery/video-bg.jpg.webp') }}">
                 <div class="container">
                     <div class="video-wrap position-relative">
@@ -250,10 +251,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
-            <div class="guest-house section-padding">
+            {{-- <div class="guest-house section-padding">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8">
@@ -313,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
 
             <section class="client-say">
