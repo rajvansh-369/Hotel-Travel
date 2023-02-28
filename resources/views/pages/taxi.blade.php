@@ -18,93 +18,121 @@
         </div>
         <div class="container brdetailmain">
             <p class="gotosrchrslt "><i class="fa fa-angle-left"></i>
-                <a href="{{route('home')}}">
+                <a href="{{ route('home') }}">
                     Back
                     <!--Top Rated Around You-->
                 </a>
             </p>
             <div class="col-lg-12 text-justify">
+                <div>
 
-                <br>
-                Bodhgaya car rental agency based at Bodh Gaya, Bihar, India provide Car rental in Bodh Gaya - The land of
-                enlightenment and salvation. We offers wide range of cars for rent in Bodh Gaya like Sedan vehicle – Swift
-                Dzire / Toyota Etios and SUV vehicle –Toyota Innova. You can opt Full day Local sightseeing and same day
-                excursion Rajgir and Nalanda. Hire Gaya Airport Taxi
-                <br><br>
-                <img src="https://www.gayatobodhgaya.com/images/Innova-Crysta-Taxi.jpg" style="width:calc(60%);"
-                    class="car rental in Bodh Gaya">
-                <br><br>
-                <strong> You can opt other service Like </strong> <br>
-                1. Bodh Gaya – Varanasi – Drop only <br>
-                2. Bodh Gaya – Patna – Drop only <br>
-                3. Bodh Gaya – Shikhar ji – Drop Only <br>
-                4. Bodh Gaya – Deoghar Drop only <br>
-                5.Bodh Gaya- Ranchi Drop only <br>
-                <br>
-                Bodh Gaya - The land of enlightenment and salvation. Holy place for Buddhist and Hindu pilgrim . Visit
-                Attractions in Bodh Gaya like Mahabodhi Temple , Sujata Temple , 80feet statue Buddha ,Durgeshwari hill and
-                International Monastery like Royal Bhutan, Thai, Nippon Japanese and Chinese monastery .
-                <br>
-                Guests take Outstation tour like Buddhist Pilgrimage tour cover Bodhgaya, Rajgir, Vaishali, Kushinagar,
-                Lumbini, Sravasti, Saranath and Varanasi. Jain Pilgrimage Tour cover - Rajir, Kundalpur, Pavapuri, Lachwad,
-                Champapur, Parasnath- Shikharji.Hire Gaya Airport Taxi in well advance... Bodhgaya car rental fleet
-                comprises of a selection of sedan cars that have been chosen keeping in mind the comfort and safety of a
-                business traveler.
-                Our fleet car rental in Bodh Gaya includes models such as Swift Dezire, Toyota Etios, Toyota Innova, Toyota
-                Innova Crysta, Tempo Traveller &amp; Luxury Coaches. On request, we can arrange any other types of vehicle
-                services. All our vehicles are immaculately maintained &amp; driven by experienced drivers. We aim to create
-                the best in class services for the Car rental business and guarantee the highest level of services.
-
-                <br>
+                    <img src="{{ asset('storage/taxi.jpg') }}" style="width:calc(100%);" class="car rental in Bodh Gaya">
+                    <strong> <h4> You can opt other service Like </h4></strong>
+                </div>
+                <ul>
+                    <li>1. Bodh Gaya – Varanasi - Drop only</li>
+                    <li> 2. Bodh Gaya – Patna - Drop only</li>
+                    <li>3. Bodh Gaya – Shikhar ji - Drop Only</li>
+                    <li>4. Bodh Gaya – Deoghar - Drop only</li>
+                    <li>5. Bodh Gaya - Ranchi - Drop only</li>
+                    <li>7. Bodh Gaya - Rajgir Nalanda - Bodhgaya</li>
+                    <li>8. Bodh Gaya - Rajgir Nalanda – Drop Only</li>
+                    <li>9. Bodh Gaya - Gaya Airport - Drop Only</li>
+                </ul>
+     
                 <br>
 
                 <h4>- Taxi in Bodhgaya</h4>
-                <p>Bodhgaya or Gaya is considered the most beautiful and holiest Buddhist pilgrimage site in the world, along with other historical cities of India. Bodhgaya is situated in the Gaya district of Bihar, India. This site is believed to be where Siddhartha Gautama, the founder of Buddhism, attained Enlightenment under a Bodhi tree. At this place sitting under a tree, Lord Buddha attained wisdom and Buddhism came into the existence. The original Bodhi tree may have been destroyed by many Kings, but the direct descendants flourish even today standing tall at 80 feet.
+                <p>Bodhgaya or Gaya is considered the most beautiful and holiest Buddhist pilgrimage site in the world,
+                    along with other historical cities of India. Bodhgaya is situated in the Gaya district of Bihar, India.
+                    This site is believed to be where Siddhartha Gautama, the founder of Buddhism, attained Enlightenment
+                    under a Bodhi tree. At this place sitting under a tree, Lord Buddha attained wisdom and Buddhism came
+                    into the existence. The original Bodhi tree may have been destroyed by many Kings, but the direct
+                    descendants flourish even today standing tall at 80 feet.
 
-                    Today, Bodhgaya is a popular tourist destination for both domestic and international Travelers. A hundred thousand Pilgrims visit this city every year. Easy & quality mobility and hospitality become very important in a city with such diverse people. To fulfill this demand, Hotel In Bodhgaya comes into the picture. “Hotel in Bodhgaya” is a Bodhgaya-based company We are managed and operated by the locals of Bodhgaya. We generally Provide Transportation, Accommodation, Pind Daan, Guided tours of the main and Popular sights in and around Bodhgaya, and Tour Packages related to the Buddhist circuit.
-                    
-                    Bodhgaya or Gaya is a blend of history. This Place is also known as a land of Knowledge and salvation Lots of Tourist Attractions are present in Gaya, due to which cab service in Bodhgaya has become the most common mode of transportation. Cabs in Bodhgaya are very popular and convenient. The service parameter has improved drastically with the advent of the Bodhgaya online taxi booking system.
-                    
-                    Cab booking in Bodhgaya or Gaya is now straightforward and affordable for all travelers, whether tourists, youth, or business people, with flexible payment options. With the help of a cab service in Bodhgaya, you can visit some places Dungeshwari, Mahabodhi Temple, Vishnupad Temple, Barabar Caves, Maa Mangla Gauri Mandir, and much more. So book a taxi in Bodhgaya from us and head on with your journey.
-                    
-                    Not only this, but We also provide the facility of a taxi on hire in Bodhgaya for exploring nearby places too like Rajgir, Ruins of Nalanda University, Patna Museum, Varanasi or Banaras, Takhat Sri Harimandir ji (Patna Sahib), Budhha Smriti Park, Barabar caves, Mahavirswami Jain Water Temple, and much more. All you need to do is book a cab in Bodhgaya and enjoy your trip. With the facility of a taxi on rent in Bodhgaya, your travel time reduces, and comfortability increases.
-                    
-                    With Hotel in Bodhgaya, cab booking in Bodhgaya has become extremely easy and affordable. With the advent of an online booking system, taxi rental in Bodhgaya has become the most popular means of transportation. We also provide outstation cab on hire in Bodhgaya with well-trained and experienced Drivers to make your journey safe and comfortable. Not just that, we provide various car options at the lowest price. So book a taxi in Bodhgaya from us for your next travel plan, and you will surely get a wonderful experience.</p>
+                    Today, Bodhgaya is a popular tourist destination for both domestic and international Travelers. A
+                    hundred thousand Pilgrims visit this city every year. Easy & quality mobility and hospitality become
+                    very important in a city with such diverse people. To fulfill this demand, Hotel In Bodhgaya comes into
+                    the picture. “Hotel in Bodhgaya” is a Bodhgaya-based company We are managed and operated by the locals
+                    of Bodhgaya. We generally Provide Transportation, Accommodation, Pind Daan, Guided tours of the main and
+                    Popular sights in and around Bodhgaya, and Tour Packages related to the Buddhist circuit.
 
+                    Bodhgaya or Gaya is a blend of history. This Place is also known as a land of Knowledge and salvation
+                    Lots of Tourist Attractions are present in Gaya, due to which cab service in Bodhgaya has become the
+                    most common mode of transportation. Cabs in Bodhgaya are very popular and convenient. The service
+                    parameter has improved drastically with the advent of the Bodhgaya online taxi booking system.
 
-                    <h4>- Taxi Service in Bodhgaya 
-                        -from us Why?</h4>
+                    Cab booking in Bodhgaya or Gaya is now straightforward and affordable for all travelers, whether
+                    tourists, youth, or business people, with flexible payment options. With the help of a cab service in
+                    Bodhgaya, you can visit some places Dungeshwari, Mahabodhi Temple, Vishnupad Temple, Barabar Caves, Maa
+                    Mangla Gauri Mandir, and much more. So book a taxi in Bodhgaya from us and head on with your journey.
 
-                        <p>There are several reasons for choosing Our Taxi as a taxi service in Bodhgaya. First, our assurance in quality and services is unmatched and the best. We value your time and comfort and offer several benefits to you. You can easily avail of our below-given services once you take a cab in Bodhgaya with us.  
+                    Not only this, but We also provide the facility of a taxi on hire in Bodhgaya for exploring nearby
+                    places too like Rajgir, Ruins of Nalanda University, Patna Museum, Varanasi or Banaras, Takhat Sri
+                    Harimandir ji (Patna Sahib), Budhha Smriti Park, Barabar caves, Mahavirswami Jain Water Temple, and much
+                    more. All you need to do is book a cab in Bodhgaya and enjoy your trip. With the facility of a taxi on
+                    rent in Bodhgaya, your travel time reduces, and comfortability increases.
 
-                            Multiple options among cars: Cabs from sedans and hatchbacks to Innovas, tempo travelers, Mini Bus, Luxury Coach, and many more vehicles are all available. You can book any among them that suits your desired need and comfort.
-                            
-                            Experienced drivers: We care for your safety, so each driver is hired after a Proper checklist and their familiarity with the routes and knowledge of the local language.
-                            
-                            Simple booking process: With Hotel in Bodhgaya, you can book our cab for hire in Bodhgaya in a few minutes with a phone call on our helpline no. +91 9971840388 or 91+9546355003 or a few clicks on our website “hotelinbodhgaya.com” or email us at hotelofbodhgaya@gmail.com.
-                            
-                            Steps to Hire Cabs in Bodhgaya from us
-                            Cabs in Bodhgaya from us are very easy and affordable. All you need to do is follow the steps below and head on with your journey.
-                            <ul>
-                                <li> 1. Choose your car- As per your comfort and need, you can choose cars among the various cars we offer</li>
-                                <li>2. Select the type of your journey- i.e. whether you want a cab for a local visit, outstation trips, or an airport.</li>
-                                <li>3. Tell us some details of your Trip- Provide us with details of your trip, like pick-up date, time, and location</li>
-                                <li>4. Confirm your booking- </li>
-
-                            </ul>
-                           
-                            
-                            
-                            
-                            Pay a token amount to confirm your booking from Hotel in Bodhgaya with your card or e-wallet, and the cab gets reserved for you.
-                            
-                            With our Excellent service system, you will get all messages and emails regarding your journey. In addition, our website has been designed much more user-friendly, so taking a 
-                            taxi for hire in Delhi has become extremely easy.</p>
+                    With Hotel in Bodhgaya, cab booking in Bodhgaya has become extremely easy and affordable. With the
+                    advent of an online booking system, taxi rental in Bodhgaya has become the most popular means of
+                    transportation. We also provide outstation cab on hire in Bodhgaya with well-trained and experienced
+                    Drivers to make your journey safe and comfortable. Not just that, we provide various car options at the
+                    lowest price. So book a taxi in Bodhgaya from us for your next travel plan, and you will surely get a
+                    wonderful experience.</p>
 
 
-                            <h4>- Cab in Bodhgaya</h4>
+                <h4>- Taxi Service in Bodhgaya
+                    -from us Why?</h4>
 
-                            <p>Whether planning for a single or a multi-day journey, local or outstation trip with a family of four, or friends of ten, or Group of 45 We always stands at your service with various options at your disposal. We have room for all your plans. Just hire a cab in Bodhgaya. You have a taxi at your service till your booking destination. Our excellent service track record and a good review of our customers encourage us throughout the journey. We care for your time and comfort, and so we provide you with the best available carb at the most reasonable price in the least time.</p>
+                <p>There are several reasons for choosing Our Taxi as a taxi service in Bodhgaya. First, our assurance in
+                    quality and services is unmatched and the best. We value your time and comfort and offer several
+                    benefits to you. You can easily avail of our below-given services once you take a cab in Bodhgaya with
+                    us.
+
+                    Multiple options among cars: Cabs from sedans and hatchbacks to Innovas, tempo travelers, Mini Bus,
+                    Luxury Coach, and many more vehicles are all available. You can book any among them that suits your
+                    desired need and comfort.
+
+                    Experienced drivers: We care for your safety, so each driver is hired after a Proper checklist and their
+                    familiarity with the routes and knowledge of the local language.
+
+                    Simple booking process: With Hotel in Bodhgaya, you can book our cab for hire in Bodhgaya in a few
+                    minutes with a phone call on our helpline no. +91 9971840388 or 91+9546355003 or a few clicks on our
+                    website “hotelinbodhgaya.com” or email us at hotelofbodhgaya@gmail.com.
+
+                    Steps to Hire Cabs in Bodhgaya from us
+                    Cabs in Bodhgaya from us are very easy and affordable. All you need to do is follow the steps below and
+                    head on with your journey.
+                <ul>
+                    <li> 1. Choose your car- As per your comfort and need, you can choose cars among the various cars we
+                        offer</li>
+                    <li>2. Select the type of your journey- i.e. whether you want a cab for a local visit, outstation trips,
+                        or an airport.</li>
+                    <li>3. Tell us some details of your Trip- Provide us with details of your trip, like pick-up date, time,
+                        and location</li>
+                    <li>4. Confirm your booking- </li>
+
+                </ul>
+
+
+
+
+                Pay a token amount to confirm your booking from Hotel in Bodhgaya with your card or e-wallet, and the cab
+                gets reserved for you.
+
+                With our Excellent service system, you will get all messages and emails regarding your journey. In addition,
+                our website has been designed much more user-friendly, so taking a
+                taxi for hire in Bodhgaya has become extremely easy.</p>
+
+
+                <h4>- Cab in Bodhgaya</h4>
+
+                <p>Whether planning for a single or a multi-day journey, local or outstation trip with a family of four, or
+                    friends of ten, or Group of 45 We always stands at your service with various options at your disposal.
+                    We have room for all your plans. Just hire a cab in Bodhgaya. You have a taxi at your service till your
+                    booking destination. Our excellent service track record and a good review of our customers encourage us
+                    throughout the journey. We care for your time and comfort, and so we provide you with the best available
+                    carb at the most reasonable price in the least time.</p>
 
                 <table border="0" cellspacing="1" cellpadding="1" width="100%">
                     <tbody>
@@ -178,71 +206,71 @@
                             <tr>
                                 <td> <a href="https://www.gayatobodhgaya.com/car-rental-gaya-airport-railway-Station.html">
                                         Full Day city Tour (80 Kms / 80 Hrs) </a> </td>
-                                <td>On Request</td>
-                                <td>On Request</td>
-                                <td>On Request</td>
-                                <td>On Request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On Request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On Request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On Request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On Request </a> </td>
                             </tr>
                             <tr>
                                 <td> <a href="https://www.gayatobodhgaya.com/flight-schedule-gaya-airport.html"> Half Day
                                         city Tour (40 Kms / 4 Hrs) </a> </td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td>Gaya Railway station / <a href="gaya-airport-car-rental.html">Gaya airport to
                                         Bodhgaya</a></td>
-                                <td> On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td><a href="car-rental-bodhgaya-patna-airport.html">Patna Airport to Bodhgaya dropping or
                                         vice versa</a></td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td>Patna to Bodhgaya via Rajgir / Nalanda- Same day or vice versa</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td>Bodhgaya to Rajgir &amp; Nalanda- Same Day </td>
-                                <td>On request/td&gt;
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request/td&gt;
                                 </td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td><a href="car-rental-bodhgaya-varanasi.html">Bodhgaya/ Varanasi Dropping or vice
                                         versa</a></td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                             </tr>
                             <tr>
                                 <td><a href="car-rental-gaya-deoghar.html">Dhungeswari Trip (Mahakala Cave</a></td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                                 <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td><a href="/taxi-car-rental-gaya-railway-station.html">Taxi Service Gaya Railway
                                         Station</a></td>
-                                <td>On request</td>
-                                <td>On request</td>
-                                <td>On request</td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
+                                <td><a href="mailto:hotelofbodhgaya@gmail.com" > On request </a> </td>
                                 <td>&nbsp;</td>
                             </tr>
                         </tbody>
@@ -250,7 +278,7 @@
                 </span> <br>
 
                 <h4>FAQ </h4>
-                {{-- on Delhi book taxi --}}
+                {{-- on Bodhgaya book taxi --}}
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -262,7 +290,8 @@
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <strong> Yes, Bodhi Travel desk cabs are available in Delhi.</strong> You can opt for local car rentals, outstation
+                                <strong> Yes, Bodhi Travel desk cabs are available in Bodhgaya.</strong> You can opt for local
+                                car rentals, outstation
                                 round trip cabs or airport transfer services in Bodhgaya, based on your requirement.
                             </div>
                         </div>
@@ -277,10 +306,12 @@
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Booking a Bodhi Travel desk taxi in Bodhgaya is extremely easy. You can book online by visiting our
-                        website hotelinbodhgaya.com or bodhitraveldesk.com to book your ride from anywhere at your
-                        convenience. You can also call us on +91 9971840388 email us at hotelofbodhgaya@gmail.com. to reach
-                        out to our customer service team to assist you with a customized itinerary.
+                                Booking a Bodhi Travel desk taxi in Bodhgaya is extremely easy. You can book online by
+                                visiting our
+                                website hotelinbodhgaya.com or bodhitraveldesk.com to book your ride from anywhere at your
+                                convenience. You can also call us on +91 9971840388 email us at hotelofbodhgaya@gmail.com.
+                                to reach
+                                out to our customer service team to assist you with a customized itinerary.
                             </div>
                         </div>
                     </div>
@@ -294,9 +325,11 @@
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                You can book from Bodhi Travel Desk for airport taxi from Gaya International airport by visiting our
-                        websit hotelinbodhgaya.com or bodhitraveldesk.com calling us at on +91 9971840388 or email us at
-                        hotelofbodhgaya@gmail.com.
+                                You can book from Bodhi Travel Desk for airport taxi from Gaya International airport by
+                                visiting our
+                                websit <a href="http://hotelinbodhgaya.com/"> hotelinbodhgaya.com </a>or <a href="http://bodhitraveldesk.com/">  </a> calling us at on +91 9971840388 or email
+                                us at
+                                <a href="mailto:hotelofbodhgaya@gmail.com" style="color:white">hotelofbodhgaya@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -310,9 +343,11 @@
                         <div id="collapseFOur" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                Bodhi Travel Desk cabs are available for hourly rental bookings. You can book a taxi online in Delhi
+                                Bodhi Travel Desk cabs are available for hourly rental bookings. You can book a taxi online
+                                in Bodhgaya
                                 for 4 and 40 km. Alternatively, you may also call on +91 9971840388 or email us at
-                                hotelofbodhgaya@gmail.com and get in touch with our representatives to make your booking offline.
+                                hotelofbodhgaya@gmail.com and get in touch with our representatives to make your booking
+                                offline.
                             </div>
                         </div>
                     </div>
@@ -340,9 +375,11 @@
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                The cab booking options available in New Delhi are A.C. sedans (Etios, Amaze, Dzire),, S.U.V
-                                (Innova, Innova crista), tempo travelers, and luxury coach are also available in Bodhgaya. Based on
-                                the number of passengers and trip type, you can hire a tempo traveler, Mini Bus, or Luxury coach in
+                                The cab booking options available in New Bodhgaya are A.C. sedans (Etios, Amaze, Dzire),, S.U.V
+                                (Innova, Innova crista), tempo travelers, and luxury coach are also available in Bodhgaya.
+                                Based on
+                                the number of passengers and trip type, you can hire a tempo traveler, Mini Bus, or Luxury
+                                coach in
                                 Bodhgaya to make your booking at a super affordable Price.
                             </div>
                         </div>
@@ -357,8 +394,9 @@
                         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                To hire a taxi service in Bodhgaya, all you have to do is log in to the website hotelinbodhgaya.com,
-                        enter your trip details & book your taxi on the go.
+                                To hire a taxi service in Bodhgaya, all you have to do is log in to the website
+                                hotelinbodhgaya.com,
+                                enter your trip details & book your taxi on the go.
                             </div>
                         </div>
                     </div>
