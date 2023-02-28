@@ -85,14 +85,14 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
                             <div class="media-body">
-                                <h3>+91 9971 (840) 388</h3>
-                                <p>Mon to Fri 9am to 6pm</p>
+                                <h3><a href="tel:9971840388">Call Us:   +91 9971840388</a></h3>
+                                {{-- <p>Mon to Fri 9am to 6pm</p> --}}
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>   <a href="mailto:enquiry@hotel.com">enquiry@hotel.com</a>
+                                <h3>   <a href="mailto:hotelofbodhgaya@gmail.com">hotelofbodhgaya@gmail.com</a>
                                 </h3>
                                 <p>Send us your query anytime!</p>
                             </div>

@@ -29,8 +29,8 @@
                 OF BUDDHISM, OUR TOUR PACKAGE IS THE WAY TO GO. WITH SO MUCH TO SEE AND DO, ORGANIZING EVERYTHING AHEAD OF
                 TIME WILL HELP YOU GET THE MOST OUT OF YOUR TIME AT THIS SACRED PLACE. IN ADDITION TO METICULOUS PLANNING,
                 WE PROVIDE 24/7 SUPPORT DURING YOUR TRIP. YOU CAN EDIT AND DESIGN YOUR TOUR ITINERARY BY YOURSELF AS PER
-                YOUR REQUIREMENT. IF YOU HAVE ANY QUESTIONS OR CONCERNS <br> PLEASE CALL US AT 91+9971840388 OR EMAIL US AT
-                HOTELOFBODHGAYA@GMAIL.COM I WILL BE HAPPY TO HELP YOU.</p>
+                YOUR REQUIREMENT. IF YOU HAVE ANY QUESTIONS OR CONCERNS <br> PLEASE <a href="tel:9971840388" style="font-weight:bold">Call Us:   +91 9971840388</a> OR EMAIL US AT
+                <a href="mailto:hotelofbodhgaya@gmail.com" style="font-weight:bold">hotelofbodhgaya@gmail.com</a> I WILL BE HAPPY TO HELP YOU.</p>
 
             <h4>OUR SERVICES:</h4>
 
@@ -92,8 +92,8 @@
                 READY TO PLAN YOUR NEXT ADVENTURE? CONTACT US TODAY TO GET STARTED. OUR TRAVEL EXPERTS ARE READY TO HELP YOU PLAN AND BOOK YOUR TRIP WITH EASE.
                 
                 <ul>
-                    <li><strong> MOBILE NO – </strong> 91+ 9971840388 OR 91+ 9546355003</li>
-                    <li> <strong>GMAIL I’D - </strong>  hotelofbodhgaya@gmail.com</li>
+                    <li><strong> MOBILE NO : </strong><a href="tel:9971840388" style="font-weight:bold"> +91 9971840388</a> OR <a href="tel:9546355003" style="font-weight:bold"> +91 9546355003</a></li>
+                    <li> <strong>GMAIL I’D : </strong>  <a href="mailto:hotelofbodhgaya@gmail.com" style="font-weight:bold">hotelofbodhgaya@gmail.com</a></li>
                 </ul>
                 
                 

@@ -56,8 +56,8 @@
                                 <ul>
                                     <li><a href="#">Hotel Bodhi Residency, Near kanaya uch vidyalaya,
                                         Pachhatti Bodhgaya, Police Thana Rd, Gaya, Bihar 824231</a></li>
-                                    <li class="number"><a href="tel:9971840388" style="color:white">Call Us:   +91 9971 (840) 388</a></li>
-                                    <li><a href="mailto:enquiry@hotel.com" style="color:white">enquiry@hotel.com</a>
+                                    <li class="number"><a href="tel:9971840388" style="color:white">Call Us:   +91 9971840388</a></li>
+                                    <li><a href="mailto:hotelofbodhgaya@gmail.com" style="color:white">hotelofbodhgaya@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
