@@ -15,7 +15,7 @@ use App\Models\Testimonial;
 use App\Models\TimexEvents;
 use App\Models\TourPackage;
 use App\Models\User;
-
+use App\Models\WebsiteVideo;
 use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -39,7 +39,9 @@ class HotelController extends Controller
         $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
         $testimonials = Testimonial::all();
         $bedrooms = BedroomsType::where('status', 1)->get();
+        $webSiteVideo = WebsiteVideo::latest()->get()->take(2);
 
+        
 
         $location = [];
         foreach($hotels as $hotel){
@@ -51,7 +53,7 @@ class HotelController extends Controller
             $locations[] = $location;
         }
 
-        return view('pages.home' ,compact('hotels' , 'locations' , 'banner', 'testimonials' , 'bedrooms'));
+        return view('pages.home' ,compact('hotels' , 'locations' , 'banner', 'testimonials' , 'bedrooms', 'webSiteVideo'));
     }
 
 

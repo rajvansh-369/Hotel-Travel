@@ -101,7 +101,7 @@
                                         sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of
                                         enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.
                                     </p>
-                                    <a href="{{route('contact')}}" class="btn_01 about-btn">Learn More</a>
+                                    <a href="{{ route('contact') }}" class="btn_01 about-btn">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                         <img src="{{ asset('img/gallery/hotel3.webp') }}" alt="">
                                         <div class="location-contents">
                                             <h3><a href="#">Couple Room </a></h3>
-                                       
+
                                             <div class="price">
                                                 <span>Started from<span>$500</span></span>
                                             </div>
@@ -173,25 +173,23 @@
                                         </div>
                                     </div>
                                 </div>
-
                             @else
-                            @forelse ($bedrooms as $key => $bedroom)
-                                <div class="col-lg-12 {{$key}}">
-                                    {{-- {{dd($bedroom)}} --}}
-                                    <div class="single-location">
-                                        <img src="{{ asset('storage/'.$bedroom->bedroom_image) }}" alt="">
-                                        <div class="location-contents">
-                                            <h3><a href="#">{{ $bedroom->bedroom_name }}</a></h3>
-                                            {{-- <p>2 Adult 1 Children</p> --}}
-                                            <div class="price">
-                                                <span>Started from<span>₹{{ $bedroom->bedroom_price }}</span></span>
+                                @forelse ($bedrooms as $key => $bedroom)
+                                    <div class="col-lg-12 {{ $key }}">
+                                        {{-- {{dd($bedroom)}} --}}
+                                        <div class="single-location">
+                                            <img src="{{ asset('storage/' . $bedroom->bedroom_image) }}" alt="">
+                                            <div class="location-contents">
+                                                <h3><a href="#">{{ $bedroom->bedroom_name }}</a></h3>
+                                                {{-- <p>2 Adult 1 Children</p> --}}
+                                                <div class="price">
+                                                    <span>Started from<span>₹{{ $bedroom->bedroom_price }}</span></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            @empty
-
-                            @endforelse
+                                @empty
+                                @endforelse
                             @endif
 
 
@@ -241,22 +239,98 @@
             </div>
 
 
-            {{-- <div class="video-area section-img-bg2 d-flex align-items-center"
-                data-background="{{ asset('img/gallery/video-bg.jpg.webp') }}">
-                <div class="container">
-                    <div class="video-wrap position-relative">
 
-                        <div class="video-icon">
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
-                                <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
-                            </a>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="card videoWebsite">
+                            <section class="w3l-videohny" id="video">
+                                <div class="new-block">
+                                    <div class="container">
+                                        <div class="history-info position-relative"
+                                            style="background-image: url({{ count($webSiteVideo) > 0 ? asset('storage/' . $webSiteVideo[0]->previewImage) : asset('img/gallery/project-img.webp') }})">
+                                            <div class="video-icon">
+                                                <a class="popup-video btn-icon"
+                                                    href="{{ count($webSiteVideo) > 0 ? asset('storage' . $webSiteVideo[0]->video) : 'https://www.youtube.com/watch?v=up68UAfH0d0' }}">
+                                                    <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div style="text-align: center!important;">
+                                <a href="#" class="blog-desc" style="font-size: 2em;">Hindi
+                                </a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6 ">
+                        <div class="card videoWebsite">
+                            <section class="w3l-videohny" id="video">
+                                <div class="new-block">
+                                    <div class="container">
+                                        <div class="history-info position-relative"
+                                            style="background-image: url({{ count($webSiteVideo) > 1 ? asset('storage/' . $webSiteVideo[1]->previewImage) : asset('img/gallery/project-img.webp') }})">
+                                            <div class="video-icon">
+                                                <a class="popup-video btn-icon"
+                                                    href="{{ count($webSiteVideo) > 1 ? asset('storage' . $webSiteVideo[1]->video) : 'https://www.youtube.com/watch?v=up68UAfH0d0' }}">
+                                                    <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div style="text-align: center!important;">
+                                <a href="#" class="blog-desc" style="font-size: 2em;">English
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            {{-- 
+            <div class="video-area section-img-bg2 d-flex align-items-center"
+                data-background="{{ asset('img/gallery/video-bg.jpg.webp') }}">
+                <div class="container">
+                    <div class="row">
+
+                   
+                    <div class="col-sm-6">
+                        <div class="video-wrap position-relative">
+
+                            <div class="video-icon">
+                                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                                    <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="video-wrap position-relative">
+
+                            <div class="video-icon">
+                                <p class="videoText">Test1</p>
+                                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
+                                    <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div> --}}
 
 
-            {{-- <div class="guest-house section-padding">
+            <div class="guest-house section-padding">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-8 col-lg-8">
@@ -316,7 +390,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
 
             <section class="client-say">
