@@ -1725,5 +1725,14 @@ li.active {
     }
 
 
+    .developedBy{
+
+        color: red !important;
+    }
+    .developedBy:hover{
+
+        color: #fff !important;
+    }
+
 
 
