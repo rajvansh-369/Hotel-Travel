@@ -72,6 +72,7 @@ class HotelController extends Controller
 
         $hotels = Listing::get();
         $banner = Banner::where('status',1)->orderBy('id' ,'desc')->first();
+        $testimonials = Testimonial::all();
         $location = [];
         foreach($hotels as $hotel){
 
@@ -82,11 +83,13 @@ class HotelController extends Controller
             $locations[] = $location;
         }
 
-        return view('pages.hotels' ,compact('hotels', 'locations', 'banner'));
+        return view('pages.hotels' ,compact('hotels', 'locations', 'banner', 'testimonials'));
     }
     public function tour(){
+        $testimonials = Testimonial::all();
+
         
-        return view('pages.tour');
+        return view('pages.tour', compact('testimonials'));
     }
     public function tour_details($id){
 
@@ -98,7 +101,9 @@ class HotelController extends Controller
     
     public function taxi(){
 
-        return view('pages.taxi');
+        $testimonials = Testimonial::all();
+
+        return view('pages.taxi',  compact('testimonials'));
     }
 
 
@@ -435,6 +440,12 @@ class HotelController extends Controller
     public function myBooking(){
 
         return view('pages.myBooking');
+    }
+
+
+    public function forget(){
+
+        return view('auth.forgetPassword');
     }
 
     public function bill($id){

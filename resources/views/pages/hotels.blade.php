@@ -47,133 +47,205 @@
                 </div>
 
 
-                <div class="video-area section-img-bg2 d-flex align-items-center"
-                    data-background="{{ asset('img/gallery/video-bg.jpg.webp') }}">
-                    <div class="container">
-                        <div class="video-wrap position-relative">
-
-                            <div class="video-icon">
-                                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
-                                    <img src="{{ asset('img/icon/video-icon_2.svg') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="guest-house section-padding">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-8">
-
+    
                                 <div class="section-tittle text-center mb-50">
                                     <h2>We Offer to Our Guest</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-location single-location2 mb-30 mb-30">
+                            <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
+                                <div class="single-location mb-30">
                                     <img src="{{ asset('img/gallery/guest1.webp') }}" alt="">
                                     <div class="guest-contents guest-contents2">
-                                        <h3><a href="#">Free Drinks</a></h3>
+                                        <h3><a href="#">European Plan</a></h3>
                                     </div>
-                                    <div class="guest-contents">
-                                        <h3><a href="#">Free Breakfast</a></h3>
-                                        <p>The concept and service of the best luxury hotels in Asturias in our
-                                            sophisticated Urban
-                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a
-                                            furnished
+                                    {{-- <div class="guest-contents">
+                                        <h3><a href="#">European Plan</a></h3>
+                                        <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
+                                            Urban
+                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                             terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-location single-location2 mb-30 mb-30">
+                            <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
+                                <div class="single-location mb-30">
                                     <img src="{{ asset('img/gallery/guest2.jpg') }}" alt="">
                                     <div class="guest-contents guest-contents2">
-                                        <h3><a href="#">Free Breakfast</a></h3>
+                                        <h3><a href="#">Continental Plan</a></h3>
                                     </div>
-                                    <div class="guest-contents">
-                                        <h3><a href="#">Free Breakfast</a></h3>
-                                        <p>The concept and service of the best luxury hotels in Asturias in our
-                                            sophisticated Urban
-                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a
-                                            furnished
+                                    {{-- <div class="guest-contents">
+                                        <h3><a href="#">Continental Plan</a></h3>
+                                        <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
+                                            Urban
+                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                             terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
-                                <div class="single-location single-location2 mb-30 mb-30">
+                            <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
+                                <div class="single-location mb-30">
                                     <img src="{{ asset('img/gallery/guest3.webp') }}" alt="">
                                     <div class="guest-contents guest-contents2">
-                                        <h3><a href="#">Free Dinner</a></h3>
+                                        <h3><a href="#">Modified American Plan</a></h3>
                                     </div>
-                                    <div class="guest-contents">
+                                    {{-- <div class="guest-contents">
                                         <h3><a href="#">Free Breakfast</a></h3>
-                                        <p>The concept and service of the best luxury hotels in Asturias in our
-                                            sophisticated Urban
-                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a
-                                            furnished
+                                        <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
+                                            Urban
+                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                             terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
+                                    </div> --}}
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
+                                <div class="single-location mb-30">
+                                    <img src="{{ asset('img/gallery/guest3.webp') }}" alt="">
+                                    <div class="guest-contents guest-contents2">
+                                        <h3><a href="#">American Plan</a></h3>
                                     </div>
+                                    {{-- <div class="guest-contents">
+                                        <h3><a href="#">Free Breakfast</a></h3>
+                                        <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
+                                            Urban
+                                            Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
+                                            terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+              
 
 
                 <section class="client-say">
                     <div class="container">
                         <div class="custom-row">
                             <div class="client-active">
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
+                                @if (count($testimonials) > 2)
+                                    @forelse ($testimonials as  $testimonial)
+                                        <div class="col-lg-5 col-md-6 col-sm-6">
+                                            <div class="client-caption">
+                                                <h3>{{ $testimonial->review_title }}</h3>
+                                                <p>{{ $testimonial->review_desc }}</p>
+    
+                                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                    <div class="testimonialimg">
+                                                        <img src="{{ asset('storage/' . $testimonial->image) }}"
+                                                            class="img-fluid" alt="client-img">
+                                                    </div>
+                                                    <div class="founder-text mx-1">
+                                                        <span> - {{ $testimonial->name }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                    @empty
+                                        <div class="col-lg-5 col-md-6 col-sm-6">
+                                            <div class="client-caption">
+                                                <h3>Delicious Food</h3>
+                                                <p>"Leather detail shoulder contrastic colour
+                                                    contour stunning silhouette working peplum.
+                                                    Statement buttons cover-up tweaks patch.</p>
+    
+                                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                    <div class="testimonialimg">
+                                                        <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                            alt="client-img">
+                                                    </div>
+                                                    <div class="founder-text mx-1">
+                                                        <span>- Omeka Lotus</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-6 col-sm-6">
+                                            <div class="client-caption">
+                                                <h3>Nice Accommodation</h3>
+                                                <p>"Leather detail shoulder contrastic colour
+                                                    contour stunning silhouette working peplum.
+                                                    Statement buttons cover-up tweaks patch.</p>
+    
+                                                <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                    <div class="testimonialimg">
+                                                        <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                            alt="client-img">
+                                                    </div>
+                                                    <div class="founder-text mx-1">
+                                                        <span>- Omeka Lotus</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforelse
+                                @else
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>Delicious Food</h3>
+                                            <p>"Leather detail shoulder contrastic colour
+                                                contour stunning silhouette working peplum.
+                                                Statement buttons cover-up tweaks patch.</p>
+    
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                        alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span>- Omeka Lotus</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Delicious Food</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>Nice Accommodation</h3>
+                                            <p>"Leather detail shoulder contrastic colour
+                                                contour stunning silhouette working peplum.
+                                                Statement buttons cover-up tweaks patch.</p>
+    
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                        alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span>- Omeka Lotus</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
+                                    <div class="col-lg-5 col-md-6 col-sm-6">
+                                        <div class="client-caption">
+                                            <h3>Nice Accommodation</h3>
+                                            <p>"Leather detail shoulder contrastic colour
+                                                contour stunning silhouette working peplum.
+                                                Statement buttons cover-up tweaks patch.</p>
+    
+                                            <div class="testimonial-founder d-flex align-items-center mt-30">
+                                                <div class="testimonialimg">
+                                                    <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                        alt="client-img">
+                                                </div>
+                                                <div class="founder-text mx-1">
+                                                    <span>- Omeka Lotus</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
+    
+    
                             </div>
                         </div>
                     </div>

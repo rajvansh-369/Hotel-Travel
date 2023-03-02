@@ -16,10 +16,26 @@ class Contact extends Component
     }
 
 
+    protected $rules = [
+        'name' => 'required|min:6',
+        'email' => 'required|email',
+        'msg' => 'required',
+        'subject' => 'required',
+    ];
+
+    protected $messages = [
+        'email.required' => 'The Email Address cannot be empty.',
+        'email.email' => 'The Email Address format is not valid.',
+        'name.required' => 'Name can not be empty',
+        'msg.required' => 'Please select Enquiry',
+
+    ];
+
     public function send(){
 
 
-        // dd($this->name);
+        $this->validate();
+        // dd($this->msg);
         $data = [
 
             'name' => $this->name,

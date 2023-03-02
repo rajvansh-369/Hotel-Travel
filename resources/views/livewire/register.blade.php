@@ -1,6 +1,8 @@
 <div class="container-fluid"> 
 
 
+
+
         {{-- <section class="vh-100"> --}}
             <div class="container-fluid">
                 <div class="row">
@@ -15,9 +17,10 @@
 
                             <form wire:submit.prevent="create" style="width: 23rem;">
                                 @csrf
-                                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h3>
+                                <h2 class="mt-3">Register</h2>
+                                {{-- <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register</h3> --}}
 
-                                <div class="form-outline mb-2">
+                                <div class="form-outline mb-2 mt-3">
                                     <label class="form-label" for="name">Name</label>
                                     <input type="text" wire:model="name" id="name" name="name"
                                         class="form-control form-control-lg" />
@@ -56,10 +59,8 @@
                                 </div>
                                   @endif
                                 <div class="pt-1">
-                                    <button class="btn btn-info btn-lg btn-block" type="submit">Register</button>
+                                    <button class="btn2 btn-info btn-lg btn-block" type="submit">Register</button>
                                 </div>
-
-                                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
                                 <p>Have an account? <a href="{{route('loginView')}}" class="link-info">Login here</a></p>
 
                             </form>

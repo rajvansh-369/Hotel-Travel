@@ -94,14 +94,20 @@
                         <div class="col-xl-4 col-lg-6 col-md-8">
                             <div class="right-caption">
                                 <div class="section-tittle">
-                                    <h2>Luxury & Comfort Our services and wonders of Prague</h2>
+                                    <h2>Book Your All Travel Related Services</h2>
                                 </div>
                                 <div class="support-caption">
-                                    <p class="mb-10">The concept and service of the best luxury hotels in Asturias in our
-                                        sophisticated Urban Double and Unique Junior Suite rooms, with the possibility of
-                                        enjoying a furnished terrace in our Double Urban Loft and Unique Junior Loft Suite.
+                                    <p class="mb-10">We are a BODHGAYA-BASED Travel company. your ONE-STOP Shop for all
+                                        ypur Travel Needs.
+                                        If you are looking for Hotels and Transport services like
+                                        Car/ Luxury Bus/ Luxury Mini Bus/ Tempo traveler etc. in Bodhgaya, then you have
+                                        come
+                                        to the right place.
+                                        <br> Whether you are planning a family vacation, a Buddhist Circuit Tour, a Bodhgaya
+                                        Tour, a Pind Daan, or a Solo Adventure, we are here to arrange your
+                                        all travel needs.
                                     </p>
-                                    <a href="{{ route('contact') }}" class="btn_01 about-btn">Learn More</a>
+                                    <a href="{{ route('contact') }}" class="btn_01 about-btn">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -204,9 +210,9 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-9 col-lg-8">
                             <div class="section-tittle mb-60 text-center">
-                                <h2>Surrounded by galleries, boutiques, restaurants and cafés, our Hotel is a hub of energy
+                                <h2>Surrounded by galleries, boutiques, restaurants and cafes, our Hotel is a hub of energy
                                     and style.</h2>
-                                <a href="#" class="tittle-btn mt-15">Find a Room For You</a>
+
                             </div>
                         </div>
                     </div>
@@ -222,12 +228,12 @@
                                         </div>
                                         <div class="col-xl-6 col-lg-6 col-md-6 p-0">
                                             <div class="features-caption">
-                                                <h3><a href="#">Take advantage of our seasonal specials.</a></h3>
-                                                <p>The concept and service of the best luxury hotels in Asturias in our
-                                                    sophisticated Urban Double and Unique Junior Suite rooms, with the
-                                                    possibility of enjoying a furnished terrace in our Double Urban Loft and
-                                                    Unique Junior Loft Suite.</p>
-                                                <a href="#" class="btn">View Project</a>
+                                                <h3><a>You can also book Tour Package from us.</a></h3>
+                                                <p>If you’re looking to experience the holy site of Bodhgaya then this tour
+                                                    package is definitely the way to go. With so much to see and do, having
+                                                    everything organized in advance will help you make the most of your time
+                                                    at this sacred site.</p>
+                                                <a href="/tour" class="btn">Tour Packages</a>
                                             </div>
                                         </div>
                                     </div>
@@ -341,51 +347,66 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6 weOffers">
+                        <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
                             <div class="single-location mb-30">
                                 <img src="{{ asset('img/gallery/guest1.webp') }}" alt="">
                                 <div class="guest-contents guest-contents2">
-                                    <h3><a href="#">Free Drinks</a></h3>
+                                    <h3><a href="#">European Plan</a></h3>
                                 </div>
-                                <div class="guest-contents">
-                                    <h3><a href="#">Free Breakfast</a></h3>
+                                {{-- <div class="guest-contents">
+                                    <h3><a href="#">European Plan</a></h3>
                                     <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
                                         Urban
                                         Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                         terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 weOffers">
+                        <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
                             <div class="single-location mb-30">
                                 <img src="{{ asset('img/gallery/guest2.jpg') }}" alt="">
                                 <div class="guest-contents guest-contents2">
-                                    <h3><a href="#">Free Breakfast</a></h3>
+                                    <h3><a href="#">Continental Plan</a></h3>
                                 </div>
-                                <div class="guest-contents">
-                                    <h3><a href="#">Free Breakfast</a></h3>
+                                {{-- <div class="guest-contents">
+                                    <h3><a href="#">Continental Plan</a></h3>
                                     <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
                                         Urban
                                         Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                         terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 weOffers">
+                        <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
                             <div class="single-location mb-30">
                                 <img src="{{ asset('img/gallery/guest3.webp') }}" alt="">
                                 <div class="guest-contents guest-contents2">
-                                    <h3><a href="#">Free Dinner</a></h3>
+                                    <h3><a href="#">Modified American Plan</a></h3>
                                 </div>
-                                <div class="guest-contents">
+                                {{-- <div class="guest-contents">
                                     <h3><a href="#">Free Breakfast</a></h3>
                                     <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
                                         Urban
                                         Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
                                         terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
+                                </div> --}}
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
+                            <div class="single-location mb-30">
+                                <img src="{{ asset('img/gallery/guest3.webp') }}" alt="">
+                                <div class="guest-contents guest-contents2">
+                                    <h3><a href="#">American Plan</a></h3>
                                 </div>
+                                {{-- <div class="guest-contents">
+                                    <h3><a href="#">Free Breakfast</a></h3>
+                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
+                                        Urban
+                                        Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
+                                        terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

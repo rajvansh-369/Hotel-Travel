@@ -2279,9 +2279,9 @@ hr {
     }
 }
 
-.guest-house .single-location .guest-contents h3 a:hover {
+/* .guest-house .single-location .guest-contents h3 a:hover {
     color: #003580
-}
+} */
 
 .guest-house .single-location .guest-contents p {
     margin-bottom: 10px;
@@ -2344,10 +2344,10 @@ hr {
     visibility: visible
 }
 
-.guest-house .single-location:hover .guest-contents.guest-contents2 {
+/* .guest-house .single-location:hover .guest-contents.guest-contents2 {
     opacity: 0;
     visibility: hidden
-}
+} */
 
 .client-say {
     background: #003580;
