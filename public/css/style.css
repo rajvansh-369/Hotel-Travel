@@ -199,7 +199,7 @@ hr {
 }
 
 #back-top {
-    /* background: #003580; */
+    background-color: #fff;
     height: 40px;
     width: 40px;
     right: 31px;
@@ -214,7 +214,7 @@ hr {
     box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2)
 }
 #back-top_call {
-    /* background: #003580; */
+    background-color: #fff;
     margin-bottom: 49px;
     height: 40px;
     width: 40px;
@@ -230,7 +230,7 @@ hr {
     box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2)
 }
 #back-top_gmail {
-    /* background: #003580; */
+    background-color: #fff;
     margin-bottom: 100px;
     height: 40px;
     width: 40px;
