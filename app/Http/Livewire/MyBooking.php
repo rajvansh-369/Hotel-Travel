@@ -63,10 +63,10 @@ class MyBooking extends Component
     // $userAddress->country = $this->country;
 
 
-    UserAddress::updateOrCreate(['user_id', $this->user_id],[
-        'city',$this->city,
-        'state',$this->state,
-        'country',$this->country,
+    UserAddress::updateOrCreate([ 'user_id' => $this->user_id],[
+        'city'=>$this->city,
+        'state'=>$this->state,
+        'country'=> $this->country,
     ]);
 
 
