@@ -39,7 +39,7 @@
         <div class="pt-1 mb-4">
             <button class="btn2 btn-info btn-lg btn-block" type="submit">Login</button>
         </div>
-        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="{{route('forget')}}">Forgot password?</a></p>
         
         <hr>
 
