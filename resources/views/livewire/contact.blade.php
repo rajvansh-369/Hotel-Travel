@@ -37,15 +37,32 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" wire:model="msg" name="message" id="message" cols="30" rows="9"
-                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
-                                    </div>
+                                        <p>Select Enquiry</p>
+                                        <input wire:model="msg" value="Rooms" type="radio" name="rooms" id="rooms" required>
+                                        <label for="rooms">Rooms</label>
+                                        <input  wire:model="msg" value="Taxi" type="radio" name="rooms" id="rooms" required>
+                                        <label for="rooms">Taxi</label>
+                                        <input  wire:model="msg" value="Tour Package" type="radio" name="rooms" id="rooms" required>
+                                        <label for="rooms">Tour Package</label>
+                                        <input wire:model="msg" value="Restaurant Dinning"  type="radio" name="rooms" id="rooms" required>
+                                        {{-- <select class="form-control w-100"  wire:model="msg" name="message" id="message" >
+                                            <option value="Select Enquiry"></option>
+                                            <option value="Select Enquiry"></option>
+                                            <option value="Select Enquiry"></option>
+                                            <option value="Select Enquiry"></option>
+                                        </select> --}}
+                                        {{-- <textarea class="form-control w-100" wire:model="msg" name="message" id="message" cols="30" rows="9"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea> --}}
+                                            <br>
+                                            <span style="color:red">  @error('msg') <span class="error">{{ $message }}</span> @enderror</span>
+                                        </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <input class="form-control valid" wire:model="name" name="name" id="name" type="text"
                                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
                                             placeholder="Enter your name">
+                                            <span style="color:red">     @error('name') <span class="error">{{ $message }}</span> @enderror </span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -53,6 +70,7 @@
                                         <input class="form-control valid" wire:model="email" name="email" id="email" type="email"
                                             onfocus="this.placeholder = ''"
                                             onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                            <span style="color:red">    @error('email') <span class="error">{{ $message }}</span> @enderror </span>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -60,6 +78,7 @@
                                         <input class="form-control" name="subject" wire:model="subject" id="subject" type="text"
                                             onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
                                             placeholder="Enter Subject">
+                                            <span style="color:red">    @error('subject') <span class="error">{{ $message }}</span> @enderror </span>
                                     </div>
                                 </div>
                             </div>
@@ -72,6 +91,8 @@
                             {{ session('message') }}
                         </div>
                           @endif
+
+                        
                     </div>
                      
                     <div class="col-lg-3 offset-lg-1">

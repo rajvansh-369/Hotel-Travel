@@ -49,6 +49,7 @@ use Illuminate\Support\Facades\File;
 Route::get('/', [HotelController::class, 'index'])->name('home');
 Route::get('/hotels', [HotelController::class, 'hotels'])->name('hotels');
 Route::get('/tour', [HotelController::class, 'tour'])->name('tour');
+Route::get('/forget-password', [HotelController::class, 'forget'])->name('forget');
 Route::get('/taxi', [HotelController::class, 'taxi'])->name('taxi');
 Route::get('/myBookings', [HotelController::class, 'myBooking'])->name('myBooking');
 Route::get('/hotel-details/{id}', [HotelController::class, 'hotel_details'])->name('hotel-details');
