@@ -48,7 +48,7 @@ class MyBooking extends Component
 
    public function updateProfile(){
 
-    $userAddress = new UserAddress();
+    // $userAddress = new UserAddress();
     // $userAddress = $userAddress->get();
 
     // dd($this->user->userAddress->user_id);
@@ -56,12 +56,19 @@ class MyBooking extends Component
     $this->user->email = $this->email;
     $this->user->address = $this->address;
     $this->user->phone = $this->phone;
-    $userAddress->user_id = $this->user_id;
-    $userAddress->city = $this->city;
-    $userAddress->state = $this->state;
-    $userAddress->country = $this->country;
     $this->user->save();
-    $userAddress->save();
+    // $userAddress->user_id = $this->user_id;
+    // $userAddress->city = $this->city;
+    // $userAddress->state = $this->state;
+    // $userAddress->country = $this->country;
+
+
+    UserAddress::updateOrCreate(['user_id', $this->user_id],[
+        'city',$this->city,
+        'state',$this->state,
+        'country',$this->country,
+    ]);
+
 
     session()->flash('message', 'User successfully updated.');
    }
