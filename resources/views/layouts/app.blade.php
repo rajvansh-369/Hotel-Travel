@@ -58,13 +58,24 @@
     @include('layouts.header')
     @yield('content')
     <div id="back-top">
-        <a class="wrapper" title="Go to Top" href="#">
-            <div class="arrows-container">
+        <a class="wrapper" title="WhatsApp" target="_blank" href="https://wa.me/+919971840388">
+            <img src="{{asset('img/WhatsApp.svg')}}" alt="">
+            {{-- <div class="arrows-container">
                 <div class="arrow arrow-one">
                 </div>
                 <div class="arrow arrow-two">
                 </div>
-            </div>
+            </div> --}}
+        </a>
+    </div>
+    <div id="back-top_call">
+        <a class="wrapper" title="Call" href="tel:9971840388">
+            <img src="{{asset('img/call.png')}}" width="30px" alt="">
+        </a>
+    </div>
+    <div id="back-top_gmail">
+        <a class="wrapper" title="Email" href="mailto:enquiry@hotel.com">
+            <img src="{{asset('img/gmail.png')}}" width="30px" alt="">
         </a>
     </div>
 
