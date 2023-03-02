@@ -80,7 +80,7 @@
                             <ul class="list-unstyled">
                                 <li class="text-muted">To: <span style="color:#5d9fc5 ;">{{ucfirst($user->name)}}</span></li>
                                 <li class="text-muted">{{ucfirst($user->address)}}</li>
-                                <li class="text-muted">{{ucfirst($user->userAddress->state)}}, {{ucfirst($user->userAddress->country)}}</li>
+                                <li class="text-muted">{{ucfirst($user->userAddress?->state)}}, {{ucfirst($user->userAddress?->country)}}</li>
                                 <li class="text-muted"><i class="fas fa-phone"></i> {{$user->email}}</li>
                             </ul>
                         </div>
