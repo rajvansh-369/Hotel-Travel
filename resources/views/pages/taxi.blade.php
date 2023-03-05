@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div class="container brdetailmain">
+        <div class="container brdetailmain taxiMobile">
             <p class="gotosrchrslt "><i class="fa fa-angle-left"></i>
                 <a href="{{ route('home') }}">
                     Back

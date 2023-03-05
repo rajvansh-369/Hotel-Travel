@@ -24,8 +24,14 @@
 
     </div>
 
-    <div class="container-fluid location-house section-padding">
+    <div class="container-fluid location-house section-padding tourMobile">
         <div class="row mx-auto">
+            <p class="gotosrchrslt "><i class="fa fa-angle-left"></i>
+                <a href="{{ route('home') }}">
+                    Back
+                    <!--Top Rated Around You-->
+                </a>
+            </p>
             {{-- <div class="col-xl-2 col-lg-1 d-none d-md-block"></div> --}}
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="container">
