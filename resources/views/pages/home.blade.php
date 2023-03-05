@@ -355,13 +355,10 @@
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">European Plan</a></h3>
                                 </div>
-                                {{-- <div class="guest-contents">
+                                <div class="guest-contents">
                                     <h3><a href="#">European Plan</a></h3>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
-                                        Urban
-                                        Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
-                                        terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div> --}}
+                                    <p>A European plan typically means that your accommodations only are included.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
@@ -370,13 +367,11 @@
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">Continental Plan</a></h3>
                                 </div>
-                                {{-- <div class="guest-contents">
+                                <div class="guest-contents">
                                     <h3><a href="#">Continental Plan</a></h3>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
-                                        Urban
-                                        Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
-                                        terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div> --}}
+                                    <p>Continental Plan is where the hotel includes a daily breakfast with your rooms stay.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
@@ -385,13 +380,11 @@
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">Modified American Plan</a></h3>
                                 </div>
-                                {{-- <div class="guest-contents">
-                                    <h3><a href="#">Free Breakfast</a></h3>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
-                                        Urban
-                                        Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
-                                        terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div> --}}
+                                <div class="guest-contents">
+                                    <h3><a href="#">Modified American Plan</a></h3>
+                                    <p>Modified American Plan is a slightly altered version of the American Plan, and
+                                        includes a room stay with breakfast and a choice between lunch and dinner.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 weOffers">
@@ -400,13 +393,11 @@
                                 <div class="guest-contents guest-contents2">
                                     <h3><a href="#">American Plan</a></h3>
                                 </div>
-                                {{-- <div class="guest-contents">
-                                    <h3><a href="#">Free Breakfast</a></h3>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated
-                                        Urban
-                                        Double and Unique Junior Suite rooms, with the possibility of enjoying a furnished
-                                        terrace in our Double Urban Loft and Unique Junior Loft Suite.</p>
-                                </div> --}}
+                                <div class="guest-contents">
+                                    <h3><a href="#">American Plant</a></h3>
+                                    <p>In American Plan is where the hotel includes the costs of the room and three meals
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -441,9 +432,11 @@
                                     <div class="col-lg-5 col-md-6 col-sm-6">
                                         <div class="client-caption">
                                             <h3>Delicious Food</h3>
-                                            <p>"Leather detail shoulder contrastic colour
-                                                contour stunning silhouette working peplum.
-                                                Statement buttons cover-up tweaks patch.</p>
+                                            <p>"My hotel is on Excellent location. All the major attractions in Bodhgaya are
+                                                at a walking distance from this hotel. The owner is an amazing individual.
+                                                Always ready to help with a smile. Is a minefield of knowledge in regards to
+                                                Bodhgaya and around. About the hotel, it’s well maintained and complete
+                                                value for money. Good for families.</p>
 
                                             <div class="testimonial-founder d-flex align-items-center mt-30">
                                                 <div class="testimonialimg">
@@ -478,54 +471,74 @@
                             @else
                                 <div class="col-lg-5 col-md-6 col-sm-6">
                                     <div class="client-caption">
-                                        <h3>Delicious Food</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
+                                        <h3>Excellent Location</h3>
+                                        <p>"My hotel is on Excellent location. All the major attractions in Bodhgaya are
+                                            at a walking distance from this hotel. The owner is an amazing individual.
+                                            Always ready to help with a smile. Is a minefield of knowledge in regards to
+                                            Bodhgaya and around. About the hotel, it’s well maintained and complete
+                                            value for money. Good for families.</p>
                                         <div class="testimonial-founder d-flex align-items-center mt-30">
                                             <div class="testimonialimg">
-                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                <img src="{{ asset('testimonials/1.jpeg') }}" class="img-fluid"
                                                     alt="client-img">
                                             </div>
                                             <div class="founder-text mx-1">
-                                                <span>- Omeka Lotus</span>
+                                                <span>- Himanshu Sheth</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-sm-6">
                                     <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
+                                        <h3>Delicious food</h3>
+                             
+                                            <p>"We had booked an family room 4 bed. The room was very spacious and well
+                                                maintained. the bathroom was neat and clean. Service of hotel shelton is superb,
+                                                anything you request would be fullfilled instantly within few minutes. Food
+                                                served in the hotel was also delicious. Overall had an good experience in this
+                                                hotel. Would recommend to everyone who are travelling with family. I have good
+                                                experience with Hotel in Bodhgaya.</p>
 
                                         <div class="testimonial-founder d-flex align-items-center mt-30">
                                             <div class="testimonialimg">
-                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                <img src="{{ asset('testimonials/4.jpeg') }}" class="img-fluid"
                                                     alt="client-img">
                                             </div>
                                             <div class="founder-text mx-1">
-                                                <span>- Omeka Lotus</span>
+                                                <span>- Shubham Chauhan</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-sm-6">
                                     <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
+                                        <h3>Nice accommodation</h3>
+                                        <p>"Rooms are neat and maintained well. Service is very good, especially Saheed and
+                                            Tinku are very good. Quickly do the work asked for. Food is also good here</p>
 
                                         <div class="testimonial-founder d-flex align-items-center mt-30">
                                             <div class="testimonialimg">
-                                                <img src="{{ asset('img/testiImg.png') }}" class="img-fluid"
+                                                <img src="{{ asset('testimonials/2.jpeg') }}" class="img-fluid"
                                                     alt="client-img">
                                             </div>
                                             <div class="founder-text mx-1">
-                                                <span>- Omeka Lotus</span>
+                                                <span>- Kunal Rout</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-sm-6">
+                                    <div class="client-caption">
+                                        <h3>Nice service</h3>
+                                        <p>"Excellent customer service. Room well maintained. Staffs are very helpful and friendly. book your travel services from hotel in bodhgaya for nice service 😊😊</p>
+
+                                        <div class="testimonial-founder d-flex align-items-center mt-30">
+                                            <div class="testimonialimg">
+                                                <img src="{{ asset('testimonials/3.jpeg') }}" class="img-fluid"
+                                                    alt="client-img">
+                                            </div>
+                                            <div class="founder-text mx-1">
+                                                <span>- Alok Kumar</span>
                                             </div>
                                         </div>
                                     </div>

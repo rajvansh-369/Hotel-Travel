@@ -1720,7 +1720,7 @@ hr {
 
 .location-house {
     background: #F9F8F8;
-    padding-top: 110px;
+    padding-top: 32px;
     padding-left: 30px;
     padding-right: 30px
 }
@@ -2279,9 +2279,9 @@ hr {
     }
 }
 
-/* .guest-house .single-location .guest-contents h3 a:hover {
+.guest-house .single-location .guest-contents h3 a:hover {
     color: #003580
-} */
+}
 
 .guest-house .single-location .guest-contents p {
     margin-bottom: 10px;
@@ -2344,10 +2344,10 @@ hr {
     visibility: visible
 }
 
-/* .guest-house .single-location:hover .guest-contents.guest-contents2 {
+.guest-house .single-location:hover .guest-contents.guest-contents2 {
     opacity: 0;
     visibility: hidden
-} */
+}
 
 .client-say {
     background: #003580;
@@ -3520,8 +3520,32 @@ hr {
 }
 
 .contact-section {
-    padding: 130px 0 100px
+    padding: 30px 0 100px
 }
+
+
+@media only screen  and (max-width: 600px) {
+
+    .contact-section {
+        padding: 186px 0 40px !important
+    }
+
+    .container.brdetailmain.mt-5 {
+        padding-top: 145px;
+    }
+
+
+    .container.brdetailmain.taxiMobile {
+        padding-top: 170px;
+    }
+
+    .tourMobile{
+
+        padding-top: 190px;
+    }
+
+}
+
 
 @media (max-width: 991px) {
     .contact-section {
