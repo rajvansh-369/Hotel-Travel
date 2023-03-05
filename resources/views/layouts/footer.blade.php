@@ -101,12 +101,10 @@
                                     <p>Copyright &copy;
                                         <script>
                                             document.write(new Date().getFullYear());
-                                        </script> All rights reserved.
-                                        {{-- | This template is made with <i
-                                            class="fa fa-heart color-danger" aria-hidden="true"></i> --}}
-                                            Developed by <a
+                                        </script> All rights reserved of Hotel in Bodhgaya.
+                                            {{-- Developed by <a
                                             href="https://uxdesigns.in" target="_blank"
-                                            rel="nofollow noopener"> <span class="developedBy" style="color:red !important">ScrapyLab </span> </a>
+                                            rel="nofollow noopener"> <span class="developedBy" style="color:red !important">ScrapyLab </span> </a> --}}
                                     </p>
                                 </div>
                             </div>
