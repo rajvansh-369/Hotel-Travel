@@ -19,10 +19,10 @@
                             <div class="d-flex justify-content-between flex-wrap align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li><a href="tel:9971840388" style="color:white">Call Us:   +91 9971 (840) 388</a></li>
+                                        <li><a href="tel:9971840388" style="color:white">Call Us:   +91 9971840388</a></li>
                                         <li>
 
-                                            <a href="mailto:enquiry@hotel.com" style="color:white">enquiry@hotel.com</a>
+                                            <a href="mailto:enquiry@hotel.com" style="color:white">hotelofbodhgaya@gmail.com</a>
                                             {{-- <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                                 data-cfemail="a2cbccc4cde2d0cdcec3da8cc1cdcf">[email&#160;protected]</a> --}}
                                       </li>
@@ -31,8 +31,15 @@
                                 <div class="header-info-right d-none d-sm-block">
                                     <ul class="header-social">
                                         <li><img src="{{asset('storage/inr_logo.webp')}}" style="max-width:25px;" class="img-fluid"></li>
-                                        <li><a href="/admin"><button class="btn2">List your property</button> </a></li>
-                                        <li><a href="{{route('registerView')}}"><button class="btn">Register</button> </a></li>
+                                        <li><a href="{{route('contact')}}"><button class="btn2">Contact Us</button> </a></li>
+                                      
+                                        @if (!auth()->user())
+                                        <li><a href="{{route('registerView')}}"><button class="btn">Register</button> </a></li>   
+                                        @else
+                                        
+                                        <li><a href="{{route('logout')}}"><button class="btn">Logout</button> </a></li>   
+
+                                        @endif
                                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a target="_blank" href="https://wa.me/+919971840388"><i class="fab fa-whatsapp"></i></a></li>

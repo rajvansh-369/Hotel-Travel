@@ -482,7 +482,7 @@ class HotelController extends Controller
             $timex->where('id', $id)->update(['status' => 2, 'category' => 'success']);
 
             Mail::to($user->email)
-            ->bcc(['snhlrj8@gmail.com' , 'hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingConfimed($id));
+            ->bcc(['hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingConfimed($id));
             
         return view('pages.bookingConfirmed');
 
@@ -498,7 +498,7 @@ class HotelController extends Controller
 
         $timex->where('id', $id)->update(['status' => 0, 'category' => 'danger']);
            
-        Mail::to($user->email)->bcc(['snhlrj8@gmail.com' , 'hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingRejected());
+        Mail::to($user->email)->bcc(['hotelofbodhgaya@gmail.com' , 'snhlrj9@gmail.com', 'surmansalman@gmail.com'])->send(new bookingRejected());
         return view('pages.bookingReject');
 
     }

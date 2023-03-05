@@ -19,8 +19,8 @@
                                 
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Leather detail contrastic colour contour stunning silhouette working peplum.
-                                            Statement buttons patch.</p>
+                                        <p>We are a BODHGAYA-BASED Travel company. your ONE-STOP Shop for all
+                                            your Travel Needs in Bodhgaya.</p>
                                     </div>
                                 </div>
 
