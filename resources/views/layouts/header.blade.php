@@ -110,7 +110,7 @@
                         </div>
 
                         <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none mt-3"></div>
+                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
