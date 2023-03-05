@@ -22,7 +22,7 @@
                                         <li><a href="tel:9971840388" style="color:white">Call Us:   +91 9971840388</a></li>
                                         <li>
 
-                                            <a href="mailto:enquiry@hotel.com" style="color:white">hotelofbodhgaya@gmail.com</a>
+                                            <a href="mailto:enquiry@hotel.com" style="color:white; font-size: 12px;">hotelofbodhgaya@gmail.com</a>
                                             {{-- <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                                 data-cfemail="a2cbccc4cde2d0cdcec3da8cc1cdcf">[email&#160;protected]</a> --}}
                                       </li>
