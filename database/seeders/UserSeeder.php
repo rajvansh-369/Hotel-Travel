@@ -18,10 +18,10 @@ class UserSeeder extends Seeder
     {
           if(!User::whereEmail('admin@hotel.com')->exists()){
             User::create([
-                'name' => 'Snehal Rajvansh',
-                'email' => 'admin@hotel.com',
-                'password' => Hash::make('admin@hotel123'),
-                'phone' => '7894561230',
+                'name' => 'Gaurav',
+                'email' => 'admin@hotelinbodhgaya.com',
+                'password' => Hash::make('Bodhi@#123'),
+                'phone' => '9546355003',
                 'address' => 'Bodhgaya , Bihar',
             ]);
         }

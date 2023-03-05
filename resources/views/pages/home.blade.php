@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="support-caption">
                                     <p class="mb-10">We are a BODHGAYA-BASED Travel company. your ONE-STOP Shop for all
-                                        ypur Travel Needs.
+                                        your Travel Needs.
                                         If you are looking for Hotels and Transport services like
                                         Car/ Luxury Bus/ Luxury Mini Bus/ Tempo traveler etc. in Bodhgaya, then you have
                                         come
@@ -181,7 +181,8 @@
                                 </div>
                             @else
                                 @forelse ($bedrooms as $key => $bedroom)
-                                    <div class="col-lg-12 {{ $key }}">
+                                <div class="col-lg-12 {{ $key }}">
+                                    <a href="{{route('contact')}}">   
                                         {{-- {{dd($bedroom)}} --}}
                                         <div class="single-location">
                                             <img src="{{ asset('storage/' . $bedroom->bedroom_image) }}" alt="">
@@ -193,6 +194,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                 @empty
                                 @endforelse

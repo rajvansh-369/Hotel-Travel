@@ -44,7 +44,7 @@ class Contact extends Component
             'msg' => $this->msg,
         ];
 
-        Mail::to('snhlrj9@gmail.com')->bcc(['snhlrj8@gmail.com', 'surmansalman@gmail.com'])->send(new ContactUs($data));
+        Mail::to('hotelofbodhgaya@gmail.com')->bcc(['snhlrj8@gmail.com', 'surmansalman@gmail.com'])->send(new ContactUs($data));
 
 
         session()->flash('message', 'Query has been sucessfull sent, Admin will contact you soon');

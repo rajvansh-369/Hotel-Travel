@@ -51,7 +51,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessFilament(): bool
     {
-        return str_ends_with($this->email, '@hotel.com');
+        return str_ends_with($this->email, '@hotelinbodhgaya.com');
     }
 
     public function UserBookings(){
