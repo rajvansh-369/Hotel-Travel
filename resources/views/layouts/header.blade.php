@@ -69,7 +69,7 @@
 
                             
                             <a href="{{route('home')}}">
-                                <h1 class="logoName">Hotels in <span style="color:#fff">Bo</span>dhgaya</h1>
+                                <h1 class="logoName">Hotel in <span style="color:#fff">Bo</span>dhgaya</h1>
                                 {{-- <img class="logoName" src="{{asset('img/logo/logo2.png')}}" width="200px" alt=""> --}}
                             </a>
                            
