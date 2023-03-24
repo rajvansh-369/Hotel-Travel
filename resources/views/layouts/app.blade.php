@@ -22,10 +22,10 @@
     {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
     @include('meta::manager', [
         'title' => config('app.name', 'Laravel'),
-        'description' => 'The concept and service of the best luxury hotels in BodhGaya in our sophisticated.',
+        'description' => 'The concept and service of the best luxury hotel in BodhGaya in our sophisticated.',
         'image' => asset('img/logo/mainLogo_1.png'),
         'keywords' =>
-            'bodhgaya, taxi services in bodhgaya,taxi,services ,rooms ,hotel, hotels, Bodh Gaya, lodging, accommodation, special offers, packages, specials, weekend breaks, deals Bodh Gaya India, budget, cheap, discount, savings, tours, package, ',
+            'bodhgaya, taxi services in bodhgaya,taxi,services ,rooms ,hotel, Bodh Gaya, lodging, accommodation, special offers, packages, specials, weekend breaks, deals Bodh Gaya India, budget, cheap, discount, savings, tours, package, ',
         'author' => 'Dharmendra Chauhan',
         'referrer' => 'default',
     ])
